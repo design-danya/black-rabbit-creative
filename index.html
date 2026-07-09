@@ -1,0 +1,43 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <script>
+  // This checks for both /sitemap.xml and just /sitemap
+  if (window.location.pathname === '/sitemap.xml' || window.location.pathname === '/sitemap') {
+    window.location.href = 'https://gist.githubusercontent.com/design-danya/e812570829c0becc93a098e525c94ae6/raw/b26e0af2c9ceca899e4bff0364d1c8dc33d900bc/sitemap.xml';
+  }
+</script> <!-- Google Sitemap Text Version -->
+<link rel="sitemap" type="text/plain" href="https://www.blackrabbit-creative.com/sitemap.txt">
+<script>
+  if (window.location.pathname === '/sitemap.txt' ) {
+    document.documentElement.innerHTML = `
+https://blackrabbit-creative.com/
+https://blackrabbit-creative.com/about
+https://blackrabbit-creative.com/contact
+https://blackrabbit-creative.com/services
+https://blackrabbit-creative.com/work
+https://blackrabbit-creative.com/privacy
+https://blackrabbit-creative.com/terms
+    `;
+    document.close( );
+  }
+</script>
+
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Branding Agency Keene NH Portsmouth NH Providence RI | Black Rabbit Creative</title>
+      <meta name="description" content="Black Rabbit Creative: Branding Agency offering Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency in Keene, NH, Portsmouth, NH, Providence, RI." />
+      
+      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      
+    </head>
+
+    <body>
+      
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+      
+    </body>
+  </html>
+  

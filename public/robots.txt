@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.blackrabbit-creative.com/sitemap.xml
