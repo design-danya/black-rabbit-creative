@@ -1,0 +1,36 @@
+@import '../styles/fonts.css';
+@import '../styles/tailwind.css';
+@import '../styles/theme.css';
+@import 'sonner/dist/styles.css';
+@import 'react-day-picker/dist/style.css';
+
+/* ── Constant Contact inline form: centered, natural width ── */
+.ctct-inline-form,
+.ctct-form-wrapper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Spread out the heading and description text */
+.ctct-form-wrapper .ctct-form-header,
+.ctct-form-wrapper h2,
+.ctct-form-wrapper h3,
+.ctct-form-wrapper p,
+.ctct-form-wrapper .ctct-form-description {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Ensure html, body take full height for app shell */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
