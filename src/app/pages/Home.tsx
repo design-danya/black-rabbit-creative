@@ -1,5 +1,5 @@
 'use client'
-const rabbitEars = "/assets/9bcef0195920300136ab5fd442b3cfbd4197aa12.png";
+const rabbitEars = "/assets/homepage-rabbit.gif";
 const graniteRootsImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 const kapiloffLogoMark = "/assets/813500a7323a190b78d4a353bedbc57a5d5c1fd1.png";
 const basicBalanceThumb = "/assets/c2966b48a7c59fc377cbe7b0bbefc3111f13f42b.png";
@@ -21,7 +21,7 @@ import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useSEO } from "../components/useSEO";
 
-const RABBIT_IMG = "/assets/9bcef0195920300136ab5fd442b3cfbd4197aa12.png";
+const RABBIT_IMG = "/assets/homepage-rabbit.gif";
 const services = [
   {
     name: "Full Brand Identity",
