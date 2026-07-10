@@ -44,7 +44,7 @@ const bestFit = [
 
 const workItems = [
   {
-    src: sequoiaFlatImg,
+    src: sequoiaFlatImg.src,
     alt: "Sequoia Sex Toys – box flat design with floral pattern",
     name: "Sequoia Sex Toys",
     label: "Retail Box Design",
@@ -52,7 +52,7 @@ const workItems = [
     award: false,
   },
   {
-    src: sequoiaPeachBoxImg,
+    src: sequoiaPeachBoxImg.src,
     alt: "Sequoia – For Your Peach gift box packaging",
     name: "Sequoia Sex Toys",
     label: "Gift Box Packaging",
@@ -60,7 +60,7 @@ const workItems = [
     award: false,
   },
   {
-    src: wetBoxImg,
+    src: wetBoxImg.src,
     alt: "WET & Tame the Beast Personal Lubricant – full product box line",
     name: "Sequoia Sex Toys",
     label: "Product Box Design",
@@ -68,7 +68,7 @@ const workItems = [
     award: false,
   },
   {
-    src: sequoiaStickerImg,
+    src: sequoiaStickerImg.src,
     alt: "Sequoia – branded box with sticker roll",
     name: "Sequoia Sex Toys",
     label: "Packaging & Stickers",
@@ -76,7 +76,7 @@ const workItems = [
     award: false,
   },
   {
-    src: sequoiaCardsImg,
+    src: sequoiaCardsImg.src,
     alt: "Sequoia – thank you card suite spread",
     name: "Sequoia Sex Toys",
     label: "Insert Card Suite",
@@ -84,7 +84,7 @@ const workItems = [
     award: false,
   },
   {
-    src: sequoiaEnvelopeImg,
+    src: sequoiaEnvelopeImg.src,
     alt: "Sequoia – branded envelope with illustrated liner",
     name: "Sequoia Sex Toys",
     label: "Branded Envelope",
@@ -92,7 +92,7 @@ const workItems = [
     award: false,
   },
   {
-    src: peachBoxImg,
+    src: peachBoxImg.src,
     alt: "Sequoia – For Your Peach gift box open with tissue paper",
     name: "Sequoia Sex Toys",
     label: "Gift Box Mockup",
@@ -100,7 +100,7 @@ const workItems = [
     award: false,
   },
   {
-    src: staySafeImg,
+    src: staySafeImg.src,
     alt: "Sequoia – Stay Safe condom wrapper duo",
     name: "Sequoia Sex Toys",
     label: "Condom Packaging",

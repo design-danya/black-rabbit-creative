@@ -44,63 +44,63 @@ const applications: Application[] = [
   },
   {
     key: "tote",
-    src: appToteImg,
+    src: appToteImg.src,
     label: "Tote Bag",
     caption:
       "The seal becomes a signature detail. Ceremonial. Owned. Something you'd display, not hide.",
   },
   {
     key: "mug",
-    src: appMugImg,
+    src: appMugImg.src,
     label: "Mug",
     caption:
       "The primary mark works here. Simple. Clear. Refined. You pick it up and know exactly what it is.",
   },
   {
     key: "card",
-    src: appCardImg,
+    src: appCardImg.src,
     label: "Business Card",
     caption:
       "Heritage mark. Establishes formality without overdoing it. The establishment date tells the story.",
   },
   {
     key: "hat",
-    src: appHatImg,
+    src: appHatImg.src,
     label: "Hat / Apparel",
     caption:
       "Monogram-forward. Scaled appropriately. Clean. Not crowded.",
   },
   {
     key: "packaging",
-    src: appPackagingImg,
+    src: appPackagingImg.src,
     label: "Packaging",
     caption:
       "Primary mark on retail packaging — brand and product living together, no compromise.",
   },
   {
     key: "stamp",
-    src: appStampImg,
+    src: appStampImg.src,
     label: "Embossed Seal",
     caption:
       "The seal, made physical. A quiet detail that turns paper into a keepsake.",
   },
   {
     key: "tee-primary",
-    src: appTeePrimaryImg,
+    src: appTeePrimaryImg.src,
     label: "T-Shirt — Primary",
     caption:
       "Reversed primary mark on soft cotton. Wearable, without looking like a corporate freebie.",
   },
   {
     key: "tee-seal",
-    src: appTeeSealImg,
+    src: appTeeSealImg.src,
     label: "T-Shirt — Seal",
     caption:
       "The seal centered on the chest. A collectible piece — the kind you keep.",
   },
   {
     key: "hoodie",
-    src: appHoodieImg,
+    src: appHoodieImg.src,
     label: "Hoodie",
     caption:
       "Full seal on the back. A quiet nod for people who know the place.",
