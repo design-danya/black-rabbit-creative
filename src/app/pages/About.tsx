@@ -386,7 +386,7 @@ export default function About() {
             </p>
             <div>
               <Link
-                to="/contact"
+                href="/contact"
                 className="group relative inline-flex items-center gap-3 bg-[#060606] text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-[#060606]/80 transition-all duration-500 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-3">
