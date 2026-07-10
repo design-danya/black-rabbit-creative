@@ -196,7 +196,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: applications where the brand benefits from a traditional, established presence. Signage. Formal stationery. Moments that need weight.",
-    image: heritageMark,
+    image: heritageMark.src,
     imageAlt:
       "Monadnock Berries heritage mark with EST 1996 date — formal brand variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -213,7 +213,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: anywhere you want the brand to feel ceremonial. Signature-like. Rooted.",
-    image: brandSeal,
+    image: brandSeal.src,
     imageAlt:
       "Monadnock Berries brand seal — circular signature mark with landscape detail by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -230,7 +230,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: when simplicity and clarity are key. When the space needs the brand but shouldn't be overwhelmed. Apparel. Favors. Digital icons.",
-    image: monogramMark,
+    image: monogramMark.src,
     imageAlt:
       "Monadnock Berries MB monogram — essential brand mark by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -266,7 +266,7 @@ const directions: Direction[] = [
       "A muted, nature-inspired palette of sage, navy, and warm neutrals reflects the landscape while adding depth and refinement.",
     positioning:
       "For clients seeking an elevated yet grounded atmosphere. The landscape is there. The refinement is intentional.",
-    image: estateHarvestBoard,
+    image: estateHarvestBoard.src,
     chosen: true,
   },
   {
@@ -286,7 +286,7 @@ const directions: Direction[] = [
       "A rich, nature-inspired palette of deep berry, olive, muted plum, and warm wood tones reflect the harvest season while adding depth and warmth.",
     positioning:
       "For couples seeking an elevated yet organic celebration. This one leans into the farm. Makes it intentional. Makes it warm.",
-    image: harvestHeritageBoard,
+    image: harvestHeritageBoard.src,
   },
   {
     key: "minimalist-botanical",
@@ -305,7 +305,7 @@ const directions: Direction[] = [
       "A soft, neutral palette of warm whites, cool grays, sage, and deep charcoal creates a calm, modern foundation with subtle contrast.",
     positioning:
       "For those seeking elevated, calm, and intentionally minimal. The restraint is the point. Nothing unnecessary.",
-    image: minimalistBotanicalBoard,
+    image: minimalistBotanicalBoard.src,
   },
 ];
 
