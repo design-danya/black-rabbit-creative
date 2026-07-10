@@ -1,4 +1,4 @@
-'use client'
+import { useEffect, Suspense, type ReactNode } from 'react'export function Layout({ children }: { children: ReactNode }) {{children}'use client'
 
 import { usePathname } from 'next/navigation'
 import { useEffect, Suspense } from 'react'
