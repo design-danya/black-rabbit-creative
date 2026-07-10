@@ -397,7 +397,7 @@ export default function MonadnockBerries() {
             className="lg:col-span-8 relative overflow-hidden rounded-sm"
           >
             <img
-              src={heroImg}
+              src={heroImg.src}
               alt="Oliver and Elise, owners of Monadnock Berries, standing in front of Mount Monadnock holding their farm sign — legacy berry farm brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-full object-cover"
             />
