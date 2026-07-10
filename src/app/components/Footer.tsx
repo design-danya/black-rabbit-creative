@@ -94,7 +94,7 @@ export function Footer() {
           {/* Logo + tagline */}
           <div className="md:col-span-3">
             <img
-              src={rabbitLogo}
+              src={rabbitLogo.src}
               alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
               className="h-10 w-auto invert opacity-70 mb-6"
               width={120}
