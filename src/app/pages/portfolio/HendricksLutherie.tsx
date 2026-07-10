@@ -76,7 +76,7 @@ export default function HendricksLutherie() {
       <div style={{ backgroundColor: darkWood }}>
         <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
           <Link
-            to="/work"
+            href="/work"
             className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/25 hover:text-[#D4943A] transition-colors duration-300"
           >
             <ArrowLeft size={12} /> All Work
@@ -788,7 +788,7 @@ export default function HendricksLutherie() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group relative inline-flex items-center gap-3 px-10 py-4 text-white text-xs uppercase tracking-[0.2em] overflow-hidden transition-all duration-500"
               style={{ backgroundColor: copper }}
             >
@@ -798,7 +798,7 @@ export default function HendricksLutherie() {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             </Link>
             <Link
-              to="/work"
+              href="/work"
               className="inline-flex items-center gap-2 px-10 py-4 text-xs uppercase tracking-[0.2em] border border-black/15 text-black/50 hover:text-black hover:border-black/30 transition-colors duration-300"
             >
               View More Work

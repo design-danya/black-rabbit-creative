@@ -207,7 +207,7 @@ export default function LogoDesign() {
                 className="mt-10"
               >
                 <Link
-                  to="/work/monadnock-berries"
+                  href="/work/monadnock-berries"
                   className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] hover:text-[#060606] transition-colors duration-300"
                 >
                   See a Logo Case Study — Monadnock Berries
@@ -455,14 +455,14 @@ export default function LogoDesign() {
                 This package is perfect if you already know your brand direction and just need a
                 strong, ownable mark. If you need deeper brand strategy first, consider our{" "}
                 <Link
-                  to="/services/brand-identity"
+                  href="/services/brand-identity"
                   className="text-[#5b3fd6] hover:text-white underline underline-offset-4 decoration-[#5b3fd6]/40 hover:decoration-white transition-colors duration-300"
                 >
                   full brand identity package
                 </Link>.
               </p>
               <Link
-                to="/contact"
+                href="/contact"
                 className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 uppercase tracking-[0.25em] text-xs font-bold overflow-hidden bg-white/5 border border-white/15 hover:bg-white/10 hover:border-white/40 transition-all duration-500"
               >
                 <span className="relative z-10 flex items-center gap-3">

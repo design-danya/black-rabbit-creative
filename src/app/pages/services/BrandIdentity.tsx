@@ -172,7 +172,7 @@ export default function BrandIdentity() {
             transition={{ duration: 0.5 }}
           >
             <Link
-              to="/services"
+              href="/services"
               className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
             >
               <ArrowLeft size={12} /> All Services
@@ -216,7 +216,7 @@ export default function BrandIdentity() {
               </p>
               <div>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group relative inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.05)]"
                 >
                   <span className="relative z-10 flex items-center gap-3">
@@ -482,7 +482,7 @@ export default function BrandIdentity() {
 
                 {/* CTA */}
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 uppercase tracking-[0.25em] text-xs font-bold transition-all duration-500 overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-white/10 hover:border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
                 >
                   <span className="relative z-10 flex items-center gap-3">

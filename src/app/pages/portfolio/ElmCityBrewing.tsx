@@ -132,7 +132,7 @@ export default function ElmCityBrewing() {
       {/* ── Back nav ─ */}
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-4">
         <Link
-          to="/work"
+          href="/work"
           className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#E6E2D3]/40 hover:text-[#C89B12] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
@@ -574,7 +574,7 @@ export default function ElmCityBrewing() {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group relative inline-flex items-center justify-center gap-3 bg-[#1F2010] text-[#E6E2D3] px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold overflow-hidden transition-all duration-500"
             >
               <span className="relative z-10 flex items-center gap-3">
@@ -583,7 +583,7 @@ export default function ElmCityBrewing() {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-[#E6E2D3]/10 to-transparent" />
             </Link>
             <Link
-              to="/work"
+              href="/work"
               className="inline-flex items-center justify-center gap-3 border border-[#1F2010]/20 text-[#1F2010] px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:border-[#1F2010]/60 transition-colors duration-300"
             >
               View More Work

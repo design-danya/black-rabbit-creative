@@ -113,7 +113,7 @@ export default function BreweryBranding() {
             className="flex flex-wrap gap-4"
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group inline-flex items-center gap-3 bg-[#5b3fd6] hover:bg-[#4a32b8] px-8 py-4 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300"
             >
               Start Your Brewery Brand
@@ -123,7 +123,7 @@ export default function BreweryBranding() {
               />
             </Link>
             <Link
-              to="/work"
+              href="/work"
               className="group inline-flex items-center gap-3 bg-white/5 border border-white/15 hover:bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300"
             >
               View Brewery Work
@@ -182,7 +182,7 @@ export default function BreweryBranding() {
                   className="group block relative overflow-hidden aspect-[4/3]"
                 >
                   <ImageWithFallback
-                    src={project.image}
+                    src={typeof project.image === "string" ? project.image : project.image.src}
                     alt={`${project.title} — craft beer branding by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
@@ -326,7 +326,7 @@ export default function BreweryBranding() {
             transition={{ delay: 0.2 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group inline-flex items-center gap-3 bg-[#5b3fd6] hover:bg-[#4a32b8] px-10 py-5 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300"
             >
               Get in Touch

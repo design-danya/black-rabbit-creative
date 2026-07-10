@@ -212,7 +212,7 @@ export default function Services() {
             Have something in mind?
           </p>
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-block text-2xl md:text-3xl font-black uppercase tracking-[0.07em] hover:text-[#5b3fd6] transition-colors border-b-2 border-black hover:border-[#5b3fd6] pb-1"
           >
             Let's talk about it

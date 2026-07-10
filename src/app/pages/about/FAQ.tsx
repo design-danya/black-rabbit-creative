@@ -293,7 +293,7 @@ export default function FAQ() {
       {/* ─── HERO ─── */}
       <section className="px-6 md:px-16 lg:px-24 pt-40 pb-16 md:pb-24 max-w-7xl mx-auto">
         <Link
-          to="/about"
+          href="/about"
           className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors mb-10"
         >
           <ArrowLeft size={12} /> About
@@ -401,7 +401,7 @@ export default function FAQ() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group relative inline-flex items-center gap-3 bg-[#5b3fd6] text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-[#4a32b0] transition-all duration-500 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">

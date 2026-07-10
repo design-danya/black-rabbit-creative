@@ -352,7 +352,7 @@ export default function MonadnockBerries() {
       {/* ── Back nav ── */}
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-4">
         <Link
-          to="/work"
+          href="/work"
           className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#EBE6DE]/40 hover:text-[#B7C0B1] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
@@ -1050,7 +1050,7 @@ export default function MonadnockBerries() {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group inline-flex items-center justify-center gap-3 px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold transition-all duration-500 rounded-sm"
               style={{ backgroundColor: accent, color: bg }}
             >

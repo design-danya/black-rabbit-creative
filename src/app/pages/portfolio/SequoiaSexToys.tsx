@@ -53,7 +53,7 @@ export default function SequoiaSexToys() {
       {/* ── Back nav ── */}
       <div className="px-6 md:px-12 lg:px-20 pt-28 pb-6">
         <Link
-          to="/work"
+          href="/work"
           className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
@@ -884,7 +884,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group relative inline-flex items-center justify-center gap-3 bg-[#5b3fd6] text-white px-8 py-3.5 uppercase tracking-[0.25em] text-xs font-bold overflow-hidden transition-all duration-500"
             >
               <span className="relative z-10 flex items-center gap-3">
@@ -893,7 +893,7 @@ export default function SequoiaSexToys() {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             </Link>
             <Link
-              to="/work"
+              href="/work"
               className="inline-flex items-center justify-center gap-3 border border-white/20 text-white px-8 py-3.5 uppercase tracking-[0.25em] text-xs font-bold hover:border-white/60 transition-colors duration-300"
             >
               View More Work

@@ -88,7 +88,7 @@ export default function PrintMaterials() {
       {/* ── Back nav ── */}
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
         <Link
-          to="/work"
+          href="/work"
           className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
@@ -540,7 +540,7 @@ export default function PrintMaterials() {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="group relative inline-flex items-center justify-center gap-3 bg-[#060606] text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold overflow-hidden transition-all duration-500"
             >
               <span className="relative z-10 flex items-center gap-3">
@@ -549,7 +549,7 @@ export default function PrintMaterials() {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </Link>
             <Link
-              to="/work"
+              href="/work"
               className="inline-flex items-center justify-center gap-3 border border-[#060606]/20 text-[#060606] px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:border-[#060606]/60 transition-colors duration-300"
             >
               View More Work

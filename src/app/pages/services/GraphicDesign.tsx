@@ -165,7 +165,7 @@ export default function GraphicDesign() {
             transition={{ duration: 0.5 }}
           >
             <Link
-              to="/services"
+              href="/services"
               className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
             >
               <ArrowLeft size={12} /> All Services
@@ -207,7 +207,7 @@ export default function GraphicDesign() {
               </p>
               <div>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group relative inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-3">
@@ -598,7 +598,7 @@ export default function GraphicDesign() {
                 Let's build what comes next.
               </p>
               <Link
-                to="/contact"
+                href="/contact"
                 className="group relative inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 text-white px-10 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-3">
