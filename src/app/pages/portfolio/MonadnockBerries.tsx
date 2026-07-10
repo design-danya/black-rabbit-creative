@@ -36,7 +36,7 @@ type Application = {
 const applications: Application[] = [
   {
     key: "signage",
-    src: appSignageImg,
+    src: appSignageImg.src,
     label: "Signage",
     caption:
       "Primary mark. Large. Clear. Commands the space without shouting.",
