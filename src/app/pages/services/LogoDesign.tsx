@@ -248,7 +248,7 @@ export default function LogoDesign() {
                       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
                     >
                       <img
-                        src={logos[activeSlide].src}
+                        src={typeof logos[activeSlide].src === "string" ? logos[activeSlide].src : logos[activeSlide].src.src}
                         alt={logos[activeSlide].alt}
                         className="object-contain"
                         style={{ maxWidth: logos[activeSlide].maxW, maxHeight: logos[activeSlide].maxH, width: "100%", transform: `translateY(${logos[activeSlide].nudge})` }}
