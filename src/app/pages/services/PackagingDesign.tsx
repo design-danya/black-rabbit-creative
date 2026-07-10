@@ -1,18 +1,19 @@
+'use client'
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check, X, ZoomIn } from "lucide-react";
-import rabbitImg from "figma:asset/eed29b13bea1a52313221c289bafae04132dc381.png";
-import carrotRabbitImg from "figma:asset/199e77e547416bd57486c1a74cb2584cf537aa6f.png";
-import canImg from "figma:asset/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
-import sequoiaFlatImg from "figma:asset/b7de3e886507c7e33eb8252454dbcec51cdc2204.png";
-import sequoiaPeachBoxImg from "figma:asset/7cc4ef53f0c695cab640f42b7d8c6b0c3607ef03.png";
-import wetBoxImg from "figma:asset/6a9e50f522155b75baf5e7ef9d9c159116527921.png";
-import sequoiaStickerImg from "figma:asset/1c758d31953945aeec19b258d4bc1d6a7e3c4bf5.png";
-import sequoiaCardsImg from "figma:asset/7bc99b336cbc03d7e4369c8cef3f7082af1b991e.png";
-import sequoiaEnvelopeImg from "figma:asset/e59bd461e7a2b9e94bf8ac62572f7930d054b830.png";
-import peachBoxImg from "figma:asset/c623085a0fa6b8d6f06c6c8a1164e462be62b41c.png";
-import staySafeImg from "figma:asset/9224ae1519040450d99ad7ef61a74d4a48844b14.png";
+const rabbitImg = "/assets/placeholder-portfolio.png";
+const carrotRabbitImg = "/assets/placeholder-portfolio.png";
+const canImg = "/assets/placeholder-portfolio.png";
+const sequoiaFlatImg = "/assets/placeholder-portfolio.png";
+const sequoiaPeachBoxImg = "/assets/placeholder-portfolio.png";
+const wetBoxImg = "/assets/placeholder-portfolio.png";
+const sequoiaStickerImg = "/assets/placeholder-portfolio.png";
+const sequoiaCardsImg = "/assets/placeholder-portfolio.png";
+const sequoiaEnvelopeImg = "/assets/placeholder-portfolio.png";
+const peachBoxImg = "/assets/placeholder-portfolio.png";
+const staySafeImg = "/assets/placeholder-portfolio.png";
 import React from "react";
 
 const focusPoints = [
@@ -650,7 +651,7 @@ export default function PackagingDesign() {
                 className="flex flex-col"
               >
                 <Link
-                  to={s.to}
+                  href={s.to}
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">

@@ -1,11 +1,12 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../components/useSEO";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 // Headshot — hosted externally // cache-bust-v2
 const danyaImg = "https://i.imgur.com/kUWmB0z.jpeg";
-import rabbitBoutiqueImg from "figma:asset/3103fbe1b861323996fe5b068f0223584004cb92.png";
+const rabbitBoutiqueImg = "/assets/placeholder-portfolio.png";
 
 const beliefs = [
   {

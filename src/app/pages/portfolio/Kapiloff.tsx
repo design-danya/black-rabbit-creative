@@ -1,16 +1,17 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ArrowDown } from "lucide-react";
-import oldLogoFull   from "figma:asset/cff77871d546fe390d6ba12440edabc44aa2fdf1.png";
-import oldLogoMark   from "figma:asset/1d73f619d040c6cc2752d231aadf121ea1d27d86.png";
-import newLogoFull   from "figma:asset/66fcfb6e89320be0cf9d1c2fc5012e1f66bc7a90.png";
-import newLogoMark   from "figma:asset/813500a7323a190b78d4a353bedbc57a5d5c1fd1.png";
-import typoLemonMilk from "figma:asset/fc67eb2aa040222a861b1e7a36ae55dcf65d72c0.png";
-import typoCalibri   from "figma:asset/cbe582959aa54a8427db1d29fd09a329b883cdf4.png";
-import typoGeorgina  from "figma:asset/539fdac10ec1dab6e66660503cc0b33abbd3fbf3.png";
-import signPhoto     from "figma:asset/2b0c1ad31365aab88f0215d56770c958966e84f0.png";
-import mapsGalaAd    from "figma:asset/318b451ff66696cb786ea4c9289550bcf528c223.png";
+const oldLogoFull = "/assets/placeholder-portfolio.png";
+const oldLogoMark = "/assets/placeholder-portfolio.png";
+const newLogoFull = "/assets/placeholder-portfolio.png";
+const newLogoMark = "/assets/placeholder-portfolio.png";
+const typoLemonMilk = "/assets/placeholder-portfolio.png";
+const typoCalibri = "/assets/placeholder-portfolio.png";
+const typoGeorgina = "/assets/placeholder-portfolio.png";
+const signPhoto = "/assets/placeholder-portfolio.png";
+const mapsGalaAd = "/assets/placeholder-portfolio.png";
 
 const blue      = "#1058CF";
 const blueLight = "#689BF8";

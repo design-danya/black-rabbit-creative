@@ -1,6 +1,7 @@
+'use client'
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 
 import heroImg from "../../../imports/Screenshot_2026-07-02_at_7.07.27_PM.png";

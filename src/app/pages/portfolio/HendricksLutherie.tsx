@@ -1,16 +1,17 @@
+'use client'
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 
-import oldLogo from "figma:asset/27c2293749cce214d7b669de432a539d6ffe15ac.png";
-import badgeLogo from "figma:asset/ce45cde349dc30f5f89c11e2c69e3ff0a5d834c7.png";
-import horizontalLogo from "figma:asset/38fb5f36cd00ed2b540bad89804222d6bcea6b2b.png";
-import stackedLogo from "figma:asset/4820e1d75fe987e7157cd2223d79b7c9b7281d35.png";
-import lyreMark from "figma:asset/6dde127992d64a2181b0474bcb1b6d564592d34e.png";
-import typographyImg from "figma:asset/63e8ec913872ed9549c13e545812c4fe1f448fdb.png";
-import workshopColorImg from "figma:asset/7f41d04f1b99f6a3bd6f86a9139fa0a10bd23315.png";
+const oldLogo = "/assets/placeholder-portfolio.png";
+const badgeLogo = "/assets/placeholder-portfolio.png";
+const horizontalLogo = "/assets/placeholder-portfolio.png";
+const stackedLogo = "/assets/placeholder-portfolio.png";
+const lyreMark = "/assets/placeholder-portfolio.png";
+const typographyImg = "/assets/placeholder-portfolio.png";
+const workshopColorImg = "/assets/placeholder-portfolio.png";
 
 const copper = "#C46A2C";
 const copperLight = "#D4943A";

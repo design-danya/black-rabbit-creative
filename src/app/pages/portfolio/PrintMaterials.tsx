@@ -1,19 +1,20 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import printPosterImg from "figma:asset/27b429ff9bf6ae77c400a58d4198a2382953e9e5.png";
-import printSignageImg from "figma:asset/da8799c4a22801c7bf7972cc8d63e82ed636a867.png";
-import printBannerImg from "figma:asset/82b6155974800c3b6267bdb034889a1ad3d27b7b.png";
-import labyrinthSignImg from "figma:asset/5f2985b47c9b27b00d3d122f4c725ea70d4dd635.png";
-import danyaOsBackImg from "figma:asset/ccad00bb27b2ea1d0f638ab15b7411ee251631d4.png";
-import danyaOsFrontImg from "figma:asset/6805f3d32128fccf47e76ec0876757d3abe45296.png";
-import pridePosterImg from "figma:asset/f3e7689f6167dc5e912799624b422cacc8106736.png";
-import shamrockTeeImg from "figma:asset/acc7b7043190d7bce172e8813d061a4b8079cdd2.png";
-import stickerKettleImg from "figma:asset/1e7c6b05f17a15dc843083a598d98939651c6295.png";
-import stickerHalloweenImg from "figma:asset/24dfc39e775a9ce10a9c4d3bde39e1501c234a66.png";
-import stickerBeachImg from "figma:asset/09fa4ba1187f7ae7a3d091d29ce90fcbd5599abd.png";
-import stickerGhostImg from "figma:asset/7a01ae7ef0f06c88802343ffc328b851489ef45a.png";
+const printPosterImg = "/assets/placeholder-portfolio.png";
+const printSignageImg = "/assets/placeholder-portfolio.png";
+const printBannerImg = "/assets/placeholder-portfolio.png";
+const labyrinthSignImg = "/assets/placeholder-portfolio.png";
+const danyaOsBackImg = "/assets/placeholder-portfolio.png";
+const danyaOsFrontImg = "/assets/placeholder-portfolio.png";
+const pridePosterImg = "/assets/placeholder-portfolio.png";
+const shamrockTeeImg = "/assets/placeholder-portfolio.png";
+const stickerKettleImg = "/assets/placeholder-portfolio.png";
+const stickerHalloweenImg = "/assets/placeholder-portfolio.png";
+const stickerBeachImg = "/assets/placeholder-portfolio.png";
+const stickerGhostImg = "/assets/placeholder-portfolio.png";
 
 const meta = [
   { label: "Studio", value: "Black Rabbit Creative" },

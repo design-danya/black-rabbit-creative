@@ -1,22 +1,23 @@
-import rabbitEars from "figma:asset/9bcef0195920300136ab5fd442b3cfbd4197aa12.png";
-import graniteRootsImg from "figma:asset/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
-import kapiloffLogoMark from "figma:asset/813500a7323a190b78d4a353bedbc57a5d5c1fd1.png";
-import basicBalanceThumb from "figma:asset/c2966b48a7c59fc377cbe7b0bbefc3111f13f42b.png";
-import novaDermThumb from "figma:asset/e70fdcb5ccc84272667c059482c68732ec2f27a7.png";
-import hendricksThumb from "figma:asset/ce45cde349dc30f5f89c11e2c69e3ff0a5d834c7.png";
-import cheshireThumb from "figma:asset/8dc83a7b88b02077a8109e5054207db15a94c7bb.png";
-import keenePrideThumb from "figma:asset/80d637756726e86dd3d855c41a7fac9b5da2473a.png";
-import printMaterialsThumb from "figma:asset/27b429ff9bf6ae77c400a58d4198a2382953e9e5.png";
-import sequoiaThumb from "figma:asset/6a9e50f522155b75baf5e7ef9d9c159116527921.png";
-import badgerBalmThumb from "figma:asset/85a36a7ad55f5acc16c3a8894ea9483780e2fd8f.png";
-import lobsterLabThumb from "figma:asset/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
-import booksThumb from "figma:asset/d722827696a730f2c261adcfc080ff1dde43c556.png";
-import elmCityThumb from "figma:asset/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
+'use client'
+const rabbitEars = "/assets/placeholder-portfolio.png";
+const graniteRootsImg = "/assets/placeholder-portfolio.png";
+const kapiloffLogoMark = "/assets/placeholder-portfolio.png";
+const basicBalanceThumb = "/assets/placeholder-portfolio.png";
+const novaDermThumb = "/assets/placeholder-portfolio.png";
+const hendricksThumb = "/assets/placeholder-portfolio.png";
+const cheshireThumb = "/assets/placeholder-portfolio.png";
+const keenePrideThumb = "/assets/placeholder-portfolio.png";
+const printMaterialsThumb = "/assets/placeholder-portfolio.png";
+const sequoiaThumb = "/assets/placeholder-portfolio.png";
+const badgerBalmThumb = "/assets/placeholder-portfolio.png";
+const lobsterLabThumb = "/assets/placeholder-portfolio.png";
+const booksThumb = "/assets/placeholder-portfolio.png";
+const elmCityThumb = "/assets/placeholder-portfolio.png";
 import monadnockBerriesThumb from "../../imports/Untitled-8.png";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState, useEffect } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useSEO } from "../components/useSEO";
 
@@ -401,7 +402,7 @@ export default function Home() {
                 transition={{ delay: i * 0.07, duration: 0.5 }}
               >
                 <Link
-                  to={item.to}
+                  href={item.to}
                   className="group relative overflow-hidden flex flex-col justify-between bg-white hover:bg-[#060606] transition-colors duration-400 p-8 md:p-10 h-full min-h-[200px]"
                 >
                   <img
@@ -475,7 +476,7 @@ export default function Home() {
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ delay: i * 0.08, duration: 0.55 }}
               >
-                <Link to={project.href ?? "/work"} className="group block relative overflow-hidden aspect-square">
+                <Link href={project.href ?? "/work"} className="group block relative overflow-hidden aspect-square">
                   {/* Image — greyscale → colour */}
                   <ImageWithFallback
                     src={project.image}

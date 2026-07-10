@@ -1,24 +1,25 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 // build-cache-bust-v2
 import { useSEO } from "../../components/useSEO";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-import studioImg from "figma:asset/0073d227197a2d11078c48ed4c9955c144069439.png";
-import rabbitImg from "figma:asset/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
-import touchpointImg from "figma:asset/5d310534f3e3a5364f6b09941e1e6a7aeb24ea11.png";
-import oldBrandImg from "figma:asset/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
-import newBrandImg from "figma:asset/7c9c343e0780d9aeaac6fe49e459502282429caf.png";
-import lobsterLabImg from "figma:asset/20f240a8ee30e1ccbb07e3d25224d0824577e939.png";
-import calentonImg from "figma:asset/9487f73cf6857228ca1812e6af644c8fb87f662f.png";
-import sequoiaImg from "figma:asset/8140257f03131aef1d3ebc0f25dc02ba7784ffe7.png";
-import lobsterMenuImg from "figma:asset/88b89e394c1863621a0969459d4a1c52d920d3bf.png";
-import novaDermImg from "figma:asset/1befc199b53a513fbd6cfef21325cdbc0d97cc67.png";
-import basicBalanceMerchImg from "figma:asset/eee6a8e31ec3bd5688b0e312029b898cf6c3bf94.png";
-import kapiloffImg from "figma:asset/7b601b39d3b58f9ece4134790020643744626ff9.png";
-import monadnockImg from "figma:asset/4b8738d331bc018580f6aaa5ce7d8a9b5beae07a.png";
-import keenePrideImg from "figma:asset/fa6880930640b741275a793c25b79c99740a3f75.png";
-import hitchhikersImg from "figma:asset/2e28a03bd8af5876ba80e7d159f0248755d29eef.png";
+const studioImg = "/assets/placeholder-portfolio.png";
+const rabbitImg = "/assets/placeholder-portfolio.png";
+const touchpointImg = "/assets/placeholder-portfolio.png";
+const oldBrandImg = "/assets/placeholder-portfolio.png";
+const newBrandImg = "/assets/placeholder-portfolio.png";
+const lobsterLabImg = "/assets/placeholder-portfolio.png";
+const calentonImg = "/assets/placeholder-portfolio.png";
+const sequoiaImg = "/assets/placeholder-portfolio.png";
+const lobsterMenuImg = "/assets/placeholder-portfolio.png";
+const novaDermImg = "/assets/placeholder-portfolio.png";
+const basicBalanceMerchImg = "/assets/placeholder-portfolio.png";
+const kapiloffImg = "/assets/placeholder-portfolio.png";
+const monadnockImg = "/assets/placeholder-portfolio.png";
+const keenePrideImg = "/assets/placeholder-portfolio.png";
+const hitchhikersImg = "/assets/placeholder-portfolio.png";
 
 const capabilities = [
   "Marketing and promotional materials",
@@ -631,7 +632,7 @@ export default function GraphicDesign() {
                 className="flex flex-col"
               >
                 <Link
-                  to={s.to}
+                  href={s.to}
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">

@@ -1,10 +1,11 @@
+'use client'
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-import elmCityThumb from "figma:asset/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
-import graniteRootsImg from "figma:asset/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
+const elmCityThumb = "/assets/placeholder-portfolio.png";
+const graniteRootsImg = "/assets/placeholder-portfolio.png";
 
 const RABBIT_IMG =
   "https://www.blackrabbit-creative.com/_assets/v11/8c74470a05247f1f19f836e03a733eda74c86ffc.png";
@@ -177,7 +178,7 @@ export default function BreweryBranding() {
                 transition={{ delay: i * 0.1, duration: 0.6 }}
               >
                 <Link
-                  to={project.href}
+                  href={project.href}
                   className="group block relative overflow-hidden aspect-[4/3]"
                 >
                   <ImageWithFallback

@@ -1,19 +1,20 @@
+'use client'
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
-import seatedRabbit from "figma:asset/fd0fa931e00acfa6c15863207bc0a21f97710af2.png";
-import kapiloffLogo from "figma:asset/dac533663b508268f043b4fa54db52f02c04b87c.png";
-import hendricksLogo from "figma:asset/f1c91b1c74eea1db011e92c7ccbc33ab4d2367e3.png";
-import novaLogo from "figma:asset/e312a94d37336f32774b6a79ae7fe18a0aa10c91.png";
-import wildMocktailsLogo from "figma:asset/685fa1794cb357a4dcf82c129c9189b4da1af472.png";
-import basicBalanceLogo from "figma:asset/700e6be5ebf8a0e2924550b263c23c2bf13325a0.png";
-import sequoiaLogo from "figma:asset/ee86d18b3d5cd3d334334dace81a750418f87f47.png";
-import calentonLogo from "figma:asset/df5caeefc604f30141dac9c5cfa2e7bfeccfa457.png";
-import nyfbLogo from "figma:asset/b9f2ef1f88bc1f9be9a6218d97ac0ffd61ac279a.png";
-import lobsterLabLogo from "figma:asset/9c86fcd1543696ac99e58187ed9599e5c1d65a16.png";
-import shamrockLogo from "figma:asset/47ebd0de1bd734fa7b804aaf2bbfd9feb5cabf05.png";
+const seatedRabbit = "/assets/placeholder-portfolio.png";
+const kapiloffLogo = "/assets/placeholder-portfolio.png";
+const hendricksLogo = "/assets/placeholder-portfolio.png";
+const novaLogo = "/assets/placeholder-portfolio.png";
+const wildMocktailsLogo = "/assets/placeholder-portfolio.png";
+const basicBalanceLogo = "/assets/placeholder-portfolio.png";
+const sequoiaLogo = "/assets/placeholder-portfolio.png";
+const calentonLogo = "/assets/placeholder-portfolio.png";
+const nyfbLogo = "/assets/placeholder-portfolio.png";
+const lobsterLabLogo = "/assets/placeholder-portfolio.png";
+const shamrockLogo = "/assets/placeholder-portfolio.png";
 import monadnockLogo from "../../../imports/MB_RGB_Primary_Mt_Troy_26.png";
 
 const logos = [
@@ -68,7 +69,7 @@ export default function LogoDesign() {
         <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-14 lg:px-20 min-h-[80vh] flex flex-col justify-between pt-28 pb-10">
           <div>
             <Link
-              to="/services"
+              href="/services"
               className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
             >
               <ArrowLeft size={11} /> All Services
@@ -113,7 +114,7 @@ export default function LogoDesign() {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <Link
-                to="/contact"
+                href="/contact"
                 className="group relative inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 text-white px-9 py-4 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-3">
@@ -495,7 +496,7 @@ export default function LogoDesign() {
                 className="flex flex-col"
               >
                 <Link
-                  to={s.to}
+                  href={s.to}
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">

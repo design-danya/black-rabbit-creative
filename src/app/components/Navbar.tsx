@@ -1,8 +1,11 @@
-import { Link, useLocation } from "react-router";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { useState } from "react";
-import rabbitLogo from "figma:asset/fd3930c5beb0aaa4af40351cba963398b3cf20ad.png";
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import { useState } from 'react'
+import rabbitLogo from '@/public/assets/navbar-logo.png'
 
 const links = [
   { name: "Work", path: "/work" },
@@ -26,12 +29,12 @@ const aboutLinks = [
 ];
 
 export function Navbar() {
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesExpanded, setServicesExpanded] = useState(false);
-  const [aboutExpanded, setAboutExpanded] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const isHome = location.pathname === "/";
+  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesExpanded, setServicesExpanded] = useState(false)
+  const [aboutExpanded, setAboutExpanded] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const isHome = pathname === '/'
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -82,10 +85,10 @@ export function Navbar() {
           >
             <div className="flex flex-col border-l border-white/10 ml-1 pl-4 mb-3 mt-1 gap-0">
               <Link
-                to={overviewPath}
+                href={overviewPath}
                 onClick={close}
                 className={`py-2 text-[10px] uppercase tracking-[0.25em] transition-colors ${
-                  location.pathname === overviewPath
+                  pathname === overviewPath
                     ? "text-[#5b3fd6]"
                     : "text-white/30 hover:text-white/60"
                 }`}
@@ -101,10 +104,10 @@ export function Navbar() {
                   transition={{ delay: si * 0.05 }}
                 >
                   <Link
-                    to={s.path}
+                    href={s.path}
                     onClick={close}
                     className={`flex items-baseline gap-2 py-2.5 transition-colors group/sub ${
-                      location.pathname === s.path
+                      pathname === s.path
                         ? "text-[#5b3fd6]"
                         : "text-white/40 hover:text-white"
                     }`}
@@ -136,7 +139,7 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center group" onClick={close}>
+        <Link href="/" className="flex items-center group" onClick={close}>
           <img
             src={rabbitLogo}
             alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
@@ -189,10 +192,10 @@ export function Navbar() {
                   const isServices = link.name === "Services";
                   const isAbout = link.name === "About";
                   const isActive = isServices
-                    ? location.pathname === link.path || location.pathname.startsWith("/services")
+                    ? pathname === link.path || pathname.startsWith("/services")
                     : isAbout
-                    ? location.pathname === link.path || location.pathname.startsWith("/about/")
-                    : location.pathname === link.path;
+                    ? pathname === link.path || pathname.startsWith("/about/")
+                    : pathname === link.path;
 
                   return (
                     <motion.div
@@ -233,10 +236,10 @@ export function Navbar() {
                         </a>
                       ) : (
                         <Link
-                          to={link.path}
+                          href={link.path}
                           onClick={close}
                           className={`block py-3 text-2xl font-black uppercase tracking-[0.07em] transition-colors ${
-                            location.pathname === link.path
+                            pathname === link.path
                               ? "text-[#5b3fd6]"
                               : "text-white/50 hover:text-white"
                           }`}

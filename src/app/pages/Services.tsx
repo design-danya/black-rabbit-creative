@@ -1,5 +1,6 @@
+'use client'
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { ArrowUpRight } from "lucide-react";
 import { useSEO } from "../components/useSEO";
 
@@ -183,7 +184,7 @@ export default function Services() {
                     ))}
                   </ul>
                   <Link
-                    to={service.to}
+                    href={service.to}
                     className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#060606] hover:text-[#5b3fd6] transition-colors duration-300 font-bold group/link"
                   >
                     Learn more

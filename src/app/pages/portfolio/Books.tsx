@@ -1,13 +1,14 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Book cover images
-import hitchhikersOriginalImg from "figma:asset/c2dae3274ecf60f8e6f2b97c7ab7a87a42689708.png";
-import hitchhikersRedesignImg from "figma:asset/d722827696a730f2c261adcfc080ff1dde43c556.png";
-import hitchhikersBothImg from "figma:asset/7247983c9ca5f40235ae9b6a57322f2241c68aa8.png";
-import watercolorDreamImg from "figma:asset/a3affc9c8fa7f33683e419f95c9ba3bf7d8fc4e1.png";
+const hitchhikersOriginalImg = "/assets/placeholder-portfolio.png";
+const hitchhikersRedesignImg = "/assets/placeholder-portfolio.png";
+const hitchhikersBothImg = "/assets/placeholder-portfolio.png";
+const watercolorDreamImg = "/assets/placeholder-portfolio.png";
 
 const cosmic = "#3a8fd6";
 const gold = "#d4a017";

@@ -2,7 +2,7 @@ import { RouterProvider } from "react-router";
 // build-cache-bust-v3
 import { router } from "./routes";
 import { useEffect } from "react";
-import faviconSrc from "figma:asset/3cee36bba3197d2b9746a9867ca49c1eedbc7801.png";
+const faviconSrc = "/assets/placeholder-small.png";
 
 function App() {
   useEffect(() => {

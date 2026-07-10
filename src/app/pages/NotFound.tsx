@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../components/useSEO";
 
 export default function NotFound() {

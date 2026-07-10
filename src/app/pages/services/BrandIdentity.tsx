@@ -1,14 +1,15 @@
+'use client'
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, Check, ArrowLeft, Clock, DollarSign, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-import sketchbookImg from "figma:asset/64f24a4d091804c95a77a759ece275d2b4458b22.png";
-import rabbitImg from "figma:asset/eed29b13bea1a52313221c289bafae04132dc381.png";
-import senseImg from "figma:asset/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
-import lobsterMenuImg from "figma:asset/03f18bfe8e04d5774abf120d1f3fad955b9c299e.png";
-import lobsterHoodieImg from "figma:asset/3600427455a05045405b90350f411e3023b4f419.png";
+const sketchbookImg = "/assets/placeholder-portfolio.png";
+const rabbitImg = "/assets/placeholder-portfolio.png";
+const senseImg = "/assets/placeholder-portfolio.png";
+const lobsterMenuImg = "/assets/placeholder-portfolio.png";
+const lobsterHoodieImg = "/assets/placeholder-portfolio.png";
 
 const packages = [
   {
@@ -468,7 +469,7 @@ export default function BrandIdentity() {
                 {/* Example project link */}
                 {pkg.example && (
                   <Link
-                    to={pkg.example.href}
+                    href={pkg.example.href}
                     className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] hover:text-white transition-colors duration-300 mb-4 mt-auto"
                   >
                     {pkg.example.label}
@@ -596,7 +597,7 @@ export default function BrandIdentity() {
                 className="flex flex-col"
               >
                 <Link
-                  to={s.to}
+                  href={s.to}
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-10 min-h-[100px] transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)]"
                 >
                   <div className="relative z-10 flex items-center gap-5">

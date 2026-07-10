@@ -1,5 +1,6 @@
+'use client'
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, Plus, Minus, ArrowLeft } from "lucide-react";
 import { useState } from "react";

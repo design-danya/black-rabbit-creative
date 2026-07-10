@@ -1,25 +1,26 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import stationeryImg from "figma:asset/8140257f03131aef1d3ebc0f25dc02ba7784ffe7.png";
-import letterheadImg from "figma:asset/7f36d760097949a5cbf16b8abc94e1ad4f6127bc.png";
-import socialImg from "figma:asset/9e6fb10fce4e50491d20a842bbe6a8698c11c4a7.png";
-import businessCardImg from "figma:asset/4bdc6f75ae0826340a16c5eccded41d9772eccda.png";
-import instagramImg from "figma:asset/da0b4d0a018f03fb094a493b7eadf3182698f41d.png";
-import envelopeImg from "figma:asset/f197c68eb63b0a64283819205b1451fe5b0c7121.png";
-import thankYouCardsImg from "figma:asset/c3e6a7f6b0685bbc7da3611c6fb4f543a7e50462.png";
-import peachBoxImg from "figma:asset/c623085a0fa6b8d6f06c6c8a1164e462be62b41c.png";
-import floralBoxImg from "figma:asset/4eed3acad87e65ab0e3933e8340dd64f53b44948.png";
-import lubricantBoxImg from "figma:asset/6a9e50f522155b75baf5e7ef9d9c159116527921.png";
-import stickerTapeImg from "figma:asset/c390af4e482dba3c7b0dd5acd8a94f8b5a3de2c1.png";
-import condomPacketsImg from "figma:asset/9224ae1519040450d99ad7ef61a74d4a48844b14.png";
-import waterBottlesImg from "figma:asset/852e4838ec683852d8a89e2270ca82065afb2add.png";
-import websiteDesignImg from "figma:asset/4801931dd1bb4e47323e36c0f77772a25b7077ac.png";
-import logoDarkImg from "figma:asset/5dddcbadf5da4c35fa79deac7747192351fc3476.png";
-import logoLightImg from "figma:asset/70896d185cb15cf69e7e9cafbe260c8a8c8a79de.png";
-import swagImg from "figma:asset/0ce5651d6803e4d65610e67759ef9705f33646f9.png";
-import facebookImg from "figma:asset/3a763002cf809757cfcb9651f07a080c9feb6424.png";
+const stationeryImg = "/assets/placeholder-portfolio.png";
+const letterheadImg = "/assets/placeholder-portfolio.png";
+const socialImg = "/assets/placeholder-portfolio.png";
+const businessCardImg = "/assets/placeholder-portfolio.png";
+const instagramImg = "/assets/placeholder-portfolio.png";
+const envelopeImg = "/assets/placeholder-portfolio.png";
+const thankYouCardsImg = "/assets/placeholder-portfolio.png";
+const peachBoxImg = "/assets/placeholder-portfolio.png";
+const floralBoxImg = "/assets/placeholder-portfolio.png";
+const lubricantBoxImg = "/assets/placeholder-portfolio.png";
+const stickerTapeImg = "/assets/placeholder-portfolio.png";
+const condomPacketsImg = "/assets/placeholder-portfolio.png";
+const waterBottlesImg = "/assets/placeholder-portfolio.png";
+const websiteDesignImg = "/assets/placeholder-portfolio.png";
+const logoDarkImg = "/assets/placeholder-portfolio.png";
+const logoLightImg = "/assets/placeholder-portfolio.png";
+const swagImg = "/assets/placeholder-portfolio.png";
+const facebookImg = "/assets/placeholder-portfolio.png";
 
 const meta = [
   { label: "Project Type", value: "Master of Fine Arts Thesis" },

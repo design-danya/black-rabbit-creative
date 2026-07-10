@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+'use client'
+import Link from 'next/link';
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, Award, Newspaper } from "lucide-react";
 import { useSEO } from "../../components/useSEO";

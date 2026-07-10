@@ -1,12 +1,13 @@
+'use client'
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Link } from "react-router";
+import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 
-import brandBoardImg from "figma:asset/da5b6063e3f263dd4a30d4ca74ba3eb8a74be11c.png";
-import drPortrait from "figma:asset/e70fdcb5ccc84272667c059482c68732ec2f27a7.png";
-import drWide from "figma:asset/d26a5785d38f95abb7a1c39e26ecb4aebc748945.png";
-import lobbyImg from "figma:asset/129d0cca6ea9eb569a062a5cc08e4db124f09188.png";
+const brandBoardImg = "/assets/placeholder-portfolio.png";
+const drPortrait = "/assets/placeholder-portfolio.png";
+const drWide = "/assets/placeholder-portfolio.png";
+const lobbyImg = "/assets/placeholder-portfolio.png";
 
 const taupe = "#B7AB9F";
 const taupeLight = "#CCC5BD";

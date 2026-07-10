@@ -1,7 +1,9 @@
-import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router";
-import { useEffect, useRef, useState } from "react";
-import rabbitLogo from "figma:asset/ced01a81ae0897798c4315174368484b37578faf.png";
+'use client'
+
+import { ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
+import rabbitLogo from "@/public/assets/footer-logo.png";
 
 const socials = [
   { name: "Instagram", href: "https://www.instagram.com/black.rabbit.creative" },
@@ -67,7 +69,7 @@ export function Footer() {
             <span className="text-[#5b3fd6] italic font-light">together.</span>
           </h2>
           <Link
-            to="/contact"
+            href="/contact"
             className="group inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-8 py-4 text-xs uppercase tracking-[0.2em] text-white hover:bg-white/20 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)]"
           >
             Start a Project
@@ -114,7 +116,7 @@ export function Footer() {
               {footerLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className="text-sm text-gray-300 hover:text-white transition-colors"
                 >
                   {link.name}
@@ -127,11 +129,11 @@ export function Footer() {
           <div className="md:col-span-3">
             <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-5">Specialties</h3>
             <div className="flex flex-col gap-3">
-              <Link to="/services/brand-identity" className="text-sm text-gray-300 hover:text-white transition-colors">Brand Identity Design</Link>
-              <Link to="/services/packaging-design" className="text-sm text-gray-300 hover:text-white transition-colors">Packaging Design</Link>
-              <Link to="/services/brewery-branding" className="text-sm text-gray-300 hover:text-white transition-colors">Brewery Branding</Link>
-              <Link to="/services/logo-design" className="text-sm text-gray-300 hover:text-white transition-colors">Logo Design</Link>
-              <Link to="/services/graphic-design" className="text-sm text-gray-300 hover:text-white transition-colors">Graphic Design</Link>
+              <Link href="/services/brand-identity" className="text-sm text-gray-300 hover:text-white transition-colors">Brand Identity Design</Link>
+              <Link href="/services/packaging-design" className="text-sm text-gray-300 hover:text-white transition-colors">Packaging Design</Link>
+              <Link href="/services/brewery-branding" className="text-sm text-gray-300 hover:text-white transition-colors">Brewery Branding</Link>
+              <Link href="/services/logo-design" className="text-sm text-gray-300 hover:text-white transition-colors">Logo Design</Link>
+              <Link href="/services/graphic-design" className="text-sm text-gray-300 hover:text-white transition-colors">Graphic Design</Link>
             </div>
           </div>
 
