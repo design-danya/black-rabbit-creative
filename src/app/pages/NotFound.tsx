@@ -14,7 +14,7 @@ export default function NotFound() {
       <p className="text-gray-500 mb-8 max-w-md">
         The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
       </p>
-      <Link to="/" className="border-b border-black pb-1 hover:pb-2 transition-all uppercase tracking-widest text-sm">
+      <Link href="/" className="border-b border-black pb-1 hover:pb-2 transition-all uppercase tracking-widest text-sm">
         Return Home
       </Link>
     </div>
