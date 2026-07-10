@@ -178,7 +178,7 @@ const logoBlocks: LogoBlock[] = [
     imageAlt:
       "Monadnock Berries primary logo mark with mountain silhouette — refined destination brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
     imageExtra: {
-      src: primaryNoMt,
+      src: primaryNoMt.src,
       alt:
         "Monadnock Berries primary logo mark without mountain — clean variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
     },
