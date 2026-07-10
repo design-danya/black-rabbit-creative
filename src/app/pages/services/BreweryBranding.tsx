@@ -8,7 +8,7 @@ const elmCityThumb = "/assets/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
 const graniteRootsImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 
 const RABBIT_IMG =
-  "https://www.blackrabbit-creative.com/_assets/v11/8c74470a05247f1f19f836e03a733eda74c86ffc.png";
+  "/assets/9bcef0195920300136ab5fd442b3cfbd4197aa12.png";
 
 const services = [
   "Brewery brand identity systems",

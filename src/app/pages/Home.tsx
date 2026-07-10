@@ -21,7 +21,7 @@ import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useSEO } from "../components/useSEO";
 
-const RABBIT_IMG = "https://www.blackrabbit-creative.com/_assets/v11/8c74470a05247f1f19f836e03a733eda74c86ffc.png";
+const RABBIT_IMG = "/assets/9bcef0195920300136ab5fd442b3cfbd4197aa12.png";
 const services = [
   {
     name: "Full Brand Identity",

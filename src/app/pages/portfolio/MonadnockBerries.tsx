@@ -8,7 +8,7 @@ import heroImg from "../../../imports/Screenshot_2026-07-02_at_7.07.27_PM.png";
 import estateHarvestBoard from "../../../imports/Screenshot_2026-07-02_at_6.56.40_PM.png";
 import harvestHeritageBoard from "../../../imports/Screenshot_2026-07-02_at_6.55.44_PM.png";
 import minimalistBotanicalBoard from "../../../imports/Screenshot_2026-07-02_at_6.55.32_PM.png";
-import originalBannerLogo from "../../../imports/MB_bannerlogo.gif";
+const originalBannerLogo = "/assets/MB_bannerlogo.gif";
 import primaryMt from "../../../imports/MB_RGB_Primary_Mt_16.png";
 import primaryNoMt from "../../../imports/MB_RGB_Primary_NoMt_11.png";
 import heritageMark from "../../../imports/MB_RGB_Heritage_ESTdate_9.png";
@@ -746,7 +746,7 @@ export default function MonadnockBerries() {
             <div className="lg:col-span-7">
               <div className="bg-[#EBE6DE] rounded-sm p-6 md:p-10 flex items-center justify-center">
                 <img
-                  src={originalBannerLogo.src}
+                  src={originalBannerLogo}
                   alt="Original 1990s Monadnock Berries logo — painted farm scene with hand-lettered text | Before the rebrand by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="max-w-full h-auto"
                 />
