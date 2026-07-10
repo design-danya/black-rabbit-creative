@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, Award } from "lucide-react";
-const heroImg = "/assets/placeholder-portfolio.png";
-const sideHouseImg = "/assets/placeholder-portfolio.png";
-const sideTrainImg = "/assets/placeholder-portfolio.png";
-const backImg = "/assets/placeholder-portfolio.png";
-const fullLabelImg = "/assets/placeholder-portfolio.png";
-const trainStationImg = "/assets/placeholder-portfolio.png";
+const heroImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
+const sideHouseImg = "/assets/9f287c83c845164e089b289e3024b4a7a8a5e465.png";
+const sideTrainImg = "/assets/6479d3ffe8f0ef38bec89d85a84101ac451c0af2.png";
+const backImg = "/assets/f4186fd57b287eaaf67087cab3a38d32ccca65df.png";
+const fullLabelImg = "/assets/874f30422be2f740afa26039e87110aeaa92d620.png";
+const trainStationImg = "/assets/d2cfeced632756eb4a0e48e7edff40d3e48f1322.png";
 
 const meta = [
   { label: "Client", value: "Granite Roots Brewing" },

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-const brandOverviewImg = "/assets/placeholder-portfolio.png";
-const shamrockImg = "/assets/placeholder-portfolio.png";
+const brandOverviewImg = "/assets/1a3266b3d9193a8ed951288cc5e847ed126d6f0e.png";
+const shamrockImg = "/assets/0808beac1353910e6a43f23c50e30ac2b287c8d6.png";
 
 const meta = [
   { label: "Client", value: "Cheshire Children's Museum" },

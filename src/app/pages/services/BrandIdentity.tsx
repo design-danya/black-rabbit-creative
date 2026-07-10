@@ -5,11 +5,11 @@ import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, Check, ArrowLeft, Clock, DollarSign, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-const sketchbookImg = "/assets/placeholder-portfolio.png";
-const rabbitImg = "/assets/placeholder-portfolio.png";
-const senseImg = "/assets/placeholder-portfolio.png";
-const lobsterMenuImg = "/assets/placeholder-portfolio.png";
-const lobsterHoodieImg = "/assets/placeholder-portfolio.png";
+const sketchbookImg = "/assets/64f24a4d091804c95a77a759ece275d2b4458b22.png";
+const rabbitImg = "/assets/eed29b13bea1a52313221c289bafae04132dc381.png";
+const senseImg = "/assets/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
+const lobsterMenuImg = "/assets/03f18bfe8e04d5774abf120d1f3fad955b9c299e.png";
+const lobsterHoodieImg = "/assets/3600427455a05045405b90350f411e3023b4f419.png";
 
 const packages = [
   {

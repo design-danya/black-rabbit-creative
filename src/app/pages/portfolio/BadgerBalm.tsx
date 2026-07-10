@@ -4,11 +4,11 @@ import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const roseOilImg = "/assets/placeholder-portfolio.png";
-const beautyBalmImg = "/assets/placeholder-portfolio.png";
-const roseBeautyOilImg = "/assets/placeholder-portfolio.png";
-const glowBeautyOilImg = "/assets/placeholder-portfolio.png";
-const faceOilLineImg = "/assets/placeholder-portfolio.png";
+const roseOilImg = "/assets/24b92cae45ca047c0ff92c7910f024424d35b8af.png";
+const beautyBalmImg = "/assets/c052f3bd2f769ab0407b7f223cf6f136a1ac4413.png";
+const roseBeautyOilImg = "/assets/e74b07e6aae925a2e3ccd3ec8bcba01971d9bc3c.png";
+const glowBeautyOilImg = "/assets/0e63128127e54a4abd518c21d5f3744adc480212.png";
+const faceOilLineImg = "/assets/85a36a7ad55f5acc16c3a8894ea9483780e2fd8f.png";
 
 const accent = "#c9553d";
 const warm = "#e8a77a";

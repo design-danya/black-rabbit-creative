@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 
-const oldLogo = "/assets/placeholder-portfolio.png";
-const badgeLogo = "/assets/placeholder-portfolio.png";
-const horizontalLogo = "/assets/placeholder-portfolio.png";
-const stackedLogo = "/assets/placeholder-portfolio.png";
-const lyreMark = "/assets/placeholder-portfolio.png";
-const typographyImg = "/assets/placeholder-portfolio.png";
-const workshopColorImg = "/assets/placeholder-portfolio.png";
+const oldLogo = "/assets/27c2293749cce214d7b669de432a539d6ffe15ac.png";
+const badgeLogo = "/assets/ce45cde349dc30f5f89c11e2c69e3ff0a5d834c7.png";
+const horizontalLogo = "/assets/38fb5f36cd00ed2b540bad89804222d6bcea6b2b.png";
+const stackedLogo = "/assets/4820e1d75fe987e7157cd2223d79b7c9b7281d35.png";
+const lyreMark = "/assets/6dde127992d64a2181b0474bcb1b6d564592d34e.png";
+const typographyImg = "/assets/63e8ec913872ed9549c13e545812c4fe1f448fdb.png";
+const workshopColorImg = "/assets/7f41d04f1b99f6a3bd6f86a9139fa0a10bd23315.png";
 
 const copper = "#C46A2C";
 const copperLight = "#D4943A";

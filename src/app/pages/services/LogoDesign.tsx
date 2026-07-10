@@ -4,17 +4,17 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
-const seatedRabbit = "/assets/placeholder-portfolio.png";
-const kapiloffLogo = "/assets/placeholder-portfolio.png";
-const hendricksLogo = "/assets/placeholder-portfolio.png";
-const novaLogo = "/assets/placeholder-portfolio.png";
-const wildMocktailsLogo = "/assets/placeholder-portfolio.png";
-const basicBalanceLogo = "/assets/placeholder-portfolio.png";
-const sequoiaLogo = "/assets/placeholder-portfolio.png";
-const calentonLogo = "/assets/placeholder-portfolio.png";
-const nyfbLogo = "/assets/placeholder-portfolio.png";
-const lobsterLabLogo = "/assets/placeholder-portfolio.png";
-const shamrockLogo = "/assets/placeholder-portfolio.png";
+const seatedRabbit = "/assets/fd0fa931e00acfa6c15863207bc0a21f97710af2.png";
+const kapiloffLogo = "/assets/dac533663b508268f043b4fa54db52f02c04b87c.png";
+const hendricksLogo = "/assets/f1c91b1c74eea1db011e92c7ccbc33ab4d2367e3.png";
+const novaLogo = "/assets/e312a94d37336f32774b6a79ae7fe18a0aa10c91.png";
+const wildMocktailsLogo = "/assets/685fa1794cb357a4dcf82c129c9189b4da1af472.png";
+const basicBalanceLogo = "/assets/700e6be5ebf8a0e2924550b263c23c2bf13325a0.png";
+const sequoiaLogo = "/assets/ee86d18b3d5cd3d334334dace81a750418f87f47.png";
+const calentonLogo = "/assets/df5caeefc604f30141dac9c5cfa2e7bfeccfa457.png";
+const nyfbLogo = "/assets/b9f2ef1f88bc1f9be9a6218d97ac0ffd61ac279a.png";
+const lobsterLabLogo = "/assets/9c86fcd1543696ac99e58187ed9599e5c1d65a16.png";
+const shamrockLogo = "/assets/47ebd0de1bd734fa7b804aaf2bbfd9feb5cabf05.png";
 import monadnockLogo from "../../../imports/MB_RGB_Primary_Mt_Troy_26.png";
 
 const logos = [

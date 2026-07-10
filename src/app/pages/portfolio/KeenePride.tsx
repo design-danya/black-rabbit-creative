@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-const heroGridImg = "/assets/placeholder-portfolio.png";
-const backViewImg = "/assets/placeholder-portfolio.png";
-const merchSpreadImg = "/assets/placeholder-portfolio.png";
+const heroGridImg = "/assets/396580bcc401079f5b721a978261ce44d3c42ac8.png";
+const backViewImg = "/assets/80d637756726e86dd3d855c41a7fac9b5da2473a.png";
+const merchSpreadImg = "/assets/11716b43cc8852e8433433118635b67a59086a0f.png";
 
 const meta = [
   { label: "Client", value: "Keene Pride Festival" },

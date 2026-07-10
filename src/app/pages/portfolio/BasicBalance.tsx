@@ -4,16 +4,16 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 
-const oldBrand = "/assets/placeholder-portfolio.png";
-const newBrand = "/assets/placeholder-portfolio.png";
-const mugPhoto = "/assets/placeholder-portfolio.png";
-const bagShirt = "/assets/placeholder-portfolio.png";
-const merch = "/assets/placeholder-portfolio.png";
-const logoSubmark = "/assets/placeholder-portfolio.png";
-const logoPrimary = "/assets/placeholder-portfolio.png";
-const logoMark = "/assets/placeholder-portfolio.png";
-const logoStacked = "/assets/placeholder-portfolio.png";
-const brandGuideImg = "/assets/placeholder-portfolio.png";
+const oldBrand = "/assets/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
+const newBrand = "/assets/07e21b8992ed9a132c8cb87fcf91998efa0ffcd2.png";
+const mugPhoto = "/assets/a7693f022ee5879ef7d16d96b2f78d24732a259a.png";
+const bagShirt = "/assets/eee6a8e31ec3bd5688b0e312029b898cf6c3bf94.png";
+const merch = "/assets/c2966b48a7c59fc377cbe7b0bbefc3111f13f42b.png";
+const logoSubmark = "/assets/f2a66ae8036ad8d4e8938c3620a12961e60482fb.png";
+const logoPrimary = "/assets/c56ab88a9e2119246ead203390b16fb2fe1bcf8c.png";
+const logoMark = "/assets/82a106d03e855da5bd9f4df627a0af53c90db2a0.png";
+const logoStacked = "/assets/ca2787ea4349c60c26d1e5c1d021aa5532e6695f.png";
+const brandGuideImg = "/assets/4c93da17e826f9e450715348030806205c246955.png";
 
 const plum  = "#7b5c80";
 const mauve = "#c9a5c1";

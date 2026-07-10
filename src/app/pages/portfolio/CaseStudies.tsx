@@ -5,19 +5,19 @@ import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Lobster Lab images
-const menuImg = "/assets/placeholder-portfolio.png";
-const labIllustrationImg = "/assets/placeholder-portfolio.png";
-const stackedBoxesImg = "/assets/placeholder-portfolio.png";
-const takeoutBoxesImg = "/assets/placeholder-portfolio.png";
-const hoodieImg = "/assets/placeholder-portfolio.png";
-const storefrontImg = "/assets/placeholder-portfolio.png";
+const menuImg = "/assets/03f18bfe8e04d5774abf120d1f3fad955b9c299e.png";
+const labIllustrationImg = "/assets/fd63c1b5d2868cff77ee9406126475825f091101.png";
+const stackedBoxesImg = "/assets/87a38a6b1dcd3ee33bf1c96210e6ff8045d52682.png";
+const takeoutBoxesImg = "/assets/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
+const hoodieImg = "/assets/3600427455a05045405b90350f411e3023b4f419.png";
+const storefrontImg = "/assets/c3a176e298012b00a8264eac6b76f36186b31b37.png";
 
 // Calentón images
-const calentonBrandSplitImg = "/assets/placeholder-portfolio.png";
-const calentonBottleImg = "/assets/placeholder-portfolio.png";
-const calentonPackageImg = "/assets/placeholder-portfolio.png";
-const calentonTVsImg = "/assets/placeholder-portfolio.png";
-const calentonMerchImg = "/assets/placeholder-portfolio.png";
+const calentonBrandSplitImg = "/assets/74ddf897dc27d3af21a310ff4b2955836fb1236e.png";
+const calentonBottleImg = "/assets/8905280fcbbe6472c87d966e62b2820dfb0a08b2.png";
+const calentonPackageImg = "/assets/771212747661ef21fb4fe98d1e6f64dbb222c7a9.png";
+const calentonTVsImg = "/assets/6cf0157453a99927daa1bb516060e69723795c3a.png";
+const calentonMerchImg = "/assets/bb18605de2d08ddbf9ab2c8fcc4762503b1226ae.png";
 
 const teal = "#2a9d8f";
 const red = "#c73e3a";

@@ -5,21 +5,21 @@ import { useSEO } from "../../components/useSEO";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-const studioImg = "/assets/placeholder-portfolio.png";
-const rabbitImg = "/assets/placeholder-portfolio.png";
-const touchpointImg = "/assets/placeholder-portfolio.png";
-const oldBrandImg = "/assets/placeholder-portfolio.png";
-const newBrandImg = "/assets/placeholder-portfolio.png";
-const lobsterLabImg = "/assets/placeholder-portfolio.png";
-const calentonImg = "/assets/placeholder-portfolio.png";
-const sequoiaImg = "/assets/placeholder-portfolio.png";
-const lobsterMenuImg = "/assets/placeholder-portfolio.png";
-const novaDermImg = "/assets/placeholder-portfolio.png";
-const basicBalanceMerchImg = "/assets/placeholder-portfolio.png";
-const kapiloffImg = "/assets/placeholder-portfolio.png";
-const monadnockImg = "/assets/placeholder-portfolio.png";
-const keenePrideImg = "/assets/placeholder-portfolio.png";
-const hitchhikersImg = "/assets/placeholder-portfolio.png";
+const studioImg = "/assets/0073d227197a2d11078c48ed4c9955c144069439.png";
+const rabbitImg = "/assets/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
+const touchpointImg = "/assets/5d310534f3e3a5364f6b09941e1e6a7aeb24ea11.png";
+const oldBrandImg = "/assets/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
+const newBrandImg = "/assets/7c9c343e0780d9aeaac6fe49e459502282429caf.png";
+const lobsterLabImg = "/assets/20f240a8ee30e1ccbb07e3d25224d0824577e939.png";
+const calentonImg = "/assets/9487f73cf6857228ca1812e6af644c8fb87f662f.png";
+const sequoiaImg = "/assets/8140257f03131aef1d3ebc0f25dc02ba7784ffe7.png";
+const lobsterMenuImg = "/assets/88b89e394c1863621a0969459d4a1c52d920d3bf.png";
+const novaDermImg = "/assets/1befc199b53a513fbd6cfef21325cdbc0d97cc67.png";
+const basicBalanceMerchImg = "/assets/eee6a8e31ec3bd5688b0e312029b898cf6c3bf94.png";
+const kapiloffImg = "/assets/7b601b39d3b58f9ece4134790020643744626ff9.png";
+const monadnockImg = "/assets/4b8738d331bc018580f6aaa5ce7d8a9b5beae07a.png";
+const keenePrideImg = "/assets/fa6880930640b741275a793c25b79c99740a3f75.png";
+const hitchhikersImg = "/assets/2e28a03bd8af5876ba80e7d159f0248755d29eef.png";
 
 const capabilities = [
   "Marketing and promotional materials",

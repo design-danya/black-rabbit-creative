@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 // Headshot — hosted externally // cache-bust-v2
 const danyaImg = "https://i.imgur.com/kUWmB0z.jpeg";
-const rabbitBoutiqueImg = "/assets/placeholder-portfolio.png";
+const rabbitBoutiqueImg = "/assets/3103fbe1b861323996fe5b068f0223584004cb92.png";
 
 const beliefs = [
   {
