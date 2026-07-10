@@ -264,7 +264,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                 <Link
-                  to="/work"
+                  href="/work"
                   className="group relative w-full sm:w-auto bg-white/5 backdrop-blur-xl border border-white/10 text-white px-8 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-white/10 hover:border-white/30 transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
                 >
                   <span className="relative z-10 flex items-center gap-3">
@@ -275,7 +275,7 @@ export default function Home() {
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </Link>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group relative w-full sm:w-auto bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 px-8 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-white/10 hover:text-white hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Get in Touch <ArrowUpRight size={12} />
@@ -334,7 +334,7 @@ export default function Home() {
                 for serious brands.
               </h2>
               <Link
-                to="/contact"
+                href="/contact"
                 className="group relative inline-flex items-center gap-3 bg-[#060606]/80 backdrop-blur-xl border border-black/10 text-white px-12 py-4 uppercase tracking-[0.3em] text-xs font-bold hover:bg-[#060606] hover:border-black/30 transition-all duration-500 overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.08)] hover:shadow-[0_0_30px_rgba(0,0,0,0.15)]"
               >
                 <span className="relative z-10">Enquire</span>
@@ -459,7 +459,7 @@ export default function Home() {
               </h2>
             </motion.div>
             <Link
-              to="/work"
+              href="/work"
               className="hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#5b3fd6] hover:text-white transition-colors"
             >
               View All <ArrowRight size={12} />
@@ -526,7 +526,7 @@ export default function Home() {
 
           <div className="md:hidden mt-12 text-center">
             <Link
-              to="/work"
+              href="/work"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] border-b border-white pb-1"
             >
               View All Projects <ArrowRight size={12} />
