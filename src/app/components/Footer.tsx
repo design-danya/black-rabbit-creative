@@ -3,7 +3,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-import rabbitLogo from "@/public/assets/footer-logo.png";
+import rabbitLogo from "/public/assets/footer-logo.png";
 
 const socials = [
   { name: "Instagram", href: "https://www.instagram.com/black.rabbit.creative" },

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
-import rabbitLogo from '@/public/assets/navbar-logo.png'
+import rabbitLogo from '/public/assets/navbar-logo.png'
 
 const links = [
   { name: "Work", path: "/work" },
