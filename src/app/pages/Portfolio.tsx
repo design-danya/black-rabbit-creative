@@ -270,7 +270,7 @@ function ProjectCardInner({ project }: { project: typeof projects[number] }) {
 
       {/* Image — greyscale → colour */}
       <ImageWithFallback
-        src={project.image}
+        src={typeof project.image === "string" ? project.image : project.image.src}
         alt={`${project.title} — portfolio project by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
         className={`absolute transition-all duration-700 ${
           isLight
