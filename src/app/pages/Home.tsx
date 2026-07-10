@@ -479,7 +479,7 @@ export default function Home() {
                 <Link href={project.href ?? "/work"} className="group block relative overflow-hidden aspect-square">
                   {/* Image — greyscale → colour */}
                   <ImageWithFallback
-                    src={project.image}
+                    src={typeof project.image === "string" ? project.image : project.image.src}
                     alt={`${project.title} — portfolio project by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     width={600}
