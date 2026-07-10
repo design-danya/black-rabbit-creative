@@ -182,7 +182,7 @@ export default function BreweryBranding() {
                   className="group block relative overflow-hidden aspect-[4/3]"
                 >
                   <ImageWithFallback
-                    src={typeof project.image === "string" ? project.image : project.image.src}
+                    src={project.image}
                     alt={`${project.title} — craft beer branding by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
