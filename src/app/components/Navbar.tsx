@@ -141,7 +141,7 @@ export function Navbar() {
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center group" onClick={close}>
           <img
-            src={rabbitLogo}
+            src={rabbitLogo.src}
             alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
             className={`h-10 md:h-12 w-auto transition-all duration-500 ease-out group-hover:scale-105 ${
               isDark ? "invert" : ""
