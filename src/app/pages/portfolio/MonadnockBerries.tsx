@@ -746,7 +746,7 @@ export default function MonadnockBerries() {
             <div className="lg:col-span-7">
               <div className="bg-[#EBE6DE] rounded-sm p-6 md:p-10 flex items-center justify-center">
                 <img
-                  src={originalBannerLogo}
+                  src={originalBannerLogo.src}
                   alt="Original 1990s Monadnock Berries logo — painted farm scene with hand-lettered text | Before the rebrand by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="max-w-full h-auto"
                 />
