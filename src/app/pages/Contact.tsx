@@ -27,43 +27,6 @@ function JotForm() {
   return <div ref={containerRef} />;
 }
 
-function useReviewsWidget() {
-  useEffect(() => {
-    function getPageSizeForWidth(width: number) {
-      if (width < 450) return 1;
-      if (width < 675) return 2;
-      if (width < 918) return 3;
-      if (width < 1144) return 4;
-      return 5;
-    }
-
-    function setIframeSrc() {
-      const iframe = document.getElementById("reviewsWidget") as HTMLIFrameElement | null;
-      const container = document.getElementById("reviewsWidgetContainer");
-      if (!iframe || !container) {
-        setTimeout(setIframeSrc, 50);
-        return;
-      }
-      const width = container.offsetWidth;
-      if (width === 0) {
-        setTimeout(setIframeSrc, 50);
-        return;
-      }
-      const pageSize = getPageSizeForWidth(width);
-      const expectedSrc =
-        "https://www.localmarketingmanager.com/api/reviews/black-rabbit-creative-review-widget?pageSize=" + pageSize;
-      if (iframe.src !== expectedSrc) {
-        iframe.src = expectedSrc;
-      }
-    }
-
-    setIframeSrc();
-    setTimeout(setIframeSrc, 50);
-    window.addEventListener("resize", setIframeSrc);
-    return () => window.removeEventListener("resize", setIframeSrc);
-  }, []);
-}
-
 function MoxieBooking() {
   const didInit = useRef(false);
 
@@ -136,7 +99,6 @@ export default function Contact() {
     description: "Get in touch with Black Rabbit Creative — a brand identity, logo design, graphic design, and packaging design studio in Portsmouth, New Hampshire. Request a quote for branding, packaging, or visual identity projects for product-based businesses.",
     canonical: "/contact",
   });
-  useReviewsWidget();
   return (
     <div className="bg-white min-h-screen pt-28 pb-16 px-6">
       <div className="max-w-3xl w-full mx-auto">
@@ -209,12 +171,27 @@ export default function Contact() {
           <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#5b3fd6] mb-6">
             Reviews
           </h3>
-          <div id="reviewsWidgetContainer">
-            <iframe
-              id="reviewsWidget"
-              style={{ width: "100%", border: "none", minHeight: "300px" }}
-              title="Reviews Widget"
-            />
+          <div className="border border-black/10 bg-[#f7f7f5] p-6 md:p-8">
+            <div className="flex items-center gap-1 text-[#f4b400] text-xl mb-4" aria-label="5 star reviews">
+              ★★★★★
+            </div>
+
+            <p className="text-lg md:text-xl font-semibold leading-relaxed text-black mb-3">
+              Worked with Black Rabbit Creative?
+            </p>
+
+            <p className="text-sm md:text-base text-black/60 leading-relaxed mb-6 max-w-xl">
+              Your feedback helps future clients feel confident choosing a creative partner.
+            </p>
+
+            <a
+              href="https://g.page/r/CVgPQVm1INAxEAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#5b3fd6] hover:bg-[#4a32b8] px-6 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white transition-colors"
+            >
+              Leave a Google Review
+            </a>
           </div>
         </motion.div>
 
