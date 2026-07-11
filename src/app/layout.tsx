@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Script from 'next/script'
@@ -112,6 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <ClientShell>{children}</ClientShell>
+              <Analytics />
       </body>
     </html>
   )
