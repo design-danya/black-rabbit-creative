@@ -96,7 +96,7 @@ export function Footer() {
             <img
               src={rabbitLogo}
               alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
-              className="h-10 w-auto invert opacity-70 mb-6"
+              className="h-10 w-auto mb-6"
               width={120}
               height={40}
               loading="lazy"
