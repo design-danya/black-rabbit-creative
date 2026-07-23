@@ -63,6 +63,8 @@ export function Navbar() {
     <div>
       <button
         onClick={toggleFn}
+        aria-expanded={expanded}
+        aria-controls={`submenu-${label.toLowerCase()}`}
         className={`w-full flex items-center justify-between py-3 text-2xl font-black uppercase tracking-[0.07em] transition-colors ${
           isActive ? "text-[#5b3fd6]" : "text-white/50 hover:text-white"
         }`}
@@ -79,6 +81,7 @@ export function Navbar() {
       <AnimatePresence initial={false}>
         {expanded && (
           <motion.div
+            id={`submenu-${label.toLowerCase()}`}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -161,7 +164,9 @@ export function Navbar() {
               : "text-black bg-black/5 border-black/5 hover:bg-black/10"
           }`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+          aria-controls="site-menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -183,6 +188,7 @@ export function Navbar() {
 
             {/* Drawer panel */}
             <motion.div
+              id="site-menu"
               className="fixed top-0 right-0 h-full z-[106] bg-[#060606] w-72 flex flex-col pt-24 pb-12 px-10 border-l border-white/8 overflow-y-auto"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}

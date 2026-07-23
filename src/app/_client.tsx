@@ -27,8 +27,17 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
         style={{ backgroundImage: `url("${NOISE_SVG}")` }}
       />
 
+      {/* First focusable element on every page, so keyboard users can jump the
+          nav instead of tabbing through it on every navigation (WCAG 2.4.1). */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-black focus:text-white focus:px-5 focus:py-3 focus:text-xs focus:uppercase focus:tracking-[0.2em] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      >
+        Skip to content
+      </a>
+
       <Navbar />
-      <main className="flex-grow w-full relative z-0">
+      <main id="main-content" tabIndex={-1} className="flex-grow w-full relative z-0">
         {children}
       </main>
       <Footer />

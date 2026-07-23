@@ -44,9 +44,17 @@ function ConstantContactForm() {
       {/* Fallback visible in preview / when script is blocked */}
       {!loaded && (
         <div className="flex flex-col sm:flex-row gap-3 max-w-xl">
+          {/* The placeholder is not an accessible name — it vanishes on input
+              and screen readers treat it inconsistently. Real label, hidden. */}
+          <label htmlFor="newsletter-email" className="sr-only">
+            Email address
+          </label>
           <input
+            id="newsletter-email"
+            name="email"
             type="email"
-            placeholder="Your email address"
+            autoComplete="email"
+            placeholder="you@company.com"
             className="flex-1 bg-white/5 border border-white/15 px-5 py-3 text-sm text-white placeholder-gray-500 outline-none focus:border-[#5b3fd6] transition-colors"
           />
           <button className="group inline-flex items-center justify-center gap-2 bg-[#5b3fd6] hover:bg-[#4a32b8] px-7 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300 whitespace-nowrap">
