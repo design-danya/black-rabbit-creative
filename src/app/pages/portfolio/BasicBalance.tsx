@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 
 const oldBrand = "/assets/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
@@ -297,8 +298,11 @@ export default function BasicBalance() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="rounded-lg overflow-hidden"
           >
-            <img
+            <Image
               src={brandGuideImg}
+              width={1920}
+              height={2879}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Basic Balance Acupuncture brand guideline sheet — logo suite, colour palette, brand assets, brand fonts, and real-world applications | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-auto object-contain"
             />
@@ -340,8 +344,11 @@ export default function BasicBalance() {
               className="relative overflow-hidden flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)", backgroundColor: "#0f0a10" }}
             >
-              <img
+              <Image
                 src={merch}
+                width={2000}
+                height={2000}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Basic Balance branded t-shirt and water bottle — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-full object-contain"
               />
@@ -363,8 +370,11 @@ export default function BasicBalance() {
               className="relative overflow-hidden flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)", backgroundColor: "#0f0a10" }}
             >
-              <img
+              <Image
                 src={bagShirt}
+                width={2048}
+                height={2048}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Basic Balance branded tote bag and cherry blossom t-shirt — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-full object-contain"
               />
@@ -386,8 +396,11 @@ export default function BasicBalance() {
               className="relative overflow-hidden flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)", backgroundColor: "#0f0a10" }}
             >
-              <img
+              <Image
                 src={mugPhoto}
+                width={2000}
+                height={2000}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Basic Balance branded mug with stacked stones — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-full object-contain"
               />

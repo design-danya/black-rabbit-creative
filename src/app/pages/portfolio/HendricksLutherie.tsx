@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 
@@ -348,8 +349,11 @@ export default function HendricksLutherie() {
                 Before
               </span>
               <div className="flex-1 flex items-center justify-center w-full">
-                <img
+                <Image
                   src={oldLogo}
+                  width={1401}
+                  height={1551}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Hendrick's Lutherie original guitar pick logo before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="max-w-[200px] w-full h-auto object-contain opacity-70"
                 />
@@ -375,8 +379,11 @@ export default function HendricksLutherie() {
                 After
               </span>
               <div className="flex-1 flex items-center justify-center w-full">
-                <img
+                <Image
                   src={badgeLogo}
+                  width={1821}
+                  height={1766}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Hendrick's Lutherie new heritage circle badge logo — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="max-w-[240px] w-full h-auto object-contain"
                 />
@@ -557,8 +564,11 @@ export default function HendricksLutherie() {
             transition={{ duration: 0.7 }}
             className="bg-white overflow-hidden"
           >
-            <img
+            <Image
               src={typographyImg}
+              width={1224}
+              height={642}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Hendrick's Lutherie typography system — primary font ELLERY with brand name treatment and craftsmanship-inspired lettering | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-auto object-contain"
             />
@@ -612,8 +622,11 @@ export default function HendricksLutherie() {
             transition={{ duration: 0.7 }}
             className="overflow-hidden mb-8"
           >
-            <img
+            <Image
               src={workshopColorImg}
+              width={3986}
+              height={1904}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Authentic lutherie workspace showing guitar parts, wooden surfaces, tools, and materials that inspired the warm brand color palette | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-auto object-cover"
             />

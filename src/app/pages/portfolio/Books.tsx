@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -127,8 +128,11 @@ export default function Books() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img
+            <Image
               src={hitchhikersOriginalImg}
+              width={1920}
+              height={1440}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="The Hitchhiker's Guide to the Galaxy — original 1979 Pocket Books cover | Book cover analysis by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full max-w-xs mx-auto lg:max-w-none object-contain"
             />
@@ -193,8 +197,11 @@ export default function Books() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img
+            <Image
               src={hitchhikersRedesignImg}
+              width={1920}
+              height={1440}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="The Hitchhiker's Guide to the Galaxy — redesigned cover with mechanical robot hand and bold orange typography | Book cover design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full max-w-xs mx-auto lg:max-w-none object-contain"
             />
@@ -211,8 +218,11 @@ export default function Books() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img
+          <Image
             src={hitchhikersBothImg}
+            width={1920}
+            height={1440}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
             alt="Side-by-side 3D mockup comparing original and redesigned Hitchhiker's Guide book covers | Book design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
             className="w-full max-w-2xl mx-auto object-contain"
           />
@@ -452,8 +462,11 @@ export default function Books() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <img
+            <Image
               src={watercolorDreamImg}
+              width={1536}
+              height={1024}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="The Watercolor Dream Book by Bill Whyte — printed book with watercolor artwork on cover | Book design support by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full max-w-sm mx-auto lg:max-w-none object-contain"
             />

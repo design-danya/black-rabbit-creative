@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ArrowDown } from "lucide-react";
@@ -152,8 +153,11 @@ export default function Kapiloff() {
                   className="bg-white rounded-sm flex items-center justify-center p-4"
                   style={{ width: "min(380px, 55%)" }}
                 >
-                  <img
+                  <Image
                     src={oldLogoFull}
+                    width={630}
+                    height={193}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                     alt="Original Kapiloff Insurance logo before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                     className="object-contain w-full h-auto"
                   />
@@ -166,8 +170,11 @@ export default function Kapiloff() {
                   className="bg-white rounded-sm flex items-center justify-center p-4"
                   style={{ width: "min(130px, 22%)", aspectRatio: "1" }}
                 >
-                  <img
+                  <Image
                     src={oldLogoMark}
+                    width={271}
+                    height={273}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                     alt="Original Kapiloff Insurance K mark before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                     className="object-contain w-full h-full"
                   />
@@ -229,8 +236,11 @@ export default function Kapiloff() {
                   className="bg-white rounded-sm flex items-center justify-center p-4"
                   style={{ width: "min(380px, 55%)" }}
                 >
-                  <img
+                  <Image
                     src={newLogoFull}
+                    width={900}
+                    height={220}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                     alt="New Kapiloff Insurance Solutions wordmark — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                     className="object-contain w-full h-auto"
                   />
@@ -243,8 +253,11 @@ export default function Kapiloff() {
                   className="bg-white rounded-sm flex items-center justify-center p-4"
                   style={{ width: "min(130px, 22%)", aspectRatio: "1" }}
                 >
-                  <img
+                  <Image
                     src={newLogoMark}
+                    width={339}
+                    height={329}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                     alt="New Kapiloff Insurance K monogram mark — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                     className="object-contain w-full h-full"
                   />
@@ -428,7 +441,7 @@ export default function Kapiloff() {
               className="relative overflow-hidden bg-[#060606] flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)" }}
             >
-              <img src={signPhoto} alt="Kapiloff Insurance Solutions outdoor LED pylon sign — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+              <Image src={signPhoto} width={840} height={1120} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance Solutions outdoor LED pylon sign — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
             </div>
             <div className="py-4 text-center">
               <p className="text-[9px] uppercase tracking-[0.35em] mb-1" style={{ color: blueLight }}>Environmental</p>
@@ -447,7 +460,7 @@ export default function Kapiloff() {
               className="relative overflow-hidden bg-[#060606] flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)" }}
             >
-              <img src={mapsGalaAd} alt="Kapiloff Insurance MAPS Gala sponsorship ad — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+              <Image src={mapsGalaAd} width={1725} height={2664} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance MAPS Gala sponsorship ad — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
             </div>
             <div className="py-4 text-center">
               <p className="text-[9px] uppercase tracking-[0.35em] mb-1" style={{ color: blueLight }}>Digital / Print</p>

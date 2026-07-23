@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -179,8 +180,11 @@ export default function CheshireMuseum() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <img
+            <Image
               src={brandOverviewImg}
+              width={1920}
+              height={8549}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Cheshire Children's Museum brand solidification overview — social media, website, and content strategy | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full object-contain"
             />
@@ -287,8 +291,11 @@ export default function CheshireMuseum() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15 }}
             >
-              <img
+              <Image
                 src={shamrockImg}
+                width={1920}
+                height={6161}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Shamrock Shuffle fundraiser — logo, ads, rack cards, banners, flyers, and donor letters | Event marketing by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-contain"
               />

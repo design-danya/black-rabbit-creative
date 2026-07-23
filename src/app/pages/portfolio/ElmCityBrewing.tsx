@@ -13,6 +13,7 @@ const whiteTeeImg = "/assets/c263200ce30e37d53f5ff6db026a4e526913d414.png";
 const greenTeeImg = "/assets/01f861e418bf778bb42369a4719c8d450abd3c07.png";
 const blackTeeImg = "/assets/e7a5c9433856757800295d1d2105caab3566ea9c.png";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -184,8 +185,11 @@ export default function ElmCityBrewing() {
 
       {/* ── Brand Banner Strip ── */}
       <section className="w-full overflow-hidden">
-        <img
+        <Image
           src={bannerImg}
+          width={15742}
+          height={2217}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
           alt="Elm City Brewing — brand overview strip | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
           className="w-full object-cover"
         />
@@ -234,8 +238,11 @@ export default function ElmCityBrewing() {
               </p>
             </div>
             <div className="md:col-span-8">
-              <img
+              <Image
                 src={sketchesImg}
+                width={5712}
+                height={4284}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Early logo sketches and concept explorations for Elm City Brewing | Logo design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full rounded-sm object-cover rotate-180"
               />
@@ -254,8 +261,11 @@ export default function ElmCityBrewing() {
             className="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 mb-3"
           >
             <div className="md:col-span-8 md:order-1 order-2">
-              <img
+              <Image
                 src={logoEvolutionImg}
+                width={2250}
+                height={1320}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Logo evolution — original vs simplified Elm City Brewing identity | Redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full rounded-sm object-cover"
               />
@@ -294,8 +304,11 @@ export default function ElmCityBrewing() {
               </p>
             </div>
             <div className="md:col-span-8">
-              <img
+              <Image
                 src={burgerBoxImg}
+                width={1416}
+                height={968}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Elm City Brewing branded burger box | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full rounded-sm object-contain max-h-[400px]"
               />
@@ -341,26 +354,28 @@ export default function ElmCityBrewing() {
 
           {/* Slide display — all slides stacked & preloaded for snappy cross-fades */}
           <div className="relative w-full overflow-hidden rounded-sm bg-[#1F2010]/60 select-none">
-            {/* Sizer: first slide sets aspect ratio so the box doesn't jump */}
-            <img
-              src={brandSlides[0].src}
-              alt=""
-              aria-hidden="true"
-              className="w-full block invisible"
-            />
+            {/* Sizer: first slide's aspect ratio holds the box open. Rendered
+                as a padding box rather than a second copy of the image so the
+                slide is not downloaded twice. 4000x2250 = 16:9. */}
+            <div className="w-full aspect-[16/9]" aria-hidden="true" />
             {brandSlides.map((slide, i) => (
-              <motion.img
+              <motion.div
                 key={i}
-                src={slide.src}
-                alt={slide.alt}
-                draggable={false}
-                loading={i === 0 ? "eager" : "lazy"}
-                decoding="async"
                 animate={{ opacity: i === currentSlide ? 1 : 0 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 style={{ pointerEvents: i === currentSlide ? "auto" : "none" }}
-                className="absolute inset-0 w-full h-full object-cover rounded-sm"
-              />
+                className="absolute inset-0"
+              >
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  draggable={false}
+                  priority={i === 0}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+                  className="object-cover rounded-sm"
+                />
+              </motion.div>
             ))}
 
             {/* Arrow overlays */}
@@ -444,7 +459,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-7 overflow-hidden rounded-sm"
             >
-              <img src={mugsImg} alt="Elm City Brewing branded mugs | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={mugsImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded mugs | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -453,7 +468,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-5 overflow-hidden rounded-sm"
             >
-              <img src={blackTeeImg} alt="Elm City Brewing black t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={blackTeeImg} width={2880} height={3600} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing black t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -466,7 +481,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-5 overflow-hidden rounded-sm"
             >
-              <img src={greenTeeImg} alt="Elm City Brewing green t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={greenTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing green t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -475,7 +490,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-7 overflow-hidden rounded-sm"
             >
-              <img src={wallSignImg} alt="Elm City Brewing wall sign in Keene NH | Environmental design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={wallSignImg} width={1024} height={1024} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing wall sign in Keene NH | Environmental design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -488,7 +503,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="overflow-hidden rounded-sm"
             >
-              <img src={pintGlassesImg} alt="Elm City Brewing branded pint glasses | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={pintGlassesImg} width={1200} height={800} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded pint glasses | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -497,7 +512,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="overflow-hidden rounded-sm"
             >
-              <img src={toteBagImg} alt="Elm City Brewing tote bag — Drink Like a Local | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={toteBagImg} width={3072} height={3072} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing tote bag — Drink Like a Local | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -506,7 +521,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="overflow-hidden rounded-sm"
             >
-              <img src={whiteTeeImg} alt="Elm City Brewing white t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={whiteTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing white t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -519,7 +534,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-8 overflow-hidden rounded-sm"
             >
-              <img src={coastersImg} alt="Elm City Brewing branded coasters | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={coastersImg} width={3500} height={2500} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded coasters | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -528,7 +543,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-4 overflow-hidden rounded-sm"
             >
-              <img src={menuImg} alt="Elm City Brewing menu design | Print design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={menuImg} width={3000} height={2200} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing menu design | Print design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 

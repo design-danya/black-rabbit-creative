@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, Award } from "lucide-react";
@@ -149,8 +150,11 @@ export default function GraniteRoots() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <img
+            <Image
               src={backImg}
+              width={1200}
+              height={800}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Granite Roots Brewing Cheshire Czech Lager — back panel detail | Packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full object-cover"
             />
@@ -222,14 +226,20 @@ export default function GraniteRoots() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="space-y-4"
             >
-              <img
+              <Image
                 src={fullLabelImg}
+                width={1200}
+                height={754}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Granite Roots Brewing full wraparound label illustration — Czech village and Troy NH train station | Illustrated by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-contain"
               />
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={trainStationImg}
+                  width={603}
+                  height={422}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Troy, NH Train Station — original photo reference for Granite Roots label illustration | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full object-cover"
                 />

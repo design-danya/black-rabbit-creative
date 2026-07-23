@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -157,15 +158,21 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             <div className="relative overflow-hidden bg-[#2a1854]">
-              <img
+              <Image
                 src={businessCardImg}
+                width={1440}
+                height={1029}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Sequoia Sex Toys business cards — front and back with jackalope logo and botanical illustrations | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-contain"
               />
             </div>
             <div className="relative overflow-hidden bg-[#2a1854] mt-4">
-              <img
+              <Image
                 src={stationeryImg}
+                width={1440}
+                height={1029}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Sequoia Sex Toys complete stationery suite — letterhead, business cards, and envelopes | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-contain"
               />
@@ -282,7 +289,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.6 }}
             >
               <div className="bg-[#060606] aspect-square flex items-center justify-center p-10 md:p-14">
-                <img src={logoDarkImg} alt="Sequoia Sex Toys logo reversed on black — jackalope crest mark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={logoDarkImg} width={1440} height={1393} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys logo reversed on black — jackalope crest mark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8 pr-4">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Reversed — Dark</p>
@@ -296,7 +303,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.6, delay: 0.08 }}
             >
               <div className="bg-white border border-[#060606]/8 aspect-square flex items-center justify-center p-10 md:p-14">
-                <img src={logoLightImg} alt="Sequoia Sex Toys logo standard on white — jackalope crest with terracotta wordmark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={logoLightImg} width={1440} height={1394} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys logo standard on white — jackalope crest with terracotta wordmark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8 pl-4">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Standard — Light</p>
@@ -390,7 +397,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.7 }}
           >
             <div className="overflow-hidden bg-[#f5f3f0]">
-              <img src={letterheadImg} alt="Sequoia Sex Toys branded letterhead spread with botanical border illustrations | Stationery design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
+              <Image src={letterheadImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded letterhead spread with botanical border illustrations | Stationery design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Letterhead</p>
@@ -407,7 +414,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#2a1854] aspect-[4/3] flex items-center justify-center p-6">
-                <img src={envelopeImg} alt="Sequoia Sex Toys branded envelopes with jackalope mark and fruit-motif liner | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={envelopeImg} width={1440} height={1028} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded envelopes with jackalope mark and fruit-motif liner | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Envelope System</p>
@@ -421,7 +428,7 @@ export default function SequoiaSexToys() {
               transition={{ delay: 0.08, duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#2a1854] aspect-[4/3] flex items-center justify-center p-6">
-                <img src={thankYouCardsImg} alt="Sequoia Sex Toys illustrated thank-you insert cards with cheeky fruit messaging | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={thankYouCardsImg} width={2048} height={1463} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys illustrated thank-you insert cards with cheeky fruit messaging | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Thank-You Cards</p>
@@ -470,7 +477,7 @@ export default function SequoiaSexToys() {
             className="mb-8"
           >
             <div className="overflow-hidden bg-[#3d2a5e]">
-              <img src={peachBoxImg} alt="Sequoia Sex Toys 'For Your Peach' illustrated gift box with custom tissue paper | Packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
+              <Image src={peachBoxImg} width={2048} height={1424} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys 'For Your Peach' illustrated gift box with custom tissue paper | Packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Gift Box System</p>
@@ -487,7 +494,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#4a2d7a] aspect-[4/3] flex items-center justify-center p-5">
-                <img src={floralBoxImg} alt="Sequoia Sex Toys botanical wrap and gift box with gold jackalope seal | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={floralBoxImg} width={2048} height={1152} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys botanical wrap and gift box with gold jackalope seal | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Botanical Wrap & Box</p>
@@ -501,7 +508,7 @@ export default function SequoiaSexToys() {
               transition={{ delay: 0.08, duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#4a2d7a] aspect-[4/3] flex items-center justify-center p-5">
-                <img src={stickerTapeImg} alt="Sequoia Sex Toys branded sticker tape with repeating jackalope logo | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={stickerTapeImg} width={2048} height={1503} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded sticker tape with repeating jackalope logo | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Sticker Tape</p>
@@ -518,7 +525,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.7 }}
           >
             <div className="overflow-hidden bg-[#2a1854]">
-              <img src={lubricantBoxImg} alt="Sequoia Sex Toys lubricant packaging with illustrated mermaid and sea dragon artwork | Product packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
+              <Image src={lubricantBoxImg} width={2048} height={1366} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys lubricant packaging with illustrated mermaid and sea dragon artwork | Product packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Lubricant Packaging</p>
@@ -565,8 +572,11 @@ export default function SequoiaSexToys() {
             className="mb-8"
           >
             <div className="overflow-hidden bg-[#2a1854]">
-              <img
+              <Image
                 src={swagImg}
+                width={1177}
+                height={655}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Sequoia Sex Toys branded apparel — crop tops, hoodies, underwear, and t-shirts featuring jackalope logo, fruit pattern, and botanical designs | Merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-cover"
               />
@@ -586,7 +596,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#2a1854] aspect-square flex items-center justify-center p-8">
-                <img src={condomPacketsImg} alt="Sequoia Sex Toys branded condom packets with jackalope and fruit-pattern designs | Promotional merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={condomPacketsImg} width={2048} height={1503} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded condom packets with jackalope and fruit-pattern designs | Promotional merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Condom Packets</p>
@@ -600,7 +610,7 @@ export default function SequoiaSexToys() {
               transition={{ delay: 0.08, duration: 0.6 }}
             >
               <div className="overflow-hidden bg-[#2a1854] aspect-square flex items-center justify-center p-5">
-                <img src={waterBottlesImg} alt="Sequoia Sex Toys branded water bottles with fruit and botanical patterns | Merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+                <Image src={waterBottlesImg} width={644} height={489} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded water bottles with fruit and botanical patterns | Merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Water Bottles</p>
@@ -654,7 +664,7 @@ export default function SequoiaSexToys() {
                   background: "radial-gradient(ellipse at 30% 50%, #d4547a 0%, #e8768e 30%, #d4547a 60%, #c24a6e 100%)",
                 }}
               >
-                <img src={websiteDesignImg} alt="Sequoia Sex Toys responsive e-commerce website — desktop, laptop, tablet, and mobile views | Web design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
+                <Image src={websiteDesignImg} width={1120} height={578} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys responsive e-commerce website — desktop, laptop, tablet, and mobile views | Web design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
               </div>
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
@@ -749,7 +759,7 @@ export default function SequoiaSexToys() {
             className="mb-8"
           >
             <div className="overflow-hidden bg-[#0a0a0a]">
-              <img src={socialImg} alt="Sequoia Sex Toys Twitter/X profiles in light and dark mode with illustrated eggplant header | Social media design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
+              <Image src={socialImg} width={1440} height={1028} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Twitter/X profiles in light and dark mode with illustrated eggplant header | Social media design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Twitter / X Profiles</p>
@@ -766,7 +776,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.7 }}
             >
               <div className="overflow-hidden bg-[#f0f2f5] aspect-[4/3] flex items-center justify-center">
-                <img src={facebookImg} alt="Sequoia Sex Toys Facebook business page with branded cover photo and curated posts | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-cover" />
+                <Image src={facebookImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Facebook business page with branded cover photo and curated posts | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-cover" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Facebook Business Page</p>
@@ -781,7 +791,7 @@ export default function SequoiaSexToys() {
               transition={{ duration: 0.7, delay: 0.08 }}
             >
               <div className="overflow-hidden bg-[#2a1854] aspect-[4/3] flex items-center justify-center py-4 px-5">
-                <img src={instagramImg} alt="Sequoia Sex Toys Instagram profile with curated grid and consistent visual identity | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="max-h-full w-auto object-contain" />
+                <Image src={instagramImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Instagram profile with curated grid and consistent visual identity | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="max-h-full w-auto object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Instagram Profile</p>

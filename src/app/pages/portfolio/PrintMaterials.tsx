@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -148,8 +149,11 @@ export default function PrintMaterials() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img
+          <Image
             src={printPosterImg}
+            width={2800}
+            height={1667}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
             alt="DJ Chris Hamilton 'Get Down' event poster — bold illustrated promotional poster for Madame Sherri's, Keene NH | Graphic design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
             className="w-full object-cover"
           />
@@ -199,8 +203,11 @@ export default function PrintMaterials() {
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             <div className="relative overflow-hidden bg-[#0a0a0a]">
-              <img
+              <Image
                 src={pridePosterImg}
+                width={2048}
+                height={2048}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Keene Pride Prom After Party '2099' — futuristic neon-illustrated event poster | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full object-contain"
               />
@@ -240,8 +247,11 @@ export default function PrintMaterials() {
               transition={{ duration: 0.6 }}
             >
               <div className="relative overflow-hidden bg-[#f5f3f0] aspect-[4/5]">
-                <img
+                <Image
                   src={printSignageImg}
+                  width={840}
+                  height={1120}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Kapiloff Insurance Solutions — outdoor LED pylon sign | Sign design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-cover"
                 />
@@ -259,8 +269,11 @@ export default function PrintMaterials() {
               transition={{ delay: 0.1, duration: 0.6 }}
             >
               <div className="relative overflow-hidden bg-[#f5f3f0] aspect-[4/5]">
-                <img
+                <Image
                   src={labyrinthSignImg}
+                  width={1800}
+                  height={2046}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="The Monadnock Labyrinth — interpretive signage panel | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-cover"
                 />
@@ -306,8 +319,11 @@ export default function PrintMaterials() {
               transition={{ duration: 0.8 }}
             >
               <div className="relative overflow-hidden bg-[#f5f3f0] aspect-[4/5] flex items-center justify-center p-6">
-                <img
+                <Image
                   src={printBannerImg}
+                  width={4032}
+                  height={3024}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="City of Keene Coming Events board — Shamrock Shuffle 5K banner | Event marketing by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-contain"
                 />
@@ -326,8 +342,11 @@ export default function PrintMaterials() {
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <div className="relative overflow-hidden bg-[#f5f3f0] aspect-[4/5] flex items-center justify-center p-6">
-                <img
+                <Image
                   src={shamrockTeeImg}
+                  width={1620}
+                  height={1620}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Cheshire Children's Museum Shamrock 5K & Family Day — custom illustrated t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-contain"
                 />
@@ -475,8 +494,11 @@ export default function PrintMaterials() {
               transition={{ duration: 0.6 }}
             >
               <div className="relative overflow-hidden bg-[#111] aspect-[3/4] flex items-center justify-center p-6">
-                <img
+                <Image
                   src={danyaOsFrontImg}
+                  width={1200}
+                  height={1800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Danya-O's Creative Crunch cereal box front — retro pop-art illustrated self-promotion piece | Illustration by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-contain"
                 />
@@ -494,8 +516,11 @@ export default function PrintMaterials() {
               transition={{ delay: 0.1, duration: 0.6 }}
             >
               <div className="relative overflow-hidden bg-[#111] aspect-[3/4] flex items-center justify-center p-6">
-                <img
+                <Image
                   src={danyaOsBackImg}
+                  width={1200}
+                  height={1800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                   alt="Danya-O's Creative Crunch cereal box back — Design Nutrition panel with brand strategy breakdown | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="w-full h-full object-contain"
                 />

@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 
 const brandBoardImg = "/assets/da5b6063e3f263dd4a30d4ca74ba3eb8a74be11c.png";
@@ -283,8 +284,11 @@ export default function NovaDerm() {
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             <div className="relative overflow-hidden">
-              <img
+              <Image
                 src={drPortrait}
+                width={1200}
+                height={1200}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Dr. Marina Jungwirth with Nova Dermatology Specialists signage — brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-auto object-cover"
                 style={{ aspectRatio: "1/1" }}
@@ -332,8 +336,11 @@ export default function NovaDerm() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="overflow-hidden"
           >
-            <img
+            <Image
               src={brandBoardImg}
+              width={1920}
+              height={2781}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               alt="Nova Dermatology brand board — logo suite, color palette, typography, merchandise mockups | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-auto object-contain"
             />
@@ -558,8 +565,11 @@ export default function NovaDerm() {
               className="relative overflow-hidden w-full"
               style={{ aspectRatio: "1/1" }}
             >
-              <img
+              <Image
                 src={lobbyImg}
+                width={1179}
+                height={1179}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Nova Dermatology reception area with branded signage — environmental design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-full object-cover"
               />
@@ -592,8 +602,11 @@ export default function NovaDerm() {
               className="relative overflow-hidden w-full"
               style={{ aspectRatio: "1/1" }}
             >
-              <img
+              <Image
                 src={drWide}
+                width={1179}
+                height={1179}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
                 alt="Dr. Marina Jungwirth with Nova Dermatology branded wall signage — brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                 className="w-full h-full object-cover"
               />
