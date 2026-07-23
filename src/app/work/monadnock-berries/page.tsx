@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import MonadnockBerries from '../../pages/portfolio/MonadnockBerries'
 
 export const metadata: Metadata = {
-  title: 'Monadnock Berries — Logo Identity Case Study | Black Rabbit Creative',
-  description: 'A heritage-driven logo system for a New Hampshire berry farm.',
+  title: 'Monadnock Berries — Logo Identity Case Study',
+  description: "A heritage-driven logo and identity system for Monadnock Berries, a New Hampshire berry farm — mark, palette, and packaging rooted in the land it grew from.",
   alternates: {
     canonical: '/work/monadnock-berries',
   },

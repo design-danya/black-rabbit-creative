@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import SequoiaSexToys from '../../pages/portfolio/SequoiaSexToys'
 
 export const metadata: Metadata = {
-  title: 'SequoiaSexToys | Black Rabbit Creative',
-  description: 'Case study: SequoiaSexToys',
+  title: 'Sequoia — Product Branding & Packaging Design',
+  description: "Product branding and packaging design for Sequoia — a confident, tasteful identity and retail packaging system for a modern wellness brand.",
   alternates: {
     canonical: '/work/sequoia-sex-toys',
   },

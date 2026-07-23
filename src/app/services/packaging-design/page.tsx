@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import PackagingDesign from '../../pages/services/PackagingDesign'
 
 export const metadata: Metadata = {
-  title: 'Packaging Design | Black Rabbit Creative',
-  description: 'Strategic packaging design for products.',
+  title: 'Packaging Design',
+  description: "Packaging design for product-based businesses — retail-ready label systems, structural guidance, and shelf-tested design from a Portsmouth, NH studio.",
   alternates: {
     canonical: '/services/packaging-design',
   },

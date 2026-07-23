@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import BadgerBalm from '../../pages/portfolio/BadgerBalm'
 
 export const metadata: Metadata = {
-  title: 'BadgerBalm | Black Rabbit Creative',
-  description: 'Case study: BadgerBalm',
+  title: 'Badger Balm — Packaging Design',
+  description: "Packaging design for Badger Balm — retail-ready label systems and product packaging built to hold the shelf for a New England natural care brand.",
   alternates: {
     canonical: '/work/badger-balm',
   },

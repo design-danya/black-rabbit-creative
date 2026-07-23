@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import LogoDesign from '../../pages/services/LogoDesign'
 
 export const metadata: Metadata = {
-  title: 'Logo Design | Black Rabbit Creative',
-  description: 'Distinctive logo design for brands.',
+  title: 'Logo Design',
+  description: "Custom logo design from Black Rabbit Creative in Portsmouth, NH — distinctive, precise marks engineered to last, with full typography and usage guidelines.",
   alternates: {
     canonical: '/services/logo-design',
   },

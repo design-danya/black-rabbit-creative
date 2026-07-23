@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import { ClientShell } from './_client'
+import { organizationSchema, websiteSchema } from './structured-data'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -96,20 +97,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* Google Ads */}
+        {/* Google Ads conversion tracking — reuses the gtag.js loaded above. */}
         <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-xxxxxxxxxxxxxxxx"
-          strategy="lazyOnload"
-          crossOrigin="anonymous"
+          id="google-ads"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `gtag('config', 'AW-17440004789');`,
+          }}
         />
 
-        {/* Constant Contact Popup */}
-        <Script
-          id="ctct_embed_script"
-          async
-          src="https://app.constantcontact.com/......js"
-          strategy="lazyOnload"
+        {/* Organization / LocalBusiness structured data, server-rendered so
+            crawlers receive it in the initial HTML. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>
