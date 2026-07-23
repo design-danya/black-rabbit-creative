@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import Link from 'next/link';
+import Image, { type StaticImageData } from 'next/image';
 import { useSEO } from "../../components/useSEO";
 
 import heroImg from "../../../imports/Screenshot_2026-07-02_at_7.07.27_PM.png";
@@ -27,7 +28,7 @@ import appPackagingImg from "../../../imports/Untitled-8.png";
 
 type Application = {
   key: string;
-  src: string;
+  src: StaticImageData;
   label: string;
   caption: string;
   span?: "wide" | "tall";
@@ -36,7 +37,7 @@ type Application = {
 const applications: Application[] = [
   {
     key: "signage",
-    src: appSignageImg.src,
+    src: appSignageImg,
     label: "Signage",
     caption:
       "Primary mark. Large. Clear. Commands the space without shouting.",
@@ -44,63 +45,63 @@ const applications: Application[] = [
   },
   {
     key: "tote",
-    src: appToteImg.src,
+    src: appToteImg,
     label: "Tote Bag",
     caption:
       "The seal becomes a signature detail. Ceremonial. Owned. Something you'd display, not hide.",
   },
   {
     key: "mug",
-    src: appMugImg.src,
+    src: appMugImg,
     label: "Mug",
     caption:
       "The primary mark works here. Simple. Clear. Refined. You pick it up and know exactly what it is.",
   },
   {
     key: "card",
-    src: appCardImg.src,
+    src: appCardImg,
     label: "Business Card",
     caption:
       "Heritage mark. Establishes formality without overdoing it. The establishment date tells the story.",
   },
   {
     key: "hat",
-    src: appHatImg.src,
+    src: appHatImg,
     label: "Hat / Apparel",
     caption:
       "Monogram-forward. Scaled appropriately. Clean. Not crowded.",
   },
   {
     key: "packaging",
-    src: appPackagingImg.src,
+    src: appPackagingImg,
     label: "Packaging",
     caption:
       "Primary mark on retail packaging — brand and product living together, no compromise.",
   },
   {
     key: "stamp",
-    src: appStampImg.src,
+    src: appStampImg,
     label: "Embossed Seal",
     caption:
       "The seal, made physical. A quiet detail that turns paper into a keepsake.",
   },
   {
     key: "tee-primary",
-    src: appTeePrimaryImg.src,
+    src: appTeePrimaryImg,
     label: "T-Shirt — Primary",
     caption:
       "Reversed primary mark on soft cotton. Wearable, without looking like a corporate freebie.",
   },
   {
     key: "tee-seal",
-    src: appTeeSealImg.src,
+    src: appTeeSealImg,
     label: "T-Shirt — Seal",
     caption:
       "The seal centered on the chest. A collectible piece — the kind you keep.",
   },
   {
     key: "hoodie",
-    src: appHoodieImg.src,
+    src: appHoodieImg,
     label: "Hoodie",
     caption:
       "Full seal on the back. A quiet nod for people who know the place.",
@@ -156,9 +157,9 @@ type LogoBlock = {
   intro: string;
   works: string[];
   usage?: string;
-  image: string;
+  image: StaticImageData;
   imageAlt: string;
-  imageExtra?: { src: string; alt: string };
+  imageExtra?: { src: StaticImageData; alt: string };
 };
 
 const logoBlocks: LogoBlock[] = [
@@ -174,11 +175,11 @@ const logoBlocks: LogoBlock[] = [
       "The hierarchy is clear. Your eye moves naturally through the mark. No confusion. No guessing.",
     ],
     usage: "The result: a mark that feels quietly luxurious. Timeless. Intentional.",
-    image: primaryMt.src,
+    image: primaryMt,
     imageAlt:
       "Monadnock Berries primary logo mark with mountain silhouette — refined destination brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
     imageExtra: {
-      src: primaryNoMt.src,
+      src: primaryNoMt,
       alt:
         "Monadnock Berries primary logo mark without mountain — clean variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
     },
@@ -196,7 +197,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: applications where the brand benefits from a traditional, established presence. Signage. Formal stationery. Moments that need weight.",
-    image: heritageMark.src,
+    image: heritageMark,
     imageAlt:
       "Monadnock Berries heritage mark with EST 1996 date — formal brand variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -213,7 +214,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: anywhere you want the brand to feel ceremonial. Signature-like. Rooted.",
-    image: brandSeal.src,
+    image: brandSeal,
     imageAlt:
       "Monadnock Berries brand seal — circular signature mark with landscape detail by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -230,7 +231,7 @@ const logoBlocks: LogoBlock[] = [
     ],
     usage:
       "When to use it: when simplicity and clarity are key. When the space needs the brand but shouldn't be overwhelmed. Apparel. Favors. Digital icons.",
-    image: monogramMark.src,
+    image: monogramMark,
     imageAlt:
       "Monadnock Berries MB monogram — essential brand mark by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
   },
@@ -244,7 +245,7 @@ type Direction = {
   palette: { hex: string; label: string }[];
   paletteNote: string;
   positioning: string;
-  image: string;
+  image: StaticImageData;
   chosen?: boolean;
 };
 
@@ -266,7 +267,7 @@ const directions: Direction[] = [
       "A muted, nature-inspired palette of sage, navy, and warm neutrals reflects the landscape while adding depth and refinement.",
     positioning:
       "For clients seeking an elevated yet grounded atmosphere. The landscape is there. The refinement is intentional.",
-    image: estateHarvestBoard.src,
+    image: estateHarvestBoard,
     chosen: true,
   },
   {
@@ -286,7 +287,7 @@ const directions: Direction[] = [
       "A rich, nature-inspired palette of deep berry, olive, muted plum, and warm wood tones reflect the harvest season while adding depth and warmth.",
     positioning:
       "For couples seeking an elevated yet organic celebration. This one leans into the farm. Makes it intentional. Makes it warm.",
-    image: harvestHeritageBoard.src,
+    image: harvestHeritageBoard,
   },
   {
     key: "minimalist-botanical",
@@ -305,7 +306,7 @@ const directions: Direction[] = [
       "A soft, neutral palette of warm whites, cool grays, sage, and deep charcoal creates a calm, modern foundation with subtle contrast.",
     positioning:
       "For those seeking elevated, calm, and intentionally minimal. The restraint is the point. Nothing unnecessary.",
-    image: minimalistBotanicalBoard.src,
+    image: minimalistBotanicalBoard,
   },
 ];
 
@@ -396,8 +397,8 @@ export default function MonadnockBerries() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-8 relative overflow-hidden rounded-sm"
           >
-            <img
-              src={heroImg.src}
+            <Image
+              src={heroImg}
               alt="Oliver and Elise, owners of Monadnock Berries, standing in front of Mount Monadnock holding their farm sign — legacy berry farm brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
               className="w-full h-full object-cover"
             />
@@ -563,7 +564,7 @@ export default function MonadnockBerries() {
               >
                 {/* Mood board image */}
                 <div className={`lg:col-span-7 overflow-hidden rounded-sm border border-[#EBE6DE]/10 ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <img
+                  <Image
                     src={d.image}
                     alt={`${d.title} — mood board direction for Monadnock Berries brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
                     className="w-full h-full object-cover block"
@@ -745,7 +746,7 @@ export default function MonadnockBerries() {
             </div>
             <div className="lg:col-span-7">
               <div className="bg-[#EBE6DE] rounded-sm p-6 md:p-10 flex items-center justify-center">
-                <img
+                <Image
                   src={originalBannerLogo}
                   alt="Original 1990s Monadnock Berries logo — painted farm scene with hand-lettered text | Before the rebrand by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
                   className="max-w-full h-auto"
@@ -768,7 +769,7 @@ export default function MonadnockBerries() {
                 {/* Logo canvas */}
                 <div className={`lg:col-span-7 ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="bg-[#1f2431] border border-[#7D796C]/25 rounded-sm p-6 md:p-10 flex items-center justify-center min-h-[320px] md:min-h-[440px]">
-                    <img
+                    <Image
                       src={b.image}
                       alt={b.imageAlt}
                       className="w-full max-w-[92%] max-h-[420px] object-contain"
@@ -776,7 +777,7 @@ export default function MonadnockBerries() {
                   </div>
                   {b.imageExtra && (
                     <div className="mt-4 bg-[#1f2431] border border-[#7D796C]/25 rounded-sm p-5 md:p-8 flex items-center justify-center min-h-[220px]">
-                      <img
+                      <Image
                         src={b.imageExtra.src}
                         alt={b.imageExtra.alt}
                         className="w-full max-w-[80%] max-h-[260px] object-contain"
@@ -876,7 +877,7 @@ export default function MonadnockBerries() {
                 className={`flex flex-col ${a.span === "wide" ? "md:col-span-2 lg:col-span-3" : ""}`}
               >
                 <div className="overflow-hidden rounded-sm border border-[#7D796C]/20 bg-[#1f2431] group">
-                  <img
+                  <Image
                     src={a.src}
                     alt={`${a.label} — Monadnock Berries brand application by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
                     className={`w-full ${a.span === "wide" ? "aspect-[21/9]" : "aspect-[4/3]"} object-cover transition-transform duration-700 group-hover:scale-[1.03]`}
