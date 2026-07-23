@@ -21,7 +21,11 @@ import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { useSEO } from "../components/useSEO";
 
+// Animated WebP is served to browsers that support it (~776KB); the original
+// GIF stays as the <picture> fallback. Identical 8s loop, 100 frames of motion.
 const RABBIT_IMG = "/assets/homepage-rabbit.gif";
+const RABBIT_WEBP = "/assets/homepage-rabbit.webp";
+const RABBIT_WEBP_SM = "/assets/homepage-rabbit-sm.webp";
 const services = [
   {
     name: "Full Brand Identity",
@@ -224,15 +228,19 @@ export default function Home() {
                className="relative w-full max-w-none will-change-opacity scale-[1.3] origin-center lg:translate-x-16"
             >
               <div className="relative w-full aspect-square flex items-center justify-center" style={{ maskImage: "radial-gradient(ellipse 60% 60% at center, black 35%, transparent 65%)", WebkitMaskImage: "radial-gradient(ellipse 60% 60% at center, black 35%, transparent 65%)" }}>
-                 <img
-                   src={RABBIT_IMG}
-                   alt="Black Rabbit Creative mascot — branding and design studio, Portsmouth NH, New Hampshire, New England"
-                   className="w-full h-full object-contain mix-blend-lighten" 
-                   loading="eager"
-                   width={800}
-                   height={800}
-                   decoding="async"
-                 />
+                 <picture>
+                   <source srcSet={RABBIT_WEBP} type="image/webp" />
+                   <img
+                     src={RABBIT_IMG}
+                     alt="Black Rabbit Creative mascot — branding and design studio, Portsmouth NH, New Hampshire, New England"
+                     className="w-full h-full object-contain mix-blend-lighten"
+                     loading="eager"
+                     fetchPriority="high"
+                     width={800}
+                     height={800}
+                     decoding="async"
+                   />
+                 </picture>
               </div>
             </motion.div>
           </div>
@@ -405,15 +413,18 @@ export default function Home() {
                   href={item.to}
                   className="group relative overflow-hidden flex flex-col justify-between bg-white hover:bg-[#060606] transition-colors duration-400 p-8 md:p-10 h-full min-h-[200px]"
                 >
-                  <img
-                    src={rabbitEars}
-                    alt="Black Rabbit Creative decorative rabbit ears — design studio, Portsmouth NH, New Hampshire, New England"
-                    aria-hidden="true"
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[70%] opacity-0 group-hover:opacity-[0.15] group-hover:translate-y-[62%] transition-all duration-1000 ease-out invert pointer-events-none select-none"
-                    width={400}
-                    height={400}
-                    loading="lazy"
-                  />
+                  <picture>
+                    <source srcSet={RABBIT_WEBP_SM} type="image/webp" />
+                    <img
+                      src={rabbitEars}
+                      alt="Black Rabbit Creative decorative rabbit ears — design studio, Portsmouth NH, New Hampshire, New England"
+                      aria-hidden="true"
+                      className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[70%] opacity-0 group-hover:opacity-[0.15] group-hover:translate-y-[62%] transition-all duration-1000 ease-out invert pointer-events-none select-none"
+                      width={400}
+                      height={400}
+                      loading="lazy"
+                    />
+                  </picture>
                   <div className="flex items-start justify-between mb-8">
                     <span className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6] group-hover:text-[#7c5fe6] transition-colors">
                       {item.num}

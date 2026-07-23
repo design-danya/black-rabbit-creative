@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { Menu, X, ChevronDown } from 'lucide-react'
@@ -141,12 +142,14 @@ export function Navbar() {
     >
       <div className="max-w-[1920px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center group" onClick={close}>
-          <img
+          <Image
             src={isDark ? darkLogo : lightLogo}
             alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
             className={`h-10 md:h-12 w-auto transition-all duration-500 ease-out group-hover:scale-105 `}
-            width={144}
-            height={48}
+            width={380}
+            height={96}
+            sizes="190px"
+            priority
           />
         </Link>
 

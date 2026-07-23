@@ -7,8 +7,10 @@ import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 const elmCityThumb = "/assets/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
 const graniteRootsImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 
+// Animated WebP served where supported; original GIF is the <picture> fallback.
 const RABBIT_IMG =
   "/assets/homepage-rabbit.gif";
+const RABBIT_WEBP = "/assets/homepage-rabbit.webp";
 
 const services = [
   "Brewery brand identity systems",
@@ -66,11 +68,17 @@ export default function BreweryBranding() {
                 "radial-gradient(ellipse 60% 60% at center, black 35%, transparent 65%)",
             }}
           >
-            <img
-              src={RABBIT_IMG}
-              alt="Black Rabbit Creative mascot — brewery branding studio, Portsmouth NH, New Hampshire"
-              className="w-full h-full object-contain mix-blend-lighten"
-            />
+            <picture>
+              <source srcSet={RABBIT_WEBP} type="image/webp" />
+              <img
+                src={RABBIT_IMG}
+                alt="Black Rabbit Creative mascot — brewery branding studio, Portsmouth NH, New Hampshire"
+                className="w-full h-full object-contain mix-blend-lighten"
+                loading="lazy"
+                width={800}
+                height={800}
+              />
+            </picture>
           </div>
         </div>
 

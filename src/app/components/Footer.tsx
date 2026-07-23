@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 const rabbitLogo = "/assets/Black_Rabbitv3-16.png";
 
@@ -93,12 +94,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           {/* Logo + tagline */}
           <div className="md:col-span-3">
-            <img
+            <Image
               src={rabbitLogo}
               alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
               className="h-10 w-auto mb-6"
-              width={120}
-              height={40}
+              width={380}
+              height={96}
+              sizes="158px"
               loading="lazy"
             />
             <p className="text-sm text-gray-400 max-w-xs leading-relaxed">

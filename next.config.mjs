@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Static site generation (SSG)
   reactStrictMode: true,
 
-  // Configure image optimization for static export
+  // Image optimization runs on Vercel at request time. Source files in
+  // public/assets are never modified — resized WebP/AVIF derivatives are
+  // generated on demand and cached at the edge.
   images: {
-    unoptimized: true, // Required for 'export' mode
+    formats: ['image/avif', 'image/webp'],
   },
 
   // Configure basePath if needed (e.g., for non-root deployments)
