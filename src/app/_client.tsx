@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { MotionConfig } from 'motion/react'
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer'
 
@@ -20,6 +21,12 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
   }, [pathname])
 
   return (
+    /* reducedMotion="user" makes every motion component in the tree respect the
+       OS "Reduce motion" setting — transform and layout animations are dropped,
+       opacity is kept. The site runs ~940 motion components and ~380 scroll-
+       triggered reveals, which is a lot of movement for anyone with a
+       vestibular disorder (WCAG 2.3.3). One wrapper covers all of them. */
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white flex flex-col relative">
       {/* Global Noise Overlay */}
       <div
@@ -42,5 +49,6 @@ export function ClientShell({ children }: { children: React.ReactNode }) {
       </main>
       <Footer />
     </div>
+    </MotionConfig>
   )
 }
