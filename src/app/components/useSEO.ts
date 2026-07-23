@@ -1,73 +1,26 @@
-import { useEffect } from "react";
-
+/**
+ * Historical no-op, kept so the 27 page components that call it keep compiling.
+ *
+ * This hook used to rewrite document.title, the meta description, the canonical
+ * link and the OG/Twitter tags from a useEffect. That predates the Next.js
+ * migration. Once every route gained a `metadata` export the two fought each
+ * other: Next rendered one title into the HTML and this hook replaced it with
+ * different text on mount, so crawlers and users saw different strings on every
+ * page — and the client-side copy was often 90+ characters, well past what
+ * Google renders.
+ *
+ * Metadata now lives in exactly one place: the `metadata` export of each
+ * page.tsx. Call sites are left in place rather than edited out of 27 files;
+ * remove them opportunistically when touching a page for other reasons.
+ */
 interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  title: string
+  description: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
 }
 
-const BASE_URL = "https://www.blackrabbit-creative.com";
-
-export function useSEO({ title, description, canonical, ogTitle, ogDescription }: SEOProps) {
-  useEffect(() => {
-    // ── Set page title ──
-    document.title = title;
-
-    // ── Remove any noindex meta tags ──
-    const noindexTags = document.querySelectorAll('meta[name="robots"][content*="noindex"]');
-    noindexTags.forEach((tag) => tag.remove());
-
-    // ── Ensure robots meta allows indexing ──
-    let robotsMeta = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
-    if (!robotsMeta) {
-      robotsMeta = document.createElement("meta");
-      robotsMeta.name = "robots";
-      document.head.appendChild(robotsMeta);
-    }
-    robotsMeta.content = "index, follow";
-
-    // ── Meta description ──
-    let metaDesc = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = description;
-
-    // ── Canonical tag ──
-    const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : undefined;
-    let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (canonicalUrl) {
-      if (!link) {
-        link = document.createElement("link");
-        link.rel = "canonical";
-        document.head.appendChild(link);
-      }
-      link.href = canonicalUrl;
-    } else if (link) {
-      link.remove();
-    }
-
-    // ── Update OG & Twitter tags ──
-    const updates: Record<string, string> = {
-      "og:title": ogTitle || title,
-      "og:description": ogDescription || description,
-      "twitter:title": ogTitle || title,
-      "twitter:description": ogDescription || description,
-    };
-
-    Object.entries(updates).forEach(([property, content]) => {
-      const attr = property.startsWith("twitter:") ? "name" : "property";
-      let meta = document.querySelector(`meta[${attr}="${property}"]`) as HTMLMetaElement | null;
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.setAttribute(attr, property);
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    });
-  }, [title, description, canonical, ogTitle, ogDescription]);
+export function useSEO(_props: SEOProps) {
+  // Intentionally empty — see the note above.
 }

@@ -2,23 +2,25 @@ import type { Metadata } from 'next'
 import Home from './pages/Home'
 
 export const metadata: Metadata = {
-  title: 'Branding Agency Keene NH Portsmouth NH Providence RI | Black Rabbit Creative',
+  title: 'Branding & Packaging Design Studio in Portsmouth, NH',
   description:
-    'Black Rabbit Creative: Branding Agency offering Branding Services, Logo Design Company, Packaging Design, Graphic Design Agency in Keene, NH, Portsmouth, NH, Providence, RI.',
+    'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH — serving Keene and Providence.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Black Rabbit Creative | Branding & Design Studio',
-    description: 'Branding Agency offering Logo Design, Brand Identity, Packaging Design, and Graphic Design.',
+    title: 'Black Rabbit Creative — Branding & Packaging Design',
+    description:
+      'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH.',
     url: '/',
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Black Rabbit Creative',
-    description: 'Branding & Design Studio',
+    title: 'Black Rabbit Creative — Branding & Packaging Design',
+    description:
+      'Brand identity, logo, and packaging design for product-based businesses across New England.',
     images: ['/og-image.png'],
   },
 }

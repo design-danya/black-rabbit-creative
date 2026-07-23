@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PrintMaterials from '../../pages/portfolio/PrintMaterials'
 
 export const metadata: Metadata = {
-  title: 'Print Materials — Graphic Design Portfolio',
+  title: "Print Materials — Graphic Design",
   description: "Print and graphic design portfolio from Black Rabbit Creative — brochures, posters, signage, and collateral produced for brands across New England.",
   alternates: {
     canonical: '/work/print-materials',

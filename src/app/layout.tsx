@@ -17,20 +17,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.blackrabbit-creative.com'),
   title: {
-    default: 'Branding Agency Keene NH Portsmouth NH Providence RI | Black Rabbit Creative',
+    default: 'Branding & Packaging Design Studio in Portsmouth, NH',
     template: '%s | Black Rabbit Creative',
   },
   description:
-    'Black Rabbit Creative: Branding Agency offering Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency in Keene, NH, Portsmouth, NH, Providence, RI.',
-  keywords: [
-    'branding agency',
-    'logo design',
-    'graphic design',
-    'brand identity',
-    'Keene NH',
-    'Portsmouth NH',
-    'Providence RI',
-  ],
+    'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH — serving Keene and Providence.',
   authors: [{ name: 'Black Rabbit Creative' }],
   creator: 'Black Rabbit Creative',
   robots: {
@@ -46,9 +37,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.blackrabbit-creative.com',
     siteName: 'Black Rabbit Creative',
-    title: 'Black Rabbit Creative | Branding & Design Studio',
+    title: 'Black Rabbit Creative — Branding & Packaging Design',
     description:
-      'Branding Agency offering Logo Design, Brand Identity, Packaging Design, and Graphic Design services.',
+      'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH.',
     images: [
       {
         url: '/og-image.png',
@@ -60,8 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Black Rabbit Creative',
-    description: 'Branding Agency offering professional design services.',
+    title: 'Black Rabbit Creative — Branding & Packaging Design',
+    description:
+      'Brand identity, logo, and packaging design for product-based businesses across New England.',
     images: ['/og-image.png'],
   },
   alternates: {

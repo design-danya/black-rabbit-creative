@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import BreweryBranding from '../../pages/services/BreweryBranding'
 
 export const metadata: Metadata = {
-  title: 'Brewery Branding',
+  title: "Brewery Branding & Beer Label Design",
   description: "Brewery branding and craft beer label design from Portsmouth, NH — brand identity systems, can and bottle labels, taproom signage, and merchandise for breweries.",
   alternates: {
     canonical: '/services/brewery-branding',
