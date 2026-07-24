@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { Menu, X, ChevronDown } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 const darkLogo = "/assets/Black_Rabbitv3-16.png"
 const lightLogo = "/assets/Black_Rabbitv3-12.png"
 
@@ -45,11 +45,59 @@ export function Navbar() {
 
   const isDark = (isHome && !scrolled) || isOpen;
 
+  const panelRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+
   const close = () => {
     setIsOpen(false);
     setServicesExpanded(false);
     setAboutExpanded(false);
   };
+
+  // While the drawer is open, move focus into it, keep Tab inside it, and
+  // return focus to the toggle on close (WCAG 2.4.3 / 4.1.2). Escape also
+  // closes it — handled here so it works regardless of which item has focus.
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const panel = panelRef.current;
+    if (!panel) return;
+
+    const focusables = () =>
+      Array.from(
+        panel.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((el) => el.offsetParent !== null);
+
+    focusables()[0]?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+        toggleRef.current?.focus();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      toggleRef.current?.focus();
+    };
+  }, [isOpen]);
 
   const renderSubMenu = (
     expanded: boolean,
@@ -163,6 +211,7 @@ export function Navbar() {
               ? "text-white bg-white/10 border-white/10 hover:bg-white/20"
               : "text-black bg-black/5 border-black/5 hover:bg-black/10"
           }`}
+          ref={toggleRef}
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
@@ -188,7 +237,11 @@ export function Navbar() {
 
             {/* Drawer panel */}
             <motion.div
+              ref={panelRef}
               id="site-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Site menu"
               className="fixed top-0 right-0 h-full z-[106] bg-[#060606] w-72 flex flex-col pt-24 pb-12 px-10 border-l border-white/8 overflow-y-auto"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
