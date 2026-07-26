@@ -200,7 +200,7 @@ export default function Home() {
           Now a standard flex column layout with simple entrance animations. */}
       <section
         ref={heroRef}
-        className="relative min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 md:px-12 pt-40 md:pt-12 pb-12 overflow-visible"
+        className="relative min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 md:px-12 pt-40 md:pt-24 pb-12 overflow-visible"
       >
         {/* Subtle background blob (optional, as per request to remove bubble but keep depth) */}
         {/* Using a very subtle dark gradient to break the pure black flatness if needed, but keeping it minimal */}
@@ -311,28 +311,17 @@ export default function Home() {
       <section className="bg-white text-[#060606] px-6 md:px-16 lg:px-24 pt-16 pb-14 md:pt-[5.5rem] md:pb-20">
         <div className="max-w-7xl mx-auto">
 
-          {/* Eyebrow */}
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-12"
-          >
+          {/* Eyebrow — visible on load; no scroll-gated fade so the section
+              never shows as a blank white block before it animates in. */}
+          <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-12">
             Studio Philosophy
-          </motion.span>
+          </span>
 
           {/* ── Two-column editorial block ── */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-14 md:mb-20">
 
             {/* LEFT — Headline */}
-            <motion.div
-              className="lg:col-span-5 lg:sticky lg:top-32 self-start"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
+            <div className="lg:col-span-5">
               <h2
                 className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-8"
                 style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.8rem)" }}
@@ -348,16 +337,10 @@ export default function Home() {
                 <span className="relative z-10">Enquire</span>
                 <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
               </Link>
-            </motion.div>
+            </div>
 
             {/* RIGHT — Body copy */}
-            <motion.div
-              className="lg:col-span-7 space-y-6 text-gray-500 text-[0.95rem] leading-[1.9]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            >
+            <div className="lg:col-span-7 space-y-6 text-gray-500 text-[0.95rem] leading-[1.9]">
               <p>
                 In today's competitive landscape, a strong product alone isn't enough. More businesses than ever are competing for the same customers' attention.
               </p>
@@ -371,7 +354,7 @@ export default function Home() {
               <p>
                 That means going beyond surface-level design. You need branding and packaging with clarity and presence — work that stops the scroll, captures attention online and on the shelf, and communicates your brand's true value.
               </p>
-            </motion.div>
+            </div>
           </div>
 
           {/* ── Services grid ── */}

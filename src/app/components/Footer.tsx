@@ -3,7 +3,6 @@
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
 const rabbitLogo = "/assets/Black_Rabbitv3-16.png";
 
 const socials = [
@@ -19,61 +18,30 @@ const footerLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
-function ConstantContactForm() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-    // The CC widget is lazyOnload, so it injects its form well after mount —
-    // a fixed timer checked too early and left both the CC form and the
-    // fallback showing. Watch the container and hide the fallback the moment
-    // CC populates it.
-    if (el.children.length > 0) {
-      setLoaded(true);
-      return;
-    }
-    const observer = new MutationObserver(() => {
-      if (el.children.length > 0) {
-        setLoaded(true);
-        observer.disconnect();
-      }
-    });
-    observer.observe(el, { childList: true });
-    return () => observer.disconnect();
-  }, []);
-
+// Constant Contact's embed widget was removed: it pulled in Google reCAPTCHA
+// and the account's pop-up form, which rendered as stray white bars and added
+// heavy third-party JS to every page. This is the clean, accessible markup;
+// wire its action to a hosted CC signup URL (or a route handler) to submit.
+function NewsletterSignup() {
   return (
-    <div>
-      {/* Constant Contact renders into this div on the live site */}
-      <div
-        ref={containerRef}
-        className="ctct-inline-form"
-        data-form-id="8db0066a-dc0e-4bc6-a521-c3848637b9fb"
+    <div className="flex flex-col sm:flex-row gap-3 max-w-xl">
+      {/* The placeholder is not an accessible name — it vanishes on input and
+          screen readers treat it inconsistently. Real label, visually hidden. */}
+      <label htmlFor="newsletter-email" className="sr-only">
+        Email address
+      </label>
+      <input
+        id="newsletter-email"
+        name="email"
+        type="email"
+        autoComplete="email"
+        placeholder="you@company.com"
+        className="flex-1 bg-white/5 border border-white/15 px-5 py-3 text-sm text-white placeholder-gray-500 outline-none focus:border-[#7c5fe6] transition-colors"
       />
-      {/* Fallback visible in preview / when script is blocked */}
-      {!loaded && (
-        <div className="flex flex-col sm:flex-row gap-3 max-w-xl">
-          {/* The placeholder is not an accessible name — it vanishes on input
-              and screen readers treat it inconsistently. Real label, hidden. */}
-          <label htmlFor="newsletter-email" className="sr-only">
-            Email address
-          </label>
-          <input
-            id="newsletter-email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            placeholder="you@company.com"
-            className="flex-1 bg-white/5 border border-white/15 px-5 py-3 text-sm text-white placeholder-gray-500 outline-none focus:border-[#5b3fd6] transition-colors"
-          />
-          <button className="group inline-flex items-center justify-center gap-2 bg-[#5b3fd6] hover:bg-[#4a32b8] px-7 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300 whitespace-nowrap">
-            Subscribe
-            <ArrowUpRight size={13} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
-          </button>
-        </div>
-      )}
+      <button className="group inline-flex items-center justify-center gap-2 bg-[#5b3fd6] hover:bg-[#4a32b8] px-7 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors duration-300 whitespace-nowrap">
+        Subscribe
+        <ArrowUpRight size={13} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+      </button>
     </div>
   );
 }
@@ -103,7 +71,7 @@ export function Footer() {
         <div className="max-w-6xl mx-auto">
           <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-6 text-center">Stay in the Loop</h3>
           <div className="max-w-xl mx-auto">
-            <ConstantContactForm />
+            <NewsletterSignup />
           </div>
         </div>
       </div>

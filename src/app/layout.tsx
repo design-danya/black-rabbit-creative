@@ -102,21 +102,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
 
-        {/* Constant Contact signup widget. It hydrates the .ctct-inline-form
-            div in the footer (form id 8db0066a…). _ctct_m is the account key;
-            loaded lazily so it stays off the critical path. */}
-        <Script
-          id="ctct-account"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `var _ctct_m = "94ad48554a724fe816b6c1223098fdf6";`,
-          }}
-        />
-        <Script
-          id="ctct-widget"
-          strategy="lazyOnload"
-          src="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js"
-        />
       </head>
       <body>
         <ClientShell>{children}</ClientShell>
