@@ -80,7 +80,7 @@ export default function CheshireMuseum() {
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -102,7 +102,7 @@ export default function CheshireMuseum() {
             style={{ fontSize: "clamp(2.4rem, 5.5vw, 5.5rem)" }}
           >
             Cheshire Children's{" "}
-            <em className="not-italic text-[#5b3fd6]">Museum</em>
+            <em className="not-italic text-[#7c5fe6]">Museum</em>
           </h1>
           <p className="mt-4 text-white/40 text-sm uppercase tracking-[0.2em]">
             Brand Solidification &amp; Community Growth
@@ -122,7 +122,7 @@ export default function CheshireMuseum() {
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="px-6 py-8 first:pl-0"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">
                   {item.label}
                 </p>
                 <p className="text-sm text-white/80 leading-snug">{item.value}</p>
@@ -142,7 +142,7 @@ export default function CheshireMuseum() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Project Overview
             </span>
             <h2
@@ -150,7 +150,7 @@ export default function CheshireMuseum() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Building trust through{" "}
-              <em className="not-italic text-[#5b3fd6]">visual consistency.</em>
+              <em className="not-italic text-[#7c5fe6]">visual consistency.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -206,7 +206,7 @@ export default function CheshireMuseum() {
                 className="px-6 py-10 first:pl-0"
               >
                 <p
-                  className="font-black uppercase tracking-[0.05em] text-[#5b3fd6] mb-2"
+                  className="font-black uppercase tracking-[0.05em] text-[#7c5fe6] mb-2"
                   style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.5rem)" }}
                 >
                   {stat.num}
@@ -231,7 +231,7 @@ export default function CheshireMuseum() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Event Branding
             </span>
             <h2
@@ -239,7 +239,7 @@ export default function CheshireMuseum() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Shamrock Shuffle{" "}
-              <em className="not-italic text-[#5b3fd6]">Annual Fundraiser.</em>
+              <em className="not-italic text-[#7c5fe6]">Annual Fundraiser.</em>
             </h2>
           </motion.div>
 
@@ -271,7 +271,7 @@ export default function CheshireMuseum() {
 
               {/* Scope list */}
               <div className="pt-4">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-5">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-5">
                   Full Scope
                 </p>
                 <ul className="space-y-3">
@@ -314,7 +314,7 @@ export default function CheshireMuseum() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Key Deliverables
             </span>
             <h2
@@ -322,7 +322,7 @@ export default function CheshireMuseum() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Consistency builds{" "}
-              <em className="not-italic text-[#5b3fd6]">community trust.</em>
+              <em className="not-italic text-[#7c5fe6]">community trust.</em>
             </h2>
           </motion.div>
 
@@ -336,7 +336,7 @@ export default function CheshireMuseum() {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="border border-white/[0.06] p-8 md:p-12"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-4">
                   {h.label}
                 </p>
                 <p className="text-white/50 leading-[1.85] text-[0.95rem]">{h.desc}</p>
@@ -356,7 +356,7 @@ export default function CheshireMuseum() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Impact
             </span>
             <h2
@@ -364,7 +364,7 @@ export default function CheshireMuseum() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Measurable growth,{" "}
-              <em className="not-italic text-[#5b3fd6]">lasting identity.</em>
+              <em className="not-italic text-[#7c5fe6]">lasting identity.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -395,17 +395,17 @@ export default function CheshireMuseum() {
           >
             <div className="border border-white/10 p-8 space-y-6">
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Facebook</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Facebook</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">451% Growth</p>
                 <p className="text-white/40 text-sm mt-1">Reach from 60 to 80,340</p>
               </div>
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Instagram</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Instagram</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">1,143% Growth</p>
                 <p className="text-white/40 text-sm mt-1">Reach from 221 to 2,746</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Campaign</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Campaign</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">100K+ Views</p>
                 <p className="text-white/40 text-sm mt-1">60-day Facebook ad campaign</p>
               </div>
@@ -424,7 +424,7 @@ export default function CheshireMuseum() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Ready to stand out?
             </span>
             <h2
@@ -432,7 +432,7 @@ export default function CheshireMuseum() {
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Branding that builds{" "}
-              <em className="not-italic text-[#5b3fd6]">community.</em>
+              <em className="not-italic text-[#7c5fe6]">community.</em>
             </h2>
           </motion.div>
 

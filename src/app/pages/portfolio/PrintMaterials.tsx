@@ -90,7 +90,7 @@ export default function PrintMaterials() {
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -112,7 +112,7 @@ export default function PrintMaterials() {
             style={{ fontSize: "clamp(2.6rem, 6vw, 6rem)" }}
           >
             Print{" "}
-            <em className="not-italic text-[#5b3fd6]">Materials</em>
+            <em className="not-italic text-[#7c5fe6]">Materials</em>
           </h1>
           <p className="mt-4 text-white/40 text-sm uppercase tracking-[0.2em]">
             Posters, Signage, Banners &amp; Merchandise
@@ -132,7 +132,7 @@ export default function PrintMaterials() {
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="px-6 py-8 first:pl-0"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">
                   {item.label}
                 </p>
                 <p className="text-sm text-white/80 leading-snug">{item.value}</p>
@@ -170,7 +170,7 @@ export default function PrintMaterials() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Project Overview
             </span>
             <h2
@@ -178,7 +178,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Designed for the{" "}
-              <em className="not-italic text-[#5b3fd6]">real world.</em>
+              <em className="not-italic text-[#7c5fe6]">real world.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -226,7 +226,7 @@ export default function PrintMaterials() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Signage &amp; Environmental
             </span>
             <h2
@@ -234,7 +234,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Extending the brand into{" "}
-              <em className="not-italic text-[#5b3fd6]">physical space.</em>
+              <em className="not-italic text-[#7c5fe6]">physical space.</em>
             </h2>
           </motion.div>
 
@@ -257,7 +257,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Outdoor Signage</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Outdoor Signage</p>
                 <p className="text-sm text-gray-500 leading-relaxed">Branded pylon sign with LED message board — clear hierarchy and roadside visibility for a high-traffic location.</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#060606]/30 mt-2">Kapiloff Insurance</p>
               </div>
@@ -279,7 +279,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Interpretive Signage</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Interpretive Signage</p>
                 <p className="text-sm text-gray-500 leading-relaxed">Community land art project wayfinding panel — illustrative environmental signage designed for year-round outdoor durability.</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#060606]/30 mt-2">The Monadnock Labyrinth</p>
               </div>
@@ -298,7 +298,7 @@ export default function PrintMaterials() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Event Banners &amp; Merchandise
             </span>
             <h2
@@ -306,7 +306,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               From banners to{" "}
-              <em className="not-italic text-[#5b3fd6]">wearable design.</em>
+              <em className="not-italic text-[#7c5fe6]">wearable design.</em>
             </h2>
           </motion.div>
 
@@ -329,7 +329,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Event Banner</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Event Banner</p>
                 <p className="text-sm text-gray-500 leading-relaxed">Shamrock Shuffle 5K & Family Day — large-format community display</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#060606]/30 mt-2">Cheshire Children's Museum</p>
               </div>
@@ -352,7 +352,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Event Merchandise</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Event Merchandise</p>
                 <p className="text-sm text-gray-500 leading-relaxed">Custom illustrated t-shirt with retro mascot characters for the annual fundraiser</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#060606]/30 mt-2">Cheshire Children's Museum</p>
               </div>
@@ -371,7 +371,7 @@ export default function PrintMaterials() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Custom Illustrated Stickers
             </span>
             <h2
@@ -379,7 +379,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Hand-drawn characters,{" "}
-              <em className="not-italic text-[#5b3fd6]">die-cut & ready to stick.</em>
+              <em className="not-italic text-[#7c5fe6]">die-cut & ready to stick.</em>
             </h2>
             <p className="mt-6 text-gray-500 leading-[1.9] max-w-2xl">
               Every sticker starts as a custom illustration — original characters drawn
@@ -448,7 +448,7 @@ export default function PrintMaterials() {
               {["Custom Illustration", "Die-Cut Vinyl", "Character Design", "Hand-Lettering", "Halftone Textures"].map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/10 text-[#060606]/50 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/10 text-[#060606]/50 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                 >
                   {tag}
                 </span>
@@ -468,7 +468,7 @@ export default function PrintMaterials() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Self-Promotion
             </span>
             <h2
@@ -476,7 +476,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Creative Crunch —{" "}
-              <em className="not-italic text-[#5b3fd6]">award-winning self-promo.</em>
+              <em className="not-italic text-[#7c5fe6]">award-winning self-promo.</em>
             </h2>
             <p className="mt-6 text-white/50 leading-[1.9] max-w-2xl">
               Danya-O's "Creative Crunch" is a custom illustrated cereal box self-promotion
@@ -504,7 +504,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Front Panel</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Front Panel</p>
                 <p className="text-sm text-white/50 leading-relaxed">Custom illustrated character with retro pop-art styling and hand-lettered typography.</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-white/20 mt-2">GD USA 2025 Award Winner</p>
               </div>
@@ -526,7 +526,7 @@ export default function PrintMaterials() {
                 />
               </div>
               <div className="mt-4 pt-4 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Back Panel</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Back Panel</p>
                 <p className="text-sm text-white/50 leading-relaxed">"Design Nutrition" panel with ingredients, brand strategy breakdown, and interactive maze.</p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-white/20 mt-2">Package Design Awards</p>
               </div>
@@ -545,7 +545,7 @@ export default function PrintMaterials() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Need print materials?
             </span>
             <h2
@@ -553,7 +553,7 @@ export default function PrintMaterials() {
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Bring your brand into the{" "}
-              <em className="not-italic text-[#5b3fd6]">physical world.</em>
+              <em className="not-italic text-[#7c5fe6]">physical world.</em>
             </h2>
           </motion.div>
 

@@ -50,7 +50,7 @@ export default function KeenePride() {
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -72,7 +72,7 @@ export default function KeenePride() {
             style={{ fontSize: "clamp(2.6rem, 6vw, 6rem)" }}
           >
             Keene Pride{" "}
-            <em className="not-italic text-[#5b3fd6]">Festival</em>
+            <em className="not-italic text-[#7c5fe6]">Festival</em>
           </h1>
           <p className="mt-4 text-white/40 text-sm uppercase tracking-[0.2em]">
             Pride Festival Merchandise Design
@@ -92,7 +92,7 @@ export default function KeenePride() {
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="px-6 py-8 first:pl-0"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">
                   {item.label}
                 </p>
                 <p className="text-sm text-white/80 leading-snug">{item.value}</p>
@@ -130,7 +130,7 @@ export default function KeenePride() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Project Overview
             </span>
             <h2
@@ -138,7 +138,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Bold festival{" "}
-              <em className="not-italic text-[#5b3fd6]">merchandise.</em>
+              <em className="not-italic text-[#7c5fe6]">merchandise.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -182,7 +182,7 @@ export default function KeenePride() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               The Challenge
             </span>
             <h2
@@ -190,7 +190,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Balancing bold energy with{" "}
-              <em className="not-italic text-[#5b3fd6]">meaningful symbolism.</em>
+              <em className="not-italic text-[#7c5fe6]">meaningful symbolism.</em>
             </h2>
             <div className="space-y-5 text-gray-500 leading-[1.9]">
               <p>
@@ -202,7 +202,7 @@ export default function KeenePride() {
             </div>
 
             <div className="pt-8">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-5">
+              <p className="text-[11px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-5">
                 Requirements
               </p>
               <ul className="space-y-3">
@@ -222,7 +222,7 @@ export default function KeenePride() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Design Approach
             </span>
             <h2
@@ -230,7 +230,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Chevrons as{" "}
-              <em className="not-italic text-[#5b3fd6]">forward motion.</em>
+              <em className="not-italic text-[#7c5fe6]">forward motion.</em>
             </h2>
             <div className="space-y-5 text-gray-500 leading-[1.9]">
               <p>
@@ -278,7 +278,7 @@ export default function KeenePride() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Design Features
             </span>
             <h2
@@ -286,7 +286,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Pattern, color,{" "}
-              <em className="not-italic text-[#5b3fd6]">community.</em>
+              <em className="not-italic text-[#7c5fe6]">community.</em>
             </h2>
           </motion.div>
 
@@ -300,7 +300,7 @@ export default function KeenePride() {
                 transition={{ delay: i * 0.08, duration: 0.5 }}
                 className="border border-white/[0.06] p-8 md:p-12"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-4">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-4">
                   {f.label}
                 </p>
                 <p className="text-white/50 leading-[1.85] text-[0.95rem]">{f.desc}</p>
@@ -320,7 +320,7 @@ export default function KeenePride() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Impact
             </span>
             <h2
@@ -328,7 +328,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Worn with{" "}
-              <em className="not-italic text-[#5b3fd6]">pride.</em>
+              <em className="not-italic text-[#7c5fe6]">pride.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -354,17 +354,17 @@ export default function KeenePride() {
           >
             <div className="border border-white/10 p-8 space-y-6">
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Event</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Event</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">Keene Pride</p>
                 <p className="text-white/40 text-sm mt-1">2024 Festival</p>
               </div>
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Merchandise</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Merchandise</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">Multi-Format</p>
                 <p className="text-white/40 text-sm mt-1">T-shirts, totes, bottles & more</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Reach</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Reach</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">Community-Wide</p>
                 <p className="text-white/40 text-sm mt-1">Visibility beyond the festival day</p>
               </div>
@@ -383,7 +383,7 @@ export default function KeenePride() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Ready to create something memorable?
             </span>
             <h2
@@ -391,7 +391,7 @@ export default function KeenePride() {
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Design that turns moments into{" "}
-              <em className="not-italic text-[#5b3fd6]">lasting impressions.</em>
+              <em className="not-italic text-[#7c5fe6]">lasting impressions.</em>
             </h2>
           </motion.div>
 

@@ -114,7 +114,7 @@ export function Navbar() {
         aria-expanded={expanded}
         aria-controls={`submenu-${label.toLowerCase()}`}
         className={`w-full flex items-center justify-between py-3 text-2xl font-black uppercase tracking-[0.07em] transition-colors ${
-          isActive ? "text-[#5b3fd6]" : "text-white/50 hover:text-white"
+          isActive ? "text-[#7c5fe6]" : "text-white/50 hover:text-white"
         }`}
       >
         <span>{label}</span>
@@ -142,7 +142,7 @@ export function Navbar() {
                 onClick={close}
                 className={`py-2 text-[10px] uppercase tracking-[0.25em] transition-colors ${
                   pathname === overviewPath
-                    ? "text-[#5b3fd6]"
+                    ? "text-[#7c5fe6]"
                     : "text-white/30 hover:text-white/60"
                 }`}
               >
@@ -161,11 +161,11 @@ export function Navbar() {
                     onClick={close}
                     className={`flex items-baseline gap-2 py-2.5 transition-colors group/sub ${
                       pathname === s.path
-                        ? "text-[#5b3fd6]"
+                        ? "text-[#7c5fe6]"
                         : "text-white/40 hover:text-white"
                     }`}
                   >
-                    <span className="text-[9px] font-mono text-[#5b3fd6]/60 group-hover/sub:text-[#5b3fd6] transition-colors shrink-0">
+                    <span className="text-[9px] font-mono text-[#7c5fe6]/60 group-hover/sub:text-[#7c5fe6] transition-colors shrink-0">
                       {s.num}
                     </span>
                     <span className="text-[13px] font-semibold uppercase tracking-[0.06em] leading-tight">
@@ -301,7 +301,7 @@ export function Navbar() {
                           onClick={close}
                           className={`block py-3 text-2xl font-black uppercase tracking-[0.07em] transition-colors ${
                             pathname === link.path
-                              ? "text-[#5b3fd6]"
+                              ? "text-[#7c5fe6]"
                               : "text-white/50 hover:text-white"
                           }`}
                         >
@@ -319,7 +319,7 @@ export function Navbar() {
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/25 mb-2">Get in touch</p>
                   <a
                     href="mailto:hello@blackrabbit-creative.com"
-                    className="text-[11px] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                    className="text-[11px] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
                     onClick={close}
                   >
                     hello@blackrabbit-creative.com

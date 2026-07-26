@@ -15,14 +15,14 @@ export default function NotFound() {
   return (
     <section className="min-h-[75vh] bg-black text-white flex items-center px-6 md:px-12 py-24">
       <div className="max-w-3xl mx-auto w-full">
-        <span className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+        <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
           404
         </span>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-[0.07em] leading-[0.9] mb-8">
           This page
           <br />
-          <span className="text-[#5b3fd6]">doesn&apos;t exist.</span>
+          <span className="text-[#7c5fe6]">doesn&apos;t exist.</span>
         </h1>
 
         <p className="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10">

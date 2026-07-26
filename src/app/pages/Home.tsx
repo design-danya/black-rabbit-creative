@@ -256,7 +256,7 @@ export default function Home() {
             >
               <span className="sr-only">Branding Agency in Portsmouth, NH | Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency, Creative Agency, Packaging Design Agency, Rebranding Services &amp; Brand Identity Design Services for Small Businesses</span>
               <span className="text-white" aria-hidden="true">Distinct</span>
-              <span className="text-[#5b3fd6]" aria-hidden="true">By</span>
+              <span className="text-[#7c5fe6]" aria-hidden="true">By</span>
               <span className="text-white" aria-hidden="true">Design</span>
             </motion.h1>
 
@@ -300,7 +300,7 @@ export default function Home() {
           transition={{ delay: 1.2, duration: 1 }}
           className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
         >
-           <span className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6]">
+           <span className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6]">
               Scroll
            </span>
            <div className="h-12 w-px bg-gradient-to-b from-[#5b3fd6] to-transparent opacity-50" />
@@ -317,7 +317,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-12"
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-12"
           >
             Studio Philosophy
           </motion.span>
@@ -338,7 +338,7 @@ export default function Home() {
                 style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.8rem)" }}
               >
                 Stand-out branding{" "}
-                <em className="not-italic text-[#5b3fd6]">isn't optional</em>{" "}
+                <em className="not-italic text-[#7c5fe6]">isn't optional</em>{" "}
                 for serious brands.
               </h2>
               <Link
@@ -426,7 +426,7 @@ export default function Home() {
                     />
                   </picture>
                   <div className="flex items-start justify-between mb-8">
-                    <span className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6] group-hover:text-[#7c5fe6] transition-colors">
+                    <span className="text-[11px] uppercase tracking-[0.3em] text-[#7c5fe6] group-hover:text-[#7c5fe6] transition-colors">
                       {item.num}
                     </span>
                     <ArrowUpRight
@@ -462,7 +462,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-xs uppercase tracking-[0.3em] text-[#5b3fd6] block mb-4">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7c5fe6] block mb-4">
                 Portfolio
               </span>
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-[0.07em]">
@@ -471,7 +471,7 @@ export default function Home() {
             </motion.div>
             <Link
               href="/work"
-              className="hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#5b3fd6] hover:text-white transition-colors"
+              className="hidden md:inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#7c5fe6] hover:text-white transition-colors"
             >
               View All <ArrowRight size={12} />
             </Link>
@@ -503,7 +503,7 @@ export default function Home() {
 
                   {/* Info — sits at bottom, slides up slightly on hover */}
                   <div className="absolute bottom-0 left-0 right-0 px-5 py-5 translate-y-1 group-hover:translate-y-0 transition-transform duration-400">
-                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">
+                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">
                       {project.category}
                     </span>
                     <div className="flex items-end justify-between">

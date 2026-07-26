@@ -48,7 +48,7 @@ export default function BadgerBalm() {
       <div className="px-6 md:px-12 lg:px-20 pt-28 pb-6">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -432,7 +432,7 @@ export default function BadgerBalm() {
               {["Packaging Design", "Label Design", "Production Artwork", "Skincare", "Natural Products", "Brand Collaboration", "CPG"].map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                 >
                   {tag}
                 </span>
@@ -472,7 +472,7 @@ export default function BadgerBalm() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Need Packaging That Stands Out?
             </span>
             <h2
@@ -480,7 +480,7 @@ export default function BadgerBalm() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 3.5rem)" }}
             >
               Strong design helps products{" "}
-              <em className="not-italic text-[#5b3fd6]">connect.</em>
+              <em className="not-italic text-[#7c5fe6]">connect.</em>
             </h2>
           </motion.div>
 

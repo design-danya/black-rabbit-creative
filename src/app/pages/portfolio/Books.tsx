@@ -34,7 +34,7 @@ export default function Books() {
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 pt-28 pb-6">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -52,7 +52,7 @@ export default function Books() {
             style={{ fontSize: "clamp(2.2rem, 6vw, 6rem)" }}
           >
             Book{" "}
-            <em className="not-italic text-[#5b3fd6]">Design</em>
+            <em className="not-italic text-[#7c5fe6]">Design</em>
           </h1>
           <p className="text-white/40 text-[13px] sm:text-sm md:text-base leading-relaxed max-w-2xl">
             Full book projects — from cover redesigns to complete book proposals,
@@ -248,7 +248,7 @@ export default function Books() {
             {["Book Cover Design", "Redesign", "Typography", "Illustration", "Sci-Fi", "Print Design", "Douglas Adams"].map((tag) => (
               <span
                 key={tag}
-                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
               >
                 {tag}
               </span>
@@ -380,7 +380,7 @@ export default function Books() {
             {["Book Design", "Editorial Layout", "Typography", "Recipe Book", "Proposal", "Digital Book", "Mocktails"].map((tag) => (
               <span
                 key={tag}
-                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
               >
                 {tag}
               </span>
@@ -542,7 +542,7 @@ export default function Books() {
             {["Book Design", "Watercolor", "Art Book", "Typography", "Editorial Layout", "Print Design", "Bill Whyte"].map((tag) => (
               <span
                 key={tag}
-                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
               >
                 {tag}
               </span>
@@ -561,7 +561,7 @@ export default function Books() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Like What You See?
             </span>
             <h2
@@ -569,7 +569,7 @@ export default function Books() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 3.5rem)" }}
             >
               Let's build something{" "}
-              <em className="not-italic text-[#5b3fd6]">bold.</em>
+              <em className="not-italic text-[#7c5fe6]">bold.</em>
             </h2>
           </motion.div>
 

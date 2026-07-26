@@ -70,7 +70,7 @@ export default function LogoDesign() {
           <div>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
             >
               <ArrowLeft size={11} /> All Services
             </Link>
@@ -78,7 +78,7 @@ export default function LogoDesign() {
 
           <div className="lg:max-w-[45%]">
             <motion.span
-              className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6"
+              className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -95,7 +95,7 @@ export default function LogoDesign() {
             >
               Distinctive marks<br />
               built with{" "}
-              <em className="not-italic text-[#5b3fd6]">purpose.</em>
+              <em className="not-italic text-[#7c5fe6]">purpose.</em>
             </motion.h1>
 
             <motion.p
@@ -175,7 +175,7 @@ export default function LogoDesign() {
                 transition={{ duration: 0.7 }}
               >
                 A smart place{" "}
-                <em className="not-italic text-[#5b3fd6]">to begin.</em>
+                <em className="not-italic text-[#7c5fe6]">to begin.</em>
               </motion.h3>
 
               <motion.div
@@ -208,7 +208,7 @@ export default function LogoDesign() {
               >
                 <Link
                   href="/work/monadnock-berries"
-                  className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] hover:text-[#060606] transition-colors duration-300"
+                  className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#7c5fe6] hover:text-[#060606] transition-colors duration-300"
                 >
                   See a Logo Case Study — Monadnock Berries
                   <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -224,7 +224,7 @@ export default function LogoDesign() {
               transition={{ duration: 0.7, delay: 0.15 }}
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">Selected Work</span>
+                <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">Selected Work</span>
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#060606]/25 font-mono">
                   {String(activeSlide + 1).padStart(2, "0")} / {String(logos.length).padStart(2, "0")}
                 </span>
@@ -260,14 +260,14 @@ export default function LogoDesign() {
                 {/* Prev / Next */}
                 <button
                   onClick={prev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center border border-[#060606]/10 bg-white/80 backdrop-blur-sm hover:border-[#5b3fd6]/50 hover:text-[#5b3fd6] text-[#060606]/40 transition-all duration-300"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center border border-[#060606]/10 bg-white/80 backdrop-blur-sm hover:border-[#5b3fd6]/50 hover:text-[#7c5fe6] text-[#060606]/40 transition-all duration-300"
                   aria-label="Previous"
                 >
                   <ChevronLeft size={14} />
                 </button>
                 <button
                   onClick={next}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center border border-[#060606]/10 bg-white/80 backdrop-blur-sm hover:border-[#5b3fd6]/50 hover:text-[#5b3fd6] text-[#060606]/40 transition-all duration-300"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center border border-[#060606]/10 bg-white/80 backdrop-blur-sm hover:border-[#5b3fd6]/50 hover:text-[#7c5fe6] text-[#060606]/40 transition-all duration-300"
                   aria-label="Next"
                 >
                   <ChevronRight size={14} />
@@ -298,7 +298,7 @@ export default function LogoDesign() {
                   transition={{ duration: 0.3 }}
                 >
                   <span className="text-[10px] uppercase tracking-[0.3em] text-white/55">{logos[activeSlide].name}</span>
-                  <span className="text-[10px] font-mono tracking-[0.15em] text-[#5b3fd6]">{logos[activeSlide].year}</span>
+                  <span className="text-[10px] font-mono tracking-[0.15em] text-[#7c5fe6]">{logos[activeSlide].year}</span>
                 </motion.div>
               </AnimatePresence>
 
@@ -340,7 +340,7 @@ export default function LogoDesign() {
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-14 md:mb-20"
           >
             <div className="lg:col-span-5">
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
                 Logo Package
               </span>
               <h2
@@ -348,7 +348,7 @@ export default function LogoDesign() {
                 style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)" }}
               >
                 Your Brand's{" "}
-                <em className="not-italic text-[#5b3fd6]">Starting Point.</em>
+                <em className="not-italic text-[#7c5fe6]">Starting Point.</em>
               </h2>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-end gap-6">
@@ -399,7 +399,7 @@ export default function LogoDesign() {
                 className="bg-[#060606] p-8 md:p-10 flex flex-col gap-4"
               >
                 <div className="flex items-baseline justify-between">
-                  <span className="text-[10px] tracking-[0.3em] text-[#5b3fd6] font-mono">
+                  <span className="text-[10px] tracking-[0.3em] text-[#7c5fe6] font-mono">
                     Stage {stage.num}
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.25em] text-white/40">
@@ -425,7 +425,7 @@ export default function LogoDesign() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-7"
             >
-              <p className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+              <p className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
                 What You Get
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
@@ -456,7 +456,7 @@ export default function LogoDesign() {
                 strong, ownable mark. If you need deeper brand strategy first, consider our{" "}
                 <Link
                   href="/services/brand-identity"
-                  className="text-[#5b3fd6] hover:text-white underline underline-offset-4 decoration-[#5b3fd6]/40 hover:decoration-white transition-colors duration-300"
+                  className="text-[#7c5fe6] hover:text-white underline underline-offset-4 decoration-[#5b3fd6]/40 hover:decoration-white transition-colors duration-300"
                 >
                   full brand identity package
                 </Link>.
@@ -479,7 +479,7 @@ export default function LogoDesign() {
       <section className="bg-[#060606] text-white px-6 md:px-14 lg:px-20 pb-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="py-10">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">Other Services</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">Other Services</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
             {[
@@ -500,10 +500,10 @@ export default function LogoDesign() {
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">
-                    <span className="text-[10px] tracking-[0.3em] text-[#5b3fd6] font-mono">{s.num}</span>
+                    <span className="text-[10px] tracking-[0.3em] text-[#7c5fe6] font-mono">{s.num}</span>
                     <span className="text-sm font-black uppercase tracking-[0.07em] text-white">{s.label}</span>
                   </div>
-                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#5b3fd6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#7c5fe6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/8 to-transparent" />
                 </Link>
               </motion.div>

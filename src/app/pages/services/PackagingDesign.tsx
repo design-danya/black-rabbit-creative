@@ -158,7 +158,7 @@ export default function PackagingDesign() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
             >
               <ArrowLeft size={12} /> All Services
             </Link>
@@ -172,7 +172,7 @@ export default function PackagingDesign() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8"
+                className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8"
               >
                 Service — 03
               </motion.span>
@@ -185,7 +185,7 @@ export default function PackagingDesign() {
                 style={{ fontSize: "clamp(2.6rem, 6vw, 6.5rem)" }}
               >
                 Packaging{" "}
-                <em className="not-italic text-[#5b3fd6]">Design</em>
+                <em className="not-italic text-[#7c5fe6]">Design</em>
               </motion.h1>
 
               <motion.div
@@ -230,7 +230,7 @@ export default function PackagingDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               What It Is
             </span>
             <h2
@@ -238,7 +238,7 @@ export default function PackagingDesign() {
               style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
             >
               Seconds to{" "}
-              <em className="not-italic text-[#5b3fd6]">impress.</em>
+              <em className="not-italic text-[#7c5fe6]">impress.</em>
             </h2>
             <p className="text-gray-500 leading-[1.9] mb-6">
               In competitive retail environments, packaging has seconds to make an impression. Strong packaging doesn't just look good — it communicates clearly, builds trust, and helps your product stand apart on crowded shelves.
@@ -268,7 +268,7 @@ export default function PackagingDesign() {
                 {/* Caption */}
                 <div className="flex items-center justify-between bg-[#060606] px-5 py-3.5">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-white/55">Granite Roots Brewing</span>
-                  <span className="text-[10px] font-mono tracking-[0.15em] text-[#5b3fd6]">GDUSA 2025</span>
+                  <span className="text-[10px] font-mono tracking-[0.15em] text-[#7c5fe6]">GDUSA 2025</span>
                 </div>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function PackagingDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               What We Focus On
             </span>
             <h3
@@ -295,7 +295,7 @@ export default function PackagingDesign() {
               style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.2rem)" }}
             >
               Design that{" "}
-              <em className="not-italic text-[#5b3fd6]">works.</em>
+              <em className="not-italic text-[#7c5fe6]">works.</em>
             </h3>
             <p className="text-gray-500 leading-[1.9] mb-8">
               We design packaging that is:
@@ -310,7 +310,7 @@ export default function PackagingDesign() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07, duration: 0.5 }}
                 >
-                  <Check size={13} className="text-[#5b3fd6] shrink-0 mt-0.5" />
+                  <Check size={13} className="text-[#7c5fe6] shrink-0 mt-0.5" />
                   <span className="text-[#060606] text-sm leading-snug">{point}</span>
                 </motion.li>
               ))}
@@ -330,7 +330,7 @@ export default function PackagingDesign() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
                 Services Include
               </span>
               <div className="space-y-0 border-t border-[#060606]/8">
@@ -343,7 +343,7 @@ export default function PackagingDesign() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05, duration: 0.4 }}
                   >
-                    <span className="text-[9px] font-mono text-[#5b3fd6] shrink-0">
+                    <span className="text-[9px] font-mono text-[#7c5fe6] shrink-0">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="text-sm text-[#060606]/80">{item}</span>
@@ -359,14 +359,14 @@ export default function PackagingDesign() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
                 Best Fit Clients
               </span>
               <div className="flex flex-wrap gap-2">
                 {bestFit.map((item, i) => (
                   <motion.span
                     key={i}
-                    className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/12 text-[#060606]/60 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                    className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/12 text-[#060606]/60 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -393,7 +393,7 @@ export default function PackagingDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Selected Work
             </span>
             <h2
@@ -401,7 +401,7 @@ export default function PackagingDesign() {
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}
             >
               Packaging in{" "}
-              <em className="not-italic text-[#5b3fd6]">the wild.</em>
+              <em className="not-italic text-[#7c5fe6]">the wild.</em>
             </h2>
           </motion.div>
 
@@ -429,13 +429,13 @@ export default function PackagingDesign() {
                   </div>
                   {item.award && (
                     <div className="absolute top-2 left-2 bg-[#060606]/90 backdrop-blur-sm px-2 py-1 border border-[#5b3fd6]/50">
-                      <span className="text-[8px] uppercase tracking-[0.2em] text-[#5b3fd6]">GDUSA 2025</span>
+                      <span className="text-[8px] uppercase tracking-[0.2em] text-[#7c5fe6]">GDUSA 2025</span>
                     </div>
                   )}
                 </div>
                 <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
                   <span className="text-[9px] uppercase tracking-[0.25em] text-white/50 truncate">{item.name}</span>
-                  <span className="text-[9px] font-mono tracking-[0.1em] text-[#5b3fd6] shrink-0 ml-1">{item.label}</span>
+                  <span className="text-[9px] font-mono tracking-[0.1em] text-[#7c5fe6] shrink-0 ml-1">{item.label}</span>
                 </div>
               </motion.div>
             ))}
@@ -498,7 +498,7 @@ export default function PackagingDesign() {
               </div>
               <div className="flex items-center justify-between w-full bg-[#0d0d0d] px-5 py-3 border-t border-white/5 mt-0">
                 <span className="text-[10px] uppercase tracking-[0.3em] text-white/55">{workItems[lightbox].name}</span>
-                <span className="text-[10px] font-mono tracking-[0.15em] text-[#5b3fd6]">{workItems[lightbox].label}</span>
+                <span className="text-[10px] font-mono tracking-[0.15em] text-[#7c5fe6]">{workItems[lightbox].label}</span>
               </div>
               <div className="flex gap-2 mt-4">
                 {workItems.map((_, i) => (
@@ -525,7 +525,7 @@ export default function PackagingDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               Our Approach
             </span>
             <h2
@@ -533,7 +533,7 @@ export default function PackagingDesign() {
               style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}
             >
               Strategy first,{" "}
-              <em className="not-italic text-[#5b3fd6]">always.</em>
+              <em className="not-italic text-[#7c5fe6]">always.</em>
             </h2>
           </motion.div>
 
@@ -575,7 +575,7 @@ export default function PackagingDesign() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.5 }}
                 >
-                  <span className="text-[10px] font-mono text-[#5b3fd6] shrink-0 pt-0.5 w-6">{step.num}</span>
+                  <span className="text-[10px] font-mono text-[#7c5fe6] shrink-0 pt-0.5 w-6">{step.num}</span>
                   <div>
                     <p className="text-sm font-black uppercase tracking-[0.07em] mb-2 text-[#060606]">{step.title}</p>
                     <p className="text-sm text-gray-500 leading-[1.8]">{step.desc}</p>
@@ -601,7 +601,7 @@ export default function PackagingDesign() {
             className="flex flex-col lg:flex-row lg:items-end justify-between gap-12"
           >
             <div>
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
                 Ready to begin?
               </span>
               <h2
@@ -609,7 +609,7 @@ export default function PackagingDesign() {
                 style={{ fontSize: "clamp(2.6rem, 5.5vw, 5.5rem)" }}
               >
                 Elevate your<br />
-                <em className="not-italic text-[#5b3fd6]">packaging.</em>
+                <em className="not-italic text-[#7c5fe6]">packaging.</em>
               </h2>
             </div>
             <div className="flex flex-col items-start lg:items-end gap-4 shrink-0">
@@ -634,7 +634,7 @@ export default function PackagingDesign() {
       <section className="bg-[#060606] text-white px-6 md:px-16 lg:px-24 pb-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="py-10">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">Other Services</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">Other Services</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
             {[
@@ -655,10 +655,10 @@ export default function PackagingDesign() {
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">
-                    <span className="text-[10px] tracking-[0.3em] text-[#5b3fd6] font-mono">{s.num}</span>
+                    <span className="text-[10px] tracking-[0.3em] text-[#7c5fe6] font-mono">{s.num}</span>
                     <span className="text-sm font-black uppercase tracking-[0.07em] text-white">{s.label}</span>
                   </div>
-                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#5b3fd6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#7c5fe6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/8 to-transparent" />
                 </Link>
               </motion.div>

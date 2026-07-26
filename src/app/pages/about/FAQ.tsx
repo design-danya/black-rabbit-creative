@@ -244,12 +244,12 @@ function AccordionItem({ item, isOpen, toggle }: { item: FAQItem; isOpen: boolea
         onClick={toggle}
         className="w-full flex items-start justify-between gap-6 py-6 md:py-7 text-left group"
       >
-        <span className={`text-[15px] md:text-base font-semibold leading-snug transition-colors duration-300 ${isOpen ? "text-[#5b3fd6]" : "text-white/80 group-hover:text-white"}`}>
+        <span className={`text-[15px] md:text-base font-semibold leading-snug transition-colors duration-300 ${isOpen ? "text-[#7c5fe6]" : "text-white/80 group-hover:text-white"}`}>
           {item.q}
         </span>
         <span className="shrink-0 mt-0.5">
           {isOpen ? (
-            <Minus size={16} className="text-[#5b3fd6]" />
+            <Minus size={16} className="text-[#7c5fe6]" />
           ) : (
             <Plus size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
           )}
@@ -294,7 +294,7 @@ export default function FAQ() {
       <section className="px-6 md:px-16 lg:px-24 pt-40 pb-16 md:pb-24 max-w-7xl mx-auto">
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors mb-10"
         >
           <ArrowLeft size={12} /> About
         </Link>
@@ -303,7 +303,7 @@ export default function FAQ() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10"
+          className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10"
         >
           Frequently Asked Questions
         </motion.span>
@@ -315,7 +315,7 @@ export default function FAQ() {
           className="font-black uppercase tracking-[0.07em] leading-[0.93] max-w-5xl"
           style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)" }}
         >
-          Got <em className="not-italic text-[#5b3fd6]">questions?</em>
+          Got <em className="not-italic text-[#7c5fe6]">questions?</em>
         </motion.h1>
 
         <motion.p
@@ -383,7 +383,7 @@ export default function FAQ() {
             className="font-black uppercase tracking-[0.07em] leading-[0.95] mb-6"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
-            Still have <em className="not-italic text-[#5b3fd6]">questions?</em>
+            Still have <em className="not-italic text-[#7c5fe6]">questions?</em>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}

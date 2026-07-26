@@ -123,13 +123,13 @@ export default function Contact() {
           className="flex flex-wrap gap-x-12 gap-y-4 mb-10 pb-10 border-b border-gray-100"
         >
           <div>
-            <span className="block text-[11px] font-bold uppercase tracking-widest text-[#5b3fd6] mb-1">Email</span>
+            <span className="block text-[11px] font-bold uppercase tracking-widest text-[#7c5fe6] mb-1">Email</span>
             <a href="mailto:hello@blackrabbit-creative.com" className="text-base hover:underline">
               hello@blackrabbit-creative.com
             </a>
           </div>
           <div>
-            <span className="block text-[11px] font-bold uppercase tracking-widest text-[#5b3fd6] mb-1">Phone</span>
+            <span className="block text-[11px] font-bold uppercase tracking-widest text-[#7c5fe6] mb-1">Phone</span>
             <a href="tel:6032079890" className="text-base hover:underline">603-207-9890</a>
           </div>
         </motion.div>
@@ -153,7 +153,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#5b3fd6] mb-6">
+          <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#7c5fe6] mb-6">
             Book a Discovery Call
           </h3>
           <MoxieBooking />
@@ -168,7 +168,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
         >
-          <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#5b3fd6] mb-6">
+          <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#7c5fe6] mb-6">
             Reviews
           </h3>
           <div className="border border-black/10 bg-[#f7f7f5] p-6 md:p-8">

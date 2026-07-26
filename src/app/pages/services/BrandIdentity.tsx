@@ -173,7 +173,7 @@ export default function BrandIdentity() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
             >
               <ArrowLeft size={12} /> All Services
             </Link>
@@ -185,7 +185,7 @@ export default function BrandIdentity() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8"
+              className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8"
             >
               Service — 01
             </motion.span>
@@ -198,7 +198,7 @@ export default function BrandIdentity() {
               style={{ fontSize: "clamp(2.6rem, 6vw, 6.5rem)" }}
             >
               Brand{" "}
-              <em className="not-italic text-[#5b3fd6]">Identity</em>
+              <em className="not-italic text-[#7c5fe6]">Identity</em>
               <br />
               Design
             </motion.h1>
@@ -242,7 +242,7 @@ export default function BrandIdentity() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               What It Is
             </span>
             <h2
@@ -251,7 +251,7 @@ export default function BrandIdentity() {
             >
               More than a logo.
               <br />A complete{" "}
-              <em className="not-italic text-[#5b3fd6]">system.</em>
+              <em className="not-italic text-[#7c5fe6]">system.</em>
             </h2>
             <p className="text-gray-500 leading-[1.9] mb-6">
               Your brand identity is the sum of every visual and verbal signal
@@ -328,7 +328,7 @@ export default function BrandIdentity() {
 
               {/* Label */}
               <div className="flex items-center justify-between pt-1">
-                <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">
+                <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">
                   Lobster Lab 2025
                 </span>
                 <span className="text-[11px] uppercase tracking-[0.25em] text-[#060606]/30">
@@ -352,7 +352,7 @@ export default function BrandIdentity() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               The Process
             </span>
             <h2
@@ -360,7 +360,7 @@ export default function BrandIdentity() {
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}
             >
               How we{" "}
-              <em className="not-italic text-[#5b3fd6]">get there.</em>
+              <em className="not-italic text-[#7c5fe6]">get there.</em>
             </h2>
           </motion.div>
 
@@ -377,7 +377,7 @@ export default function BrandIdentity() {
               >
                 {/* Recommended badge */}
                 {pkg.recommended && (
-                  <span className="absolute top-8 right-8 md:top-12 md:right-12 text-[10px] uppercase tracking-[0.25em] text-[#5b3fd6] border border-[#5b3fd6]/40 px-3 py-1">
+                  <span className="absolute top-8 right-8 md:top-12 md:right-12 text-[10px] uppercase tracking-[0.25em] text-[#7c5fe6] border border-[#5b3fd6]/40 px-3 py-1">
                     Most Popular
                   </span>
                 )}
@@ -398,7 +398,7 @@ export default function BrandIdentity() {
                 {/* Meta: timeline + investment */}
                 <div className="flex gap-6 mb-10 pb-10 border-b border-white/10">
                   <div className="flex items-center gap-2">
-                    <Clock size={13} className="text-[#5b3fd6] shrink-0" />
+                    <Clock size={13} className="text-[#7c5fe6] shrink-0" />
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.2em] mb-0.5 text-gray-500">
                         Timeline
@@ -409,7 +409,7 @@ export default function BrandIdentity() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <DollarSign size={13} className="text-[#5b3fd6] shrink-0" />
+                    <DollarSign size={13} className="text-[#7c5fe6] shrink-0" />
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.2em] mb-0.5 text-gray-500">
                         Investment
@@ -432,7 +432,7 @@ export default function BrandIdentity() {
                         key={step.num}
                         className="flex gap-5 py-5 border-t border-white/10"
                       >
-                        <span className="text-[#5b3fd6] text-xs font-mono tracking-[0.2em] shrink-0 mt-0.5 w-4">
+                        <span className="text-[#7c5fe6] text-xs font-mono tracking-[0.2em] shrink-0 mt-0.5 w-4">
                           {step.num}
                         </span>
                         <div>
@@ -457,7 +457,7 @@ export default function BrandIdentity() {
                   <ul className="space-y-3">
                     {pkg.deliverables.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <Check size={13} className="text-[#5b3fd6] shrink-0 mt-0.5" />
+                        <Check size={13} className="text-[#7c5fe6] shrink-0 mt-0.5" />
                         <span className="text-sm leading-snug text-gray-300">
                           {item}
                         </span>
@@ -470,7 +470,7 @@ export default function BrandIdentity() {
                 {pkg.example && (
                   <Link
                     href={pkg.example.href}
-                    className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] hover:text-white transition-colors duration-300 mb-4 mt-auto"
+                    className="group inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#7c5fe6] hover:text-white transition-colors duration-300 mb-4 mt-auto"
                   >
                     {pkg.example.label}
                     <ArrowRight
@@ -507,7 +507,7 @@ export default function BrandIdentity() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               FAQ
             </span>
             <h2
@@ -515,7 +515,7 @@ export default function BrandIdentity() {
               style={{ fontSize: "clamp(2rem, 3vw, 2.8rem)" }}
             >
               Common{" "}
-              <em className="not-italic text-[#5b3fd6]">questions.</em>
+              <em className="not-italic text-[#7c5fe6]">questions.</em>
             </h2>
           </motion.div>
 
@@ -533,13 +533,13 @@ export default function BrandIdentity() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full flex items-center justify-between gap-6 py-7 text-left group"
                 >
-                  <span className="text-sm font-bold uppercase tracking-[0.07em] text-white group-hover:text-[#5b3fd6] transition-colors duration-300">
+                  <span className="text-sm font-bold uppercase tracking-[0.07em] text-white group-hover:text-[#7c5fe6] transition-colors duration-300">
                     {faq.q}
                   </span>
                   <span className="shrink-0 w-7 h-7 flex items-center justify-center border border-white/15 group-hover:border-[#5b3fd6]/50 transition-colors duration-300">
                     {openFaq === i
-                      ? <Minus size={12} className="text-[#5b3fd6]" />
-                      : <Plus size={12} className="text-white/50 group-hover:text-[#5b3fd6]" />
+                      ? <Minus size={12} className="text-[#7c5fe6]" />
+                      : <Plus size={12} className="text-white/50 group-hover:text-[#7c5fe6]" />
                     }
                   </span>
                 </button>
@@ -601,7 +601,7 @@ export default function BrandIdentity() {
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 px-8 py-10 min-h-[100px] transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)]"
                 >
                   <div className="relative z-10 flex items-center gap-5">
-                    <span className="text-[11px] tracking-[0.25em] text-[#5b3fd6] font-mono">
+                    <span className="text-[11px] tracking-[0.25em] text-[#7c5fe6] font-mono">
                       {s.num}
                     </span>
                     <span className="text-base font-black uppercase tracking-[0.07em] text-white transition-colors duration-300">
@@ -610,7 +610,7 @@ export default function BrandIdentity() {
                   </div>
                   <ArrowUpRight
                     size={18}
-                    className="relative z-10 text-white/20 group-hover:text-[#5b3fd6] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
+                    className="relative z-10 text-white/20 group-hover:text-[#7c5fe6] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
                   />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </Link>

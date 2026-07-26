@@ -89,7 +89,7 @@ export default function CaseStudies() {
       <div className="px-4 sm:px-6 md:px-12 lg:px-20 pt-28 pb-6">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -109,7 +109,7 @@ export default function CaseStudies() {
             style={{ fontSize: "clamp(2.2rem, 6vw, 6rem)" }}
           >
             Case{" "}
-            <em className="not-italic text-[#5b3fd6]">Studies</em>
+            <em className="not-italic text-[#7c5fe6]">Studies</em>
           </h1>
           <p className="text-white/40 text-[13px] sm:text-sm md:text-base leading-relaxed max-w-2xl">
             Self-initiated practice briefs designed to push creative boundaries, explore
@@ -544,7 +544,7 @@ export default function CaseStudies() {
               {["Practice Brief", "Brand Identity", "Logo Design", "Packaging Design", "Menu Design", "Illustration", "Merchandise", "Environmental Graphics", "Restaurant Branding"].map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                 >
                   {tag}
                 </span>
@@ -940,7 +940,7 @@ export default function CaseStudies() {
               {["Practice Brief", "Brand Identity", "Logo Design", "Packaging Design", "Character Design", "Illustration", "Merchandise", "Pattern Design", "Hot Sauce", "CPG Branding"].map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-white/10 text-white/40 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                 >
                   {tag}
                 </span>
@@ -968,7 +968,7 @@ export default function CaseStudies() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Sharpening the{" "}
-              <em className="not-italic text-[#5b3fd6]">craft.</em>
+              <em className="not-italic text-[#7c5fe6]">craft.</em>
             </h2>
             <p className="text-white/50 leading-[1.7] sm:leading-[1.8] text-sm sm:text-[15px] mb-4">
               Practice briefs are self-initiated projects designed to push creative boundaries
@@ -994,7 +994,7 @@ export default function CaseStudies() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Like What You See?
             </span>
             <h2
@@ -1002,7 +1002,7 @@ export default function CaseStudies() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 3.5rem)" }}
             >
               Let's build something{" "}
-              <em className="not-italic text-[#5b3fd6]">bold.</em>
+              <em className="not-italic text-[#7c5fe6]">bold.</em>
             </h2>
           </motion.div>
 

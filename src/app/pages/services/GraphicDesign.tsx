@@ -166,7 +166,7 @@ export default function GraphicDesign() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
             >
               <ArrowLeft size={12} /> All Services
             </Link>
@@ -178,7 +178,7 @@ export default function GraphicDesign() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8"
+              className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8"
             >
               Service — 04
             </motion.span>
@@ -191,7 +191,7 @@ export default function GraphicDesign() {
               style={{ fontSize: "clamp(2.4rem, 5.5vw, 6rem)" }}
             >
               Graphic{" "}
-              <em className="not-italic text-[#5b3fd6]">Design &amp;</em>
+              <em className="not-italic text-[#7c5fe6]">Design &amp;</em>
               <br />
               Illustration
             </motion.h1>
@@ -235,7 +235,7 @@ export default function GraphicDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               What It Is
             </span>
             <h2
@@ -243,7 +243,7 @@ export default function GraphicDesign() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
             >
               Every touchpoint,{" "}
-              <em className="not-italic text-[#5b3fd6]">intentional.</em>
+              <em className="not-italic text-[#7c5fe6]">intentional.</em>
             </h2>
             <p className="text-gray-500 leading-[1.9] mb-6">
               Strong brands require more than a logo and packaging. Every touchpoint — from marketing materials to digital graphics — should feel cohesive, intentional, and unmistakably yours.
@@ -284,7 +284,7 @@ export default function GraphicDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Capabilities
             </span>
             <div className="space-y-0 border-t border-[#060606]/8">
@@ -297,10 +297,10 @@ export default function GraphicDesign() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.07, duration: 0.5 }}
                 >
-                  <span className="text-[9px] font-mono text-[#5b3fd6] shrink-0">
+                  <span className="text-[9px] font-mono text-[#7c5fe6] shrink-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <Check size={11} className="text-[#5b3fd6] shrink-0" />
+                  <Check size={11} className="text-[#7c5fe6] shrink-0" />
                   <span className="text-sm text-[#060606]/80 leading-snug">{item}</span>
                 </motion.div>
               ))}
@@ -315,7 +315,7 @@ export default function GraphicDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               Our Philosophy
             </span>
             <h2
@@ -323,7 +323,7 @@ export default function GraphicDesign() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
             >
               Designed to support the{" "}
-              <em className="not-italic text-[#5b3fd6]">whole brand.</em>
+              <em className="not-italic text-[#7c5fe6]">whole brand.</em>
             </h2>
             <p className="text-gray-500 leading-[1.9] mb-6">
               This work is never treated as one-off decoration. Every piece is developed within the context of your brand system, reinforcing the visual language we've established and maintaining consistency across platforms.
@@ -346,7 +346,7 @@ export default function GraphicDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Selected Work
             </span>
             <h2
@@ -354,7 +354,7 @@ export default function GraphicDesign() {
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}
             >
               Design in{" "}
-              <em className="not-italic text-[#5b3fd6]">practice.</em>
+              <em className="not-italic text-[#7c5fe6]">practice.</em>
             </h2>
           </motion.div>
 
@@ -376,7 +376,7 @@ export default function GraphicDesign() {
                   />
                   <div className="absolute inset-0 bg-[#060606]/0 group-hover:bg-[#060606]/25 transition-all duration-300" />
                   <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#060606]/80 backdrop-blur-sm border border-white/10">
-                    <span className="text-[8px] uppercase tracking-[0.25em] text-[#5b3fd6]">{item.tag}</span>
+                    <span className="text-[8px] uppercase tracking-[0.25em] text-[#7c5fe6]">{item.tag}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
@@ -421,7 +421,7 @@ export default function GraphicDesign() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">
               Custom Illustration
             </span>
             <h2
@@ -429,7 +429,7 @@ export default function GraphicDesign() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
             >
               Depth and personality,{" "}
-              <em className="not-italic text-[#5b3fd6]">with intention.</em>
+              <em className="not-italic text-[#7c5fe6]">with intention.</em>
             </h2>
             <p className="text-gray-500 leading-[1.9]">
               Illustration can add depth and personality when used with intention. At Black Rabbit Creative, illustration is approached as a strategic extension of the brand — not surface decoration.
@@ -446,7 +446,7 @@ export default function GraphicDesign() {
               {["Clean Vector Forms", "Strong Silhouettes", "Refined Detail", "Brand-Integrated"].map((trait, i) => (
                 <motion.span
                   key={i}
-                  className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/12 text-[#060606]/60 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-4 py-2 text-[11px] uppercase tracking-[0.12em] border border-[#060606]/12 text-[#060606]/60 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -472,7 +472,7 @@ export default function GraphicDesign() {
             transition={{ duration: 0.7 }}
           >
             <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-16 mb-8">
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] shrink-0">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] shrink-0">
                 Best Fit Clients
               </span>
               <h3
@@ -480,7 +480,7 @@ export default function GraphicDesign() {
                 style={{ fontSize: "clamp(1.5rem, 2.2vw, 2rem)" }}
               >
                 This service is{" "}
-                <em className="not-italic text-[#5b3fd6]">ideal for:</em>
+                <em className="not-italic text-[#7c5fe6]">ideal for:</em>
               </h3>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -493,7 +493,7 @@ export default function GraphicDesign() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.06, duration: 0.4 }}
                 >
-                  <Check size={11} className="text-[#5b3fd6] shrink-0" />
+                  <Check size={11} className="text-[#7c5fe6] shrink-0" />
                   <span className="text-sm text-[#060606]/75 leading-snug">{item}</span>
                 </motion.div>
               ))}
@@ -511,7 +511,7 @@ export default function GraphicDesign() {
             transition={{ duration: 0.7 }}
           >
             <div className="flex flex-col md:flex-row md:items-baseline gap-6 md:gap-16 mb-12">
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] shrink-0">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] shrink-0">
                 Our Approach
               </span>
               <h3
@@ -519,7 +519,7 @@ export default function GraphicDesign() {
                 style={{ fontSize: "clamp(1.5rem, 2.2vw, 2rem)" }}
               >
                 Brand first,{" "}
-                <em className="not-italic text-[#5b3fd6]">always.</em>
+                <em className="not-italic text-[#7c5fe6]">always.</em>
               </h3>
             </div>
 
@@ -554,7 +554,7 @@ export default function GraphicDesign() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.5 }}
                 >
-                  <span className="text-[10px] font-mono text-[#5b3fd6] shrink-0 pt-0.5 w-6">{step.num}</span>
+                  <span className="text-[10px] font-mono text-[#7c5fe6] shrink-0 pt-0.5 w-6">{step.num}</span>
                   <div>
                     <p className="text-sm font-black uppercase tracking-[0.07em] mb-2 text-[#060606]">{step.title}</p>
                     <p className="text-sm text-gray-500 leading-[1.8]">{step.desc}</p>
@@ -582,7 +582,7 @@ export default function GraphicDesign() {
             className="flex flex-col lg:flex-row lg:items-end justify-between gap-12"
           >
             <div>
-              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+              <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
                 Ready to begin?
               </span>
               <h2
@@ -590,7 +590,7 @@ export default function GraphicDesign() {
                 style={{ fontSize: "clamp(2.4rem, 5vw, 5.5rem)" }}
               >
                 Strengthen your<br />
-                <em className="not-italic text-[#5b3fd6]">visual presence.</em>
+                <em className="not-italic text-[#7c5fe6]">visual presence.</em>
               </h2>
             </div>
             <div className="flex flex-col items-start lg:items-end gap-4 shrink-0">
@@ -615,7 +615,7 @@ export default function GraphicDesign() {
       <section className="bg-[#060606] text-white px-6 md:px-16 lg:px-24 pb-10 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="py-10">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">Other Services</span>
+            <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">Other Services</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
             {[
@@ -636,10 +636,10 @@ export default function GraphicDesign() {
                   className="group relative overflow-hidden flex flex-1 items-center justify-between bg-white/[0.04] hover:bg-white/[0.09] px-8 py-10 min-h-[100px] transition-all duration-300"
                 >
                   <div className="flex items-center gap-5">
-                    <span className="text-[10px] tracking-[0.3em] text-[#5b3fd6] font-mono">{s.num}</span>
+                    <span className="text-[10px] tracking-[0.3em] text-[#7c5fe6] font-mono">{s.num}</span>
                     <span className="text-sm font-black uppercase tracking-[0.07em] text-white">{s.label}</span>
                   </div>
-                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#5b3fd6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0" />
+                  <ArrowUpRight size={16} className="text-white/15 group-hover:text-[#7c5fe6] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 shrink-0" />
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/8 to-transparent" />
                 </Link>
               </motion.div>

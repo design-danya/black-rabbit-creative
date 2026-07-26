@@ -75,7 +75,7 @@ export function Footer() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-[0.07em] leading-[1.05]">
             Let's work <br className="hidden md:block" />
-            <span className="text-[#5b3fd6] italic font-light">together.</span>
+            <span className="text-[#7c5fe6] italic font-light">together.</span>
           </h2>
           <Link
             href="/contact"
@@ -90,7 +90,7 @@ export function Footer() {
       {/* Constant Contact Inline Form */}
       <div className="border-b border-white/10 py-12 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-6 text-center">Stay in the Loop</h3>
+          <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-6 text-center">Stay in the Loop</h3>
           <div className="max-w-xl mx-auto">
             <ConstantContactForm />
           </div>
@@ -121,7 +121,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div className="md:col-span-2">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-5">Navigation</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-5">Navigation</h3>
             <div className="flex flex-col gap-3">
               {footerLinks.map((link) => (
                 <Link
@@ -137,7 +137,7 @@ export function Footer() {
 
           {/* Specialties — niche keyword links for SEO */}
           <div className="md:col-span-3">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-5">Specialties</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-5">Specialties</h3>
             <div className="flex flex-col gap-3">
               <Link href="/services/brand-identity" className="text-sm text-gray-300 hover:text-white transition-colors">Brand Identity Design</Link>
               <Link href="/services/packaging-design" className="text-sm text-gray-300 hover:text-white transition-colors">Packaging Design</Link>
@@ -149,7 +149,7 @@ export function Footer() {
 
           {/* Connect */}
           <div className="md:col-span-2">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-5">Connect</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-5">Connect</h3>
             <div className="flex flex-col gap-3">
               {socials.map((s) => (
                 <a
@@ -173,7 +173,7 @@ export function Footer() {
 
           {/* Studio */}
           <div className="md:col-span-2">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#5b3fd6] mb-5">Contact</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-5">Contact</h3>
             <div className="flex flex-col gap-1 text-sm text-gray-400">
               <a href="mailto:hello@blackrabbit-creative.com" className="hover:text-white transition-colors">hello@blackrabbit-creative.com</a>
               <a href="tel:6032079890" className="mt-3 hover:text-white transition-colors">603-207-9890</a>

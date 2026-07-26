@@ -113,7 +113,7 @@ export default function Services() {
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-[0.07em] leading-[0.95] max-w-4xl">
             What we{" "}
-            <em className="not-italic text-[#5b3fd6]">do.</em>
+            <em className="not-italic text-[#7c5fe6]">do.</em>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -141,14 +141,14 @@ export default function Services() {
 
                 {/* Number */}
                 <div className="md:col-span-1">
-                  <span className="text-xs tracking-[0.2em] text-[#5b3fd6] font-mono">
+                  <span className="text-xs tracking-[0.2em] text-[#7c5fe6] font-mono">
                     {service.num}
                   </span>
                 </div>
 
                 {/* Title + tagline */}
                 <div className="md:col-span-3">
-                  <h2 className="text-2xl md:text-3xl font-black uppercase tracking-[0.04em] group-hover:text-[#5b3fd6] transition-colors duration-300 mb-2">
+                  <h2 className="text-2xl md:text-3xl font-black uppercase tracking-[0.04em] group-hover:text-[#7c5fe6] transition-colors duration-300 mb-2">
                     {service.title}
                   </h2>
                   <p className="text-[11px] uppercase tracking-[0.2em] text-gray-400">
@@ -185,7 +185,7 @@ export default function Services() {
                   </ul>
                   <Link
                     href={service.to}
-                    className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#060606] hover:text-[#5b3fd6] transition-colors duration-300 font-bold group/link"
+                    className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-[#060606] hover:text-[#7c5fe6] transition-colors duration-300 font-bold group/link"
                   >
                     Learn more
                     <ArrowUpRight
@@ -213,7 +213,7 @@ export default function Services() {
           </p>
           <Link
             href="/contact"
-            className="inline-block text-2xl md:text-3xl font-black uppercase tracking-[0.07em] hover:text-[#5b3fd6] transition-colors border-b-2 border-black hover:border-[#5b3fd6] pb-1"
+            className="inline-block text-2xl md:text-3xl font-black uppercase tracking-[0.07em] hover:text-[#7c5fe6] transition-colors border-b-2 border-black hover:border-[#5b3fd6] pb-1"
           >
             Let's talk about it
           </Link>

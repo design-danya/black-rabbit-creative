@@ -55,7 +55,7 @@ export default function SequoiaSexToys() {
       <div className="px-6 md:px-12 lg:px-20 pt-28 pb-6">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -77,7 +77,7 @@ export default function SequoiaSexToys() {
             style={{ fontSize: "clamp(2.4rem, 5.5vw, 5.5rem)" }}
           >
             Sequoia{" "}
-            <em className="not-italic text-[#5b3fd6]">Sex Toys</em>
+            <em className="not-italic text-[#7c5fe6]">Sex Toys</em>
           </h1>
           <p className="mt-3 text-white/40 text-sm uppercase tracking-[0.2em]">
             Brand Identity &amp; Packaging System
@@ -97,7 +97,7 @@ export default function SequoiaSexToys() {
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="px-5 py-6 first:pl-0"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1.5">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1.5">
                   {item.label}
                 </p>
                 <p className="text-sm text-white/80 leading-snug">{item.value}</p>
@@ -117,7 +117,7 @@ export default function SequoiaSexToys() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Project Overview
             </span>
             <h2
@@ -125,7 +125,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Rooted in{" "}
-              <em className="not-italic text-[#5b3fd6]">pleasure.</em>
+              <em className="not-italic text-[#7c5fe6]">pleasure.</em>
             </h2>
             <div className="space-y-4 text-white/50 leading-[1.8] text-[15px]">
               <p>
@@ -191,7 +191,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Research &amp; Strategy
             </span>
             <h2
@@ -199,7 +199,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Finding the{" "}
-              <em className="not-italic text-[#5b3fd6]">middle ground.</em>
+              <em className="not-italic text-[#7c5fe6]">middle ground.</em>
             </h2>
             <p className="text-gray-500 leading-[1.8] text-[15px] mb-6">
               The thesis began with research into how branding shapes consumer
@@ -258,7 +258,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Logo Design
             </span>
             <h2
@@ -266,7 +266,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               The{" "}
-              <em className="not-italic text-[#5b3fd6]">jackalope</em> identity.
+              <em className="not-italic text-[#7c5fe6]">jackalope</em> identity.
             </h2>
             <p className="mt-4 text-white/50 leading-[1.8] max-w-2xl text-[15px]">
               At the center of the brand identity is a mirrored jackalope crest — a
@@ -292,7 +292,7 @@ export default function SequoiaSexToys() {
                 <Image src={logoDarkImg} width={1440} height={1393} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys logo reversed on black — jackalope crest mark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8 pr-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Reversed — Dark</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Reversed — Dark</p>
                 <p className="text-xs text-gray-400 leading-relaxed">White jackalope mark with gold wordmark on black — primary logo for packaging and dark-ground applications.</p>
               </div>
             </motion.div>
@@ -306,7 +306,7 @@ export default function SequoiaSexToys() {
                 <Image src={logoLightImg} width={1440} height={1394} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys logo standard on white — jackalope crest with terracotta wordmark | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8 pl-4">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Standard — Light</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Standard — Light</p>
                 <p className="text-xs text-gray-400 leading-relaxed">Black jackalope with terracotta-red wordmark on white — for stationery and light-ground print.</p>
               </div>
             </motion.div>
@@ -328,7 +328,7 @@ export default function SequoiaSexToys() {
                 transition={{ delay: parseInt(item.num) * 0.05, duration: 0.4 }}
                 className="bg-[#060606] px-5 py-6"
               >
-                <span className="block text-[10px] text-[#5b3fd6] mb-1.5 font-bold">{item.num}</span>
+                <span className="block text-[10px] text-[#7c5fe6] mb-1.5 font-bold">{item.num}</span>
                 <p className="text-sm font-semibold text-white mb-1">{item.title}</p>
                 <p className="text-xs text-white/45 leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -353,7 +353,7 @@ export default function SequoiaSexToys() {
               />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Logo Design Process</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Logo Design Process</p>
               <p className="text-xs text-white/40 leading-relaxed">From initial sketches and concept exploration through to the final mirrored jackalope mark and wordmark system.</p>
             </div>
           </motion.div>
@@ -370,7 +370,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Stationery System
             </span>
             <h2
@@ -378,7 +378,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Building a cohesive{" "}
-              <em className="not-italic text-[#5b3fd6]">brand world.</em>
+              <em className="not-italic text-[#7c5fe6]">brand world.</em>
             </h2>
             <p className="mt-4 text-white/50 leading-[1.8] max-w-2xl text-[15px]">
               The stationery system extends the brand's illustrated personality into
@@ -400,7 +400,7 @@ export default function SequoiaSexToys() {
               <Image src={letterheadImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded letterhead spread with botanical border illustrations | Stationery design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Letterhead</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Branded Letterhead</p>
               <p className="text-xs text-white/40 leading-relaxed">Hand-illustrated botanical border pattern, jackalope logo lockup, and signature sign-off.</p>
             </div>
           </motion.div>
@@ -417,7 +417,7 @@ export default function SequoiaSexToys() {
                 <Image src={envelopeImg} width={1440} height={1028} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded envelopes with jackalope mark and fruit-motif liner | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Envelope System</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Envelope System</p>
                 <p className="text-xs text-white/40 leading-relaxed">Branded outer with jackalope mark and poppy illustrations. Custom patterned fruit-motif liner.</p>
               </div>
             </motion.div>
@@ -431,7 +431,7 @@ export default function SequoiaSexToys() {
                 <Image src={thankYouCardsImg} width={2048} height={1463} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys illustrated thank-you insert cards with cheeky fruit messaging | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Thank-You Cards</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Thank-You Cards</p>
                 <p className="text-xs text-white/40 leading-relaxed">"Peel Me Baby," "Let's Get Spicy," "I-peach-iate you" — cheeky illustrated insert cards.</p>
               </div>
             </motion.div>
@@ -449,7 +449,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Packaging Design
             </span>
             <h2
@@ -457,7 +457,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Designing the{" "}
-              <em className="not-italic text-[#5b3fd6]">unboxing experience.</em>
+              <em className="not-italic text-[#7c5fe6]">unboxing experience.</em>
             </h2>
             <p className="mt-4 text-gray-500 leading-[1.8] max-w-2xl text-[15px]">
               A major focus of the thesis explored how packaging design can elevate
@@ -480,7 +480,7 @@ export default function SequoiaSexToys() {
               <Image src={peachBoxImg} width={2048} height={1424} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys 'For Your Peach' illustrated gift box with custom tissue paper | Packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Gift Box System</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Gift Box System</p>
               <p className="text-xs text-gray-400 leading-relaxed">"For Your Peach" gift box with illustrated pin-up character, polka-dot panels, and custom tissue paper.</p>
             </div>
           </motion.div>
@@ -497,7 +497,7 @@ export default function SequoiaSexToys() {
                 <Image src={floralBoxImg} width={2048} height={1152} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys botanical wrap and gift box with gold jackalope seal | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Botanical Wrap & Box</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Botanical Wrap & Box</p>
                 <p className="text-xs text-gray-400 leading-relaxed">Art nouveau floral wrap with tonal inner box and gold jackalope seal.</p>
               </div>
             </motion.div>
@@ -511,7 +511,7 @@ export default function SequoiaSexToys() {
                 <Image src={stickerTapeImg} width={2048} height={1503} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded sticker tape with repeating jackalope logo | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-[#060606]/8">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Sticker Tape</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Branded Sticker Tape</p>
                 <p className="text-xs text-gray-400 leading-relaxed">Custom shipping tape with repeating jackalope logo seals for a premium unboxing.</p>
               </div>
             </motion.div>
@@ -528,7 +528,7 @@ export default function SequoiaSexToys() {
               <Image src={lubricantBoxImg} width={2048} height={1366} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys lubricant packaging with illustrated mermaid and sea dragon artwork | Product packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Lubricant Packaging</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Lubricant Packaging</p>
               <p className="text-xs text-gray-400 leading-relaxed">"Wet" and "Tame the Beast" — custom illustrated mermaid and sea dragon artwork on coral with gold accents.</p>
             </div>
           </motion.div>
@@ -545,7 +545,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Brand Extensions
             </span>
             <h2
@@ -553,7 +553,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Merchandise &amp;{" "}
-              <em className="not-italic text-[#5b3fd6]">lifestyle products.</em>
+              <em className="not-italic text-[#7c5fe6]">lifestyle products.</em>
             </h2>
             <p className="mt-4 text-white/50 leading-[1.8] max-w-2xl text-[15px]">
               To test the flexibility of the identity system, the thesis expanded
@@ -582,7 +582,7 @@ export default function SequoiaSexToys() {
               />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Apparel Collection</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Branded Apparel Collection</p>
               <p className="text-xs text-white/40 leading-relaxed">Crop tops, hoodies, underwear, and tees — featuring the jackalope mark, fruit-pattern allover print, botanical illustrations, and cheeky produce graphics.</p>
             </div>
           </motion.div>
@@ -599,7 +599,7 @@ export default function SequoiaSexToys() {
                 <Image src={condomPacketsImg} width={2048} height={1503} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded condom packets with jackalope and fruit-pattern designs | Promotional merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Condom Packets</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Condom Packets</p>
                 <p className="text-xs text-white/40 leading-relaxed">"Stay Safe" jackalope design on purple, paired with a fruit-pattern variant on gold.</p>
               </div>
             </motion.div>
@@ -613,7 +613,7 @@ export default function SequoiaSexToys() {
                 <Image src={waterBottlesImg} width={644} height={489} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys branded water bottles with fruit and botanical patterns | Merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Branded Water Bottles</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Branded Water Bottles</p>
                 <p className="text-xs text-white/40 leading-relaxed">"Play. Hydrate. Repeat." — four BPA-free metal designs with fruit and botanical patterns.</p>
               </div>
             </motion.div>
@@ -631,7 +631,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Website Design
             </span>
             <h2
@@ -639,7 +639,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Translating the brand into{" "}
-              <em className="not-italic text-[#5b3fd6]">digital space.</em>
+              <em className="not-italic text-[#7c5fe6]">digital space.</em>
             </h2>
             <p className="mt-4 text-gray-500 leading-[1.8] max-w-2xl text-[15px]">
               The thesis also included the design of a fully responsive e-commerce
@@ -668,7 +668,7 @@ export default function SequoiaSexToys() {
               </div>
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Responsive E-Commerce Website</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Responsive E-Commerce Website</p>
               <p className="text-xs text-gray-400 leading-relaxed">
                 Squarespace e-commerce build with plum-to-gold palette, illustrated hero sections,
                 product galleries, and "Rooted in Pleasure" marquee across all breakpoints.
@@ -692,7 +692,7 @@ export default function SequoiaSexToys() {
                 transition={{ delay: parseInt(item.num) * 0.05, duration: 0.4 }}
                 className="bg-white px-5 py-6"
               >
-                <span className="block text-[10px] text-[#5b3fd6] mb-1.5 font-bold">{item.num}</span>
+                <span className="block text-[10px] text-[#7c5fe6] mb-1.5 font-bold">{item.num}</span>
                 <p className="text-sm font-semibold text-[#060606] mb-1">{item.title}</p>
                 <p className="text-xs text-[#060606]/45 leading-relaxed">{item.desc}</p>
               </motion.div>
@@ -717,7 +717,7 @@ export default function SequoiaSexToys() {
               />
             </div>
             <div className="mt-3 pt-3 border-t border-[#060606]/8">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Website Design Walkthrough</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Website Design Walkthrough</p>
               <p className="text-xs text-gray-400 leading-relaxed">A walkthrough of the responsive Sequoia e-commerce website — hero sections, product pages, brand story, and mobile experience.</p>
             </div>
           </motion.div>
@@ -734,7 +734,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-10"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Social Media &amp; Digital
             </span>
             <h2
@@ -742,7 +742,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               Extending the brand{" "}
-              <em className="not-italic text-[#5b3fd6]">online.</em>
+              <em className="not-italic text-[#7c5fe6]">online.</em>
             </h2>
             <p className="mt-4 text-white/50 leading-[1.8] max-w-2xl text-[15px]">
               Custom header graphics, profile imagery, and a cohesive visual language
@@ -762,7 +762,7 @@ export default function SequoiaSexToys() {
               <Image src={socialImg} width={1440} height={1028} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Twitter/X profiles in light and dark mode with illustrated eggplant header | Social media design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full object-contain" />
             </div>
             <div className="mt-3 pt-3 border-t border-white/10">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Twitter / X Profiles</p>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Twitter / X Profiles</p>
               <p className="text-xs text-white/40 leading-relaxed">"The Hardwood You've Been Looking For" header with illustrated eggplant — light and dark mode.</p>
             </div>
           </motion.div>
@@ -779,7 +779,7 @@ export default function SequoiaSexToys() {
                 <Image src={facebookImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Facebook business page with branded cover photo and curated posts | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-cover" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Facebook Business Page</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Facebook Business Page</p>
                 <p className="text-xs text-white/40 leading-relaxed">"Amazon Doesn't Need to Know Your Kinks. Order Direct." — custom cover photo, branded posts, and curated photo gallery.</p>
               </div>
             </motion.div>
@@ -794,7 +794,7 @@ export default function SequoiaSexToys() {
                 <Image src={instagramImg} width={1440} height={1029} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Sequoia Sex Toys Instagram profile with curated grid and consistent visual identity | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="max-h-full w-auto object-contain" />
               </div>
               <div className="mt-3 pt-3 border-t border-white/10">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">Instagram Profile</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">Instagram Profile</p>
                 <p className="text-xs text-white/40 leading-relaxed">Curated grid with product photography, illustrated content, and consistent visual identity.</p>
               </div>
             </motion.div>
@@ -812,7 +812,7 @@ export default function SequoiaSexToys() {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4">
               Full Deliverables
             </span>
             <h2
@@ -820,7 +820,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.6rem, 2.8vw, 2.6rem)" }}
             >
               A complete brand{" "}
-              <em className="not-italic text-[#5b3fd6]">ecosystem.</em>
+              <em className="not-italic text-[#7c5fe6]">ecosystem.</em>
             </h2>
           </motion.div>
 
@@ -834,7 +834,7 @@ export default function SequoiaSexToys() {
                 transition={{ delay: i * 0.03, duration: 0.35 }}
                 className="bg-white px-5 py-6"
               >
-                <span className="block text-[10px] text-[#5b3fd6] mb-1.5 font-bold">
+                <span className="block text-[10px] text-[#7c5fe6] mb-1.5 font-bold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="text-sm text-[#060606]/70 leading-relaxed">{item}</p>
@@ -854,7 +854,7 @@ export default function SequoiaSexToys() {
               {["Brand Identity", "Logo Design", "Custom Illustration", "Stationery", "Packaging", "Apparel & Swag", "Website Design", "Social Media", "E-Commerce", "Adult Wellness"].map((tag) => (
                 <span
                   key={tag}
-                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-[#060606]/10 text-[#060606]/50 hover:border-[#5b3fd6]/40 hover:text-[#5b3fd6] transition-colors duration-300"
+                  className="inline-block px-3 py-1.5 text-[10px] uppercase tracking-[0.12em] border border-[#060606]/10 text-[#060606]/50 hover:border-[#5b3fd6]/40 hover:text-[#7c5fe6] transition-colors duration-300"
                 >
                   {tag}
                 </span>
@@ -874,7 +874,7 @@ export default function SequoiaSexToys() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Ready to build your brand?
             </span>
             <h2
@@ -882,7 +882,7 @@ export default function SequoiaSexToys() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 3.5rem)" }}
             >
               Let's create something{" "}
-              <em className="not-italic text-[#5b3fd6]">unforgettable.</em>
+              <em className="not-italic text-[#7c5fe6]">unforgettable.</em>
             </h2>
           </motion.div>
 

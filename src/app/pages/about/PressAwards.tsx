@@ -48,7 +48,7 @@ const pressItems: PressRow[] = [
   { year: "2020", publication: "Restaurant Business Magazine", title: "Art Meets Hospitality: A Unique Concept", desc: "National feature on an innovative restaurant concept." },
 ];
 
-const sectionLabel = "block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-12";
+const sectionLabel = "block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-12";
 
 export default function PressAwards() {
   useSEO({
@@ -64,7 +64,7 @@ export default function PressAwards() {
       <section className="px-6 md:px-16 lg:px-24 pt-40 pb-16 md:pb-24 max-w-7xl mx-auto">
         <Link
           href="/about"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors mb-10"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors mb-10"
         >
           <ArrowLeft size={12} /> About
         </Link>
@@ -86,7 +86,7 @@ export default function PressAwards() {
           style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)" }}
         >
           Press &{" "}
-          <em className="not-italic text-[#5b3fd6]">Awards</em>
+          <em className="not-italic text-[#7c5fe6]">Awards</em>
         </motion.h1>
 
         <motion.p
@@ -121,11 +121,11 @@ export default function PressAwards() {
               </div>
               <div className="flex-1">
                 <div className="flex items-start gap-5 mb-4">
-                  <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-[#5b3fd6]/20 text-[#5b3fd6]">
+                  <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-[#5b3fd6]/20 text-[#7c5fe6]">
                     <Award size={24} />
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-3">
+                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-3">
                       Latest Recognition — 2025
                     </span>
                     <h2
@@ -168,7 +168,7 @@ export default function PressAwards() {
                 transition={{ delay: i * 0.08, duration: 0.6 }}
                 className="bg-[#0a0a0a] p-8 md:p-10 flex flex-col"
               >
-                <span className="text-[#5b3fd6] text-sm font-mono mb-4">{a.year}</span>
+                <span className="text-[#7c5fe6] text-sm font-mono mb-4">{a.year}</span>
                 <h3 className="font-black uppercase tracking-[0.07em] text-base leading-tight mb-3">
                   {a.award}
                 </h3>
@@ -205,7 +205,7 @@ export default function PressAwards() {
                 transition={{ delay: i * 0.04, duration: 0.5 }}
                 className="border-t border-white/8 py-6 md:py-7 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-6 items-start"
               >
-                <span className="md:col-span-2 text-[#5b3fd6] text-sm font-mono shrink-0">
+                <span className="md:col-span-2 text-[#7c5fe6] text-sm font-mono shrink-0">
                   {item.year}
                 </span>
                 <h3 className="md:col-span-5 font-semibold text-[15px] leading-snug text-white/90">
@@ -231,8 +231,8 @@ export default function PressAwards() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-12"
           >
-            <Newspaper size={16} className="text-[#5b3fd6]" />
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6]">
+            <Newspaper size={16} className="text-[#7c5fe6]" />
+            <span className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6]">
               Recent Press Coverage
             </span>
           </motion.div>
@@ -249,7 +249,7 @@ export default function PressAwards() {
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                   <div className="shrink-0 md:w-20">
-                    <span className="text-[#5b3fd6] text-sm font-mono">{item.year}</span>
+                    <span className="text-[#7c5fe6] text-sm font-mono">{item.year}</span>
                   </div>
                   <div className="flex-1">
                     <p className="text-[10px] uppercase tracking-[0.25em] text-white/35 mb-2">
@@ -280,7 +280,7 @@ export default function PressAwards() {
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
             Ready to build something{" "}
-            <em className="not-italic text-[#5b3fd6]">award-winning?</em>
+            <em className="not-italic text-[#7c5fe6]">award-winning?</em>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}

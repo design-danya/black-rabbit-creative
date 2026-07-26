@@ -178,7 +178,7 @@ export default function Portfolio() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+          <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
             Selected Work
           </span>
           <h1

@@ -41,7 +41,7 @@ export default function GraniteRoots() {
       <div className="px-6 md:px-16 lg:px-24 pt-32 pb-8">
         <Link
           href="/work"
-          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#5b3fd6] transition-colors duration-300"
+          className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/40 hover:text-[#7c5fe6] transition-colors duration-300"
         >
           <ArrowLeft size={12} /> All Work
         </Link>
@@ -57,8 +57,8 @@ export default function GraniteRoots() {
         >
           {/* Award badge */}
           <div className="inline-flex items-center gap-2 border border-[#5b3fd6]/50 bg-[#5b3fd6]/10 px-4 py-2 mb-8">
-            <Award size={13} className="text-[#5b3fd6]" />
-            <span className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6]">
+            <Award size={13} className="text-[#7c5fe6]" />
+            <span className="text-[11px] uppercase tracking-[0.3em] text-[#7c5fe6]">
               2025 GDUSA Package Design Award
             </span>
           </div>
@@ -71,7 +71,7 @@ export default function GraniteRoots() {
             style={{ fontSize: "clamp(2.8rem, 6vw, 6rem)" }}
           >
             Granite Roots{" "}
-            <em className="not-italic text-[#5b3fd6]">Brewing</em>
+            <em className="not-italic text-[#7c5fe6]">Brewing</em>
           </h1>
           <p className="mt-4 text-white/40 text-sm uppercase tracking-[0.2em]">
             Steam Train Beer Label
@@ -92,7 +92,7 @@ export default function GraniteRoots() {
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="px-6 py-8 first:pl-0"
               >
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">
                   {item.label}
                 </p>
                 <p className="text-sm text-white/80 leading-snug">{item.value}</p>
@@ -112,7 +112,7 @@ export default function GraniteRoots() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Project Overview
             </span>
             <h2
@@ -120,7 +120,7 @@ export default function GraniteRoots() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Local heritage,{" "}
-              <em className="not-italic text-[#5b3fd6]">bold presence.</em>
+              <em className="not-italic text-[#7c5fe6]">bold presence.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -137,7 +137,7 @@ export default function GraniteRoots() {
               href="https://gdusa.com/competitions/package-design/?current_year=2025&section=winner&rns=0-11884"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-8 text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] hover:gap-3 transition-all duration-300"
+              className="inline-flex items-center gap-2 mt-8 text-[11px] uppercase tracking-[0.25em] text-[#7c5fe6] hover:gap-3 transition-all duration-300"
             >
               View GDUSA Award <ArrowRight size={12} />
             </a>
@@ -172,7 +172,7 @@ export default function GraniteRoots() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Design Approach
             </span>
             <h2
@@ -180,7 +180,7 @@ export default function GraniteRoots() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               Psychedelic art meets{" "}
-              <em className="not-italic text-[#5b3fd6]">local story.</em>
+              <em className="not-italic text-[#7c5fe6]">local story.</em>
             </h2>
           </motion.div>
 
@@ -204,7 +204,7 @@ export default function GraniteRoots() {
 
               {/* Feature list */}
               <div className="pt-4">
-                <p className="text-[11px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-5">
+                <p className="text-[11px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-5">
                   Design Features
                 </p>
                 <ul className="space-y-3">
@@ -285,7 +285,7 @@ export default function GraniteRoots() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Impact
             </span>
             <h2
@@ -293,7 +293,7 @@ export default function GraniteRoots() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}
             >
               On shelves across{" "}
-              <em className="not-italic text-[#5b3fd6]">New Hampshire.</em>
+              <em className="not-italic text-[#7c5fe6]">New Hampshire.</em>
             </h2>
             <div className="space-y-5 text-white/50 leading-[1.9]">
               <p>
@@ -314,17 +314,17 @@ export default function GraniteRoots() {
           >
             <div className="border border-white/10 p-8 space-y-6">
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Award</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Award</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">GDUSA 2025</p>
                 <p className="text-white/40 text-sm mt-1">Package Design Award</p>
               </div>
               <div className="border-b border-white/10 pb-6">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Distribution</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Distribution</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">Statewide</p>
                 <p className="text-white/40 text-sm mt-1">New Hampshire retail locations</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-2">Recognition</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-2">Recognition</p>
                 <p className="font-black uppercase tracking-[0.07em] text-2xl">National</p>
                 <p className="text-white/40 text-sm mt-1">Competitive national field</p>
               </div>
@@ -343,7 +343,7 @@ export default function GraniteRoots() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-8">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
               Ready to stand out?
             </span>
             <h2
@@ -351,7 +351,7 @@ export default function GraniteRoots() {
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}
             >
               Packaging that earns{" "}
-              <em className="not-italic text-[#5b3fd6]">attention.</em>
+              <em className="not-italic text-[#7c5fe6]">attention.</em>
             </h2>
           </motion.div>
 

@@ -87,7 +87,7 @@ export default function BreweryBranding() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6"
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6"
           >
             Industry Specialty
           </motion.span>
@@ -99,7 +99,7 @@ export default function BreweryBranding() {
           >
             Brewery Branding
             <br />
-            <span className="text-[#5b3fd6]">&amp; Craft Beer</span>
+            <span className="text-[#7c5fe6]">&amp; Craft Beer</span>
             <br />
             Label Design
           </motion.h1>
@@ -148,7 +148,7 @@ export default function BreweryBranding() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4"
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4"
           >
             Featured Brewery Work
           </motion.span>
@@ -199,7 +199,7 @@ export default function BreweryBranding() {
                     {project.tag}
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 px-6 py-6">
-                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#5b3fd6] mb-1">
+                    <span className="block text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-1">
                       {project.subtitle}
                     </span>
                     <h3 className="text-xl md:text-2xl font-black uppercase tracking-[0.07em] text-white">
@@ -224,7 +224,7 @@ export default function BreweryBranding() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4"
+              className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4"
             >
               What We Deliver
             </motion.span>
@@ -236,7 +236,7 @@ export default function BreweryBranding() {
             >
               Brewery Branding
               <br />
-              <span className="text-[#5b3fd6]">Services</span>
+              <span className="text-[#7c5fe6]">Services</span>
             </motion.h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
               Every brewery has a story. We translate that story into a cohesive
@@ -255,7 +255,7 @@ export default function BreweryBranding() {
                 transition={{ delay: i * 0.05, duration: 0.5 }}
                 className="flex items-center gap-4 border-b border-white/5 pb-4"
               >
-                <Check size={14} className="text-[#5b3fd6] flex-shrink-0" />
+                <Check size={14} className="text-[#7c5fe6] flex-shrink-0" />
                 <span className="text-sm text-gray-300">{item}</span>
               </motion.div>
             ))}
@@ -270,7 +270,7 @@ export default function BreweryBranding() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="block text-[10px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-4"
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4"
           >
             Why Black Rabbit
           </motion.span>
@@ -280,7 +280,7 @@ export default function BreweryBranding() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-black uppercase tracking-[0.07em] mb-14"
           >
-            Built for <span className="text-[#5b3fd6]">Breweries</span>
+            Built for <span className="text-[#7c5fe6]">Breweries</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
@@ -315,7 +315,7 @@ export default function BreweryBranding() {
             className="text-3xl md:text-5xl font-black uppercase tracking-[0.07em] mb-6"
           >
             Ready to brew a{" "}
-            <span className="text-[#5b3fd6]">bold brand?</span>
+            <span className="text-[#7c5fe6]">bold brand?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}

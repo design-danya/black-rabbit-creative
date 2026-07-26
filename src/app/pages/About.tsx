@@ -68,7 +68,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10"
+          className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10"
         >
           About Black Rabbit Creative
         </motion.span>
@@ -81,7 +81,7 @@ export default function About() {
           style={{ fontSize: "clamp(3rem, 7vw, 7.5rem)" }}
         >
           We make brands{" "}
-          <em className="not-italic text-[#5b3fd6]">distinct.</em>
+          <em className="not-italic text-[#7c5fe6]">distinct.</em>
         </motion.h1>
       </section>
 
@@ -111,7 +111,7 @@ export default function About() {
               style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
             >
               Boutique by{" "}
-              <em className="not-italic text-[#5b3fd6]">design.</em>
+              <em className="not-italic text-[#7c5fe6]">design.</em>
             </h2>
             <p className="text-gray-600 leading-[1.9]">
               Black Rabbit Creative is a boutique branding and packaging studio for businesses that refuse to look like everyone else.
@@ -131,7 +131,7 @@ export default function About() {
       <section className="bg-[#060606] px-6 md:px-16 lg:px-24 py-20 md:py-28 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.span
-            className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-16"
+            className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -163,7 +163,7 @@ export default function About() {
               </div>
               <div className="mt-4">
                 <p className="text-white font-black uppercase tracking-[0.07em] text-sm">Danya Pugliese</p>
-                <p className="text-[#5b3fd6] text-[11px] uppercase tracking-[0.25em] mt-1">Founder & Creative Director</p>
+                <p className="text-[#7c5fe6] text-[11px] uppercase tracking-[0.25em] mt-1">Founder & Creative Director</p>
               </div>
             </motion.div>
 
@@ -180,7 +180,7 @@ export default function About() {
                 style={{ fontSize: "clamp(2rem, 3.5vw, 3.5rem)" }}
               >
                 Award-winning design.<br />
-                <em className="not-italic text-[#5b3fd6]">Business-minded thinking.</em>
+                <em className="not-italic text-[#7c5fe6]">Business-minded thinking.</em>
               </h2>
 
               <p className="text-gray-400 leading-[1.9]">
@@ -218,7 +218,7 @@ export default function About() {
       <section className="bg-white text-[#060606] px-6 md:px-16 lg:px-24 py-20 md:py-28">
         <div className="max-w-7xl mx-auto">
           <motion.span
-            className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-16"
+            className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -238,7 +238,7 @@ export default function About() {
                 className="border-t border-[#060606]/10 py-12 md:py-16"
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
-                  <span className="md:col-span-1 text-xs tracking-[0.2em] text-[#5b3fd6] font-mono">
+                  <span className="md:col-span-1 text-xs tracking-[0.2em] text-[#7c5fe6] font-mono">
                     {belief.num}
                   </span>
                   <h3
@@ -262,7 +262,7 @@ export default function About() {
       <section className="bg-[#060606] px-6 md:px-16 lg:px-24 py-20 md:py-28 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.span
-            className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-16"
+            className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -287,7 +287,7 @@ export default function About() {
                 >
                   {stat.value}
                 </p>
-                <p className="text-[11px] uppercase tracking-[0.25em] text-[#5b3fd6] mb-3">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-[#7c5fe6] mb-3">
                   {stat.label}
                 </p>
                 <p className="text-gray-600 text-sm leading-[1.7]">{stat.sub}</p>
@@ -301,7 +301,7 @@ export default function About() {
       <section className="bg-[#060606] px-6 md:px-16 lg:px-24 pt-20 pb-8 md:pt-28 md:pb-10 border-t border-white/5">
         <div className="max-w-4xl mx-auto">
           <motion.span
-            className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10"
+            className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -321,7 +321,7 @@ export default function About() {
               <p className="text-[11px] uppercase tracking-[0.25em] text-white/40 mb-2">Email</p>
               <a
                 href="mailto:hello@blackrabbit-creative.com"
-                className="text-white hover:text-[#5b3fd6] transition-colors"
+                className="text-white hover:text-[#7c5fe6] transition-colors"
               >
                 hello@blackrabbit-creative.com
               </a>
@@ -330,7 +330,7 @@ export default function About() {
               <p className="text-[11px] uppercase tracking-[0.25em] text-white/40 mb-2">Phone</p>
               <a
                 href="tel:6032079890"
-                className="text-white hover:text-[#5b3fd6] transition-colors"
+                className="text-white hover:text-[#7c5fe6] transition-colors"
               >
                 603-207-9890
               </a>
@@ -343,7 +343,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <p className="text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-6">
+            <p className="text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
               Book a Discovery Call
             </p>
             <MoxieBooking />
@@ -362,7 +362,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#5b3fd6] mb-10">
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-10">
               Looking Ahead
             </span>
             <h2
@@ -370,7 +370,7 @@ export default function About() {
               style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.5rem)" }}
             >
               Distinct{" "}
-              <em className="not-italic text-[#5b3fd6]">by design.</em>
+              <em className="not-italic text-[#7c5fe6]">by design.</em>
             </h2>
           </motion.div>
 
