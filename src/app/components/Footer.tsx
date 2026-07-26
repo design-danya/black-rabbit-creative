@@ -24,13 +24,24 @@ function ConstantContactForm() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // Give the CC widget a moment to hydrate the div
-    const timer = setTimeout(() => {
-      if (containerRef.current && containerRef.current.children.length > 0) {
+    const el = containerRef.current;
+    if (!el) return;
+    // The CC widget is lazyOnload, so it injects its form well after mount —
+    // a fixed timer checked too early and left both the CC form and the
+    // fallback showing. Watch the container and hide the fallback the moment
+    // CC populates it.
+    if (el.children.length > 0) {
+      setLoaded(true);
+      return;
+    }
+    const observer = new MutationObserver(() => {
+      if (el.children.length > 0) {
         setLoaded(true);
+        observer.disconnect();
       }
-    }, 1500);
-    return () => clearTimeout(timer);
+    });
+    observer.observe(el, { childList: true });
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -39,7 +50,7 @@ function ConstantContactForm() {
       <div
         ref={containerRef}
         className="ctct-inline-form"
-        data-form-id="c0788666-de04-4c19-bb8c-373d62ca80fa"
+        data-form-id="8db0066a-dc0e-4bc6-a521-c3848637b9fb"
       />
       {/* Fallback visible in preview / when script is blocked */}
       {!loaded && (
