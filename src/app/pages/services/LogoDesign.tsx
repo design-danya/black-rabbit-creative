@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
+import { LogoTypes } from "./LogoTypes";
 import { ArrowRight, ArrowUpRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 const seatedRabbit = "/assets/fd0fa931e00acfa6c15863207bc0a21f97710af2.png";
@@ -474,6 +475,9 @@ export default function LogoDesign() {
           </div>
         </div>
       </section>
+
+      {/* ─── NINE TYPES OF LOGOS (interactive) ─── */}
+      <LogoTypes />
 
       {/* ─── OTHER SERVICES ─── */}
       <section className="bg-[#060606] text-white px-6 md:px-14 lg:px-20 pb-10 border-t border-white/5">
