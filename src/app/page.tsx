@@ -14,14 +14,13 @@ export const metadata: Metadata = {
       'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH.',
     url: '/',
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    // og image supplied by src/app/opengraph-image.tsx (file convention)
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Black Rabbit Creative — Branding & Packaging Design',
     description:
       'Brand identity, logo, and packaging design for product-based businesses across New England.',
-    images: ['/og-image.png'],
   },
 }
 
