@@ -1,5 +1,5 @@
 'use client'
-const rabbitEars = "/assets/homepage-rabbit.gif";
+const rabbitEars = "/assets/black-rabbit-ears.webp";
 const graniteRootsImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 const kapiloffLogoMark = "/assets/813500a7323a190b78d4a353bedbc57a5d5c1fd1.png";
 const basicBalanceThumb = "/assets/c2966b48a7c59fc377cbe7b0bbefc3111f13f42b.png";
@@ -25,7 +25,7 @@ import { useSEO } from "../components/useSEO";
 // GIF stays as the <picture> fallback. Identical 8s loop, 100 frames of motion.
 const RABBIT_IMG = "/assets/homepage-rabbit.gif";
 const RABBIT_WEBP = "/assets/homepage-rabbit.webp";
-const RABBIT_WEBP_SM = "/assets/homepage-rabbit-sm.webp";
+const RABBIT_WEBP_SM = "/assets/black-rabbit-ears.webp";
 const services = [
   {
     name: "Full Brand Identity",
@@ -402,9 +402,9 @@ export default function Home() {
                       src={rabbitEars}
                       alt="Black Rabbit Creative decorative rabbit ears — design studio, Portsmouth NH, New Hampshire, New England"
                       aria-hidden="true"
-                      className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[70%] opacity-0 group-hover:opacity-[0.15] group-hover:translate-y-[62%] transition-all duration-1000 ease-out invert pointer-events-none select-none"
+                      className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[55%] opacity-0 group-hover:opacity-[0.15] group-hover:translate-y-[30%] transition-all duration-1000 ease-out invert pointer-events-none select-none"
                       width={400}
-                      height={400}
+                      height={470}
                       loading="lazy"
                     />
                   </picture>
