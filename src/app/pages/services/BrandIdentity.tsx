@@ -2,6 +2,9 @@
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
+import { BrandProcess } from "./BrandProcess";
+import { TouchpointsWheel } from "./TouchpointsWheel";
+import { StateOfBrandChart } from "./StateOfBrandChart";
 import { ArrowRight, ArrowUpRight, Check, ArrowLeft, Clock, DollarSign, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
@@ -564,6 +567,11 @@ export default function BrandIdentity() {
           </div>
         </div>
       </section>
+
+      {/* ─── BRANDING CONCEPTS (interactive) ─── */}
+      <BrandProcess />
+      <TouchpointsWheel />
+      <StateOfBrandChart />
 
       {/* ─── OTHER SERVICES ─── */}
       <section className="bg-[#060606] text-white px-6 md:px-16 lg:px-24 pb-8">
