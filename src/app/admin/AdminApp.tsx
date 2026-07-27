@@ -133,6 +133,7 @@ function Dashboard({ email }: { email: string }) {
   const [items, setItems] = useState<Item[]>([])
   const [editing, setEditing] = useState<Item | 'new' | null>(null)
   const [msg, setMsg] = useState('')
+  const [confirmDel, setConfirmDel] = useState<string | null>(null)
 
   const load = useCallback(async () => {
     const { data } = await supabase.from('work_items').select('*').order('sort_order').order('created_at', { ascending: false })
@@ -145,8 +146,12 @@ function Dashboard({ email }: { email: string }) {
     load()
   }
   async function remove(it: Item) {
-    if (!confirm(`Delete "${it.title}"? This can't be undone.`)) return
-    await supabase.from('work_items').delete().eq('id', it.id)
+    // Two-click confirm — no native confirm() dialog (those get blocked in some browsers).
+    if (confirmDel !== it.id) { setConfirmDel(it.id); return }
+    setConfirmDel(null)
+    const { error } = await supabase.from('work_items').delete().eq('id', it.id)
+    if (error) { setMsg(`Could not delete: ${error.message}`); return }
+    setMsg(`Deleted "${it.title}".`)
     load()
   }
   async function move(it: Item, dir: -1 | 1) {
@@ -202,7 +207,7 @@ function Dashboard({ email }: { email: string }) {
               <button onClick={() => window.open(`/admin/preview/${it.id}`, '_blank')} className="btn-ghost !px-3 !py-1">Preview</button>
               <button onClick={() => togglePublish(it)} className="btn-ghost !px-3 !py-1">{it.published ? 'Unpublish' : 'Publish'}</button>
               <button onClick={() => setEditing(it)} className="btn-ghost !px-3 !py-1">Edit</button>
-              <button onClick={() => remove(it)} className="btn-ghost !px-3 !py-1 !border-red-500/30 text-red-300">Del</button>
+              <button onClick={() => remove(it)} onBlur={() => setConfirmDel(null)} className={`btn-ghost !px-3 !py-1 !border-red-500/30 ${confirmDel === it.id ? '!bg-red-600 text-white' : 'text-red-300'}`}>{confirmDel === it.id ? 'Confirm?' : 'Del'}</button>
             </div>
           </div>
         ))}
@@ -274,8 +279,19 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
     e.preventDefault()
     setBusy(true); setErr('')
     try {
-      const slug = f.slug || slugify(f.title)
-      if (!f.title || !slug) throw new Error('Title is required.')
+      const base = f.slug || slugify(f.title)
+      if (!f.title || !base) throw new Error('Please add a title.')
+
+      // Make the slug unique so two items never collide (URLs must be unique).
+      let slug = base
+      let n = 2
+      while (true) {
+        const { data: clash } = await supabase
+          .from('work_items').select('id').eq('slug', slug).maybeSingle()
+        if (!clash || clash.id === item?.id) break
+        slug = `${base}-${n++}`
+      }
+
       let thumbnail_path = f.thumbnail_path
       if (thumbFile) thumbnail_path = await upload(thumbFile, slug)
 
@@ -291,8 +307,7 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
         const { error } = await supabase.from('work_items').update(payload).eq('id', item.id)
         if (error) throw error
       } else {
-        const maxSort = 0
-        const { data, error } = await supabase.from('work_items').insert({ ...payload, sort_order: maxSort }).select('id').single()
+        const { data, error } = await supabase.from('work_items').insert({ ...payload, sort_order: 0 }).select('id').single()
         if (error) throw error
         itemId = data.id
       }
