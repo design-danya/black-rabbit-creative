@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
+import { SignsItsTime } from "./SignsItsTime";
 import { BrandProcess } from "./BrandProcess";
 import { TouchpointsWheel } from "./TouchpointsWheel";
 import { StateOfBrandChart } from "./StateOfBrandChart";
@@ -569,6 +570,7 @@ export default function BrandIdentity() {
       </section>
 
       {/* ─── BRANDING CONCEPTS (interactive) ─── */}
+      <SignsItsTime />
       <BrandProcess />
       <TouchpointsWheel />
       <StateOfBrandChart />
