@@ -13,6 +13,7 @@ export type WorkItem = {
   description: string
   published: boolean
   sort_order: number
+  layout: unknown | null
 }
 
 export type WorkItemImage = {

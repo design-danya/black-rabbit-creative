@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
 import { workAssetUrl, type WorkItem, type WorkItemImage } from '../../lib/work'
+import { sanitizeLayout, BlockRenderer, type LayoutImage } from './blocks'
 
 /**
  * Presentational detail layout, shared by the public /work/[slug] page and the
@@ -17,6 +18,14 @@ export function WorkDetail({
   draft?: boolean
 }) {
   const hero = item.thumbnail_path ? workAssetUrl(item.thumbnail_path) : null
+
+  // Images the AI layout can reference by index: hero first, then gallery.
+  const layoutImages: LayoutImage[] = [
+    ...(item.thumbnail_path ? [{ url: workAssetUrl(item.thumbnail_path), caption: item.title }] : []),
+    ...images.map((im) => ({ url: workAssetUrl(im.storage_path), caption: im.caption })),
+  ]
+  const blocks = sanitizeLayout(item.layout, layoutImages.length)
+  const hasLayout = blocks.length > 0
 
   return (
     <div className="bg-[#060606] text-white min-h-screen">
@@ -55,41 +64,50 @@ export function WorkDetail({
         )}
       </section>
 
-      {hero && (
-        <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto mb-6">
-          <div className="relative w-full aspect-[16/10] bg-white/[0.03] overflow-hidden">
-            <Image
-              src={hero}
-              alt={`${item.title} — ${item.category} by Black Rabbit Creative`}
-              fill
-              sizes="(max-width: 1152px) 100vw, 1152px"
-              className="object-cover"
-              priority
-            />
-          </div>
+      {hasLayout ? (
+        /* AI-composed layout */
+        <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto pb-24">
+          <BlockRenderer blocks={blocks} images={layoutImages} title={item.title} />
         </section>
-      )}
-
-      {images.length > 0 && (
-        <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {images.map((img) => (
-            <figure key={img.id} className="flex flex-col gap-3">
-              <div className="relative w-full aspect-[4/3] bg-white/[0.03] overflow-hidden">
+      ) : (
+        <>
+          {hero && (
+            <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto mb-6">
+              <div className="relative w-full aspect-[16/10] bg-white/[0.03] overflow-hidden">
                 <Image
-                  src={workAssetUrl(img.storage_path)}
-                  alt={img.caption || `${item.title} — detail`}
+                  src={hero}
+                  alt={`${item.title} — ${item.category} by Black Rabbit Creative`}
                   fill
-                  sizes="(max-width: 768px) 100vw, 560px"
+                  sizes="(max-width: 1152px) 100vw, 1152px"
                   className="object-cover"
-                  loading="lazy"
+                  priority
                 />
               </div>
-              {img.caption && (
-                <figcaption className="text-xs text-white/40 tracking-[0.02em]">{img.caption}</figcaption>
-              )}
-            </figure>
-          ))}
-        </section>
+            </section>
+          )}
+
+          {images.length > 0 && (
+            <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto pb-24 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {images.map((img) => (
+                <figure key={img.id} className="flex flex-col gap-3">
+                  <div className="relative w-full aspect-[4/3] bg-white/[0.03] overflow-hidden">
+                    <Image
+                      src={workAssetUrl(img.storage_path)}
+                      alt={img.caption || `${item.title} — detail`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 560px"
+                      className="object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  {img.caption && (
+                    <figcaption className="text-xs text-white/40 tracking-[0.02em]">{img.caption}</figcaption>
+                  )}
+                </figure>
+              ))}
+            </section>
+          )}
+        </>
       )}
 
       <section className="px-6 md:px-16 lg:px-24 max-w-6xl mx-auto pb-24 border-t border-white/5 pt-12">

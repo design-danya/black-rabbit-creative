@@ -27,6 +27,7 @@ type Item = {
   description: string
   published: boolean
   sort_order: number
+  layout?: unknown
 }
 type GalleryImg = { id: string; storage_path: string; caption: string; sort_order: number }
 
@@ -226,10 +227,38 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
   const [gallery, setGallery] = useState<GalleryImg[]>([])
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState('')
+  const [layout, setLayout] = useState<unknown>(item?.layout ?? null)
+  const [aiPrompt, setAiPrompt] = useState('')
+  const [generating, setGenerating] = useState(false)
+  const [aiMsg, setAiMsg] = useState('')
 
   useEffect(() => {
     if (item) supabase.from('work_item_images').select('*').eq('work_item_id', item.id).order('sort_order').then(({ data }) => setGallery((data ?? []) as GalleryImg[]))
   }, [item])
+
+  async function generateLayout() {
+    setGenerating(true); setAiMsg('')
+    try {
+      // Index order MUST match the renderer: thumbnail first, then gallery.
+      const images = [
+        ...(f.thumbnail_path ? [{ index: 0, caption: f.title }] : []),
+        ...gallery.map((g, i) => ({ index: (f.thumbnail_path ? 1 : 0) + i, caption: g.caption })),
+      ]
+      const { data, error } = await supabase.functions.invoke('generate-work-layout', {
+        body: { title: f.title, category: f.category, description: f.description, prompt: aiPrompt, images },
+      })
+      if (error) throw error
+      if (data?.error) throw new Error(data.error)
+      const blocks = data?.blocks
+      if (!Array.isArray(blocks) || !blocks.length) throw new Error('No layout returned. Try again.')
+      setLayout(blocks)
+      setAiMsg(`Layout generated (${blocks.length} sections). Save, then Preview to see it.`)
+    } catch (e) {
+      setAiMsg(e instanceof Error ? e.message : 'Generation failed.')
+    } finally {
+      setGenerating(false)
+    }
+  }
 
   function set<K extends keyof typeof f>(k: K, v: (typeof f)[K]) { setF((p) => ({ ...p, [k]: v })) }
 
@@ -253,7 +282,8 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
       const payload = {
         title: f.title, slug, category: f.category, year: f.year,
         badge: f.badge || null, description: f.description,
-        published: f.published, thumbnail_path, updated_at: new Date().toISOString(),
+        published: f.published, thumbnail_path, layout: layout ?? null,
+        updated_at: new Date().toISOString(),
       }
 
       let itemId = item?.id
@@ -341,6 +371,42 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
         <div>
           <label className="label">{item ? 'Add gallery images' : 'Gallery images (save first, then add more)'}</label>
           <input type="file" accept="image/*" multiple onChange={(e) => setGalleryFiles(Array.from(e.target.files ?? []))} className="text-white/70 text-sm" />
+        </div>
+
+        {/* ── AI layout ── */}
+        <div className="border border-[#7c5fe6]/30 bg-[#7c5fe6]/[0.06] p-5">
+          <label className="label !text-[#a894f0]">Design the page with AI</label>
+          {item ? (
+            <>
+              <p className="text-white/50 text-xs mb-3 leading-relaxed">
+                Describe how you want it to look — the AI arranges your description
+                and images into a custom page. Leave blank to let it decide.
+              </p>
+              <textarea
+                value={aiPrompt}
+                onChange={(e) => setAiPrompt(e.target.value)}
+                className="field mb-3"
+                rows={3}
+                placeholder="e.g. Lead with the packaging shots, feel premium, pull the award out as a highlight."
+              />
+              <div className="flex flex-wrap items-center gap-3">
+                <button type="button" onClick={generateLayout} disabled={generating} className="btn">
+                  {generating ? 'Designing…' : layout ? 'Regenerate layout' : 'Generate layout'}
+                </button>
+                {layout != null && (
+                  <>
+                    <span className="text-[#a894f0] text-xs">Custom layout active</span>
+                    <button type="button" onClick={() => { setLayout(null); setAiMsg('Reverted to the simple template.') }} className="text-white/40 text-xs underline">
+                      Clear (use simple template)
+                    </button>
+                  </>
+                )}
+              </div>
+              {aiMsg && <p className="text-white/60 text-xs mt-3">{aiMsg}</p>}
+            </>
+          ) : (
+            <p className="text-white/50 text-xs">Save the item first (with images), then generate an AI layout.</p>
+          )}
         </div>
 
         <label className="flex items-center gap-2 text-sm">
