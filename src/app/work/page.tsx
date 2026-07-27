@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import Portfolio from '../pages/Portfolio'
+import Portfolio, { type DbProject } from '../pages/Portfolio'
+import { getPublishedWorkItems, workAssetUrl } from '../../lib/work'
 
 export const metadata: Metadata = {
   title: 'Branding & Logo Design Portfolio',
@@ -9,6 +10,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default function WorkPage() {
-  return <Portfolio />
+// Always reflect the latest admin edits.
+export const dynamic = 'force-dynamic'
+
+export default async function WorkPage() {
+  const items = await getPublishedWorkItems()
+  const dbItems: DbProject[] = items.map((w) => ({
+    id: w.id,
+    title: w.title,
+    category: w.category,
+    desc: w.description,
+    image: workAssetUrl(w.thumbnail_path),
+    href: `/work/${w.slug}`,
+    year: w.year,
+    tag: w.badge,
+  }))
+  return <Portfolio dbItems={dbItems} />
 }

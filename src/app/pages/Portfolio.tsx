@@ -157,7 +157,33 @@ const projects = [
   },
 ];
 
-export default function Portfolio() {
+// Common shape the grid renders — both hardcoded case studies and admin items.
+type Card = {
+  id: string | number;
+  title: string;
+  category: string;
+  desc?: string;
+  image: string | { src: string };
+  href?: string;
+  year?: string;
+  tag?: string | null;
+  award?: string;
+  lightCard?: boolean;
+};
+
+// Cards added through the /admin backend, passed in from the server component.
+export type DbProject = {
+  id: string;
+  title: string;
+  category: string;
+  desc: string;
+  image: string;
+  href: string;
+  year: string;
+  tag?: string | null;
+};
+
+export default function Portfolio({ dbItems = [] }: { dbItems?: DbProject[] }) {
   useSEO({
     title: "Portfolio | Brand Identity, Packaging & Logo Design Work | Black Rabbit Creative, Portsmouth NH",
     description: "Browse the portfolio of Black Rabbit Creative — brand identity, logo design, packaging design, and graphic design for product-based businesses and bold brands across New Hampshire and New England.",
@@ -165,8 +191,10 @@ export default function Portfolio() {
   });
   const [active, setActive] = useState("All");
 
+  // Admin-added items lead the grid, then the hand-built case studies.
+  const allProjects: Card[] = [...dbItems, ...(projects as Card[])];
   const filtered =
-    active === "All" ? projects : projects.filter((p) => p.category === active);
+    active === "All" ? allProjects : allProjects.filter((p) => p.category === active);
 
   return (
     <div className="bg-[#060606] text-white min-h-screen pt-28 pb-24">
@@ -258,7 +286,7 @@ export default function Portfolio() {
   );
 }
 
-function ProjectCardInner({ project }: { project: typeof projects[number] }) {
+function ProjectCardInner({ project }: { project: Card }) {
   const isLight = (project as any).lightCard;
 
   return (

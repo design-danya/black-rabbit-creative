@@ -1,3 +1,10 @@
 node_modules/
-node_modules/
-node_modules/
+
+# local env (Supabase keys etc.) — never commit
+.env
+.env.local
+.env*.local
+
+# next build output
+.next/
+out/

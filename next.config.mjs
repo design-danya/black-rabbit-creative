@@ -7,6 +7,14 @@ const nextConfig = {
   // generated on demand and cached at the edge.
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Allow admin-uploaded thumbnails/gallery served from Supabase Storage.
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'bfmqwlyjdctfmebdagej.supabase.co',
+        pathname: '/storage/v1/object/public/**',
+      },
+    ],
   },
 
   // Configure basePath if needed (e.g., for non-root deployments)
