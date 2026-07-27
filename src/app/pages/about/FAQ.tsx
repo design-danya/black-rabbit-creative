@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
+import { FaqWidget } from "../../components/MerchyntWidgets";
 import { ArrowRight, Plus, Minus, ArrowLeft } from "lucide-react";
 import { useState } from "react";
 
@@ -371,6 +372,16 @@ export default function FAQ() {
           </div>
         </section>
       ))}
+
+      {/* ─── MORE QUESTIONS (Merchynt FAQ widget) ─── */}
+      <section className="bg-[#060606] px-6 md:px-16 lg:px-24 pb-16 border-t border-white/5">
+        <div className="max-w-4xl mx-auto pt-16">
+          <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-8">
+            More questions
+          </span>
+          <FaqWidget />
+        </div>
+      </section>
 
       {/* ─── CTA ─── */}
       <section className="bg-[#060606] px-6 md:px-16 lg:px-24 py-20 md:py-28 border-t border-white/5">
