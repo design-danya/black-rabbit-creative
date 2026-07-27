@@ -87,23 +87,14 @@ function Shell({ children }: { children: ReactNode }) {
 
 function Login() {
   const [email, setEmail] = useState('')
-  const [code, setCode] = useState('')
-  const [sent, setSent] = useState(false)
+  const [password, setPassword] = useState('')
   const [busy, setBusy] = useState(false)
   const [msg, setMsg] = useState('')
 
-  async function sendCode(e: FormEvent) {
+  async function submit(e: FormEvent) {
     e.preventDefault()
     setBusy(true); setMsg('')
-    const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } })
-    setBusy(false)
-    if (error) setMsg(error.message)
-    else { setSent(true); setMsg('') }
-  }
-  async function verify(e: FormEvent) {
-    e.preventDefault()
-    setBusy(true); setMsg('')
-    const { error } = await supabase.auth.verifyOtp({ email, token: code.trim(), type: 'email' })
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
     setBusy(false)
     if (error) setMsg(error.message)
   }
@@ -111,28 +102,18 @@ function Login() {
   return (
     <div className="max-w-sm">
       <h1 className="text-2xl font-black uppercase tracking-[0.05em] mb-2">Sign in</h1>
-      <p className="text-white/45 text-sm mb-8">
-        Enter the admin email. We&apos;ll send a one-time code.
-      </p>
-      {!sent ? (
-        <form onSubmit={sendCode} className="flex flex-col gap-4">
-          <div>
-            <label className="label">Email</label>
-            <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} className="field" placeholder="you@company.com" />
-          </div>
-          <button className="btn" disabled={busy}>{busy ? 'Sending…' : 'Send code'}</button>
-        </form>
-      ) : (
-        <form onSubmit={verify} className="flex flex-col gap-4">
-          <p className="text-white/60 text-sm">Enter the 6-digit code sent to {email}.</p>
-          <div>
-            <label className="label">Code</label>
-            <input inputMode="numeric" required value={code} onChange={(e) => setCode(e.target.value)} className="field" placeholder="123456" />
-          </div>
-          <button className="btn" disabled={busy}>{busy ? 'Verifying…' : 'Verify'}</button>
-          <button type="button" onClick={() => setSent(false)} className="text-white/40 text-xs underline">Use a different email</button>
-        </form>
-      )}
+      <p className="text-white/45 text-sm mb-8">Enter your admin email and password.</p>
+      <form onSubmit={submit} className="flex flex-col gap-4">
+        <div>
+          <label className="label">Email</label>
+          <input type="email" required autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} className="field" placeholder="you@company.com" />
+        </div>
+        <div>
+          <label className="label">Password</label>
+          <input type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} className="field" placeholder="••••••••" />
+        </div>
+        <button className="btn" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
+      </form>
       {msg && <p className="text-red-400 text-sm mt-4">{msg}</p>}
     </div>
   )
@@ -175,6 +156,13 @@ function Dashboard({ email }: { email: string }) {
     await supabase.from('work_items').update({ sort_order: it.sort_order }).eq('id', swap.id)
     load()
   }
+  async function changePassword() {
+    const pw = prompt('New password (at least 6 characters):')
+    if (!pw) return
+    if (pw.length < 6) { alert('Password must be at least 6 characters.'); return }
+    const { error } = await supabase.auth.updateUser({ password: pw })
+    alert(error ? `Could not update: ${error.message}` : 'Password updated.')
+  }
 
   if (editing) {
     return <Editor email={email} item={editing === 'new' ? null : editing} onDone={(m) => { setEditing(null); setMsg(m); load() }} onCancel={() => setEditing(null)} />
@@ -185,7 +173,9 @@ function Dashboard({ email }: { email: string }) {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-black uppercase tracking-[0.05em]">Portfolio</h1>
-          <p className="text-white/40 text-xs mt-1">{email} · <button onClick={() => supabase.auth.signOut()} className="underline">sign out</button></p>
+          <p className="text-white/40 text-xs mt-1">
+            {email} · <button onClick={changePassword} className="underline">change password</button> · <button onClick={() => supabase.auth.signOut()} className="underline">sign out</button>
+          </p>
         </div>
         <button onClick={() => setEditing('new')} className="btn">+ Add item</button>
       </div>
