@@ -164,6 +164,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="text-xs text-gray-500 tracking-wide">&copy; 2025 Black Rabbit Creative. All rights reserved.</span>
           <div className="flex gap-8 text-xs text-gray-500">
+            <Link href="/admin" className="hover:text-white transition-colors">Admin</Link>
             <a href="#" className="hover:text-white transition-colors">Privacy</a>
             <a href="#" className="hover:text-white transition-colors">Terms</a>
           </div>
