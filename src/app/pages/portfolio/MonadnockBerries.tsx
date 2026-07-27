@@ -177,11 +177,11 @@ const logoBlocks: LogoBlock[] = [
     usage: "The result: a mark that feels quietly luxurious. Timeless. Intentional.",
     image: primaryMt,
     imageAlt:
-      "Monadnock Berries primary logo mark with mountain silhouette — refined destination brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+      "Monadnock Berries primary logo mark with mountain silhouette — refined destination brand identity by Black Rabbit Creative",
     imageExtra: {
       src: primaryNoMt,
       alt:
-        "Monadnock Berries primary logo mark without mountain — clean variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+        "Monadnock Berries primary logo mark without mountain — clean variation by Black Rabbit Creative",
     },
   },
   {
@@ -199,7 +199,7 @@ const logoBlocks: LogoBlock[] = [
       "When to use it: applications where the brand benefits from a traditional, established presence. Signage. Formal stationery. Moments that need weight.",
     image: heritageMark,
     imageAlt:
-      "Monadnock Berries heritage mark with EST 1996 date — formal brand variation by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+      "Monadnock Berries heritage mark with EST 1996 date — formal brand variation by Black Rabbit Creative",
   },
   {
     key: "seal",
@@ -216,7 +216,7 @@ const logoBlocks: LogoBlock[] = [
       "When to use it: anywhere you want the brand to feel ceremonial. Signature-like. Rooted.",
     image: brandSeal,
     imageAlt:
-      "Monadnock Berries brand seal — circular signature mark with landscape detail by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+      "Monadnock Berries brand seal — circular signature mark with landscape detail by Black Rabbit Creative",
   },
   {
     key: "monogram",
@@ -233,7 +233,7 @@ const logoBlocks: LogoBlock[] = [
       "When to use it: when simplicity and clarity are key. When the space needs the brand but shouldn't be overwhelmed. Apparel. Favors. Digital icons.",
     image: monogramMark,
     imageAlt:
-      "Monadnock Berries MB monogram — essential brand mark by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+      "Monadnock Berries MB monogram — essential brand mark by Black Rabbit Creative",
   },
 ];
 
@@ -399,7 +399,7 @@ export default function MonadnockBerries() {
           >
             <Image
               src={heroImg}
-              alt="Oliver and Elise, owners of Monadnock Berries, standing in front of Mount Monadnock holding their farm sign — legacy berry farm brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Oliver and Elise, owners of Monadnock Berries, standing in front of Mount Monadnock holding their farm sign — legacy berry farm brand identity by Black Rabbit Creative"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -566,7 +566,7 @@ export default function MonadnockBerries() {
                 <div className={`lg:col-span-7 overflow-hidden rounded-sm border border-[#EBE6DE]/10 ${idx % 2 === 1 ? "lg:order-2" : ""}`}>
                   <Image
                     src={d.image}
-                    alt={`${d.title} — mood board direction for Monadnock Berries brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
+                    alt={`${d.title} — mood board direction for Monadnock Berries brand identity by Black Rabbit Creative`}
                     className="w-full h-full object-cover block"
                   />
                 </div>
@@ -748,7 +748,7 @@ export default function MonadnockBerries() {
               <div className="bg-[#EBE6DE] rounded-sm p-6 md:p-10 flex items-center justify-center">
                 <Image
                   src={originalBannerLogo}
-                  alt="Original 1990s Monadnock Berries logo — painted farm scene with hand-lettered text | Before the rebrand by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Original 1990s Monadnock Berries logo — painted farm scene with hand-lettered text | Before the rebrand by Black Rabbit Creative"
                   className="max-w-full h-auto"
                 />
               </div>
@@ -879,7 +879,7 @@ export default function MonadnockBerries() {
                 <div className="overflow-hidden rounded-sm border border-[#7D796C]/20 bg-[#1f2431] group">
                   <Image
                     src={a.src}
-                    alt={`${a.label} — Monadnock Berries brand application by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
+                    alt={`${a.label} — Monadnock Berries brand application by Black Rabbit Creative`}
                     className={`w-full ${a.span === "wide" ? "aspect-[21/9]" : "aspect-[4/3]"} object-cover transition-transform duration-700 group-hover:scale-[1.03]`}
                   />
                 </div>

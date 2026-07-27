@@ -190,7 +190,7 @@ export default function CaseStudies() {
             width={1200}
             height={800}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Lobster Lab stacked takeout boxes — teal with retro lab illustration on dark red background | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Lobster Lab stacked takeout boxes — teal with retro lab illustration on dark red background | Brand identity by Black Rabbit Creative"
             className="w-full object-cover aspect-[4/3] md:aspect-[16/9]"
           />
           <Image
@@ -198,7 +198,7 @@ export default function CaseStudies() {
             width={1920}
             height={1408}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Lobster Lab bifold menu design — bold red with flowing wave patterns and retro typography | Menu design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Lobster Lab bifold menu design — bold red with flowing wave patterns and retro typography | Menu design by Black Rabbit Creative"
             className="w-full object-cover aspect-[4/3] md:aspect-[16/9]"
           />
         </motion.div>
@@ -257,7 +257,7 @@ export default function CaseStudies() {
                 width={1400}
                 height={1400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Lobster Lab custom illustration — retro science laboratory equipment with lobster motifs | Illustrated by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Lobster Lab custom illustration — retro science laboratory equipment with lobster motifs | Illustrated by Black Rabbit Creative"
                 className="w-full max-w-lg object-contain"
               />
             </div>
@@ -384,7 +384,7 @@ export default function CaseStudies() {
                 width={1200}
                 height={900}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Lobster Lab takeout boxes — teal waves design and cream lab illustration variant | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Lobster Lab takeout boxes — teal waves design and cream lab illustration variant | Packaging by Black Rabbit Creative"
                 className="w-full object-cover max-h-[50vh]"
               />
             </div>
@@ -396,7 +396,7 @@ export default function CaseStudies() {
                 width={1200}
                 height={800}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Lobster Lab stacked takeout boxes — teal with retro lab illustration on dark red background | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Lobster Lab stacked takeout boxes — teal with retro lab illustration on dark red background | Packaging by Black Rabbit Creative"
                 className="w-full object-cover max-h-[50vh]"
               />
             </div>
@@ -455,7 +455,7 @@ export default function CaseStudies() {
                   width={1920}
                   height={1080}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Lobster Lab storefront window signage — flowing wave patterns and logo on glass | Environmental design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Lobster Lab storefront window signage — flowing wave patterns and logo on glass | Environmental design by Black Rabbit Creative"
                   className="w-full object-cover aspect-[4/3]"
                 />
               </div>
@@ -482,7 +482,7 @@ export default function CaseStudies() {
                   width={600}
                   height={900}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Woman wearing Lobster Lab branded red hoodie with retro logo | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Woman wearing Lobster Lab branded red hoodie with retro logo | Merchandise by Black Rabbit Creative"
                   className="w-full object-cover aspect-[4/3]"
                 />
               </div>
@@ -629,7 +629,7 @@ export default function CaseStudies() {
             width={1400}
             height={1400}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Calentón brand identity — devil mascot with chili pepper pattern and hot sauce bottles | Brand design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Calentón brand identity — devil mascot with chili pepper pattern and hot sauce bottles | Brand design by Black Rabbit Creative"
             className="w-full object-contain"
           />
           <Image
@@ -637,7 +637,7 @@ export default function CaseStudies() {
             width={1400}
             height={1400}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Calentón hot sauce bottle close-up — devil mascot label with chili pepper pattern background | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Calentón hot sauce bottle close-up — devil mascot label with chili pepper pattern background | Packaging by Black Rabbit Creative"
             className="w-full object-contain"
           />
         </motion.div>
@@ -696,7 +696,7 @@ export default function CaseStudies() {
                 width={1745}
                 height={1999}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Calentón HOT TO GO package design — yellow background with devil mascot and bold typography | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Calentón HOT TO GO package design — yellow background with devil mascot and bold typography | Packaging by Black Rabbit Creative"
                 className="w-full object-contain"
               />
             </div>
@@ -823,7 +823,7 @@ export default function CaseStudies() {
                 width={1400}
                 height={1400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Calentón retro TV advertising mockups — stacked vintage TVs displaying devil mascot and hot sauce bottles on chili pepper pattern | Advertising by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Calentón retro TV advertising mockups — stacked vintage TVs displaying devil mascot and hot sauce bottles on chili pepper pattern | Advertising by Black Rabbit Creative"
                 className="w-full object-contain"
               />
             </div>
@@ -879,7 +879,7 @@ export default function CaseStudies() {
                 width={1400}
                 height={1400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Calentón branded merchandise — woman in teal hoodie with devil mascot logo and branded tote bag on chili pepper pattern | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Calentón branded merchandise — woman in teal hoodie with devil mascot logo and branded tote bag on chili pepper pattern | Merchandise by Black Rabbit Creative"
                 className="w-full object-contain"
               />
             </div>

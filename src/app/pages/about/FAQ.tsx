@@ -279,7 +279,7 @@ export default function FAQ() {
   useSEO({
     title: "FAQ | Black Rabbit Creative — Branding & Design Studio Portsmouth NH",
     description:
-      "Frequently asked questions about Black Rabbit Creative's branding, packaging design, logo design, creative direction, pricing, and project process. Serving Portsmouth NH, Keene NH, and Providence RI.",
+      "Frequently asked questions about Black Rabbit Creative's branding, packaging design, logo design, creative direction, pricing, and project process. A studio in Portsmouth, NH.",
     canonical: "/about/faq",
   });
 

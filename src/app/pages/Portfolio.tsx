@@ -299,7 +299,7 @@ function ProjectCardInner({ project }: { project: Card }) {
       {/* Image — greyscale → colour */}
       <ImageWithFallback
         src={typeof project.image === "string" ? project.image : project.image.src}
-        alt={`${project.title} — portfolio project by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
+        alt={`${project.title} — portfolio project by Black Rabbit Creative`}
         className={`absolute transition-all duration-700 ${
           isLight
             ? "inset-6 w-[calc(100%-3rem)] h-[calc(100%-3rem)] object-contain group-hover:scale-105 grayscale group-hover:grayscale-0"

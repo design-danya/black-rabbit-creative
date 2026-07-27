@@ -160,7 +160,7 @@ export default function BrandIdentity() {
           >
             <img
               src={rabbitImg}
-              alt="Black Rabbit Creative mascot — brand identity design studio, Portsmouth NH, New Hampshire, New England"
+              alt="Black Rabbit Creative mascot — brand identity design studio"
               className="w-full h-auto object-contain"
             />
           </div>
@@ -291,7 +291,7 @@ export default function BrandIdentity() {
                 >
                   <img
                     src={lobsterMenuImg}
-                    alt="Lobster Lab menu design — restaurant branding by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="Lobster Lab menu design — restaurant branding by Black Rabbit Creative"
                     className="w-full h-full object-cover"
                     style={{ aspectRatio: "4/3" }}
                   />
@@ -307,7 +307,7 @@ export default function BrandIdentity() {
                 >
                   <img
                     src={lobsterHoodieImg}
-                    alt="Lobster Lab branded hoodie — merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="Lobster Lab branded hoodie — merchandise design by Black Rabbit Creative"
                     className="w-full h-full object-cover object-top"
                     style={{ aspectRatio: "2/3" }}
                   />
@@ -324,7 +324,7 @@ export default function BrandIdentity() {
               >
                 <img
                   src={senseImg}
-                  alt="Lobster Lab complete brand identity system — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Lobster Lab complete brand identity system — designed by Black Rabbit Creative"
                   className="w-full object-cover"
                   style={{ aspectRatio: "16/7" }}
                 />

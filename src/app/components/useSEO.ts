@@ -14,8 +14,8 @@
  * remove them opportunistically when touching a page for other reasons.
  */
 interface SEOProps {
-  title: string
-  description: string
+  title?: string
+  description?: string
   canonical?: string
   ogTitle?: string
   ogDescription?: string

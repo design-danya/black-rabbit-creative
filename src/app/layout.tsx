@@ -17,11 +17,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.blackrabbit-creative.com'),
   title: {
-    default: 'Branding & Packaging Design Studio in Portsmouth, NH',
+    default: 'Black Rabbit Creative | Branding & Packaging Design, Portsmouth NH',
     template: '%s | Black Rabbit Creative',
   },
   description:
-    'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH — serving Keene and Providence.',
+    'Brand identity, logo, and packaging design for product-based businesses. A Portsmouth, NH studio building brands that stand apart from their competition.',
   authors: [{ name: 'Black Rabbit Creative' }],
   creator: 'Black Rabbit Creative',
   robots: {

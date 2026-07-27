@@ -191,7 +191,7 @@ export default function BreweryBranding() {
                 >
                   <ImageWithFallback
                     src={project.image}
-                    alt={`${project.title} — craft beer branding by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
+                    alt={`${project.title} — craft beer branding by Black Rabbit Creative`}
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

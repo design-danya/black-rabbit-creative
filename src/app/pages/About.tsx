@@ -100,7 +100,7 @@ export default function About() {
             {/* Rabbit — no background, floats above the heading */}
             <motion.img
               src={rabbitBoutiqueImg}
-              alt="Black Rabbit Creative mascot — branding and design studio, Portsmouth NH, New Hampshire, New England"
+              alt="Animated black rabbit mascot illustration"
               className="w-72 md:w-96 lg:w-[26rem] object-contain select-none pointer-events-none"
               animate={{ opacity: [0.15, 1, 0.15] }}
               transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
@@ -153,7 +153,7 @@ export default function About() {
               <div className="relative overflow-hidden bg-[#111] max-w-xs mx-auto sm:max-w-sm lg:max-w-none">
                 <img
                   src={danyaImg}
-                  alt="Danya Pugliese, founder of Black Rabbit Creative — branding and design studio in Portsmouth NH, New Hampshire, New England"
+                  alt="Danya Pugliese, founder of Black Rabbit Creative"
                   className="w-full h-auto object-contain"
                   loading="lazy"
                   decoding="async"

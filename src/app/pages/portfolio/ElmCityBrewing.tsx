@@ -61,37 +61,37 @@ const meta = [
 ];
 
 const brandSlides = [
-  { src: coverImg, alt: "Elm City Brewing — Brand Guidelines Cover | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: contentsImg, alt: "Elm City Brewing — Table of Contents | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: aboutBrandImg, alt: "Elm City Brewing — About the Brand | Brand strategy by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: missionImg, alt: "Elm City Brewing — Mission, Vision & Purpose | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: valuesImg, alt: "Elm City Brewing — Brand Values | Brand strategy by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: personalityImg, alt: "Elm City Brewing — Brand Personality & Voice | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: logosIntroImg, alt: "Elm City Brewing — Logos & Clear Space | Logo system by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: primaryLogoImg, alt: "Elm City Brewing — Primary Logo | Logo design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: logoProgressionImg, alt: "Elm City Brewing — Logo Progression & Design Rationale | Logo design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: secondaryLogoImg, alt: "Elm City Brewing — Secondary Logo | Logo system by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: submarkLogoImg, alt: "Elm City Brewing — Submark Logo | Logo system by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: logoMarkImg, alt: "Elm City Brewing — Logo Mark | Logo design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: incorrectUsageImg, alt: "Elm City Brewing — Incorrect Logo Usage | Brand guidelines by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: incorrectExamplesImg, alt: "Elm City Brewing — Incorrect Usage Examples | Brand guidelines by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: colorPaletteImg, alt: "Elm City Brewing — Color Palette | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: colorSwatchesImg, alt: "Elm City Brewing — Color Swatches & Specs | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: colorUsageImg, alt: "Elm City Brewing — Color Usage Guidelines | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: brandFontsImg, alt: "Elm City Brewing — Brand Fonts | Typography by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: fontSpecsImg, alt: "Elm City Brewing — Font Specifications | Typography by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: fontApplicationImg, alt: "Elm City Brewing — Font Application | Typography by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: fontIncorrectImg, alt: "Elm City Brewing — Font Incorrect Usage | Brand guidelines by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: brandAssetsImg, alt: "Elm City Brewing — Brand Assets | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: illustrationSystemImg, alt: "Elm City Brewing — Illustration System | Brand assets by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: assetUsageImg, alt: "Elm City Brewing — Asset Usage | Brand guidelines by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: socialsPhotoImg, alt: "Elm City Brewing — Socials & Photography | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: socialsMockupImg, alt: "Elm City Brewing — Social Media Mockups | Social media by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: photoGuideImg, alt: "Elm City Brewing — Photography Guidelines | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: brandActionImg, alt: "Elm City Brewing — Brand in Action | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: mockupsGridImg, alt: "Elm City Brewing — Brand Mockups | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: mockupsGrid2Img, alt: "Elm City Brewing — Collateral Mockups | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
-  { src: keepMeSafeImg, alt: "Elm City Brewing — Keep Me Safe | Brand guide by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" },
+  { src: coverImg, alt: "Elm City Brewing — Brand Guidelines Cover | Designed by Black Rabbit Creative" },
+  { src: contentsImg, alt: "Elm City Brewing — Table of Contents | Brand guide by Black Rabbit Creative" },
+  { src: aboutBrandImg, alt: "Elm City Brewing — About the Brand | Brand strategy by Black Rabbit Creative" },
+  { src: missionImg, alt: "Elm City Brewing — Mission, Vision & Purpose | Brand guide by Black Rabbit Creative" },
+  { src: valuesImg, alt: "Elm City Brewing — Brand Values | Brand strategy by Black Rabbit Creative" },
+  { src: personalityImg, alt: "Elm City Brewing — Brand Personality & Voice | Brand guide by Black Rabbit Creative" },
+  { src: logosIntroImg, alt: "Elm City Brewing — Logos & Clear Space | Logo system by Black Rabbit Creative" },
+  { src: primaryLogoImg, alt: "Elm City Brewing — Primary Logo | Logo design by Black Rabbit Creative" },
+  { src: logoProgressionImg, alt: "Elm City Brewing — Logo Progression & Design Rationale | Logo design by Black Rabbit Creative" },
+  { src: secondaryLogoImg, alt: "Elm City Brewing — Secondary Logo | Logo system by Black Rabbit Creative" },
+  { src: submarkLogoImg, alt: "Elm City Brewing — Submark Logo | Logo system by Black Rabbit Creative" },
+  { src: logoMarkImg, alt: "Elm City Brewing — Logo Mark | Logo design by Black Rabbit Creative" },
+  { src: incorrectUsageImg, alt: "Elm City Brewing — Incorrect Logo Usage | Brand guidelines by Black Rabbit Creative" },
+  { src: incorrectExamplesImg, alt: "Elm City Brewing — Incorrect Usage Examples | Brand guidelines by Black Rabbit Creative" },
+  { src: colorPaletteImg, alt: "Elm City Brewing — Color Palette | Brand identity by Black Rabbit Creative" },
+  { src: colorSwatchesImg, alt: "Elm City Brewing — Color Swatches & Specs | Brand identity by Black Rabbit Creative" },
+  { src: colorUsageImg, alt: "Elm City Brewing — Color Usage Guidelines | Brand guide by Black Rabbit Creative" },
+  { src: brandFontsImg, alt: "Elm City Brewing — Brand Fonts | Typography by Black Rabbit Creative" },
+  { src: fontSpecsImg, alt: "Elm City Brewing — Font Specifications | Typography by Black Rabbit Creative" },
+  { src: fontApplicationImg, alt: "Elm City Brewing — Font Application | Typography by Black Rabbit Creative" },
+  { src: fontIncorrectImg, alt: "Elm City Brewing — Font Incorrect Usage | Brand guidelines by Black Rabbit Creative" },
+  { src: brandAssetsImg, alt: "Elm City Brewing — Brand Assets | Brand identity by Black Rabbit Creative" },
+  { src: illustrationSystemImg, alt: "Elm City Brewing — Illustration System | Brand assets by Black Rabbit Creative" },
+  { src: assetUsageImg, alt: "Elm City Brewing — Asset Usage | Brand guidelines by Black Rabbit Creative" },
+  { src: socialsPhotoImg, alt: "Elm City Brewing — Socials & Photography | Social media by Black Rabbit Creative" },
+  { src: socialsMockupImg, alt: "Elm City Brewing — Social Media Mockups | Social media by Black Rabbit Creative" },
+  { src: photoGuideImg, alt: "Elm City Brewing — Photography Guidelines | Brand guide by Black Rabbit Creative" },
+  { src: brandActionImg, alt: "Elm City Brewing — Brand in Action | Brand identity by Black Rabbit Creative" },
+  { src: mockupsGridImg, alt: "Elm City Brewing — Brand Mockups | Brand identity by Black Rabbit Creative" },
+  { src: mockupsGrid2Img, alt: "Elm City Brewing — Collateral Mockups | Brand identity by Black Rabbit Creative" },
+  { src: keepMeSafeImg, alt: "Elm City Brewing — Keep Me Safe | Brand guide by Black Rabbit Creative" },
 ];
 
 export default function ElmCityBrewing() {
@@ -190,7 +190,7 @@ export default function ElmCityBrewing() {
           width={15742}
           height={2217}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-          alt="Elm City Brewing — brand overview strip | Brand identity by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+          alt="Elm City Brewing — brand overview strip | Brand identity by Black Rabbit Creative"
           className="w-full object-cover"
         />
       </section>
@@ -243,7 +243,7 @@ export default function ElmCityBrewing() {
                 width={5712}
                 height={4284}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Early logo sketches and concept explorations for Elm City Brewing | Logo design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Early logo sketches and concept explorations for Elm City Brewing | Logo design by Black Rabbit Creative"
                 className="w-full rounded-sm object-cover rotate-180"
               />
             </div>
@@ -266,7 +266,7 @@ export default function ElmCityBrewing() {
                 width={2250}
                 height={1320}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Logo evolution — original vs simplified Elm City Brewing identity | Redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Logo evolution — original vs simplified Elm City Brewing identity | Redesigned by Black Rabbit Creative"
                 className="w-full rounded-sm object-cover"
               />
             </div>
@@ -309,7 +309,7 @@ export default function ElmCityBrewing() {
                 width={1416}
                 height={968}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Elm City Brewing branded burger box | Packaging by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Elm City Brewing branded burger box | Packaging by Black Rabbit Creative"
                 className="w-full rounded-sm object-contain max-h-[400px]"
               />
             </div>
@@ -459,7 +459,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-7 overflow-hidden rounded-sm"
             >
-              <Image src={mugsImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded mugs | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={mugsImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded mugs | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -468,7 +468,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-5 overflow-hidden rounded-sm"
             >
-              <Image src={blackTeeImg} width={2880} height={3600} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing black t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={blackTeeImg} width={2880} height={3600} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing black t-shirt | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -481,7 +481,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-5 overflow-hidden rounded-sm"
             >
-              <Image src={greenTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing green t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={greenTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing green t-shirt | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -490,7 +490,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-7 overflow-hidden rounded-sm"
             >
-              <Image src={wallSignImg} width={1024} height={1024} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing wall sign in Keene NH | Environmental design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={wallSignImg} width={1024} height={1024} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing wall sign in Keene NH | Environmental design by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -503,7 +503,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="overflow-hidden rounded-sm"
             >
-              <Image src={pintGlassesImg} width={1200} height={800} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded pint glasses | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={pintGlassesImg} width={1200} height={800} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded pint glasses | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -512,7 +512,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="overflow-hidden rounded-sm"
             >
-              <Image src={toteBagImg} width={3072} height={3072} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing tote bag — Drink Like a Local | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={toteBagImg} width={3072} height={3072} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing tote bag — Drink Like a Local | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -521,7 +521,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="overflow-hidden rounded-sm"
             >
-              <Image src={whiteTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing white t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={whiteTeeImg} width={6000} height={4000} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing white t-shirt | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 
@@ -534,7 +534,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6 }}
               className="md:col-span-8 overflow-hidden rounded-sm"
             >
-              <Image src={coastersImg} width={3500} height={2500} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded coasters | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={coastersImg} width={3500} height={2500} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing branded coasters | Merchandise by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -543,7 +543,7 @@ export default function ElmCityBrewing() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-4 overflow-hidden rounded-sm"
             >
-              <Image src={menuImg} width={3000} height={2200} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing menu design | Print design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full max-h-[280px] object-cover" />
+              <Image src={menuImg} width={3000} height={2200} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Elm City Brewing menu design | Print design by Black Rabbit Creative" className="w-full h-full max-h-[280px] object-cover" />
             </motion.div>
           </div>
 

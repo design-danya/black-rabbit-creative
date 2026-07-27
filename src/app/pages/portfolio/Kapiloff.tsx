@@ -158,7 +158,7 @@ export default function Kapiloff() {
                     width={630}
                     height={193}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="Original Kapiloff Insurance logo before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="Original Kapiloff Insurance logo before rebrand | Black Rabbit Creative"
                     className="object-contain w-full h-auto"
                   />
                 </motion.div>
@@ -175,7 +175,7 @@ export default function Kapiloff() {
                     width={271}
                     height={273}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="Original Kapiloff Insurance K mark before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="Original Kapiloff Insurance K mark before rebrand | Black Rabbit Creative"
                     className="object-contain w-full h-full"
                   />
                 </motion.div>
@@ -241,7 +241,7 @@ export default function Kapiloff() {
                     width={900}
                     height={220}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="New Kapiloff Insurance Solutions wordmark — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="New Kapiloff Insurance Solutions wordmark — redesigned by Black Rabbit Creative"
                     className="object-contain w-full h-auto"
                   />
                 </motion.div>
@@ -258,7 +258,7 @@ export default function Kapiloff() {
                     width={339}
                     height={329}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                    alt="New Kapiloff Insurance K monogram mark — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="New Kapiloff Insurance K monogram mark — redesigned by Black Rabbit Creative"
                     className="object-contain w-full h-full"
                   />
                 </motion.div>
@@ -441,7 +441,7 @@ export default function Kapiloff() {
               className="relative overflow-hidden bg-[#060606] flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)" }}
             >
-              <Image src={signPhoto} width={840} height={1120} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance Solutions outdoor LED pylon sign — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+              <Image src={signPhoto} width={840} height={1120} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance Solutions outdoor LED pylon sign — designed by Black Rabbit Creative" className="w-full h-full object-contain" />
             </div>
             <div className="py-4 text-center">
               <p className="text-[9px] uppercase tracking-[0.35em] mb-1" style={{ color: blueLight }}>Environmental</p>
@@ -460,7 +460,7 @@ export default function Kapiloff() {
               className="relative overflow-hidden bg-[#060606] flex items-center justify-center w-full"
               style={{ height: "clamp(280px, 36vw, 480px)" }}
             >
-              <Image src={mapsGalaAd} width={1725} height={2664} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance MAPS Gala sponsorship ad — designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England" className="w-full h-full object-contain" />
+              <Image src={mapsGalaAd} width={1725} height={2664} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px" alt="Kapiloff Insurance MAPS Gala sponsorship ad — designed by Black Rabbit Creative" className="w-full h-full object-contain" />
             </div>
             <div className="py-4 text-center">
               <p className="text-[9px] uppercase tracking-[0.35em] mb-1" style={{ color: blueLight }}>Digital / Print</p>

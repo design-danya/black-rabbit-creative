@@ -112,7 +112,7 @@ export default function BadgerBalm() {
             width={1080}
             height={1350}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Badger Face Oil complete product line — Radiant Glow, Restore Rose, and Cleansing Oil held in hands | Product photography support by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Badger Face Oil complete product line — Radiant Glow, Restore Rose, and Cleansing Oil held in hands | Product photography support by Black Rabbit Creative"
             className="w-full object-cover max-h-[75vh]"
           />
         </motion.div>
@@ -170,7 +170,7 @@ export default function BadgerBalm() {
                 width={1080}
                 height={1350}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Woman holding Badger Rose Beauty Oil close-up — natural skincare product photography | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Woman holding Badger Rose Beauty Oil close-up — natural skincare product photography | Black Rabbit Creative"
                 className="w-full object-cover max-h-[55vh]"
               />
             </div>
@@ -238,7 +238,7 @@ export default function BadgerBalm() {
                 width={1080}
                 height={1350}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Woman holding Badger Rose Body Oil — product lifestyle photography | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Woman holding Badger Rose Body Oil — product lifestyle photography | Black Rabbit Creative"
                 className="w-full object-cover"
               />
             </div>
@@ -313,7 +313,7 @@ export default function BadgerBalm() {
                 width={1080}
                 height={1350}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Badger Beauty Balm held among wildflowers — natural skincare product photography | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Badger Beauty Balm held among wildflowers — natural skincare product photography | Black Rabbit Creative"
                 className="w-full object-cover"
               />
             </div>
@@ -373,7 +373,7 @@ export default function BadgerBalm() {
                 width={1080}
                 height={1350}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Woman holding Badger Radiant Glow Beauty Oil close-up — natural sunlit skincare photography | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Woman holding Badger Radiant Glow Beauty Oil close-up — natural sunlit skincare photography | Black Rabbit Creative"
                 className="w-full object-cover max-h-[55vh]"
               />
             </div>

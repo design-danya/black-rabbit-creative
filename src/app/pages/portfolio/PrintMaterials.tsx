@@ -27,42 +27,42 @@ const meta = [
 const printPieces = [
   {
     img: printPosterImg,
-    alt: "DJ Chris Hamilton 'Get Down' event poster — bold illustrated promotional poster for Madame Sherri's, Keene NH | Graphic design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "DJ Chris Hamilton 'Get Down' event poster — bold illustrated promotional poster for Madame Sherri's, Keene NH | Graphic design by Black Rabbit Creative",
     label: "Event Poster Design",
     client: "Madame Sherri's",
     desc: "Illustrated promotional poster for a DJ event — bold pop-art style with custom lettering and halftone textures.",
   },
   {
     img: pridePosterImg,
-    alt: "Keene Pride Prom After Party '2099' — futuristic neon-illustrated event poster | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "Keene Pride Prom After Party '2099' — futuristic neon-illustrated event poster | Designed by Black Rabbit Creative",
     label: "Event Poster — Illustration",
     client: "Keene Pride Festival",
     desc: "Futuristic neon-illustrated poster for the '2099' Prom After Party — custom character, hand-lettering, and cyberpunk aesthetic.",
   },
   {
     img: printSignageImg,
-    alt: "Kapiloff Insurance Solutions — outdoor LED pylon sign | Sign design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "Kapiloff Insurance Solutions — outdoor LED pylon sign | Sign design by Black Rabbit Creative",
     label: "Outdoor Signage",
     client: "Kapiloff Insurance",
     desc: "Branded pylon sign with LED message board — clear hierarchy and roadside visibility for a high-traffic location.",
   },
   {
     img: labyrinthSignImg,
-    alt: "The Monadnock Labyrinth — interpretive signage panel | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "The Monadnock Labyrinth — interpretive signage panel | Designed by Black Rabbit Creative",
     label: "Interpretive Signage",
     client: "The Monadnock Labyrinth",
     desc: "Community land art project wayfinding panel — illustrative environmental signage designed for year-round outdoor durability.",
   },
   {
     img: printBannerImg,
-    alt: "City of Keene Coming Events board — Shamrock Shuffle 5K banner | Event marketing by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "City of Keene Coming Events board — Shamrock Shuffle 5K banner | Event marketing by Black Rabbit Creative",
     label: "Event Banners",
     client: "Cheshire Children's Museum",
     desc: "Large-format event banner for the Shamrock Shuffle 5K fundraiser — designed for outdoor community display.",
   },
   {
     img: shamrockTeeImg,
-    alt: "Cheshire Children's Museum Shamrock 5K & Family Day — custom illustrated t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England",
+    alt: "Cheshire Children's Museum Shamrock 5K & Family Day — custom illustrated t-shirt | Merchandise by Black Rabbit Creative",
     label: "Event Merchandise",
     client: "Cheshire Children's Museum",
     desc: "Custom illustrated event t-shirt with retro mascot characters for the annual fundraiser.",
@@ -80,7 +80,7 @@ const categories = [
 export default function PrintMaterials() {
   useSEO({
     title: "Print Materials & Signage | Black Rabbit Creative, Portsmouth NH",
-    description: "Print materials, event posters, signage, banners, and promotional designs by Black Rabbit Creative — a graphic design studio in Portsmouth, New Hampshire, New England.",
+    description: "Print materials, event posters, signage, banners, and promotional designs by Black Rabbit Creative — a graphic design studio in Portsmouth, NH.",
     canonical: "/work/print-materials",
   });
   return (
@@ -154,7 +154,7 @@ export default function PrintMaterials() {
             width={2800}
             height={1667}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="DJ Chris Hamilton 'Get Down' event poster — bold illustrated promotional poster for Madame Sherri's, Keene NH | Graphic design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="DJ Chris Hamilton 'Get Down' event poster — bold illustrated promotional poster for Madame Sherri's, Keene NH | Graphic design by Black Rabbit Creative"
             className="w-full object-cover"
           />
         </motion.div>
@@ -208,7 +208,7 @@ export default function PrintMaterials() {
                 width={2048}
                 height={2048}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Keene Pride Prom After Party '2099' — futuristic neon-illustrated event poster | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Keene Pride Prom After Party '2099' — futuristic neon-illustrated event poster | Designed by Black Rabbit Creative"
                 className="w-full object-contain"
               />
             </div>
@@ -252,7 +252,7 @@ export default function PrintMaterials() {
                   width={840}
                   height={1120}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Kapiloff Insurance Solutions — outdoor LED pylon sign | Sign design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Kapiloff Insurance Solutions — outdoor LED pylon sign | Sign design by Black Rabbit Creative"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -274,7 +274,7 @@ export default function PrintMaterials() {
                   width={1800}
                   height={2046}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="The Monadnock Labyrinth — interpretive signage panel | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="The Monadnock Labyrinth — interpretive signage panel | Designed by Black Rabbit Creative"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -324,7 +324,7 @@ export default function PrintMaterials() {
                   width={4032}
                   height={3024}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="City of Keene Coming Events board — Shamrock Shuffle 5K banner | Event marketing by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="City of Keene Coming Events board — Shamrock Shuffle 5K banner | Event marketing by Black Rabbit Creative"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -347,7 +347,7 @@ export default function PrintMaterials() {
                   width={1620}
                   height={1620}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Cheshire Children's Museum Shamrock 5K & Family Day — custom illustrated t-shirt | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Cheshire Children's Museum Shamrock 5K & Family Day — custom illustrated t-shirt | Merchandise by Black Rabbit Creative"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -499,7 +499,7 @@ export default function PrintMaterials() {
                   width={1200}
                   height={1800}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Danya-O's Creative Crunch cereal box front — retro pop-art illustrated self-promotion piece | Illustration by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Danya-O's Creative Crunch cereal box front — retro pop-art illustrated self-promotion piece | Illustration by Black Rabbit Creative"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -521,7 +521,7 @@ export default function PrintMaterials() {
                   width={1200}
                   height={1800}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Danya-O's Creative Crunch cereal box back — Design Nutrition panel with brand strategy breakdown | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Danya-O's Creative Crunch cereal box back — Design Nutrition panel with brand strategy breakdown | Designed by Black Rabbit Creative"
                   className="w-full h-full object-contain"
                 />
               </div>

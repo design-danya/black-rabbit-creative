@@ -14,7 +14,7 @@ export const organizationSchema = {
   '@id': `${SITE_URL}/#organization`,
   name: 'Black Rabbit Creative',
   description:
-    'Black Rabbit Creative is a full-service branding agency serving Portsmouth, NH, Keene, NH, and Providence, RI. Brand strategy, visual identity systems, logo design, and production-ready packaging design for product-based and small businesses across New England.',
+    'Black Rabbit Creative is a brand identity and packaging design studio in Portsmouth, NH. Brand strategy, visual identity systems, logo design, and production-ready packaging for product-based businesses across New England.',
   url: `${SITE_URL}/`,
   telephone: '+18024160905',
   image: `${SITE_URL}/assets/Black_Rabbitv3-16.png`,
@@ -44,11 +44,6 @@ export const organizationSchema = {
       '@type': 'City',
       name: 'Keene',
       containedInPlace: { '@type': 'State', name: 'New Hampshire' },
-    },
-    {
-      '@type': 'City',
-      name: 'Providence',
-      containedInPlace: { '@type': 'State', name: 'Rhode Island' },
     },
   ],
   sameAs: [

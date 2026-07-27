@@ -83,7 +83,7 @@ export function Footer() {
           <div className="md:col-span-3">
             <Image
               src={rabbitLogo}
-              alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
+              alt="Black Rabbit Creative logo"
               className="h-10 w-auto mb-6"
               width={380}
               height={96}

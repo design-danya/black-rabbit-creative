@@ -196,7 +196,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center group" onClick={close}>
           <Image
             src={isDark ? darkLogo : lightLogo}
-            alt="Black Rabbit Creative logo — branding and design studio, Portsmouth NH, New Hampshire, New England"
+            alt="Black Rabbit Creative logo"
             className={`h-10 md:h-12 w-auto transition-all duration-500 ease-out group-hover:scale-105 `}
             width={380}
             height={96}

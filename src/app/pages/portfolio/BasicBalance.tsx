@@ -140,7 +140,7 @@ export default function BasicBalance() {
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-6 self-start">Before</p>
               <motion.img
                 src={oldBrand}
-                alt="Basic Balance Acupuncture old brand on laptop — before rebrand by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Basic Balance Acupuncture old brand on laptop — before rebrand by Black Rabbit Creative"
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -182,7 +182,7 @@ export default function BasicBalance() {
               <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-6 self-start">After</p>
               <motion.img
                 src={newBrand}
-                alt="Basic Balance Acupuncture new brand on laptop — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Basic Balance Acupuncture new brand on laptop — redesigned by Black Rabbit Creative"
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -303,7 +303,7 @@ export default function BasicBalance() {
               width={1920}
               height={2879}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Basic Balance Acupuncture brand guideline sheet — logo suite, colour palette, brand assets, brand fonts, and real-world applications | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Basic Balance Acupuncture brand guideline sheet — logo suite, colour palette, brand assets, brand fonts, and real-world applications | Designed by Black Rabbit Creative"
               className="w-full h-auto object-contain"
             />
           </motion.div>
@@ -349,7 +349,7 @@ export default function BasicBalance() {
                 width={2000}
                 height={2000}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Basic Balance branded t-shirt and water bottle — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Basic Balance branded t-shirt and water bottle — merchandise by Black Rabbit Creative"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -375,7 +375,7 @@ export default function BasicBalance() {
                 width={2048}
                 height={2048}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Basic Balance branded tote bag and cherry blossom t-shirt — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Basic Balance branded tote bag and cherry blossom t-shirt — merchandise by Black Rabbit Creative"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -401,7 +401,7 @@ export default function BasicBalance() {
                 width={2000}
                 height={2000}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Basic Balance branded mug with stacked stones — merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Basic Balance branded mug with stacked stones — merchandise by Black Rabbit Creative"
                 className="w-full h-full object-contain"
               />
             </div>

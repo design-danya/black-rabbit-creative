@@ -149,7 +149,7 @@ export default function GraphicDesign() {
           >
             <img
               src={rabbitImg}
-              alt="Black Rabbit Creative mascot — graphic design and illustration studio, Portsmouth NH, New Hampshire, New England"
+              alt="Black Rabbit Creative mascot — graphic design and illustration studio"
               className="w-full h-auto object-contain"
             />
           </div>
@@ -264,7 +264,7 @@ export default function GraphicDesign() {
             <div className="relative overflow-hidden bg-[#0a0a14] flex items-center justify-center mx-auto" style={{ aspectRatio: "4/5", maxHeight: "560px" }}>
               <img
                 src={touchpointImg}
-                alt="DJ Chris Hamilton 'Get Down' event poster — graphic design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="DJ Chris Hamilton 'Get Down' event poster — graphic design by Black Rabbit Creative"
                 className="h-full w-auto object-contain"
               />
             </div>
@@ -407,7 +407,7 @@ export default function GraphicDesign() {
             <div className="relative overflow-hidden bg-[#0d2e1a]" style={{ aspectRatio: "1/1" }}>
               <img
                 src={studioImg}
-                alt="Design studio workspace with Adobe Illustrator on drawing tablet — Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Design studio workspace with Adobe Illustrator on drawing tablet — Black Rabbit Creative"
                 className="w-full h-full object-cover"
               />
             </div>

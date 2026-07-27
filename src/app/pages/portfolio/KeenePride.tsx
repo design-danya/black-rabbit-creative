@@ -40,7 +40,7 @@ const challenges = [
 export default function KeenePride() {
   useSEO({
     title: "Keene Pride Festival Merchandise Design | Black Rabbit Creative, Portsmouth NH",
-    description: "Vibrant merchandise design for Keene Pride Festival — rainbow chevron t-shirts, tote bags, and water bottles by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England.",
+    description: "Vibrant merchandise design for Keene Pride Festival — rainbow chevron t-shirts, tote bags, and water bottles by Black Rabbit Creative.",
     canonical: "/work/keene-pride",
   });
   return (
@@ -114,7 +114,7 @@ export default function KeenePride() {
             width={2094}
             height={1412}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Keene Pride Festival t-shirt designs — six views showing the rainbow chevron pattern across multiple models | Merchandise design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Keene Pride Festival t-shirt designs — six views showing the rainbow chevron pattern across multiple models | Merchandise design by Black Rabbit Creative"
             className="w-full object-cover"
           />
         </motion.div>
@@ -166,7 +166,7 @@ export default function KeenePride() {
               width={600}
               height={600}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Keene Pride t-shirt back view — rainbow chevron pattern detail | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Keene Pride t-shirt back view — rainbow chevron pattern detail | Designed by Black Rabbit Creative"
               className="w-full object-contain"
             />
           </motion.div>
@@ -262,7 +262,7 @@ export default function KeenePride() {
             width={1920}
             height={1079}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Keene Pride Festival merchandise spread — tote bags, water bottles, and t-shirts featuring the rainbow chevron design | Merchandise by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Keene Pride Festival merchandise spread — tote bags, water bottles, and t-shirts featuring the rainbow chevron design | Merchandise by Black Rabbit Creative"
             className="w-full object-cover"
           />
         </motion.div>

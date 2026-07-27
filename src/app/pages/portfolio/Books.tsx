@@ -133,7 +133,7 @@ export default function Books() {
               width={1920}
               height={1440}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="The Hitchhiker's Guide to the Galaxy — original 1979 Pocket Books cover | Book cover analysis by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="The Hitchhiker's Guide to the Galaxy — original 1979 Pocket Books cover | Book cover analysis by Black Rabbit Creative"
               className="w-full max-w-xs mx-auto lg:max-w-none object-contain"
             />
           </motion.div>
@@ -202,7 +202,7 @@ export default function Books() {
               width={1920}
               height={1440}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="The Hitchhiker's Guide to the Galaxy — redesigned cover with mechanical robot hand and bold orange typography | Book cover design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="The Hitchhiker's Guide to the Galaxy — redesigned cover with mechanical robot hand and bold orange typography | Book cover design by Black Rabbit Creative"
               className="w-full max-w-xs mx-auto lg:max-w-none object-contain"
             />
           </motion.div>
@@ -223,7 +223,7 @@ export default function Books() {
             width={1920}
             height={1440}
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-            alt="Side-by-side 3D mockup comparing original and redesigned Hitchhiker's Guide book covers | Book design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+            alt="Side-by-side 3D mockup comparing original and redesigned Hitchhiker's Guide book covers | Book design by Black Rabbit Creative"
             className="w-full max-w-2xl mx-auto object-contain"
           />
           <div className="mt-3 pt-3 border-t border-white/10">
@@ -467,7 +467,7 @@ export default function Books() {
               width={1536}
               height={1024}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="The Watercolor Dream Book by Bill Whyte — printed book with watercolor artwork on cover | Book design support by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="The Watercolor Dream Book by Bill Whyte — printed book with watercolor artwork on cover | Book design support by Black Rabbit Creative"
               className="w-full max-w-sm mx-auto lg:max-w-none object-contain"
             />
           </motion.div>

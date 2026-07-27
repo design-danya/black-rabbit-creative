@@ -165,13 +165,9 @@ const fadeUp = {
 };
 
 export default function Home() {
-  useSEO({
-    title: "Branding Agency Portsmouth NH Keene NH Providence RI Branding Services",
-    description: "Black Rabbit Creative: Branding Agency offering Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency in Portsmouth, NH, Portsmouth, NH, Providence, RI.",
-    canonical: "/",
-    ogTitle: "Branding Agency Portsmouth NH Keene NH Providence RI Branding Services",
-    ogDescription: "Black Rabbit Creative: Branding Agency offering Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency in Portsmouth, NH, Portsmouth, NH, Providence, RI.",
-  });
+  // Metadata is set by the route's `metadata` export (src/app/page.tsx).
+  // useSEO is a no-op kept only so this component keeps compiling.
+  useSEO({ canonical: "/" });
 
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -233,7 +229,7 @@ export default function Home() {
                    <source srcSet={RABBIT_WEBP} type="image/webp" />
                    <img
                      src={RABBIT_IMG}
-                     alt="Black Rabbit Creative mascot — branding and design studio, Portsmouth NH, New Hampshire, New England"
+                     alt="Animated black rabbit mascot illustration"
                      className="w-full h-full object-contain mix-blend-lighten"
                      loading="eager"
                      fetchPriority="high"
@@ -255,7 +251,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="flex flex-col text-4xl md:text-6xl lg:text-7xl xl:text-[6rem] uppercase tracking-[0.07em] font-black leading-[0.95] mb-8 pt-[0.15em]"
             >
-              <span className="sr-only">Branding Agency in Portsmouth, NH | Branding Services, Website Design Agency, Logo Design Company, Graphic Design Agency, Creative Agency, Packaging Design Agency, Rebranding Services &amp; Brand Identity Design Services for Small Businesses</span>
+              <span className="sr-only">Branding and packaging for products that refuse to blend in.</span>
               <span className="text-white" aria-hidden="true">Distinct</span>
               <span className="text-[#7c5fe6]" aria-hidden="true">By</span>
               <span className="text-white" aria-hidden="true">Design</span>
@@ -268,7 +264,7 @@ export default function Home() {
               className="flex flex-col items-center lg:items-start gap-10 max-w-lg ml-2"
             >
               <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
-                A brand identity, logo design, graphic design, and packaging design studio in Portsmouth, NH — specializing in product-based businesses, and visual identity systems for bold brands across New England.
+                Black Rabbit Creative is a brand identity, logo, and packaging design studio in Portsmouth, NH — building visual identity systems for product-based businesses across New England.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
@@ -327,9 +323,9 @@ export default function Home() {
                 className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-8"
                 style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.8rem)" }}
               >
-                Stand-out branding{" "}
-                <em className="not-italic text-[#7c5fe6]">isn't optional</em>{" "}
-                for serious brands.
+                Blending in{" "}
+                <em className="not-italic text-[#7c5fe6]">costs more</em>{" "}
+                than branding does.
               </h2>
               <Link
                 href="/contact"
@@ -343,17 +339,14 @@ export default function Home() {
             {/* RIGHT — Body copy */}
             <div className="lg:col-span-7 space-y-6 text-gray-500 text-[0.95rem] leading-[1.9]">
               <p>
-                In today's competitive landscape, a strong product alone isn't enough. More businesses than ever are competing for the same customers' attention.
+                More businesses are competing for the same attention than ever. A good product isn't enough — if your brand doesn't register, it doesn't get remembered, and it{" "}
+                <span className="text-[#060606] font-semibold">doesn't get chosen.</span>
               </p>
               <p>
-                To succeed, your brand needs to be{" "}
-                <span className="text-[#060606] font-semibold">noticed — remembered — and recognized.</span>
+                Distinctive brands aren't accidents. Like the black rabbit — curious, quick, impossible to miss — they stand out because every decision behind them was deliberate.
               </p>
               <p>
-                At Black Rabbit Creative, we believe distinctive brands don't happen by accident. Like the black rabbit itself — a symbol of curiosity, agility, and emergence — strong brands stand out because every detail is intentional.
-              </p>
-              <p>
-                That means going beyond surface-level design. You need branding and packaging with clarity and presence — work that stops the scroll, captures attention online and on the shelf, and communicates your brand's true value.
+                That means going past surface-level design. It means identity and packaging with enough clarity and presence to hold attention on a shelf, in a feed, and in someone's memory a week later.
               </p>
             </div>
           </div>
@@ -401,7 +394,7 @@ export default function Home() {
                     <source srcSet={RABBIT_WEBP_SM} type="image/webp" />
                     <img
                       src={rabbitEars}
-                      alt="Black Rabbit Creative decorative rabbit ears — design studio, Portsmouth NH, New Hampshire, New England"
+                      alt=""
                       aria-hidden="true"
                       className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-[55%] opacity-0 group-hover:opacity-[0.15] group-hover:translate-y-[30%] transition-all duration-1000 ease-out invert pointer-events-none select-none"
                       width={400}
@@ -475,7 +468,7 @@ export default function Home() {
                   {/* Image — greyscale → colour */}
                   <ImageWithFallback
                     src={typeof project.image === "string" ? project.image : project.image.src}
-                    alt={`${project.title} — portfolio project by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England`}
+                    alt={`${project.title} — portfolio project by Black Rabbit Creative`}
                     className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                     width={600}
                     height={600}

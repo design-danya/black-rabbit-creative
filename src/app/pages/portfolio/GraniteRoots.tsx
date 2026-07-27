@@ -155,7 +155,7 @@ export default function GraniteRoots() {
               width={1200}
               height={800}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Granite Roots Brewing Cheshire Czech Lager — back panel detail | Packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Granite Roots Brewing Cheshire Czech Lager — back panel detail | Packaging design by Black Rabbit Creative"
               className="w-full object-cover"
             />
           </motion.div>
@@ -231,7 +231,7 @@ export default function GraniteRoots() {
                 width={1200}
                 height={754}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Granite Roots Brewing full wraparound label illustration — Czech village and Troy NH train station | Illustrated by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Granite Roots Brewing full wraparound label illustration — Czech village and Troy NH train station | Illustrated by Black Rabbit Creative"
                 className="w-full object-contain"
               />
               <div className="relative overflow-hidden">
@@ -240,7 +240,7 @@ export default function GraniteRoots() {
                   width={603}
                   height={422}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Troy, NH Train Station — original photo reference for Granite Roots label illustration | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Troy, NH Train Station — original photo reference for Granite Roots label illustration | Black Rabbit Creative"
                   className="w-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gradient-to-t from-black/60 to-transparent">

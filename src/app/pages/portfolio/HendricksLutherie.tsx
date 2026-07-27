@@ -292,7 +292,7 @@ export default function HendricksLutherie() {
             <div className="relative overflow-hidden">
               <ImageWithFallback
                 src={workshopImg}
-                alt="Guitar repair workshop with luthier tools — brand photography for Hendrick's Lutherie by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Guitar repair workshop with luthier tools — brand photography for Hendrick's Lutherie by Black Rabbit Creative"
                 className="w-full h-auto object-cover"
                 style={{ aspectRatio: "1/1" }}
               />
@@ -354,7 +354,7 @@ export default function HendricksLutherie() {
                   width={1401}
                   height={1551}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Hendrick's Lutherie original guitar pick logo before rebrand | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Hendrick's Lutherie original guitar pick logo before rebrand | Black Rabbit Creative"
                   className="max-w-[200px] w-full h-auto object-contain opacity-70"
                 />
               </div>
@@ -384,7 +384,7 @@ export default function HendricksLutherie() {
                   width={1821}
                   height={1766}
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                  alt="Hendrick's Lutherie new heritage circle badge logo — redesigned by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                  alt="Hendrick's Lutherie new heritage circle badge logo — redesigned by Black Rabbit Creative"
                   className="max-w-[240px] w-full h-auto object-contain"
                 />
               </div>
@@ -569,7 +569,7 @@ export default function HendricksLutherie() {
               width={1224}
               height={642}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Hendrick's Lutherie typography system — primary font ELLERY with brand name treatment and craftsmanship-inspired lettering | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Hendrick's Lutherie typography system — primary font ELLERY with brand name treatment and craftsmanship-inspired lettering | Designed by Black Rabbit Creative"
               className="w-full h-auto object-contain"
             />
           </motion.div>
@@ -627,7 +627,7 @@ export default function HendricksLutherie() {
               width={3986}
               height={1904}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Authentic lutherie workspace showing guitar parts, wooden surfaces, tools, and materials that inspired the warm brand color palette | Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Authentic lutherie workspace showing guitar parts, wooden surfaces, tools, and materials that inspired the warm brand color palette | Black Rabbit Creative"
               className="w-full h-auto object-cover"
             />
           </motion.div>

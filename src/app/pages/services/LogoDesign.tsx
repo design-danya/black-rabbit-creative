@@ -139,7 +139,7 @@ export default function LogoDesign() {
           <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#060606] to-transparent z-10" />
           <img
             src={seatedRabbit}
-            alt="Black Rabbit Creative mascot — logo design studio, Portsmouth NH, New Hampshire, New England"
+            alt="Black Rabbit Creative mascot — logo design studio"
             className={`h-full w-full object-contain mix-blend-lighten`}
           />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,#060606_92%)] z-10" />
@@ -154,7 +154,7 @@ export default function LogoDesign() {
         >
           <img
             src={seatedRabbit}
-            alt="Black Rabbit Creative mascot — logo design services, Portsmouth NH, New Hampshire, New England"
+            alt="Black Rabbit Creative mascot — logo design services"
             className="h-full w-full object-contain mix-blend-lighten"
           />
         </motion.div>

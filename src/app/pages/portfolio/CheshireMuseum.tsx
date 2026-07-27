@@ -185,7 +185,7 @@ export default function CheshireMuseum() {
               width={1920}
               height={8549}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Cheshire Children's Museum brand solidification overview — social media, website, and content strategy | Designed by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+              alt="Cheshire Children's Museum brand solidification overview — social media, website, and content strategy | Designed by Black Rabbit Creative"
               className="w-full object-contain"
             />
           </motion.div>
@@ -296,7 +296,7 @@ export default function CheshireMuseum() {
                 width={1920}
                 height={6161}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-                alt="Shamrock Shuffle fundraiser — logo, ads, rack cards, banners, flyers, and donor letters | Event marketing by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                alt="Shamrock Shuffle fundraiser — logo, ads, rack cards, banners, flyers, and donor letters | Event marketing by Black Rabbit Creative"
                 className="w-full object-contain"
               />
             </motion.div>

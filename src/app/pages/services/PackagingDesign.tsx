@@ -142,7 +142,7 @@ export default function PackagingDesign() {
         >
           <img
             src={carrotRabbitImg}
-            alt="Black Rabbit Creative mascot — packaging design studio, Portsmouth NH, New Hampshire, New England"
+            alt="Black Rabbit Creative mascot — packaging design studio"
             className="w-full h-auto object-contain"
           />
         </motion.div>
@@ -261,7 +261,7 @@ export default function PackagingDesign() {
                 <div className="relative overflow-hidden bg-[#1a2a1a]" style={{ aspectRatio: "1/1" }}>
                   <img
                     src={canImg}
-                    alt="Granite Roots Brewing Cheshire Czech Lager — award-winning packaging design by Black Rabbit Creative, Portsmouth NH, New Hampshire, New England"
+                    alt="Granite Roots Brewing Cheshire Czech Lager — award-winning packaging design by Black Rabbit Creative"
                     className="w-full h-full object-cover"
                   />
                 </div>

@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Home from './pages/Home'
 
 export const metadata: Metadata = {
-  title: 'Branding & Packaging Design Studio in Portsmouth, NH',
+  title: { absolute: 'Black Rabbit Creative | Branding & Packaging Design, Portsmouth NH' },
   description:
-    'Brand identity, logo, and packaging design for product-based businesses across New England. Based in Portsmouth, NH — serving Keene and Providence.',
+    'Brand identity, logo, and packaging design for product-based businesses. A Portsmouth, NH studio building brands that stand apart from their competition.',
   alternates: {
     canonical: '/',
   },
