@@ -13,6 +13,7 @@ const links = [
   { name: "Work", path: "/work" },
   { name: "Services", path: "/services" },
   { name: "About", path: "/about" },
+  { name: "Onlyness Test", path: "https://www.blackrabbit-brandtest.com/", external: true },
   { name: "Blog", path: "https://danya87.wixsite.com/blackrabbitcreative", external: true },
   { name: "Contact", path: "/contact" },
 ];
