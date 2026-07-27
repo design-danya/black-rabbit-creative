@@ -198,6 +198,7 @@ function Dashboard({ email }: { email: string }) {
             <div className="flex items-center gap-1.5 shrink-0">
               <button onClick={() => move(it, -1)} disabled={i === 0} className="btn-ghost !px-2 !py-1 disabled:opacity-30">↑</button>
               <button onClick={() => move(it, 1)} disabled={i === items.length - 1} className="btn-ghost !px-2 !py-1 disabled:opacity-30">↓</button>
+              <button onClick={() => window.open(`/admin/preview/${it.id}`, '_blank')} className="btn-ghost !px-3 !py-1">Preview</button>
               <button onClick={() => togglePublish(it)} className="btn-ghost !px-3 !py-1">{it.published ? 'Unpublish' : 'Publish'}</button>
               <button onClick={() => setEditing(it)} className="btn-ghost !px-3 !py-1">Edit</button>
               <button onClick={() => remove(it)} className="btn-ghost !px-3 !py-1 !border-red-500/30 text-red-300">Del</button>

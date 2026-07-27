@@ -47,6 +47,28 @@ export async function getPublishedWorkItems(): Promise<WorkItem[]> {
   }
 }
 
+/**
+ * A single item by id, INCLUDING drafts, for the admin preview. Relies on the
+ * caller's authenticated session — RLS only returns the row to the owner.
+ */
+export async function getWorkItemForPreview(
+  id: string
+): Promise<{ item: WorkItem; images: WorkItemImage[] } | null> {
+  try {
+    const supabase = await createClient()
+    const { data: item } = await supabase.from('work_items').select('*').eq('id', id).maybeSingle()
+    if (!item) return null
+    const { data: images } = await supabase
+      .from('work_item_images')
+      .select('*')
+      .eq('work_item_id', item.id)
+      .order('sort_order', { ascending: true })
+    return { item: item as WorkItem, images: (images ?? []) as WorkItemImage[] }
+  } catch {
+    return null
+  }
+}
+
 /** A single published item + its gallery, for the auto-generated detail page. */
 export async function getWorkItemBySlug(
   slug: string
