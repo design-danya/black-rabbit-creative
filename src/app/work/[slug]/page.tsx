@@ -3,9 +3,10 @@ import { notFound } from 'next/navigation'
 import { getWorkItemBySlug } from '../../../lib/work'
 import { WorkDetail } from '../WorkDetail'
 
-// Detail pages reflect the latest admin edits. Static case-study folders under
-// /work take precedence over this dynamic segment; only admin-added slugs reach it.
-export const dynamic = 'force-dynamic'
+// Static case-study folders under /work take precedence over this dynamic
+// segment; only admin-added slugs reach it. Cached with a 60s revalidate so
+// detail pages serve from cache (fast TTFB) and pick up admin edits within ~1m.
+export const revalidate = 60
 
 type Props = { params: Promise<{ slug: string }> }
 

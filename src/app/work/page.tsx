@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   },
 }
 
-// Always reflect the latest admin edits.
-export const dynamic = 'force-dynamic'
+// Served from cache for a fast TTFB, quietly rebuilt at most once a minute
+// (stale-while-revalidate). New/edited portfolio items appear within ~60s.
+export const revalidate = 60
 
 export default async function WorkPage() {
   const items = await getPublishedWorkItems()

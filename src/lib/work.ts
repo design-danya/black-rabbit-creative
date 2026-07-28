@@ -1,4 +1,5 @@
 import { createClient } from './supabase/server'
+import { createPublicClient } from './supabase/public'
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!
 
@@ -33,7 +34,8 @@ export function workAssetUrl(path: string | null | undefined): string {
 /** Published work items, newest sort first — for the public /work grid. */
 export async function getPublishedWorkItems(): Promise<WorkItem[]> {
   try {
-    const supabase = await createClient()
+    // Cookieless public client → this page can be cached/ISR instead of dynamic.
+    const supabase = createPublicClient()
     const { data, error } = await supabase
       .from('work_items')
       .select('*')
@@ -75,7 +77,8 @@ export async function getWorkItemBySlug(
   slug: string
 ): Promise<{ item: WorkItem; images: WorkItemImage[] } | null> {
   try {
-    const supabase = await createClient()
+    // Public, published-only read → cookieless so the detail page can be cached.
+    const supabase = createPublicClient()
     const { data: item } = await supabase
       .from('work_items')
       .select('*')
