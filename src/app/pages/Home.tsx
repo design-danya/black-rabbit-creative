@@ -246,9 +246,9 @@ export default function Home() {
           {/* Left aligned text as requested, items-start to align block left */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-1 lg:order-2 pl-0 lg:pl-0 z-10 relative">
             <motion.h1
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0 }}
               className="flex flex-col text-4xl md:text-6xl lg:text-7xl xl:text-[6rem] uppercase tracking-[0.07em] font-black leading-[0.95] mb-8 pt-[0.15em]"
             >
               <span className="sr-only">Branding and packaging for products that refuse to blend in.</span>
@@ -258,9 +258,9 @@ export default function Home() {
             </motion.h1>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 0 }}
               className="flex flex-col items-center lg:items-start gap-10 max-w-lg ml-2"
             >
               <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
