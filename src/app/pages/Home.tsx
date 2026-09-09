@@ -19,7 +19,8 @@ import { useRef, useState, useEffect } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { ReviewsWidget, RecentPostsWidget } from "../components/MerchyntWidgets";
+import { RecentPostsWidget } from "../components/MerchyntWidgets";
+import { ReviewsMarquee } from "../components/ReviewsMarquee";
 import { useSEO } from "../components/useSEO";
 
 // Animated WebP is served to browsers that support it (~776KB); the original
@@ -523,7 +524,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── REVIEWS (Merchynt) ─── */}
+      {/* ─── REVIEWS ─── */}
       <section className="bg-[#060606] text-white px-6 md:px-14 lg:px-20 py-20 md:py-28 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
@@ -532,7 +533,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.07em] leading-[1.02] mb-12 max-w-3xl">
             Trusted by New England brands
           </h2>
-          <ReviewsWidget />
+          <ReviewsMarquee />
         </div>
       </section>
 
