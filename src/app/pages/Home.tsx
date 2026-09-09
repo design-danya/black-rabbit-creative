@@ -19,7 +19,6 @@ import { useRef, useState, useEffect } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import { RecentPostsWidget } from "../components/MerchyntWidgets";
 import { ReviewsMarquee } from "../components/ReviewsMarquee";
 import { useSEO } from "../components/useSEO";
 
@@ -537,18 +536,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── RECENT POSTS (Merchynt) ─── */}
-      <section className="bg-[#060606] text-white px-6 md:px-14 lg:px-20 pb-24 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <span className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6 pt-20">
-            From the studio
-          </span>
-          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-[0.07em] leading-[1.02] mb-12 max-w-3xl">
-            Latest updates
-          </h2>
-          <RecentPostsWidget />
-        </div>
-      </section>
     </div>
   );
 }
