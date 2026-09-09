@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 import { IllustrationGallery } from "../../components/IllustrationGallery";
+import { brandInAction } from "../../data/brandInAction";
 import { illustrationCount } from "../../data/illustrations";
 const studioImg = "/assets/0073d227197a2d11078c48ed4c9955c144069439.png";
 const rabbitImg = "/assets/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
@@ -404,6 +405,58 @@ export default function GraphicDesign() {
                 </div>
                 <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
                   <span className="text-[8px] uppercase tracking-[0.2em] text-white/45 truncate">{item.label}</span>
+                  <span className="w-1 h-1 bg-[#5b3fd6] shrink-0 ml-2" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Identity work photographed on real products */}
+          <motion.div
+            className="mt-24 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
+              Brand in Action
+            </span>
+            <h3
+              className="font-black uppercase tracking-[0.07em] leading-[0.95] max-w-3xl"
+              style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)" }}
+            >
+              Off the screen,{" "}
+              <em className="not-italic text-[#7c5fe6]">into the world.</em>
+            </h3>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
+            {brandInAction.map((shot, i) => (
+              <motion.div
+                key={shot.slug}
+                className="relative overflow-hidden group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (i % 4) * 0.07, duration: 0.6 }}
+              >
+                <div className="relative overflow-hidden bg-[#111] aspect-square">
+                  <img
+                    src={`/assets/brand-in-action/${shot.slug}.webp`}
+                    alt={shot.alt}
+                    width={shot.w}
+                    height={shot.h}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-0 bg-[#060606]/0 group-hover:bg-[#060606]/25 transition-all duration-300" />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#060606]/80 backdrop-blur-sm border border-white/10">
+                    <span className="text-[8px] uppercase tracking-[0.25em] text-[#7c5fe6]">{shot.tag}</span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
+                  <span className="text-[8px] uppercase tracking-[0.2em] text-white/45 truncate">{shot.client}</span>
                   <span className="w-1 h-1 bg-[#5b3fd6] shrink-0 ml-2" />
                 </div>
               </motion.div>
