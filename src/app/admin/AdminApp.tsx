@@ -192,7 +192,7 @@ function Dashboard({ email }: { email: string }) {
         {items.map((it, i) => (
           <div key={it.id} className="flex items-center gap-4 py-4 border-b border-white/10">
             <div className="w-16 h-16 bg-white/5 shrink-0 overflow-hidden">
-              {it.thumbnail_path && <img src={assetUrl(it.thumbnail_path)} alt="" className="w-full h-full object-cover" />}
+              {it.thumbnail_path && <img src={assetUrl(it.thumbnail_path)} alt={`Thumbnail for ${it.title ?? 'work item'}`} className="w-full h-full object-cover" />}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -366,7 +366,7 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
         </div>
         <div>
           <label className="label">Thumbnail {f.thumbnail_path && '(replace)'}</label>
-          {f.thumbnail_path && !thumbFile && <img src={assetUrl(f.thumbnail_path)} alt="" className="w-28 h-28 object-cover mb-2" />}
+          {f.thumbnail_path && !thumbFile && <img src={assetUrl(f.thumbnail_path)} alt="Current thumbnail" className="w-28 h-28 object-cover mb-2" />}
           <input type="file" accept="image/*" onChange={(e) => setThumbFile(e.target.files?.[0] ?? null)} className="text-white/70 text-sm" />
         </div>
 
@@ -376,7 +376,7 @@ function Editor({ item, onDone, onCancel }: { email: string; item: Item | null; 
             <div className="flex flex-wrap gap-2 mb-2">
               {gallery.map((g) => (
                 <div key={g.id} className="relative">
-                  <img src={assetUrl(g.storage_path)} alt="" className="w-20 h-20 object-cover" />
+                  <img src={assetUrl(g.storage_path)} alt="Gallery image" className="w-20 h-20 object-cover" />
                   <button type="button" onClick={() => removeGalleryImg(g)} className="absolute -top-2 -right-2 bg-red-600 text-white w-5 h-5 text-xs">×</button>
                 </div>
               ))}

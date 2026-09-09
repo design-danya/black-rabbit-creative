@@ -5,6 +5,8 @@ import { useSEO } from "../../components/useSEO";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
+import { IllustrationGallery } from "../../components/IllustrationGallery";
+import { illustrationCount } from "../../data/illustrations";
 const studioImg = "/assets/0073d227197a2d11078c48ed4c9955c144069439.png";
 const rabbitImg = "/assets/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
 const touchpointImg = "/assets/5d310534f3e3a5364f6b09941e1e6a7aeb24ea11.png";
@@ -457,6 +459,36 @@ export default function GraphicDesign() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── ILLUSTRATION ARCHIVE ─── */}
+      <section className="bg-[#060606] text-white px-6 md:px-16 lg:px-24 py-20 md:py-28 border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mb-12 max-w-3xl"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
+              The Archive
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.0] mb-6"
+              style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)" }}
+            >
+              {illustrationCount} illustrations,{" "}
+              <em className="not-italic text-[#7c5fe6]">one hand.</em>
+            </h2>
+            <p className="text-white/50 leading-[1.9]">
+              Personal work, client commissions, and studies. Filter by kind — ink and line work,
+              character, creature, surreal, spot illustration, and brand commissions.
+            </p>
+          </motion.div>
+
+          <IllustrationGallery />
         </div>
       </section>
 
