@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, ArrowLeft, ArrowRight } from 'lucide-react'
@@ -19,8 +20,10 @@ import {
  * dimensions come from the data file so the grid reserves space and doesn't
  * shift as images arrive.
  *
- * The lightbox is keyboard-driven (arrows, Escape) and locks body scroll while
- * open. Motion is scoped to opacity/transform only, and the grid re-flows
+ * The lightbox is keyboard-driven (arrows, Escape), locks body scroll while
+ * open, and is portalled to document.body so it clears the fixed navbar
+ * (z-100) and the Onlyness popup (z-120) regardless of what stacking context
+ * the gallery happens to sit in. Motion is scoped to opacity/transform only, and the grid re-flows
  * without animating position — animating masonry columns fights the browser.
  */
 
@@ -32,6 +35,9 @@ const srcFor = (i: Illustration) => i.src ?? '/assets/illustrations/' + i.slug +
 export function IllustrationGallery() {
   const [filter, setFilter] = useState<Filter>('all')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   const counts = useMemo(() => {
     const c: Record<string, number> = { all: illustrations.length }
@@ -129,8 +135,10 @@ export function IllustrationGallery() {
         <p className="py-16 text-center text-sm text-white/40">Nothing in this category yet.</p>
       )}
 
-      {/* ── Lightbox ── */}
-      <AnimatePresence>
+      {/* ── Lightbox (portalled to body) ── */}
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
         {active && (
           <motion.div
             key="lightbox"
@@ -208,7 +216,9 @@ export function IllustrationGallery() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+          </AnimatePresence>,
+          document.body,
+        )}
     </div>
   )
 }
