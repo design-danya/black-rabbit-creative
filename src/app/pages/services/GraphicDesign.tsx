@@ -14,6 +14,9 @@ const oldBrandImg = "/assets/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
 const newBrandImg = "/assets/7c9c343e0780d9aeaac6fe49e459502282429caf.png";
 const lobsterLabImg = "/assets/20f240a8ee30e1ccbb07e3d25224d0824577e939.png";
 const calentonImg = "/assets/9487f73cf6857228ca1812e6af644c8fb87f662f.png";
+const calentonBottlesImg = "/assets/8905280fcbbe6472c87d966e62b2820dfb0a08b2.png";
+const calentonIdentityImg = "/assets/74ddf897dc27d3af21a310ff4b2955836fb1236e.png";
+const calentonBroadcastImg = "/assets/6cf0157453a99927daa1bb516060e69723795c3a.png";
 const sequoiaImg = "/assets/8140257f03131aef1d3ebc0f25dc02ba7784ffe7.png";
 const lobsterMenuImg = "/assets/88b89e394c1863621a0969459d4a1c52d920d3bf.png";
 const novaDermImg = "/assets/1befc199b53a513fbd6cfef21325cdbc0d97cc67.png";
@@ -70,6 +73,24 @@ const workItems = [
     alt: "Calentón Mexican Hot Sauce — brand merchandise and illustration",
     label: "Merch & Illustration",
     tag: "Brand Support",
+  },
+  {
+    img: calentonIdentityImg,
+    alt: "Calentón Mexican Hot Sauce — brand identity and devil mascot",
+    label: "Brand Identity",
+    tag: "Mascot & Logo",
+  },
+  {
+    img: calentonBottlesImg,
+    alt: "Calentón Mexican Hot Sauce — bottle range and label design",
+    label: "Packaging",
+    tag: "Label Design",
+  },
+  {
+    img: calentonBroadcastImg,
+    alt: "Calentón Mexican Hot Sauce — retro television campaign mockup",
+    label: "Campaign",
+    tag: "Retro Broadcast",
   },
   {
     img: sequoiaImg,
@@ -483,8 +504,8 @@ export default function GraphicDesign() {
               <em className="not-italic text-[#7c5fe6]">one hand.</em>
             </h2>
             <p className="text-white/50 leading-[1.9]">
-              Personal work, client commissions, and studies. Filter by kind — ink and line work,
-              character, creature, surreal, spot illustration, and brand commissions.
+              Personal work, studies, and characters built over years. Filter by kind — Nola,
+              ink and line work, character, creature, surreal, and spot illustration.
             </p>
           </motion.div>
 

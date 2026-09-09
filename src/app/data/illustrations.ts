@@ -16,18 +16,13 @@ export type IllustrationCategory =
   | 'creature'
   | 'surreal'
   | 'spot'
-  | 'brand'
 
 export type Illustration = {
   slug: string
   title: string
   alt: string
   category: IllustrationCategory
-  /**
-   * Override for pieces that already ship elsewhere in public/assets — used so
-   * the Calentón work isn't stored twice. Defaults to
-   * /assets/illustrations/<slug>.webp.
-   */
+  /** Optional override for a piece that ships elsewhere in public/assets. */
   src?: string
   /** Intrinsic size of the image, used to reserve layout space. */
   w: number
@@ -41,7 +36,6 @@ export const categories: { id: IllustrationCategory; label: string }[] = [
   { id: 'creature', label: 'Creature' },
   { id: 'surreal', label: 'Surreal' },
   { id: 'spot', label: 'Spot' },
-  { id: 'brand', label: 'Brand Work' },
 ]
 
 export const illustrations: Illustration[] = [
@@ -157,13 +151,8 @@ export const illustrations: Illustration[] = [
   { slug: 'lily-flourish', title: 'Lily Flourish', alt: 'Botanical flourish with a yellow lily', category: 'spot', w: 1500, h: 985 },
   { slug: 'orchids', title: 'Orchids', alt: 'Spot illustration of pink and yellow orchids', category: 'spot', w: 1500, h: 1500 },
   { slug: 'chilies', title: 'Chilies', alt: 'Spot illustration of red chili peppers', category: 'spot', w: 1500, h: 1500 },
-  { slug: 'chilies-flamed', title: 'Chilies, Flamed', alt: 'Spot illustration of chili peppers wreathed in flame', category: 'spot', w: 1500, h: 1500 },
-  { slug: 'chilies-flamed-ii', title: 'Chilies, Flamed II', alt: 'Spot illustration of chili peppers with flames', category: 'spot', w: 1500, h: 1500 },
-  { slug: 'secret-squirrel', title: 'Secret Squirrel', alt: 'Poster illustration for Secret Squirrel', category: 'brand', w: 1500, h: 1500 },
-  { slug: 'calenton-bottles', title: 'Calentón — Bottles', alt: 'Hot sauce bottles for Calentón Mexican Hot Sauce', category: 'brand', src: '/assets/8905280fcbbe6472c87d966e62b2820dfb0a08b2.png', w: 1400, h: 1400 },
-  { slug: 'calenton-identity', title: 'Calentón — Identity', alt: 'Brand identity and mascot for Calentón Mexican Hot Sauce', category: 'brand', src: '/assets/74ddf897dc27d3af21a310ff4b2955836fb1236e.png', w: 1400, h: 1400 },
-  { slug: 'calenton-broadcast', title: 'Calentón — Broadcast', alt: 'Retro television mockup for Calentón Mexican Hot Sauce', category: 'brand', src: '/assets/6cf0157453a99927daa1bb516060e69723795c3a.png', w: 1400, h: 1400 },
-  { slug: 'calenton-merch', title: 'Calentón — Merch', alt: 'Branded hoodie and tote for Calentón Mexican Hot Sauce', category: 'brand', src: '/assets/9487f73cf6857228ca1812e6af644c8fb87f662f.png', w: 1440, h: 1440 },
+  { slug: 'chilies-flamed-ii', title: 'Chilies, Flamed', alt: 'Spot illustration of chili peppers with flames', category: 'spot', w: 1500, h: 1500 },
+  { slug: 'secret-squirrel', title: 'Secret Squirrel', alt: 'Poster illustration of a rabbit for Secret Squirrel', category: 'character', w: 1500, h: 1500 },
 ]
 
 export const illustrationCount = illustrations.length
