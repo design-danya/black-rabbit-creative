@@ -116,6 +116,10 @@ export const illustrations: Illustration[] = [
   { slug: 'wolf-moon-company', title: 'Wolf Moon — Company', alt: 'Illustration of a woman in a red dress sitting beside a wolf under a full moon', category: 'character', w: 1500, h: 1500 },
   { slug: 'wolf-moon-warning', title: 'Wolf Moon — Warning', alt: 'Illustration of a woman in a red dress facing a snarling wolf under a full moon', category: 'character', w: 1500, h: 1500 },
   { slug: 'wolf-moon-embrace', title: 'Wolf Moon — Embrace', alt: 'Illustration of a woman in a red dress holding a wolf under a full moon', category: 'character', w: 1500, h: 1500 },
+  { slug: 'sackcloth', title: 'Sackcloth', alt: 'Illustration of a child in a burlap sack mask holding a grey cat', category: 'character', w: 1500, h: 1500 },
+  { slug: 'my-heart-is-an-idiot', title: 'My Heart Is an Idiot', alt: 'Illustration of a crying figure cradling a glowing anatomical heart, with the hand-lettered line My heart is an idiot', category: 'character', w: 1500, h: 1500 },
+  { slug: 'they-trusted-you', title: 'They Trusted You', alt: 'Illustration of a slouching man and a small girl facing each other, with the hand-lettered line They trusted you', category: 'character', w: 1500, h: 1500 },
+  { slug: 'monster-passport-medusa', title: 'Monster Passport — Medusa', alt: 'Illustration of a Halloween Town monster passport issued to Medusa, stamped for Atlantis, Vampireina and Zombiea', category: 'character', w: 1500, h: 1500 },
   { slug: 'campsite', title: 'Campsite', alt: 'Illustration of tents and a rabbit at a lantern-lit campsite', category: 'creature', w: 1500, h: 1500 },
   { slug: 'couch-dogs', title: 'Couch Dogs', alt: 'Illustration of two dogs sharing a sofa', category: 'creature', w: 1159, h: 1500 },
   { slug: 'lap-dog', title: 'Lap Dog', alt: 'Illustration of a white dog on a blue cushion', category: 'creature', w: 1371, h: 1500 },
@@ -148,6 +152,8 @@ export const illustrations: Illustration[] = [
   { slug: 'puppy-love', title: 'Puppy Love', alt: 'Cartoon illustration of a brown dog daydreaming about nuzzling a black and tan dog', category: 'creature', w: 1159, h: 1500 },
   { slug: 'sunday-best', title: 'Sunday Best', alt: 'Cartoon portrait of a brown dog in a patterned bandana, framed in an oval', category: 'creature', w: 1159, h: 1500 },
   { slug: 'milk-run', title: 'Milk Run', alt: 'Cartoon illustration of a spotted dog trotting past a painted cow mural on a brick wall', category: 'creature', w: 1500, h: 1159 },
+  { slug: 'fox-and-cat', title: 'Fox & Cat', alt: 'Pop-art illustration of a red fox curled around a tuxedo cat', category: 'creature', w: 1500, h: 1500 },
+  { slug: 'salt-water', title: 'Salt Water', alt: 'Pop-art illustration of a dolphin with a blooming flower head shedding oversized tears', category: 'creature', w: 985, h: 1500 },
 ]
 
 export const illustrationCount = illustrations.length
