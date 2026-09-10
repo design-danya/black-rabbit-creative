@@ -15,7 +15,10 @@ import {
 /**
  * Filterable illustration archive.
  *
- * Masonry via CSS columns so mixed aspect ratios pack without cropping.
+ * Masonry is built by dealing items round-robin into N columns, so reading
+ * order runs left-to-right across the top row. CSS `columns` would fill each
+ * column top-to-bottom instead, which scatters the category runs when the
+ * filter is set to All.
  * next/image handles lazy loading and serves AVIF/WebP derivatives; intrinsic
  * dimensions come from the data file so the grid reserves space and doesn't
  * shift as images arrive.
@@ -29,6 +32,24 @@ import {
 
 type Filter = 'all' | IllustrationCategory
 
+/** Column count for the masonry, matched to the Tailwind breakpoints below. */
+function useColumnCount() {
+  const [cols, setCols] = useState(2)
+  useEffect(() => {
+    const md = window.matchMedia('(min-width: 768px)')
+    const lg = window.matchMedia('(min-width: 1024px)')
+    const read = () => setCols(lg.matches ? 4 : md.matches ? 3 : 2)
+    read()
+    md.addEventListener('change', read)
+    lg.addEventListener('change', read)
+    return () => {
+      md.removeEventListener('change', read)
+      lg.removeEventListener('change', read)
+    }
+  }, [])
+  return cols
+}
+
 /** Most pieces live in /assets/illustrations; a few reuse an existing asset. */
 const srcFor = (i: Illustration) => i.src ?? '/assets/illustrations/' + i.slug + '.webp'
 
@@ -36,6 +57,7 @@ export function IllustrationGallery() {
   const [filter, setFilter] = useState<Filter>('all')
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [mounted, setMounted] = useState(false)
+  const columnCount = useColumnCount()
 
   useEffect(() => setMounted(true), [])
 
@@ -76,6 +98,15 @@ export function IllustrationGallery() {
   // Changing filter invalidates the index the lightbox is pointing at.
   useEffect(() => setOpenIndex(null), [filter])
 
+  const columns = useMemo(() => {
+    const cols: { item: Illustration; index: number }[][] = Array.from(
+      { length: columnCount },
+      () => [],
+    )
+    visible.forEach((item, index) => cols[index % columnCount].push({ item, index }))
+    return cols
+  }, [visible, columnCount])
+
   const active: Illustration | null = openIndex === null ? null : visible[openIndex]
   const label = (id: Filter) =>
     id === 'all' ? 'All' : (categories.find((c) => c.id === id)?.label ?? id)
@@ -107,14 +138,16 @@ export function IllustrationGallery() {
       </div>
 
       {/* ── Masonry grid ── */}
-      <div className="columns-2 gap-4 md:columns-3 lg:columns-4 [column-fill:_balance]">
-        {visible.map((item, i) => (
+      <div className="flex gap-4">
+        {columns.map((col, c) => (
+          <div key={c} className="flex min-w-0 flex-1 flex-col gap-4">
+        {col.map(({ item, index: i }) => (
           <button
             key={item.slug}
             type="button"
             onClick={() => setOpenIndex(i)}
             aria-label={'View ' + item.title}
-            className="group relative mb-4 block w-full break-inside-avoid overflow-hidden border border-white/10 bg-[#0c0c0c] transition-colors duration-300 hover:border-[#5b3fd6]/70 focus:outline-none focus-visible:border-[#5b3fd6]"
+            className="group relative block w-full overflow-hidden border border-white/10 bg-[#0c0c0c] transition-colors duration-300 hover:border-[#5b3fd6]/70 focus:outline-none focus-visible:border-[#5b3fd6]"
           >
             <Image
               src={srcFor(item)}
@@ -128,6 +161,8 @@ export function IllustrationGallery() {
               {item.title}
             </span>
           </button>
+        ))}
+          </div>
         ))}
       </div>
 

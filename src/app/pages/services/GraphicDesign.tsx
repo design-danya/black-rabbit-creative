@@ -6,26 +6,12 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 import { IllustrationGallery } from "../../components/IllustrationGallery";
-import { brandInAction } from "../../data/brandInAction";
+import { WorkMarquee } from "../../components/WorkMarquee";
+import { designInPracticeCount } from "../../data/designInPractice";
 import { illustrationCount } from "../../data/illustrations";
 const studioImg = "/assets/0073d227197a2d11078c48ed4c9955c144069439.png";
 const rabbitImg = "/assets/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
 const touchpointImg = "/assets/5d310534f3e3a5364f6b09941e1e6a7aeb24ea11.png";
-const oldBrandImg = "/assets/12223c6312b759ed36ed217c3fe0a5dc4ccaa925.png";
-const newBrandImg = "/assets/7c9c343e0780d9aeaac6fe49e459502282429caf.png";
-const lobsterLabImg = "/assets/20f240a8ee30e1ccbb07e3d25224d0824577e939.png";
-const calentonImg = "/assets/9487f73cf6857228ca1812e6af644c8fb87f662f.png";
-const calentonBottlesImg = "/assets/8905280fcbbe6472c87d966e62b2820dfb0a08b2.png";
-const calentonIdentityImg = "/assets/74ddf897dc27d3af21a310ff4b2955836fb1236e.png";
-const calentonBroadcastImg = "/assets/6cf0157453a99927daa1bb516060e69723795c3a.png";
-const sequoiaImg = "/assets/8140257f03131aef1d3ebc0f25dc02ba7784ffe7.png";
-const lobsterMenuImg = "/assets/88b89e394c1863621a0969459d4a1c52d920d3bf.png";
-const novaDermImg = "/assets/1befc199b53a513fbd6cfef21325cdbc0d97cc67.png";
-const basicBalanceMerchImg = "/assets/eee6a8e31ec3bd5688b0e312029b898cf6c3bf94.png";
-const kapiloffImg = "/assets/7b601b39d3b58f9ece4134790020643744626ff9.png";
-const monadnockImg = "/assets/4b8738d331bc018580f6aaa5ce7d8a9b5beae07a.png";
-const keenePrideImg = "/assets/fa6880930640b741275a793c25b79c99740a3f75.png";
-const hitchhikersImg = "/assets/2e28a03bd8af5876ba80e7d159f0248755d29eef.png";
 
 const capabilities = [
   "Marketing and promotional materials",
@@ -44,98 +30,6 @@ const bestFit = [
   "Companies ready to elevate everyday brand materials",
 ];
 
-const workItems = [
-  {
-    img: oldBrandImg,
-    alt: "Basic Balance Acupuncture — Old Brand social media redesign",
-    label: "Brand Refresh",
-    tag: "Before",
-  },
-  {
-    img: newBrandImg,
-    alt: "Basic Balance Acupuncture — New Brand social media redesign",
-    label: "Social Graphics",
-    tag: "After",
-  },
-  {
-    img: basicBalanceMerchImg,
-    alt: "Basic Balance Acupuncture — branded tote bag and apparel merchandise",
-    label: "Merchandise",
-    tag: "Brand Merch",
-  },
-  {
-    img: lobsterLabImg,
-    alt: "Lobster Lab — storefront window illustration",
-    label: "Environmental Graphics",
-    tag: "Window Design",
-  },
-  {
-    img: calentonImg,
-    alt: "Calentón Mexican Hot Sauce — brand merchandise and illustration",
-    label: "Merch & Illustration",
-    tag: "Brand Support",
-  },
-  {
-    img: calentonIdentityImg,
-    alt: "Calentón Mexican Hot Sauce — brand identity and devil mascot",
-    label: "Brand Identity",
-    tag: "Mascot & Logo",
-  },
-  {
-    img: calentonBottlesImg,
-    alt: "Calentón Mexican Hot Sauce — bottle range and label design",
-    label: "Packaging",
-    tag: "Label Design",
-  },
-  {
-    img: calentonBroadcastImg,
-    alt: "Calentón Mexican Hot Sauce — retro television campaign mockup",
-    label: "Campaign",
-    tag: "Retro Broadcast",
-  },
-  {
-    img: sequoiaImg,
-    alt: "Sequoia — print collateral and stationery system",
-    label: "Print Collateral",
-    tag: "Stationery System",
-  },
-  {
-    img: lobsterMenuImg,
-    alt: "Lobster Lab — branded menu design in print",
-    label: "Menu Design",
-    tag: "Print",
-  },
-  {
-    img: novaDermImg,
-    alt: "Nova Dermatology Specialists — brand signage in practice",
-    label: "Brand Signage",
-    tag: "Brand in Practice",
-  },
-  {
-    img: kapiloffImg,
-    alt: "Kapiloff Insurance Solutions — outdoor LED sign design",
-    label: "Sign Design",
-    tag: "Environmental",
-  },
-  {
-    img: monadnockImg,
-    alt: "The Monadnock Labyrinth — interpretive signage panel",
-    label: "Interpretive Signage",
-    tag: "Wayfinding",
-  },
-  {
-    img: keenePrideImg,
-    alt: "Keene Pride Festival — Danya Designs branded merchandise and apparel",
-    label: "Merch Design",
-    tag: "Event Branding",
-  },
-  {
-    img: hitchhikersImg,
-    alt: "The Hitchhiker's Guide to the Galaxy — book cover redesign",
-    label: "Book Cover Design",
-    tag: "Print Design",
-  },
-];
 
 export default function GraphicDesign() {
   useSEO({
@@ -374,94 +268,19 @@ export default function GraphicDesign() {
               Selected Work
             </span>
             <h2
-              className="font-black uppercase tracking-[0.07em] leading-[0.95]"
+              className="font-black uppercase tracking-[0.07em] leading-[0.95] mb-6"
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.5rem)" }}
             >
               Design in{" "}
               <em className="not-italic text-[#7c5fe6]">practice.</em>
             </h2>
+            <p className="text-white/50 leading-[1.9] max-w-2xl">
+              {designInPracticeCount} pieces of finished client work — packaging, signage,
+              stationery, merch and campaigns, off the screen and in the world.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
-            {workItems.map((item, i) => (
-              <motion.div
-                key={i}
-                className="relative overflow-hidden group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.07, duration: 0.6 }}
-              >
-                <div className="relative overflow-hidden bg-[#111] aspect-square">
-                  <img
-                    src={item.img}
-                    alt={item.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-                  />
-                  <div className="absolute inset-0 bg-[#060606]/0 group-hover:bg-[#060606]/25 transition-all duration-300" />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#060606]/80 backdrop-blur-sm border border-white/10">
-                    <span className="text-[8px] uppercase tracking-[0.25em] text-[#7c5fe6]">{item.tag}</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
-                  <span className="text-[8px] uppercase tracking-[0.2em] text-white/45 truncate">{item.label}</span>
-                  <span className="w-1 h-1 bg-[#5b3fd6] shrink-0 ml-2" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Identity work photographed on real products */}
-          <motion.div
-            className="mt-24 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-6">
-              Brand in Action
-            </span>
-            <h3
-              className="font-black uppercase tracking-[0.07em] leading-[0.95] max-w-3xl"
-              style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)" }}
-            >
-              Off the screen,{" "}
-              <em className="not-italic text-[#7c5fe6]">into the world.</em>
-            </h3>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/5">
-            {brandInAction.map((shot, i) => (
-              <motion.div
-                key={shot.slug}
-                className="relative overflow-hidden group"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: (i % 4) * 0.07, duration: 0.6 }}
-              >
-                <div className="relative overflow-hidden bg-[#111] aspect-square">
-                  <img
-                    src={shot.src ?? `/assets/brand-in-action/${shot.slug}.webp`}
-                    alt={shot.alt}
-                    width={shot.w}
-                    height={shot.h}
-                    loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
-                  />
-                  <div className="absolute inset-0 bg-[#060606]/0 group-hover:bg-[#060606]/25 transition-all duration-300" />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#060606]/80 backdrop-blur-sm border border-white/10">
-                    <span className="text-[8px] uppercase tracking-[0.25em] text-[#7c5fe6]">{shot.tag}</span>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between bg-[#0d0d0d] px-3 py-2.5 border-t border-white/5">
-                  <span className="text-[8px] uppercase tracking-[0.2em] text-white/45 truncate">{shot.client}</span>
-                  <span className="w-1 h-1 bg-[#5b3fd6] shrink-0 ml-2" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <WorkMarquee />
         </div>
       </section>
 
@@ -558,7 +377,7 @@ export default function GraphicDesign() {
             </h2>
             <p className="text-white/50 leading-[1.9]">
               Personal work, studies, and characters built over years. Filter by kind — Nola,
-              ink and line work, character, creature, and spot illustration.
+              ink and line work, character, and creature.
             </p>
           </motion.div>
 

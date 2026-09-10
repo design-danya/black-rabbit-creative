@@ -14,7 +14,6 @@ export type IllustrationCategory =
   | 'ink'
   | 'character'
   | 'creature'
-  | 'spot'
 
 export type Illustration = {
   slug: string
@@ -33,7 +32,6 @@ export const categories: { id: IllustrationCategory; label: string }[] = [
   { id: 'ink', label: 'Ink & Line' },
   { id: 'character', label: 'Character' },
   { id: 'creature', label: 'Creature' },
-  { id: 'spot', label: 'Spot' },
 ]
 
 export const illustrations: Illustration[] = [
@@ -142,17 +140,6 @@ export const illustrations: Illustration[] = [
   { slug: 'serpentine', title: 'Serpentine', alt: 'Illustration of a coiled sea creature', category: 'creature', w: 1500, h: 1500 },
   { slug: 'shell-garden', title: 'Shell Garden', alt: 'Illustration of a miniature reef inside an oyster shell', category: 'creature', w: 1500, h: 985 },
   { slug: 'bee-and-fairy', title: 'Bee & Fairy', alt: 'Illustration of a firefly fairy meeting a bee', category: 'creature', w: 1024, h: 1024 },
-  { slug: 'leaf-flourish-i', title: 'Leaf Flourish I', alt: 'Black ink botanical flourish', category: 'spot', w: 1500, h: 985 },
-  { slug: 'ribbon-bloom', title: 'Ribbon Bloom', alt: 'Black ink flourish with a red bloom', category: 'spot', w: 1500, h: 985 },
-  { slug: 'leaf-flourish-ii', title: 'Leaf Flourish II', alt: 'Black ink botanical flourish', category: 'spot', w: 1500, h: 985 },
-  { slug: 'leaf-flourish-iii', title: 'Leaf Flourish III', alt: 'Black ink botanical flourish', category: 'spot', w: 1500, h: 985 },
-  { slug: 'strawberry', title: 'Strawberry', alt: 'Spot illustration of a halved strawberry', category: 'spot', w: 1500, h: 985 },
-  { slug: 'cherries', title: 'Cherries', alt: 'Spot illustration of a pair of cherries', category: 'spot', w: 1500, h: 985 },
-  { slug: 'grapefruit', title: 'Grapefruit', alt: 'Spot illustration of cut grapefruit', category: 'spot', w: 1500, h: 985 },
-  { slug: 'banana', title: 'Banana', alt: 'Spot illustration of a banana', category: 'spot', w: 1500, h: 985 },
-  { slug: 'lily-flourish', title: 'Lily Flourish', alt: 'Botanical flourish with a yellow lily', category: 'spot', w: 1500, h: 985 },
-  { slug: 'orchids', title: 'Orchids', alt: 'Spot illustration of pink and yellow orchids', category: 'spot', w: 1500, h: 1500 },
-  { slug: 'chilies-flamed-ii', title: 'Chilies, Flamed', alt: 'Spot illustration of chili peppers with flames', category: 'spot', w: 1500, h: 1500 },
 ]
 
 export const illustrationCount = illustrations.length
