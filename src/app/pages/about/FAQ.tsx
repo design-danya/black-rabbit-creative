@@ -2,64 +2,9 @@
 import { motion } from "motion/react";
 import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
-import { ArrowRight, Plus, Minus, ArrowLeft } from "lucide-react";
-import { useState } from "react";
-import { faqData, type FAQItem } from "../../data/faq";
-
-
-
-/**
- * The answer stays mounted at all times and collapses with a CSS grid-row
- * transition rather than being conditionally rendered. Unmounting it kept all
- * 42 answers out of the served HTML, so crawlers and AI assistants saw the
- * questions and nothing else — the answers are the part worth citing.
- */
-function AccordionItem({
-  item,
-  isOpen,
-  toggle,
-  id,
-}: {
-  item: FAQItem
-  isOpen: boolean
-  toggle: () => void
-  id: string
-}) {
-  return (
-    <div className="border-t border-white/8">
-      <button
-        onClick={toggle}
-        aria-expanded={isOpen}
-        aria-controls={`faq-answer-${id}`}
-        className="w-full flex items-start justify-between gap-6 py-6 md:py-7 text-left group"
-      >
-        <span className={`text-[15px] md:text-base font-semibold leading-snug transition-colors duration-300 ${isOpen ? "text-[#7c5fe6]" : "text-white/80 group-hover:text-white"}`}>
-          {item.q}
-        </span>
-        <span className="shrink-0 mt-0.5">
-          {isOpen ? (
-            <Minus size={16} className="text-[#7c5fe6]" />
-          ) : (
-            <Plus size={16} className="text-white/30 group-hover:text-white/60 transition-colors" />
-          )}
-        </span>
-      </button>
-      <div
-        id={`faq-answer-${id}`}
-        role="region"
-        className="grid transition-[grid-template-rows] duration-300 ease-in-out motion-reduce:transition-none"
-        style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
-      >
-        <div className="overflow-hidden">
-          <p className="text-gray-400 text-sm leading-[1.9] pb-7 pr-4 md:pr-12">
-            {item.a}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { Accordion } from "../../components/Accordion";
+import { faqData } from "../../data/faq";
 
 export default function FAQ() {
   useSEO({
@@ -68,12 +13,6 @@ export default function FAQ() {
       "Frequently asked questions about Black Rabbit Creative's branding, packaging design, logo design, creative direction, pricing, and project process. A studio in Portsmouth, NH.",
     canonical: "/about/faq",
   });
-
-  const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
-
-  const toggleItem = (key: string) => {
-    setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
 
   return (
     <div className="bg-[#060606] text-white min-h-screen">
@@ -135,26 +74,7 @@ export default function FAQ() {
             </motion.h2>
 
             <div>
-              {category.items.map((item, i) => {
-                const key = `${catIdx}-${i}`;
-                return (
-                  <motion.div
-                    key={key}
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-20px" }}
-                    transition={{ delay: i * 0.03, duration: 0.4 }}
-                  >
-                    <AccordionItem
-                      item={item}
-                      id={key}
-                      isOpen={!!openItems[key]}
-                      toggle={() => toggleItem(key)}
-                    />
-                  </motion.div>
-                );
-              })}
-              <div className="border-t border-white/8" />
+              <Accordion items={category.items} idPrefix={`faq-${catIdx}`} />
             </div>
           </div>
         </section>

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
+import { Accordion } from "../../components/Accordion";
+import { breweryFaq } from "../../data/breweryFaq";
 const elmCityThumb = "/assets/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
 const graniteRootsImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 
@@ -13,14 +15,49 @@ const RABBIT_IMG =
 const RABBIT_WEBP = "/assets/homepage-rabbit.webp";
 
 const services = [
-  "Brewery brand identity systems",
-  "Craft beer label design",
-  "Can & bottle label systems",
-  "Taproom signage & environmental design",
-  "Merchandise design (shirts, glassware, coasters)",
-  "Brand guidelines for brewery teams",
-  "Seasonal & limited-release label design",
-  "Beverage packaging strategy",
+  {
+    name: "Core identity",
+    desc: "Primary mark, secondary marks, and the variations you actually need — a tap handle lockup, a can top, a single-colour version for embroidery, something that survives being an inch wide on a coaster.",
+  },
+  {
+    name: "Can & bottle label systems",
+    desc: "Not one label. A structure that lets a core lineup, a seasonal and a one-off release all read as the same brewery while staying distinct on the shelf.",
+  },
+  {
+    name: "Custom illustration",
+    desc: "Where a brand needs something nobody else can use. The Granite Roots Cheshire Czech label was illustrated from reference photography of the Troy train station, with Mount Monadnock anchoring the composition.",
+  },
+  {
+    name: "Taproom & environmental design",
+    desc: "Signage, menu boards, wayfinding and wall graphics — the brand in the room where people actually decide they like you.",
+  },
+  {
+    name: "Merchandise",
+    desc: "Shirts, glassware, coasters, hats. Designed as part of the system rather than bolted on, so a hoodie doesn't need a logo of its own.",
+  },
+  {
+    name: "Brand guidelines",
+    desc: "Written for a brewery team, not a design department. Elm City's runs 31 pages and covers what a bartender or a printer needs to get right without calling us.",
+  },
+  {
+    name: "Seasonal & limited-release design",
+    desc: "A framework for the releases you haven't brewed yet, so the tenth label is as fast to produce as the first.",
+  },
+];
+
+const shelfDistances = [
+  {
+    label: "Across the room",
+    desc: "Silhouette and colour block. Before anyone reads a word, they should recognise the can. If a label only works held in the hand, it doesn't work.",
+  },
+  {
+    label: "At arm's length",
+    desc: "Hierarchy. Brand, beer name, style, ABV — in that order, without a fight between them. Most craft labels fail here: everything is the same weight, so nothing leads.",
+  },
+  {
+    label: "In the hand",
+    desc: "Craft and detail. This is where illustration earns its place, and where a drinker decides whether the beer feels worth the price.",
+  },
 ];
 
 const whyUs = [
@@ -29,12 +66,12 @@ const whyUs = [
     desc: "We understand craft beverage culture, TTB compliance, and what makes labels sell on-shelf and on-tap.",
   },
   {
-    title: "Boutique & Agile",
-    desc: "Unlike large agencies, you work directly with the designer. Faster turnaround, more personal attention, founder-to-founder collaboration.",
+    title: "You Work With The Designer",
+    desc: "No account layer, no handoff to a junior. You talk to the person drawing the label. For a brewery owner already doing four jobs, that means fewer meetings and faster decisions.",
   },
   {
-    title: "Award-Winning Work",
-    desc: "Our Granite Roots Brewing label earned a GDUSA 2025 Packaging Design Award — proof that bold design gets recognized.",
+    title: "Nationally Recognised Work",
+    desc: "Our Granite Roots label earned a 2025 GDUSA Package Design Award and was featured in the Keene Sentinel. Bold work gets noticed.",
   },
   {
     title: "Full Brand Ecosystems",
@@ -109,10 +146,10 @@ export default function BreweryBranding() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-gray-400 text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-10"
           >
-            From taproom to tap handle, we build brand identity systems and
-            craft beer packaging that command attention on the shelf, on the bar,
-            and online. Based in Portsmouth, NH — serving breweries across New
-            Hampshire and New England.
+            From tap handle to shelf to Instagram, we build brewery identities
+            that hold up everywhere they&rsquo;re seen. Award-winning packaging
+            design from a Portsmouth, NH studio working with breweries across
+            New England.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -138,6 +175,77 @@ export default function BreweryBranding() {
               <ArrowUpRight size={14} />
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ─── WHAT MAKES A LABEL WORK ─── */}
+      <section className="px-6 md:px-12 py-20 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4"
+          >
+            The Craft
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-black uppercase tracking-[0.07em] mb-8 max-w-3xl"
+          >
+            Shelf presence is a design problem,
+            <br />
+            <span className="text-[#7c5fe6]">not a decoration problem.</span>
+          </motion.h2>
+
+          <div className="max-w-3xl flex flex-col gap-5 mb-14">
+            <p className="text-gray-400 leading-[1.9]">
+              A cooler door is a wall of noise. Forty labels, all shouting, most
+              of them using the same three moves — a mountain, a hop cone, a
+              distressed serif. The ones that sell are the ones a person can
+              find again.
+            </p>
+            <p className="text-gray-400 leading-[1.9]">
+              That means designing for three distances at once.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 mb-14">
+            {shelfDistances.map((d, i) => (
+              <motion.div
+                key={d.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
+                className="bg-[#060606] p-8 md:p-10"
+              >
+                <span className="block text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-4">
+                  0{i + 1}
+                </span>
+                <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-white mb-3">
+                  {d.label}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{d.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl flex flex-col gap-5">
+            <p className="text-gray-400 leading-[1.9]">
+              Then the constraints that aren&rsquo;t aesthetic at all: TTB
+              requirements for the government warning, alcohol content and net
+              contents. Ink limits and substrate behaviour — a colour that sings
+              on screen can die on a matte shrink sleeve. Distributor and
+              retailer expectations for how a series reads together on a shelf.
+            </p>
+            <p className="text-white/80 leading-[1.9]">
+              We design against all of it at once, because the label
+              doesn&rsquo;t get a second version.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -234,29 +342,35 @@ export default function BreweryBranding() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-black uppercase tracking-[0.07em] mb-6"
             >
-              Brewery Branding
+              More than a logo.
               <br />
-              <span className="text-[#7c5fe6]">Services</span>
+              <span className="text-[#7c5fe6]">A system your staff can run.</span>
             </motion.h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
-              Every brewery has a story. We translate that story into a cohesive
-              visual identity — from the first concept sketch to final
-              print-ready files. Whether you're launching a new brewery or
-              refreshing an existing brand, we build systems that scale.
+              Every brewery has a story. We translate it into a system that
+              holds — from the first concept sketch to final print-ready files.
+              Launching from nothing or sharpening what you already have, the
+              work has to survive contact with a bartender, a printer and a
+              cooler door.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-6">
             {services.map((item, i) => (
               <motion.div
-                key={item}
+                key={item.name}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05, duration: 0.5 }}
-                className="flex items-center gap-4 border-b border-white/5 pb-4"
+                className="flex items-start gap-4 border-b border-white/5 pb-6"
               >
-                <Check size={14} className="text-[#7c5fe6] flex-shrink-0" />
-                <span className="text-sm text-gray-300">{item}</span>
+                <Check size={14} className="text-[#7c5fe6] flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-white mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -302,6 +416,31 @@ export default function BreweryBranding() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── BREWERY FAQ ─── */}
+      <section className="px-6 md:px-12 py-20 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="block text-[10px] uppercase tracking-[0.35em] text-[#7c5fe6] mb-4"
+          >
+            Straight Answers
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-black uppercase tracking-[0.07em] mb-10"
+          >
+            Brewery branding
+            <br />
+            <span className="text-[#7c5fe6]">questions.</span>
+          </motion.h2>
+          <Accordion items={breweryFaq} idPrefix="brewery-faq" />
         </div>
       </section>
 

@@ -139,11 +139,11 @@ export function breadcrumbSchema(trail: { name: string; path: string }[]) {
 }
 
 /** The studio's own FAQ, marked up so assistants can quote the answers. */
-export function faqSchema(items: { q: string; a: string }[]) {
+export function faqSchema(items: { q: string; a: string }[], path = '/about/faq') {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    '@id': `${SITE_URL}/about/faq#faq`,
+    '@id': `${SITE_URL}${path}#faq`,
     mainEntity: items.map(({ q, a }) => ({
       '@type': 'Question',
       name: q,

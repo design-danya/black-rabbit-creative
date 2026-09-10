@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { JsonLd } from '../../components/JsonLd'
-import { serviceSchema, breadcrumbSchema } from '../../structured-data'
+import { serviceSchema, breadcrumbSchema, faqSchema } from '../../structured-data'
+import { breweryFaq } from '../../data/breweryFaq'
 import BreweryBranding from '../../pages/services/BreweryBranding'
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function BreweryBrandingPage() {
             { name: 'Services', path: '/services' },
             { name: 'Brewery Branding', path: '/services/brewery-branding' },
           ]),
+          faqSchema(breweryFaq, '/services/brewery-branding'),
         ]}
       />
       <BreweryBranding />
