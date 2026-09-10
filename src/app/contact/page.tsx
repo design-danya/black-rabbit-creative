@@ -3,7 +3,7 @@ import Contact from '../pages/Contact'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Black Rabbit Creative for your branding project.',
+  description: 'Start a branding, packaging or logo design project with Black Rabbit Creative. A Portsmouth, NH studio working with product-based businesses across New England.',
   alternates: {
     canonical: '/contact',
   },

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { JsonLd } from '../../components/JsonLd'
+import { serviceSchema, breadcrumbSchema } from '../../structured-data'
 import LogoDesign from '../../pages/services/LogoDesign'
 
 export const metadata: Metadata = {
@@ -10,5 +12,22 @@ export const metadata: Metadata = {
 }
 
 export default function LogoDesignPage() {
-  return <LogoDesign />
+  return (
+    <>
+      <JsonLd
+        schema={[
+          serviceSchema({
+            name: 'Logo Design',
+            description: 'Custom logo design: distinctive, precise marks engineered to last, delivered with typography and usage guidelines.',
+            path: '/services/logo-design',
+          }),
+          breadcrumbSchema([
+            { name: 'Services', path: '/services' },
+            { name: 'Logo Design', path: '/services/logo-design' },
+          ]),
+        ]}
+      />
+      <LogoDesign />
+    </>
+  )
 }

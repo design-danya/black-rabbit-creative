@@ -215,6 +215,19 @@ export default function Portfolio({ dbItems = [] }: { dbItems?: DbProject[] }) {
           >
             Our Work
           </h1>
+          <p className="text-white/50 leading-[1.9] max-w-2xl mt-8">
+            Brand identity, packaging and design work for breweries, food and
+            beverage makers, retail and service businesses across New Hampshire,
+            Vermont, Maine and Massachusetts. Each project below starts with
+            positioning — what the brand can claim that its competitors
+            can&rsquo;t — and carries that through to logo, typography, colour,
+            packaging and the everyday materials a business actually runs on.
+          </p>
+          <p className="text-white/50 leading-[1.9] max-w-2xl mt-5">
+            Case studies cover the brief, the strategy behind the direction, and
+            the finished system. Filter by discipline below, or read the full
+            write-ups for the projects that go deepest.
+          </p>
         </motion.div>
 
         {/* ── Category Filter ── */}

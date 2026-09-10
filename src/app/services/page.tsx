@@ -3,7 +3,7 @@ import Services from '../pages/Services'
 
 export const metadata: Metadata = {
   title: "Branding & Design Services",
-  description: 'Brand Identity, Logo Design, Packaging Design, and Graphic Design services.',
+  description: 'Brand identity, logo design, packaging design, brewery branding and graphic design for product-based businesses. A Portsmouth, NH studio serving New England.',
   alternates: {
     canonical: '/services',
   },

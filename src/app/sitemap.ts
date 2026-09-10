@@ -2,106 +2,59 @@ export const dynamic = "force-static"
 
 import { MetadataRoute } from 'next'
 
+/**
+ * Sitemap.
+ *
+ * lastModified used to be `new Date()` on every entry, which claimed the whole
+ * site changed on every deploy. Crawlers learn to discount a site that always
+ * says "everything is new", so the dates below are real: update the entry when
+ * you actually change a page. Everything else is derived from this one table.
+ */
+
+const BASE = 'https://www.blackrabbit-creative.com'
+
+type Entry = {
+  path: string
+  lastModified: string
+  priority: number
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+}
+
+const PAGES: Entry[] = [
+  { path: '/',                              lastModified: '2026-09-09', priority: 1,   changeFrequency: 'weekly'  },
+  { path: '/work',                          lastModified: '2026-09-10', priority: 0.9, changeFrequency: 'weekly'  },
+  { path: '/services',                      lastModified: '2026-09-10', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/services/brand-identity',       lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/services/logo-design',          lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/services/packaging-design',     lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/services/graphic-design',       lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/services/brewery-branding',     lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/about',                         lastModified: '2026-07-27', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/about/faq',                     lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/about/press-awards',            lastModified: '2026-09-10', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/contact',                       lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
+
+  { path: '/work/monadnock-berries',        lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/elm-city-brewing',         lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/granite-roots-brewing',    lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/kapiloff-insurance',       lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/basic-balance-acupuncture',lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/nova-dermatology',         lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/hendricks-lutherie',       lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/cheshire-childrens-museum',lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/keene-pride-festival',     lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/print-materials',          lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/sequoia-sex-toys',         lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/badger-balm',              lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
+  { path: '/work/case-studies',             lastModified: '2026-07-23', priority: 0.7, changeFrequency: 'yearly'  },
+  { path: '/work/books',                    lastModified: '2026-07-23', priority: 0.7, changeFrequency: 'yearly'  },
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.blackrabbit-creative.com'
-
-  // Main pages
-  const mainPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/about/press-awards`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/brand-identity`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/logo-design`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/packaging-design`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/graphic-design`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/brewery-branding`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/work`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ]
-
-  // Case studies
-  const caseStudies: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/work/monadnock-berries`, priority: 0.8 },
-    { url: `${baseUrl}/work/elm-city-brewing`, priority: 0.8 },
-    { url: `${baseUrl}/work/granite-roots-brewing`, priority: 0.8 },
-    { url: `${baseUrl}/work/kapiloff-insurance`, priority: 0.8 },
-    { url: `${baseUrl}/work/basic-balance-acupuncture`, priority: 0.8 },
-    { url: `${baseUrl}/work/nova-dermatology`, priority: 0.8 },
-    { url: `${baseUrl}/work/hendricks-lutherie`, priority: 0.8 },
-    { url: `${baseUrl}/work/cheshire-childrens-museum`, priority: 0.8 },
-    { url: `${baseUrl}/work/keene-pride-festival`, priority: 0.8 },
-    { url: `${baseUrl}/work/print-materials`, priority: 0.8 },
-    { url: `${baseUrl}/work/sequoia-sex-toys`, priority: 0.8 },
-    { url: `${baseUrl}/work/badger-balm`, priority: 0.8 },
-    { url: `${baseUrl}/work/case-studies`, priority: 0.7 },
-    { url: `${baseUrl}/work/books`, priority: 0.7 },
-  ].map((page) => ({
-    ...page,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
+  return PAGES.map(({ path, lastModified, priority, changeFrequency }) => ({
+    url: path === '/' ? BASE : `${BASE}${path}`,
+    lastModified: new Date(`${lastModified}T12:00:00Z`),
+    changeFrequency,
+    priority,
   }))
-
-  return [...mainPages, ...caseStudies]
 }

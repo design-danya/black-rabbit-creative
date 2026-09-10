@@ -89,3 +89,65 @@ export const websiteSchema = {
   name: 'Black Rabbit Creative',
   publisher: { '@id': `${SITE_URL}/#organization` },
 }
+
+
+/**
+ * Per-service schema. Google no longer shows FAQ rich results for most sites,
+ * but answer engines parse JSON-LD directly, so these are here for AI
+ * visibility as much as for search.
+ */
+export function serviceSchema(opts: {
+  name: string
+  description: string
+  path: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${SITE_URL}${opts.path}#service`,
+    name: opts.name,
+    description: opts.description,
+    serviceType: opts.name,
+    url: `${SITE_URL}${opts.path}`,
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: [
+      { '@type': 'State', name: 'New Hampshire' },
+      { '@type': 'State', name: 'Maine' },
+      { '@type': 'State', name: 'Vermont' },
+      { '@type': 'State', name: 'Massachusetts' },
+      { '@type': 'State', name: 'Rhode Island' },
+    ],
+    audience: {
+      '@type': 'BusinessAudience',
+      name: 'Product-based businesses, breweries and founder-led brands',
+    },
+  }
+}
+
+/** Trail for a page, so crawlers and assistants can place it in the site. */
+export function breadcrumbSchema(trail: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ name: 'Home', path: '/' }, ...trail].map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: `${SITE_URL}${c.path}`,
+    })),
+  }
+}
+
+/** The studio's own FAQ, marked up so assistants can quote the answers. */
+export function faqSchema(items: { q: string; a: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE_URL}/about/faq#faq`,
+    mainEntity: items.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  }
+}

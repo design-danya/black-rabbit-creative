@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { JsonLd } from '../../components/JsonLd'
+import { serviceSchema, breadcrumbSchema } from '../../structured-data'
 import BrandIdentity from '../../pages/services/BrandIdentity'
 
 export const metadata: Metadata = {
@@ -10,5 +12,22 @@ export const metadata: Metadata = {
 }
 
 export default function BrandIdentityPage() {
-  return <BrandIdentity />
+  return (
+    <>
+      <JsonLd
+        schema={[
+          serviceSchema({
+            name: 'Brand Identity Design',
+            description: 'Strategic brand identity systems — positioning, voice, logo, typography, colour and brand guidelines — for product-based businesses.',
+            path: '/services/brand-identity',
+          }),
+          breadcrumbSchema([
+            { name: 'Services', path: '/services' },
+            { name: 'Brand Identity', path: '/services/brand-identity' },
+          ]),
+        ]}
+      />
+      <BrandIdentity />
+    </>
+  )
 }
