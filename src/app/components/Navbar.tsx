@@ -6,6 +6,15 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+/**
+ * The blog is published to by Marblism, which only targets WordPress, Wix,
+ * Shopify and Webflow — so it stays on Wix for now. Once
+ * blog.blackrabbit-creative.com is connected in Wix (Premium plan, CNAME at
+ * GoDaddy), change this one line: the posts then live on the studio's own
+ * domain instead of a wixsite.com URL competing for the brand name.
+ */
+const BLOG_URL = "https://danya87.wixsite.com/blackrabbitcreative"
+
 const darkLogo = "/assets/Black_Rabbitv3-16.png"
 const lightLogo = "/assets/Black_Rabbitv3-12.png"
 
@@ -14,7 +23,7 @@ const links = [
   { name: "Services", path: "/services" },
   { name: "About", path: "/about" },
   { name: "Onlyness Test", path: "https://www.blackrabbit-brandtest.com/", external: true },
-  { name: "Blog", path: "https://danya87.wixsite.com/blackrabbitcreative", external: true },
+  { name: "Blog", path: BLOG_URL, external: true },
   { name: "Contact", path: "/contact" },
 ];
 

@@ -15,6 +15,11 @@ const footerLinks = [
   { name: "Work", path: "/work" },
   { name: "Services", path: "/services" },
   { name: "About", path: "/about" },
+  // FAQ and Press & Awards previously appeared only in the slide-out menu,
+  // which is conditionally rendered — so they had no inbound link in the
+  // served HTML and were effectively orphaned from crawlers.
+  { name: "FAQ", path: "/about/faq" },
+  { name: "Press & Awards", path: "/about/press-awards" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -162,12 +167,15 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-xs text-gray-500 tracking-wide">&copy; 2025 Black Rabbit Creative. All rights reserved.</span>
-          <div className="flex gap-8 text-xs text-gray-500">
-            <Link href="/admin" className="hover:text-white transition-colors">Admin</Link>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-          </div>
+          <span className="text-xs text-gray-500 tracking-wide">
+            &copy; {new Date().getFullYear()} Black Rabbit Creative. All rights reserved.
+          </span>
+          {/* The admin link was public here; it's reachable at /admin directly.
+              Privacy and Terms were href="#" placeholders and are dropped until
+              there are real pages to point at. */}
+          <span className="text-xs text-gray-500 tracking-wide">
+            Portsmouth, New Hampshire
+          </span>
         </div>
       </div>
     </footer>
