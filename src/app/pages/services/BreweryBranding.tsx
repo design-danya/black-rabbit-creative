@@ -63,7 +63,7 @@ const shelfDistances = [
 const whyUs = [
   {
     title: "Deep Industry Knowledge",
-    desc: "We understand craft beverage culture, TTB compliance, and what makes labels sell on-shelf and on-tap.",
+    desc: "We know craft beverage culture and what makes a label sell on-shelf and on-tap. We design to the mandatory information requirements from the start, so nothing gets squeezed in at the end.",
   },
   {
     title: "You Work With The Designer",
