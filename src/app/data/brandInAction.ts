@@ -39,6 +39,7 @@ export const brandInAction: BrandShot[] = [
   { slug: 'sequoia-gift-box', tag: 'Gift Box', client: 'Sequoia', alt: 'Sequoia purple gift box with a patterned lining', src: '/assets/c623085a0fa6b8d6f06c6c8a1164e462be62b41c.png', w: 2048, h: 1424 },
   { slug: 'sequoia-pattern-tape', tag: 'Pattern & Tape', client: 'Sequoia', alt: 'Sequoia patterned shipping box with branded tape', src: '/assets/c390af4e482dba3c7b0dd5acd8a94f8b5a3de2c1.png', w: 2048, h: 1503 },
   { slug: 'sequoia-pattern', tag: 'Pattern System', client: 'Sequoia', alt: 'Sequoia floral pattern system on a card and sleeve', src: '/assets/4eed3acad87e65ab0e3933e8340dd64f53b44948.png', w: 2048, h: 1152 },
+  { slug: 'sequoia-business-cards', tag: 'Business Cards', client: 'Sequoia', alt: 'Sequoia business cards for Black Rabbit Creative on a purple ground', w: 1440, h: 1029 },
   { slug: 'monadnock-signage', tag: 'Signage', client: 'Monadnock Berries', alt: 'Monadnock Berries exterior stone sign', w: 1600, h: 1067 },
   { slug: 'monadnock-packaging', tag: 'Packaging', client: 'Monadnock Berries', alt: 'Monadnock Berries branded blueberry container', w: 1600, h: 1067 },
   { slug: 'monadnock-stationery', tag: 'Wax Seal', client: 'Monadnock Berries', alt: 'Monadnock Berries stationery set with a brass wax seal', w: 1600, h: 1067 },
