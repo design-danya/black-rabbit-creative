@@ -6,8 +6,8 @@
 
 export const breweryFaq = [
   {
-    q: 'Do you handle TTB label compliance?',
-    a: 'We design to TTB requirements — government warning, alcohol content, net contents, and the placement rules that go with them — and supply print-ready files built to those specs. Final COLA submission stays with the brewery, since it is tied to your permit, but you will not get a label back that cannot be approved.',
+    q: 'What about label approval and required information?',
+    a: 'Beer labels have to carry certain mandatory information — the government warning, alcohol content, net contents, brand and class designation — and federal approval runs through the TTB, which issues a Certificate of Label Approval. That filing sits with the brewery, because it is tied to your permit and your existing relationship with the agency. What we do is design around those requirements from the start: the information gets real space in the layout rather than being squeezed in at the end, and you get print-ready files with it already placed. Send us your requirements or your last approved label and we will design to them.',
   },
   {
     q: 'Can you work with our existing printer?',
@@ -18,8 +18,8 @@ export const breweryFaq = [
     a: 'Yes. Granite Roots Brewing came to us for a single can — the Cheshire Czech lager that went on to win a 2025 GDUSA Package Design Award. If the brewery identity already works, a one-off label is a clean, contained project, and often the start of a longer conversation.',
   },
   {
-    q: 'How long does a brewery brand take?',
-    a: 'A single label runs a few weeks depending on how much illustration it needs. A full identity — marks, label system, guidelines, merchandise and taproom — is a longer engagement measured in months. We scope it properly before you commit to anything.',
+    q: 'How long does a beer label take?',
+    a: 'One to three weeks, depending on how much custom illustration it needs. A straightforward layout using an existing brand system lands at the short end; something drawn from scratch, like the Cheshire Czech label, takes the full three. Full brewery identities are a different scope — those run 4 to 8 weeks and are covered under branding packages.',
   },
   {
     q: 'Do you work with breweries outside New Hampshire?',
