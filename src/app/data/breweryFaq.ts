@@ -20,6 +20,7 @@ export const breweryFaq = [
   {
     q: 'How long does a beer label take?',
     a: 'One to three weeks, depending on how much custom illustration it needs. A straightforward layout using an existing brand system lands at the short end; something drawn from scratch, like the Cheshire Czech label, takes the full three. Full brewery identities are a different scope — those run 4 to 8 weeks and are covered under branding packages.',
+    link: { href: '/services/brand-identity', label: 'See branding packages' },
   },
   {
     q: 'Do you work with breweries outside New Hampshire?',

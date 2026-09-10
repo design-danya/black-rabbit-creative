@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Plus, Minus } from 'lucide-react'
+import { Plus, Minus, ArrowRight } from 'lucide-react'
 
 /**
  * Disclosure list.
@@ -13,7 +13,16 @@ import { Plus, Minus } from 'lucide-react'
  * quietly regress the next time one of these is built.
  */
 
-export type AccordionEntry = { q: string; a: string }
+export type AccordionEntry = {
+  q: string
+  a: string
+  /**
+   * Optional "read more" link rendered under the answer. Kept out of `a` so the
+   * FAQPage structured data stays clean prose — schema.org wants answer text,
+   * not markup.
+   */
+  link?: { href: string; label: string }
+}
 
 export function Accordion({ items, idPrefix }: { items: AccordionEntry[]; idPrefix: string }) {
   const [open, setOpen] = useState<Record<number, boolean>>({})
@@ -53,7 +62,18 @@ export function Accordion({ items, idPrefix }: { items: AccordionEntry[]; idPref
               style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
             >
               <div className="overflow-hidden">
-                <p className="text-gray-400 text-sm leading-[1.9] pb-7 pr-4 md:pr-12">{item.a}</p>
+                <div className="pb-7 pr-4 md:pr-12">
+                  <p className="text-gray-400 text-sm leading-[1.9]">{item.a}</p>
+                  {item.link ? (
+                    <a
+                      href={item.link.href}
+                      className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-[#7c5fe6] hover:text-white transition-colors duration-300"
+                    >
+                      {item.link.label}
+                      <ArrowRight size={14} />
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>
