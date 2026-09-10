@@ -15,8 +15,10 @@ import {
 /**
  * Filterable illustration archive.
  *
- * Masonry is built by dealing items round-robin into N columns, so reading
- * order runs left-to-right across the top row. CSS `columns` would fill each
+ * The All view interleaves the categories (see mixCategories) so the grid reads
+ * as a mix rather than four blocks; a single filter keeps the curated order in
+ * the data file. Masonry is built by dealing items round-robin into N columns,
+ * so reading order runs left-to-right across the top row. CSS `columns` would fill each
  * column top-to-bottom instead, which scatters the category runs when the
  * filter is set to All.
  * next/image handles lazy loading and serves AVIF/WebP derivatives; intrinsic
@@ -31,6 +33,50 @@ import {
  */
 
 type Filter = 'all' | IllustrationCategory
+
+/**
+ * Deterministic PRNG (mulberry32) so the All view mixes the same way on the
+ * server and the client — Math.random would desync hydration.
+ */
+function mulberry32(seed: number) {
+  return () => {
+    seed |= 0
+    seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+/**
+ * Interleave every category through the All view instead of showing each one
+ * as a block. Each category is shuffled, then items are ordered by their
+ * fractional position within their own category — so a run of 19 and a run of
+ * 50 both spread evenly across the whole grid rather than clumping.
+ */
+function mixCategories(items: Illustration[]): Illustration[] {
+  const rand = mulberry32(0x8b3f21)
+  const byCategory = new Map<IllustrationCategory, Illustration[]>()
+  for (const item of items) {
+    const bucket = byCategory.get(item.category)
+    if (bucket) bucket.push(item)
+    else byCategory.set(item.category, [item])
+  }
+
+  const scored: { item: Illustration; score: number }[] = []
+  for (const bucket of byCategory.values()) {
+    // Fisher-Yates within the category.
+    for (let i = bucket.length - 1; i > 0; i--) {
+      const j = Math.floor(rand() * (i + 1))
+      ;[bucket[i], bucket[j]] = [bucket[j], bucket[i]]
+    }
+    bucket.forEach((item, i) =>
+      scored.push({ item, score: (i + 0.5) / bucket.length + (rand() - 0.5) * 0.03 }),
+    )
+  }
+  return scored.sort((a, b) => a.score - b.score).map((s) => s.item)
+}
+
 
 /** Column count for the masonry, matched to the Tailwind breakpoints below. */
 function useColumnCount() {
@@ -67,9 +113,11 @@ export function IllustrationGallery() {
     return c
   }, [])
 
+  const mixed = useMemo(() => mixCategories(illustrations), [])
+
   const visible = useMemo(
-    () => (filter === 'all' ? illustrations : illustrations.filter((i) => i.category === filter)),
-    [filter],
+    () => (filter === 'all' ? mixed : illustrations.filter((i) => i.category === filter)),
+    [filter, mixed],
   )
 
   const close = useCallback(() => setOpenIndex(null), [])
