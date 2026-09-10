@@ -38,6 +38,7 @@ export const categories: { id: IllustrationCategory; label: string }[] = [
 ]
 
 export const illustrations: Illustration[] = [
+  { slug: 'pickle', title: 'Pickle', alt: 'Illustration of a single dill pickle', category: 'character', w: 1500, h: 1500 },
   { slug: 'nola-toadstool', title: 'Toadstool', alt: 'Cartoon illustration of Nola the black rabbit wearing a mushroom cap', category: 'nola', w: 1080, h: 1380 },
   { slug: 'frog-cycle-eggs', title: 'Frog Cycle — Eggs', alt: 'Illustration of frog spawn', category: 'creature', w: 1500, h: 1500 },
   { slug: 'ink-tangle', title: 'Tangle', alt: 'Ink drawing of two black cats curled around each other', category: 'ink', w: 985, h: 1500 },
