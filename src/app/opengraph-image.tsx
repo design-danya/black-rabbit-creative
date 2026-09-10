@@ -1,19 +1,32 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'node:fs/promises'
+import { join } from 'node:path'
 
 /**
  * The social share card that unfurls when the site is linked in iMessage,
- * LinkedIn, Slack, Facebook, etc. Metadata previously pointed at
- * /og-image.png, which never existed and 404'd — so shares rendered blank.
+ * LinkedIn, Slack, Facebook, etc. Applies site-wide via Next's file
+ * convention; a page can still override it per route.
  *
- * Generated in code rather than shipped as a static image, so it stays in
- * brand without touching any of the studio's own artwork. Applies site-wide
- * via Next's file convention; a page can still override it per route.
+ * Uses the real wordmark and real typeface rather than approximating them:
+ * Satori has no access to the browser's fonts or to next/font, so Poppins is
+ * read from src/assets/og and handed in explicitly, and the wordmark is
+ * inlined as a data URI. Both are kept out of public/assets so they aren't
+ * stored in Git LFS — this route reads them off disk at build time.
  */
 export const alt = 'Black Rabbit Creative — Branding & Packaging Design Studio'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export default function OpengraphImage() {
+const asset = (name: string) => join(process.cwd(), 'src/assets/og', name)
+
+export default async function OpengraphImage() {
+  const [wordmark, extraBold, regular] = await Promise.all([
+    readFile(asset('wordmark.png')),
+    readFile(asset('Poppins-ExtraBold.ttf')),
+    readFile(asset('Poppins-Regular.ttf')),
+  ])
+  const wordmarkSrc = `data:image/png;base64,${wordmark.toString('base64')}`
+
   return new ImageResponse(
     (
       <div
@@ -24,54 +37,45 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           background: '#060606',
-          padding: '80px',
-          fontFamily: 'sans-serif',
+          padding: '76px 80px',
+          fontFamily: 'Poppins',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <span
-            style={{
-              fontSize: 40,
-              fontWeight: 800,
-              color: '#ffffff',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            black
-          </span>
-          <span
-            style={{
-              fontSize: 40,
-              fontWeight: 800,
-              color: '#5b3fd6',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            rabbit
-          </span>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={wordmarkSrc} alt="" width={330} height={84} />
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {/* Satori collapses &nbsp; between inline spans, so the words are
+              laid out as explicit flex children with a real gap. Two lines,
+              matching the hero on the site. */}
           <div
             style={{
               display: 'flex',
-              flexWrap: 'wrap',
-              fontSize: 116,
+              flexDirection: 'column',
+              fontSize: 112,
               fontWeight: 800,
-              lineHeight: 1,
-              letterSpacing: '-0.03em',
+              lineHeight: 1.04,
+              letterSpacing: '0.04em',
               textTransform: 'uppercase',
               color: '#ffffff',
             }}
           >
-            Distinct&nbsp;<span style={{ color: '#7c5fe6' }}>by</span>&nbsp;design
+            <div style={{ display: 'flex', gap: '30px' }}>
+              <span>Distinct</span>
+              <span style={{ color: '#7c5fe6' }}>by</span>
+            </div>
+            <div style={{ display: 'flex' }}>
+              <span>Design</span>
+            </div>
           </div>
           <div
             style={{
-              marginTop: 36,
-              fontSize: 30,
-              color: '#94a3b8',
-              maxWidth: 900,
+              marginTop: 34,
+              fontSize: 28,
+              fontWeight: 400,
+              lineHeight: 1.5,
+              color: 'rgba(255,255,255,0.55)',
+              maxWidth: 880,
             }}
           >
             Brand identity, logo &amp; packaging design for product-based
@@ -80,6 +84,12 @@ export default function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: [
+        { name: 'Poppins', data: extraBold, weight: 800, style: 'normal' },
+        { name: 'Poppins', data: regular, weight: 400, style: 'normal' },
+      ],
+    },
   )
 }
