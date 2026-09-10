@@ -111,6 +111,11 @@ export const illustrations: Illustration[] = [
   { slug: 'cat-burglar', title: 'Cat Burglar', alt: 'Illustration of a masked figure in a cat cowl drinking cream from a saucer', category: 'character', w: 1000, h: 1500 },
   { slug: 'rose-sleeve', title: 'Rose Sleeve', alt: 'Illustration of a woman in a violet dress with roses growing along her arm', category: 'character', w: 1000, h: 1500 },
   { slug: 'siren', title: 'Siren', alt: 'Illustration of a woman with red octopus tentacles for hair', category: 'character', w: 1000, h: 1500 },
+  { slug: 'tuned-in', title: 'Tuned In', alt: 'Illustration of a woman in a red leather jacket wearing headphones, a rose pinned in her hair', category: 'character', w: 1200, h: 1500 },
+  { slug: 'neon', title: 'Neon', alt: 'Illustration of a woman with rainbow hair and a glowing visor against a bokeh-lit night', category: 'character', w: 1200, h: 1500 },
+  { slug: 'wolf-moon-company', title: 'Wolf Moon — Company', alt: 'Illustration of a woman in a red dress sitting beside a wolf under a full moon', category: 'character', w: 1500, h: 1500 },
+  { slug: 'wolf-moon-warning', title: 'Wolf Moon — Warning', alt: 'Illustration of a woman in a red dress facing a snarling wolf under a full moon', category: 'character', w: 1500, h: 1500 },
+  { slug: 'wolf-moon-embrace', title: 'Wolf Moon — Embrace', alt: 'Illustration of a woman in a red dress holding a wolf under a full moon', category: 'character', w: 1500, h: 1500 },
   { slug: 'campsite', title: 'Campsite', alt: 'Illustration of tents and a rabbit at a lantern-lit campsite', category: 'creature', w: 1500, h: 1500 },
   { slug: 'couch-dogs', title: 'Couch Dogs', alt: 'Illustration of two dogs sharing a sofa', category: 'creature', w: 1159, h: 1500 },
   { slug: 'lap-dog', title: 'Lap Dog', alt: 'Illustration of a white dog on a blue cushion', category: 'creature', w: 1371, h: 1500 },
@@ -140,6 +145,9 @@ export const illustrations: Illustration[] = [
   { slug: 'serpentine', title: 'Serpentine', alt: 'Illustration of a coiled sea creature', category: 'creature', w: 1500, h: 1500 },
   { slug: 'shell-garden', title: 'Shell Garden', alt: 'Illustration of a miniature reef inside an oyster shell', category: 'creature', w: 1500, h: 985 },
   { slug: 'bee-and-fairy', title: 'Bee & Fairy', alt: 'Illustration of a firefly fairy meeting a bee', category: 'creature', w: 1024, h: 1024 },
+  { slug: 'puppy-love', title: 'Puppy Love', alt: 'Cartoon illustration of a brown dog daydreaming about nuzzling a black and tan dog', category: 'creature', w: 1159, h: 1500 },
+  { slug: 'sunday-best', title: 'Sunday Best', alt: 'Cartoon portrait of a brown dog in a patterned bandana, framed in an oval', category: 'creature', w: 1159, h: 1500 },
+  { slug: 'milk-run', title: 'Milk Run', alt: 'Cartoon illustration of a spotted dog trotting past a painted cow mural on a brick wall', category: 'creature', w: 1500, h: 1159 },
 ]
 
 export const illustrationCount = illustrations.length
