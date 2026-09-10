@@ -443,7 +443,7 @@ export default function GraphicDesign() {
               >
                 <div className="relative overflow-hidden bg-[#111] aspect-square">
                   <img
-                    src={`/assets/brand-in-action/${shot.slug}.webp`}
+                    src={shot.src ?? `/assets/brand-in-action/${shot.slug}.webp`}
                     alt={shot.alt}
                     width={shot.w}
                     height={shot.h}
@@ -558,7 +558,7 @@ export default function GraphicDesign() {
             </h2>
             <p className="text-white/50 leading-[1.9]">
               Personal work, studies, and characters built over years. Filter by kind — Nola,
-              ink and line work, character, creature, surreal, and spot illustration.
+              ink and line work, character, creature, and spot illustration.
             </p>
           </motion.div>
 
