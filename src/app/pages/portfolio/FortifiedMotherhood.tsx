@@ -19,7 +19,7 @@ const ivory = "#F2F4F0";
 const meta = [
   { label: "Client", value: "Fortified Motherhood" },
   { label: "Industry", value: "Postpartum Care" },
-  { label: "Scope", value: "Strategy & Complete Identity" },
+  { label: "Package", value: "Streamlined Branding" },
   { label: "Year", value: "2026" },
 ];
 
@@ -734,6 +734,17 @@ export default function FortifiedMotherhood() {
               relied on for centuries. The system is complete — a full logo suite, brand typography and color, eight
               hand-drawn illustrations, a signature pattern and a brand guide — and it is ready for her website, her
               virtual coaching and the community-funded care she plans to offer one day.
+            </p>
+            <p className="text-black/60 leading-[1.9] text-[0.95rem] mt-5">
+              Delivered as a{" "}
+              <Link
+                href="/services/brand-identity"
+                className="font-semibold underline underline-offset-4 decoration-1 transition-colors duration-300 hover:text-[#111]"
+                style={{ color: pomegranate }}
+              >
+                Streamlined Branding
+              </Link>{" "}
+              package.
             </p>
           </motion.div>
 
