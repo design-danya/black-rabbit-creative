@@ -298,19 +298,6 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
-        >
-           <span className="text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6]">
-              Scroll
-           </span>
-           <div className="h-12 w-px bg-gradient-to-b from-[#5b3fd6] to-transparent opacity-50" />
-        </motion.div>
       </section>
 
       {/* ─── SECTION 2: BRAND PHILOSOPHY ─── */}
