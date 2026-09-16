@@ -135,8 +135,8 @@ const packages: Package[] = [
     ],
     notes: packageNotes,
     example: {
-      label: "See Basic Balance Acupuncture",
-      href: "/work/basic-balance-acupuncture",
+      label: "See Fortified Motherhood",
+      href: "/work/fortified-motherhood",
     },
   },
 ];

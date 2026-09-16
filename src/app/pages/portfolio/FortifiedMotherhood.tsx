@@ -498,6 +498,10 @@ export default function FortifiedMotherhood() {
               clinical process. Every subject was chosen for what it means in postpartum recovery — the eight read as
               an herbal apothecary for the brand, and each one tells part of the story.
             </p>
+            <p className="text-black/50 leading-[1.9] text-[0.9rem] mt-5">
+              The Streamlined package covers a smaller set. Odell commissioned the full eight as an addition, so the
+              brand has a complete symbol vocabulary rather than a starting point.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/10">
@@ -744,7 +748,7 @@ export default function FortifiedMotherhood() {
               >
                 Streamlined Branding
               </Link>{" "}
-              package.
+              package, with the expanded illustration set commissioned on top of it.
             </p>
           </motion.div>
 
