@@ -191,7 +191,7 @@ export default function Kapiloff() {
               </div>
             </motion.div>
 
-            {/* ── Centre arrow — desktop (horizontal) ── */}
+            {/* ── Center arrow — desktop (horizontal) ── */}
             <div className="hidden md:flex items-center justify-center z-20 mx-4 flex-shrink-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -205,7 +205,7 @@ export default function Kapiloff() {
               </motion.div>
             </div>
 
-            {/* ── Centre arrow — mobile (vertical) ── */}
+            {/* ── Center arrow — mobile (vertical) ── */}
             <div className="flex md:hidden items-center justify-center z-20 -my-1">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}

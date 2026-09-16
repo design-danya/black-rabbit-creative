@@ -157,7 +157,7 @@ export default function BasicBalance() {
               </div>
             </motion.div>
 
-            {/* ── Centre arrow ── */}
+            {/* ── Center arrow ── */}
             <div className="hidden md:flex items-center justify-center px-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -286,7 +286,7 @@ export default function BasicBalance() {
               Brand Guideline Sheet
             </h2>
             <p className="mt-4 text-white/40 text-sm leading-relaxed max-w-xl">
-              Logo suite, colour palette, brand assets, typography, and real-world
+              Logo suite, color palette, brand assets, typography, and real-world
               applications — the complete identity system at a glance
             </p>
           </motion.div>
@@ -303,7 +303,7 @@ export default function BasicBalance() {
               width={1920}
               height={2879}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              alt="Basic Balance Acupuncture brand guideline sheet — logo suite, colour palette, brand assets, brand fonts, and real-world applications | Designed by Black Rabbit Creative"
+              alt="Basic Balance Acupuncture brand guideline sheet — logo suite, color palette, brand assets, brand fonts, and real-world applications | Designed by Black Rabbit Creative"
               className="w-full h-auto object-contain"
             />
           </motion.div>

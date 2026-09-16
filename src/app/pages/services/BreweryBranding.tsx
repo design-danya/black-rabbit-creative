@@ -17,7 +17,7 @@ const RABBIT_WEBP = "/assets/homepage-rabbit.webp";
 const services = [
   {
     name: "Core identity",
-    desc: "Primary mark, secondary marks, and the variations you actually need — a tap handle lockup, a can top, a single-colour version for embroidery, something that survives being an inch wide on a coaster.",
+    desc: "Primary mark, secondary marks, and the variations you actually need — a tap handle lockup, a can top, a single-color version for embroidery, something that survives being an inch wide on a coaster.",
   },
   {
     name: "Can & bottle label systems",
@@ -48,7 +48,7 @@ const services = [
 const shelfDistances = [
   {
     label: "Across the room",
-    desc: "Silhouette and colour block. Before anyone reads a word, they should recognise the can. If a label only works held in the hand, it doesn't work.",
+    desc: "Silhouette and color block. Before anyone reads a word, they should recognize the can. If a label only works held in the hand, it doesn't work.",
   },
   {
     label: "At arm's length",
@@ -237,7 +237,7 @@ export default function BreweryBranding() {
             <p className="text-gray-400 leading-[1.9]">
               Then the constraints that aren&rsquo;t aesthetic at all: TTB
               requirements for the government warning, alcohol content and net
-              contents. Ink limits and substrate behaviour — a colour that sings
+              contents. Ink limits and substrate behavior — a color that sings
               on screen can die on a matte shrink sleeve. Distributor and
               retailer expectations for how a series reads together on a shelf.
             </p>

@@ -231,7 +231,7 @@ export default function Portfolio({ dbItems = [] }: { dbItems?: DbProject[] }) {
             beverage makers, retail and service businesses across New Hampshire,
             Vermont, Maine and Massachusetts. Each project below starts with
             positioning — what the brand can claim that its competitors
-            can&rsquo;t — and carries that through to logo, typography, colour,
+            can&rsquo;t — and carries that through to logo, typography, color,
             packaging and the everyday materials a business actually runs on.
           </p>
           <p className="text-white/50 leading-[1.9] max-w-2xl mt-5">
@@ -320,7 +320,7 @@ function ProjectCardInner({ project }: { project: Card }) {
         <div className="absolute inset-0 bg-[#f0f3fa] transition-colors duration-700 group-hover:bg-[#e4eaf5]" />
       ) : null}
 
-      {/* Image — greyscale → colour */}
+      {/* Image — greyscale → color */}
       <ImageWithFallback
         src={typeof project.image === "string" ? project.image : project.image.src}
         alt={`${project.title} — portfolio project by Black Rabbit Creative`}

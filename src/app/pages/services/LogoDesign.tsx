@@ -196,7 +196,7 @@ export default function LogoDesign() {
                   Your logo is often the first visual touchpoint for your brand. Done well, it creates recognition, builds credibility, and sets the foundation for everything that follows.
                 </p>
                 <p className="text-gray-500">
-                  At Black Rabbit Creative, every logo is designed to be distinctive, versatile, and built to last — combining custom typography, considered colour, and refined visual detail.
+                  At Black Rabbit Creative, every logo is designed to be distinctive, versatile, and built to last — combining custom typography, considered color, and refined visual detail.
                 </p>
               </motion.div>
 

@@ -18,7 +18,7 @@ export default function BrandIdentityPage() {
         schema={[
           serviceSchema({
             name: 'Brand Identity Design',
-            description: 'Strategic brand identity systems — positioning, voice, logo, typography, colour and brand guidelines — for product-based businesses.',
+            description: 'Strategic brand identity systems — positioning, voice, logo, typography, color and brand guidelines — for product-based businesses.',
             path: '/services/brand-identity',
           }),
           breadcrumbSchema([

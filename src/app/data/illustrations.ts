@@ -113,7 +113,7 @@ export const illustrations: Illustration[] = [
   { slug: 'nola-pond', title: 'Pond', alt: 'Cartoon illustration of Nola the black rabbit wading in a pond among cattails', category: 'nola', w: 1080, h: 1380 },
   { slug: 'jungle-leopard', title: 'Jungle Leopard', alt: 'Illustration of a leopard-print figure among tropical plants', category: 'character', w: 1080, h: 1380 },
   { slug: 'squid-and-wine', title: 'Squid & Wine', alt: 'Illustration of a pink squid coiled around a wine glass', category: 'creature', w: 1500, h: 1500 },
-  { slug: 'devil-and-bunny', title: 'Devil & Bunny', alt: 'Ink and colour illustration of a pin-up devil with a plush rabbit', category: 'character', w: 1000, h: 1500 },
+  { slug: 'devil-and-bunny', title: 'Devil & Bunny', alt: 'Ink and color illustration of a pin-up devil with a plush rabbit', category: 'character', w: 1000, h: 1500 },
   { slug: 'fairy-and-fawn', title: 'Fairy & Fawn', alt: 'Illustration of a fairy lighting the way for a deer', category: 'creature', w: 1500, h: 1500 },
   { slug: 'disco-ball', title: 'Disco Ball', alt: 'Illustration of a singer holding a mirrorball microphone', category: 'character', w: 1159, h: 1500 },
   { slug: 'nola-bloomrest', title: 'Bloomrest', alt: 'Cartoon illustration of Nola the black rabbit resting on a flower', category: 'nola', w: 1080, h: 1380 },

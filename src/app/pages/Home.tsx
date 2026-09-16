@@ -13,6 +13,7 @@ const badgerBalmThumb = "/assets/85a36a7ad55f5acc16c3a8894ea9483780e2fd8f.png";
 const lobsterLabThumb = "/assets/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
 const booksThumb = "/assets/d722827696a730f2c261adcfc080ff1dde43c556.png";
 const elmCityThumb = "/assets/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
+const fortifiedMotherhoodThumb = "/assets/fortified-motherhood/thumb.webp";
 import monadnockBerriesThumb from "../../imports/Untitled-8.png";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef, useState, useEffect } from "react";
@@ -51,6 +52,14 @@ const services = [
 ];
 
 const projects = [
+  {
+    title: "Fortified Motherhood",
+    category: "Brand Identity",
+    image: fortifiedMotherhoodThumb,
+    year: "2026",
+    href: "/work/fortified-motherhood",
+    tag: "New",
+  },
   {
     title: "Monadnock Berries",
     category: "Logo Design",
@@ -465,7 +474,7 @@ export default function Home() {
                 transition={{ delay: i * 0.08, duration: 0.55 }}
               >
                 <Link href={project.href ?? "/work"} className="group block relative overflow-hidden aspect-square">
-                  {/* Image — greyscale → colour */}
+                  {/* Image — greyscale → color */}
                   <ImageWithFallback
                     src={typeof project.image === "string" ? project.image : project.image.src}
                     alt={`${project.title} — portfolio project by Black Rabbit Creative`}

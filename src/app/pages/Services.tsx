@@ -10,7 +10,7 @@ const services = [
     title: "Brand Identity Design",
     tagline: "Build a brand with clarity, cohesion, and presence.",
     description:
-      "Brand identity design is more than a logo — it's the complete visual foundation of your business. At Black Rabbit Creative, we develop thoughtful identity systems that ensure your brand looks consistent, confident, and recognisable across every touchpoint.",
+      "Brand identity design is more than a logo — it's the complete visual foundation of your business. At Black Rabbit Creative, we develop thoughtful identity systems that ensure your brand looks consistent, confident, and recognizable across every touchpoint.",
     listLabel: "Includes",
     items: [
       "Brand strategy foundations",

@@ -1,13 +1,15 @@
 'use client'
-import { motion } from "motion/react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { motion, AnimatePresence } from "motion/react";
+import { ArrowLeft, ArrowRight, X, Expand } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
 
 const A = "/assets/fortified-motherhood";
 
-/** Core brand colours, taken from the delivered brand guide. */
+/** Core brand colors, taken from the delivered brand guide. */
 const pomegranate = "#B34747";
 const steelBlue = "#8DB6C8";
 const slate = "#4B6D7B";
@@ -31,14 +33,14 @@ const challenges = [
 
 /** Eight hand-drawn botanicals, each chosen for what it means in recovery. */
 const illustrations = [
-  { slug: "nettle", name: "Nettle", token: "Nourishment", desc: "A traditional mineral-rich tonic, long used to rebuild strength and replenish the body after birth." },
-  { slug: "raspberry-leaf", name: "Raspberry Leaf", token: "Strength", desc: "Used for generations to tone and support the womb through pregnancy and recovery." },
-  { slug: "milky-oats", name: "Milky Oats", token: "Rest", desc: "Calms and restores a depleted nervous system. Oats have long been a staple for nursing mothers." },
-  { slug: "calendula", name: "Calendula", token: "Healing", desc: "A healing flower traditionally used in postpartum sitz baths and salves to soothe and mend tissue." },
-  { slug: "violet", name: "Violet", token: "Soothe", desc: "Gentle and cooling. It stands for tenderness and quiet comfort in the early weeks." },
-  { slug: "wild-rose", name: "Wild Rose", token: "Heart", desc: "Love, emotional healing and the fierce devotion of new motherhood." },
-  { slug: "warm-meals", name: "Warm Meals", token: "Sustenance", desc: "The centre of Odell's practice. Across healing traditions, and especially the Asian practices behind her bodywork, warm food is the foundation of recovery." },
-  { slug: "mother-and-baby", name: "Mother & Baby", token: "Bond", desc: "The brand's purpose in one image: a mother who is held, so she can hold everything else." },
+  { slug: "nettle", name: "Nettle", token: "Nourishment", desc: "A traditional mineral-rich tonic, long used to rebuild strength and replenish the body after birth.", w: 593, h: 830 },
+  { slug: "raspberry-leaf", name: "Raspberry Leaf", token: "Strength", desc: "Used for generations to tone and support the womb through pregnancy and recovery.", w: 659, h: 776 },
+  { slug: "milky-oats", name: "Milky Oats", token: "Rest", desc: "Calms and restores a depleted nervous system. Oats have long been a staple for nursing mothers.", w: 502, h: 759 },
+  { slug: "calendula", name: "Calendula", token: "Healing", desc: "A healing flower traditionally used in postpartum sitz baths and salves to soothe and mend tissue.", w: 607, h: 750 },
+  { slug: "violet", name: "Violet", token: "Soothe", desc: "Gentle and cooling. It stands for tenderness and quiet comfort in the early weeks.", w: 520, h: 895 },
+  { slug: "wild-rose", name: "Wild Rose", token: "Heart", desc: "Love, emotional healing and the fierce devotion of new motherhood.", w: 461, h: 818 },
+  { slug: "warm-meals", name: "Warm Meals", token: "Sustenance", desc: "The center of Odell's practice. Across healing traditions, and especially the Asian practices behind her bodywork, warm food is the foundation of recovery.", w: 462, h: 770 },
+  { slug: "mother-and-baby", name: "Mother & Baby", token: "Bond", desc: "The brand's purpose in one image: a mother who is held, so she can hold everything else.", w: 440, h: 780 },
 ];
 
 const palette = [
@@ -53,10 +55,10 @@ const palette = [
 ];
 
 const logoSuite = [
-  { role: "Primary Logo", file: "logo-primary-reversed", note: "Stacked lockup. The vendor default, and the version that leads on the website and printed collateral." },
-  { role: "Secondary Logo", file: "logo-secondary-reversed", note: "Horizontal lockup for wide, short spaces — a site header, an email signature, the top of a form." },
-  { role: "Logo Mark", file: "logo-mark-color", note: "The pomegranate standing alone, for favicons, seals and embroidery where the wordmark would not survive." },
-  { role: "Submark", file: "logo-submark-reversed", note: "Compact badge for profile images, packaging seals and merchandise." },
+  { role: "Primary Logo", file: "logo-primary-reversed", note: "Stacked lockup. The vendor default, and the version that leads on the website and printed collateral.", w: 780, h: 788 },
+  { role: "Secondary Logo", file: "logo-secondary-reversed", note: "Horizontal lockup for wide, short spaces — a site header, an email signature, the top of a form.", w: 1096, h: 426 },
+  { role: "Logo Mark", file: "logo-mark-color", note: "The pomegranate standing alone, for favicons, seals and embroidery where the wordmark would not survive.", w: 736, h: 938 },
+  { role: "Submark", file: "logo-submark-reversed", note: "Compact badge for profile images, packaging seals and merchandise.", w: 733, h: 827 },
 ];
 
 const mockups = [
@@ -75,13 +77,37 @@ const mockups = [
 ];
 
 const impacts = [
-  { label: "Category Break", desc: "No lotus, no script, no blush. The brand is recognisably not the practice next to it." },
+  { label: "Category Break", desc: "No lotus, no script, no blush. The brand is recognizably not the practice next to it." },
   { label: "Meaning Throughout", desc: "Eight botanicals chosen for what they do in recovery, not for how they decorate." },
   { label: "Built to Scale", desc: "A system ready for a website, virtual coaching, packaging and merchandise before those exist." },
-  { label: "Confidence to Share", desc: "An identity Odell can put in front of a client without explaining or apologising for it." },
+  { label: "Confidence to Share", desc: "An identity Odell can put in front of a client without explaining or apologizing for it." },
 ];
 
 export default function FortifiedMotherhood() {
+  /**
+   * Brand guide lightbox. Portalled to document.body so it clears the fixed
+   * navbar (z-100) regardless of the stacking context this section sits in —
+   * a plain z-index on a transformed ancestor is not enough.
+   */
+  const [guidePage, setGuidePage] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    if (guidePage === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setGuidePage(null);
+      if (e.key === "ArrowRight") setGuidePage((n) => (n === null ? n : (n % 3) + 1));
+      if (e.key === "ArrowLeft") setGuidePage((n) => (n === null ? n : ((n + 1) % 3) + 1));
+    };
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [guidePage]);
+
   useSEO({
     title: "Fortified Motherhood Brand Identity | Black Rabbit Creative, Portsmouth NH",
     description:
@@ -216,7 +242,7 @@ export default function FortifiedMotherhood() {
               The Challenge
             </span>
             <p className="text-black/60 leading-[1.9] text-[0.95rem] mb-5">
-              Postpartum branding has become wallpaper. Lotus flowers, mother-and-child silhouettes, watercolour
+              Postpartum branding has become wallpaper. Lotus flowers, mother-and-child silhouettes, watercolor
               florals, flowing scripts and blush palettes show up on almost every brand. A new mother searching for
               support cannot tell one practice from the next.
             </p>
@@ -262,11 +288,11 @@ export default function FortifiedMotherhood() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="font-black uppercase tracking-[0.06em] leading-[1.1] text-white mb-8"
-            style={{ fontSize: "clamp(1.6rem, 3.4vw, 3rem)" }}
+            className="font-black uppercase tracking-[0.06em] leading-[1.12] text-white mb-8 max-w-3xl mx-auto"
+            style={{ fontSize: "clamp(1.5rem, 3vw, 2.6rem)" }}
           >
-            Less baby shower.{" "}
-            <em className="not-italic" style={{ color: steelBlue }}>More ancient wisdom<br className="hidden md:block" /> meets modern woman.</em>
+            Nobody in this space was pairing{" "}
+            <em className="not-italic" style={{ color: steelBlue }}>intimacy with strength</em>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -275,15 +301,17 @@ export default function FortifiedMotherhood() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-white/45 leading-[1.9] text-[0.95rem] max-w-2xl mx-auto"
           >
-            I started with strategy: defining two core clients, analysing regional and national competitors, and mapping
-            the brand&rsquo;s personality. The finding was clear. Nobody in this space was pairing intimacy with strength.
-            That became the direction, and every decision after it — colour, type, illustration, pattern — was made
-            against it.
+            I started with strategy: defining two core clients, analyzing regional and national competitors, and mapping
+            the brand&rsquo;s personality. Every practice was leaning one way or the other — soft and soothing, or
+            clinical and credible. None of them were doing both, which is exactly what Odell&rsquo;s work is. That gap
+            became the direction, shorthanded in the studio as <em className="not-italic text-white/70">less baby
+            shower, more ancient wisdom meets modern woman</em>. Every decision after it — color, type, illustration,
+            pattern — was made against it.
           </motion.p>
         </div>
       </section>
 
-      {/* ── Colour ── */}
+      {/* ── Color ── */}
       <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28" style={{ backgroundColor: "#141b1e" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -300,7 +328,7 @@ export default function FortifiedMotherhood() {
               className="font-black uppercase tracking-[0.07em] leading-[1.05] text-white"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
             >
-              Colour
+              Color
             </h2>
             <p className="mt-4 text-white/40 text-sm leading-[1.9] max-w-2xl">
               A deep pomegranate carries the mark. Steel blue and slate hold the brand steady around it, forest green
@@ -405,7 +433,7 @@ export default function FortifiedMotherhood() {
             </h2>
             <p className="mt-4 text-white/40 text-sm leading-[1.9] max-w-2xl">
               A complete system rather than a single mark: primary, secondary, logo mark and submark, plus versions
-              carrying the tagline and the service line. Each ships in colour, black and reversed, for print and
+              carrying the tagline and the service line. Each ships in color, black and reversed, for print and
               digital. Every mark holds up on a website header, an Instagram avatar or a stamped tote bag.
             </p>
           </motion.div>
@@ -425,16 +453,16 @@ export default function FortifiedMotherhood() {
                   {item.role}
                 </span>
                 <div
-                  className="flex-1 flex items-center justify-center rounded-sm mb-4 p-4"
-                  style={{ minHeight: 140, backgroundColor: "rgba(141,182,200,0.07)" }}
+                  className="flex-1 flex items-center justify-center rounded-sm mb-5 px-5 py-8"
+                  style={{ minHeight: 230, backgroundColor: "rgba(141,182,200,0.07)" }}
                 >
                   <Image
                     src={`${A}/${item.file}.webp`}
-                    width={1200}
-                    height={1200}
-                    sizes="(max-width: 1024px) 50vw, 300px"
+                    width={item.w}
+                    height={item.h}
+                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 300px"
                     alt={`Fortified Motherhood ${item.role.toLowerCase()}`}
-                    className="max-w-full h-auto max-h-[140px] w-auto object-contain"
+                    className="w-full h-auto max-h-[200px] object-contain"
                   />
                 </div>
                 <p className="text-[11px] text-white/35 leading-relaxed">{item.note}</p>
@@ -482,14 +510,14 @@ export default function FortifiedMotherhood() {
                 transition={{ duration: 0.6, delay: (i % 4) * 0.08 }}
                 className="bg-white p-8 flex flex-col"
               >
-                <div className="flex items-center justify-center mb-6" style={{ minHeight: 150 }}>
+                <div className="flex items-center justify-center mb-7" style={{ minHeight: 230 }}>
                   <Image
                     src={`${A}/illo-${item.slug}.webp`}
-                    width={900}
-                    height={900}
-                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 260px"
+                    width={item.w}
+                    height={item.h}
+                    sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, 220px"
                     alt={`${item.name} — hand-drawn botanical illustration for Fortified Motherhood by Black Rabbit Creative`}
-                    className="w-auto h-auto max-h-[150px] max-w-[150px] object-contain"
+                    className="w-auto h-auto max-h-[210px] max-w-full object-contain"
                   />
                 </div>
                 <p className="text-[9px] uppercase tracking-[0.3em] mb-2" style={{ color: pomegranate }}>
@@ -504,7 +532,7 @@ export default function FortifiedMotherhood() {
       </section>
 
       {/* ── Pattern ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28" style={{ backgroundColor: ink }}>
+      <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28 border-t border-black/8" style={{ backgroundColor: ivory }}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <motion.div
             className="lg:col-span-4"
@@ -513,16 +541,16 @@ export default function FortifiedMotherhood() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4" style={{ color: steelBlue }}>
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4" style={{ color: pomegranate }}>
               Brand System
             </span>
             <h2
-              className="font-black uppercase tracking-[0.07em] leading-[1.05] text-white mb-6"
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-6"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
             >
               Pattern
             </h2>
-            <p className="text-white/45 leading-[1.9] text-[0.95rem]">
+            <p className="text-black/60 leading-[1.9] text-[0.95rem]">
               The botanicals are woven into a repeating pattern that brings texture and richness to packaging, print,
               merchandise and digital backgrounds. It is used as accent, not decoration — a way for the brand to fill a
               surface without ever repeating the logo.
@@ -535,14 +563,16 @@ export default function FortifiedMotherhood() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            <Image
-              src={`${A}/pattern.webp`}
-              width={1600}
-              height={1013}
-              sizes="(max-width: 1024px) 100vw, 780px"
-              alt="Fortified Motherhood repeating botanical pattern built from the hand-drawn herbs"
-              className="w-full h-auto object-contain"
-            />
+            <div className="bg-white p-5 md:p-8 border border-black/8">
+              <Image
+                src={`${A}/pattern.webp`}
+                width={1600}
+                height={1013}
+                sizes="(max-width: 1024px) 100vw, 780px"
+                alt="Fortified Motherhood repeating botanical pattern built from the hand-drawn herbs"
+                className="w-full h-auto object-contain"
+              />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -649,12 +679,16 @@ export default function FortifiedMotherhood() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[1, 2, 3].map((n, i) => (
-              <motion.div
+              <motion.button
                 key={n}
+                type="button"
+                onClick={() => setGuidePage(n)}
+                aria-label={`Expand brand guide page ${n} of 3`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: i * 0.1 }}
+                className="group relative block w-full overflow-hidden border border-white/10 transition-colors duration-300 hover:border-[#8DB6C8]/70 focus:outline-none focus-visible:border-[#8DB6C8]"
               >
                 <Image
                   src={`${A}/brand-guide-${n}.webp`}
@@ -662,9 +696,14 @@ export default function FortifiedMotherhood() {
                   height={1812}
                   sizes="(max-width: 768px) 100vw, 380px"
                   alt={`Fortified Motherhood brand guide page ${n} of 3 — designed by Black Rabbit Creative`}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 />
-              </motion.div>
+                <span className="pointer-events-none absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                  <span className="mb-5 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white">
+                    <Expand size={12} /> Page {n} of 3
+                  </span>
+                </span>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -692,7 +731,7 @@ export default function FortifiedMotherhood() {
             <p className="text-black/60 leading-[1.9] text-[0.95rem]">
               Fortified Motherhood now has a brand that matches the depth of Odell&rsquo;s work. Every element carries
               meaning: the pomegranate mark, the old-style type, and herbs drawn by hand that postpartum women have
-              relied on for centuries. The system is complete — a full logo suite, brand typography and colour, eight
+              relied on for centuries. The system is complete — a full logo suite, brand typography and color, eight
               hand-drawn illustrations, a signature pattern and a brand guide — and it is ready for her website, her
               virtual coaching and the community-funded care she plans to offer one day.
             </p>
@@ -767,6 +806,79 @@ export default function FortifiedMotherhood() {
           </motion.div>
         </div>
       </section>
+
+      {/* ── Brand guide lightbox (portalled to body) ── */}
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {guidePage !== null && (
+              <motion.div
+                key="guide-lightbox"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18 }}
+                className="fixed inset-0 z-[130] flex flex-col bg-black/95 backdrop-blur-sm"
+                role="dialog"
+                aria-modal="true"
+                aria-label={`Fortified Motherhood brand guide, page ${guidePage} of 3`}
+                onClick={() => setGuidePage(null)}
+              >
+                <div className="flex shrink-0 items-center justify-between px-5 py-4 md:px-8">
+                  <span className="text-[10px] uppercase tracking-[0.24em] text-white/45">
+                    Brand Guide — {guidePage} / 3
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => setGuidePage(null)}
+                    aria-label="Close"
+                    className="text-white/50 transition-colors duration-200 hover:text-white"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                <div className="relative flex min-h-0 flex-1 items-center justify-center px-4 pb-6 md:px-16">
+                  <button
+                    type="button"
+                    aria-label="Previous page"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setGuidePage((n) => (n === null ? n : ((n + 1) % 3) + 1));
+                    }}
+                    className="absolute left-2 z-10 p-3 text-white/40 transition-colors duration-200 hover:text-white md:left-6"
+                  >
+                    <ArrowLeft size={22} />
+                  </button>
+
+                  <Image
+                    key={guidePage}
+                    src={`${A}/brand-guide-${guidePage}.webp`}
+                    width={1400}
+                    height={1812}
+                    sizes="(max-width: 768px) 92vw, 70vh"
+                    alt={`Fortified Motherhood brand guide page ${guidePage} of 3 — designed by Black Rabbit Creative`}
+                    className="max-h-full w-auto max-w-full object-contain"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+
+                  <button
+                    type="button"
+                    aria-label="Next page"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setGuidePage((n) => (n === null ? n : (n % 3) + 1));
+                    }}
+                    className="absolute right-2 z-10 p-3 text-white/40 transition-colors duration-200 hover:text-white md:right-6"
+                  >
+                    <ArrowRight size={22} />
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>,
+          document.body,
+        )}
 
     </div>
   );
