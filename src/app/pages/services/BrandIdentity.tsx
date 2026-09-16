@@ -15,44 +15,83 @@ const senseImg = "/assets/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
 const lobsterMenuImg = "/assets/03f18bfe8e04d5774abf120d1f3fad955b9c299e.png";
 const lobsterHoodieImg = "/assets/3600427455a05045405b90350f411e3023b4f419.png";
 
-const packages = [
+/**
+ * Shared terms shown under both packages. Same words on each card on purpose —
+ * they are conditions of the engagement, not differentiators.
+ */
+const packageNotes = [
+  "One concept, not a menu. Three marks get built so they can be judged at real size. One gets finished and presented.",
+  "Start dates are held by a signed agreement and a cleared deposit — a signature alone doesn\u2019t hold a slot.",
+];
+
+const SCOPE_NOTE =
+  "Works whether you\u2019re starting from scratch or already have a brand.";
+
+type ProcessStep = { num: string; title: string; when?: string; desc: string };
+
+type Package = {
+  id: string;
+  label: string;
+  tagline: string;
+  timeline: string;
+  investment: string;
+  recommended: boolean;
+  processLabel: string;
+  process: ProcessStep[];
+  scopeNote: string;
+  deliverables: string[];
+  notes: string[];
+  example: { label: string; href: string };
+};
+
+const packages: Package[] = [
   {
     id: "comprehensive",
     label: "Comprehensive Branding",
-    tagline: "Deep dive into strategy + design for businesses ready to stand out",
-    timeline: "8–12 weeks",
-    investment: "Custom pricing",
+    tagline:
+      "Strategy and design for businesses ready to stop looking like their competitors",
+    timeline: "12 weeks",
+    investment: "Quoted per project",
     recommended: true,
+    processLabel: "Process",
     process: [
       {
         num: "1",
-        title: "Research & Strategy",
-        desc: "Discovery session, competitor research, brand direction",
+        title: "Research, Strategy & Direction",
+        when: "Weeks 1–3",
+        desc: "Audience, competitors, messaging, and an approved creative direction",
       },
       {
         num: "2",
-        title: "Mood Boards & Concept",
-        desc: "Visual exploration and creative direction",
+        title: "Design Production",
+        when: "Weeks 4–7",
+        desc: "The full visual system, built and tested",
       },
       {
         num: "3",
-        title: "Design & Logo Suite",
-        desc: "Full logo system, illustrations, color palette",
+        title: "Brand Presentation",
+        when: "Weeks 8–10",
+        desc: "One direction, fully realized",
       },
       {
         num: "4",
-        title: "Templates & Guidelines",
-        desc: "Templates, brand guidelines, packaged files",
+        title: "Guidelines & Delivery",
+        when: "Weeks 11–12",
+        desc: "Guidelines, final files, handover",
       },
     ],
+    scopeNote: SCOPE_NOTE,
     deliverables: [
-      "In-depth brand strategy + presentation",
-      "Complete logo suite (primary, secondary, submarks)",
-      "Custom illustrations or patterns",
-      "Font pairings + color palette",
-      "Branded templates",
-      "Comprehensive brand guidelines",
+      "Brand strategy and presentation",
+      "Complete logo system — primary, secondary, submarks",
+      "Custom illustrations and pattern",
+      "Color and type systems",
+      "22-page brand guidelines, plus a 4-page quick reference",
+      "Final files in AI, PDF and PNG — EPS and SVG on request",
+      "Handover call",
+      "8 rounds of revisions",
     ],
+    notes: packageNotes,
     example: {
       label: "See Elm City Brewing",
       href: "/work/elm-city-brewing",
@@ -61,35 +100,40 @@ const packages = [
   {
     id: "streamlined",
     label: "Streamlined Branding",
-    tagline: "Essential professional identity for businesses who need clarity fast",
-    timeline: "6–8 weeks",
-    investment: "Custom pricing",
+    tagline: "A complete identity for businesses who need clarity fast",
+    timeline: "6 weeks",
+    investment: "Quoted per project",
     recommended: false,
+    processLabel: "Process — 2 weeks each",
     process: [
       {
         num: "1",
         title: "Mini Strategy & Mood Boards",
-        desc: "Focused session to define goals and direction",
+        desc: "Positioning, competitors, and two directions to choose from",
       },
       {
         num: "2",
         title: "Design & Logo Suite",
-        desc: "Professional logo system, patterns, colors",
+        desc: "Logo system, illustrations or pattern, color and type",
       },
       {
         num: "3",
-        title: "Brand Guidelines & Wrap-Up",
-        desc: "Concise guidelines + packaged files",
+        title: "Guidelines & Wrap-Up",
+        desc: "4-page Brand Guide, final files, handover",
       },
     ],
+    scopeNote: SCOPE_NOTE,
     deliverables: [
       "Mini strategy presentation",
-      "Cohesive logo suite",
-      "Illustrations or patterns",
-      "Font pairings + color palette",
-      "Concise brand guidelines",
-      "2 rounds of revisions at each stage",
+      "Logo suite — primary, secondary, mark",
+      "3–5 illustrations or one pattern set",
+      "Color palette and font pairings",
+      "4-page Brand Guide",
+      "Final files in AI, PDF and PNG — EPS and SVG on request",
+      "Handover call",
+      "6 rounds of revisions",
     ],
+    notes: packageNotes,
     example: {
       label: "See Basic Balance Acupuncture",
       href: "/work/basic-balance-acupuncture",
@@ -100,19 +144,19 @@ const packages = [
 const faqs = [
   {
     q: "What's the difference between Comprehensive and Streamlined?",
-    a: "Comprehensive Branding is a full deep-dive — in-depth strategy, custom illustrations, and a complete brand system built over 8–12 weeks. Streamlined Branding is a focused, faster engagement ideal for businesses that need a professional identity quickly, delivered in 6–8 weeks.",
+    a: "Comprehensive Branding runs 12 weeks and builds the whole system — strategy, a full logo system, custom illustration and pattern, and 22 pages of guidelines. Streamlined Branding runs 6 weeks and delivers a complete, usable identity with a 4-page brand guide. Both are real identities; the difference is depth, not quality.",
   },
   {
     q: "How long does each stage take?",
-    a: "Each stage runs approximately 2 weeks. This gives us enough time to do the work properly and gives you enough time to review and respond thoughtfully at each milestone.",
+    a: "Streamlined runs three stages of two weeks each. Comprehensive is weighted differently — three weeks on research and direction, four on design production, three on presentation and two on guidelines and delivery. Either way the pacing leaves you time to review properly rather than react.",
   },
   {
     q: "How many revisions do I get?",
-    a: "The Streamlined package includes 2 rounds of revisions at each stage. Comprehensive projects are handled collaboratively — we work together until the direction is right, within the agreed scope.",
+    a: "Six rounds on Streamlined, eight on Comprehensive, spread across the project rather than saved for the end. Both work the same way: one concept is developed, not a menu of options. Three marks get built so they can be judged at real size, and one gets finished and presented.",
   },
   {
     q: "How is pricing determined?",
-    a: "Both packages are custom-priced based on the scope and complexity of your project. We don't believe in one-size-fits-all pricing — reach out and we'll put together a proposal tailored to your needs.",
+    a: "Both packages are quoted per project, based on scope and complexity. Reach out and you will get a proposal with the work and the price written down. Start dates are held by a signed agreement and a cleared deposit — a signature alone doesn't hold a slot.",
   },
   {
     q: "What do I need to prepare before we start?",
@@ -428,7 +472,7 @@ export default function BrandIdentity() {
                 {/* Process steps */}
                 <div className="mb-10">
                   <p className="text-[10px] uppercase tracking-[0.3em] mb-6 text-gray-500">
-                    Process — 2 weeks each
+                    {pkg.processLabel}
                   </p>
                   <div className="space-y-0">
                     {pkg.process.map((step) => (
@@ -442,6 +486,11 @@ export default function BrandIdentity() {
                         <div>
                           <p className="text-sm font-bold uppercase tracking-[0.06em] mb-1 text-white">
                             {step.title}
+                            {step.when ? (
+                              <span className="ml-2 font-normal normal-case tracking-normal text-xs text-gray-500">
+                                {step.when}
+                              </span>
+                            ) : null}
                           </p>
                           <p className="text-xs leading-relaxed text-gray-500">
                             {step.desc}
@@ -451,6 +500,9 @@ export default function BrandIdentity() {
                     ))}
                     <div className="border-t border-white/10" />
                   </div>
+                  <p className="text-xs leading-relaxed text-gray-500 mt-5">
+                    {pkg.scopeNote}
+                  </p>
                 </div>
 
                 {/* Deliverables */}
@@ -468,6 +520,13 @@ export default function BrandIdentity() {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-8 pt-6 border-t border-white/10 space-y-3">
+                    {pkg.notes.map((note) => (
+                      <p key={note} className="text-xs leading-relaxed text-gray-500">
+                        {note}
+                      </p>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Example project link */}
@@ -490,7 +549,7 @@ export default function BrandIdentity() {
                   className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 uppercase tracking-[0.25em] text-xs font-bold transition-all duration-500 overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 text-white hover:bg-white/10 hover:border-white/30 shadow-[0_0_20px_rgba(255,255,255,0.05)]"
                 >
                   <span className="relative z-10 flex items-center gap-3">
-                    Enquire About This Package <ArrowRight size={13} />
+                    Inquire About This Package <ArrowRight size={13} />
                   </span>
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/15 to-transparent" />
                 </Link>
