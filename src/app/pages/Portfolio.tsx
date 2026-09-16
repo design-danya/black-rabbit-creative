@@ -18,11 +18,22 @@ const badgerBalmThumb = "/assets/24b92cae45ca047c0ff92c7910f024424d35b8af.png";
 const lobsterLabThumb = "/assets/eb19e6f509c3380dcf33a87840d5d7aad8341860.png";
 const hitchhikersThumb = "/assets/7247983c9ca5f40235ae9b6a57322f2241c68aa8.png";
 const elmCityThumb = "/assets/dc05ed0777eabfe2a20f4c9e9b1782312618c371.png";
+const fortifiedMotherhoodThumb = "/assets/fortified-motherhood/thumb.webp";
 import monadnockBerriesThumb from "../../imports/Untitled-8.png";
 
 const CATEGORIES = ["All", "Branding", "Logo Design", "Packaging", "Graphic Design", "Case Studies", "Books"];
 
 const projects = [
+  {
+    id: 15,
+    title: "Fortified Motherhood",
+    category: "Branding",
+    desc: "Strategy, identity and eight hand-drawn botanicals for a postpartum care practice.",
+    image: fortifiedMotherhoodThumb,
+    href: "/work/fortified-motherhood",
+    year: "2026",
+    tag: "New",
+  },
   {
     id: 14,
     title: "Monadnock Berries",

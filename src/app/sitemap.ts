@@ -34,6 +34,7 @@ const PAGES: Entry[] = [
   { path: '/about/press-awards',            lastModified: '2026-09-10', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/contact',                       lastModified: '2026-09-10', priority: 0.8, changeFrequency: 'monthly' },
 
+  { path: '/work/fortified-motherhood',     lastModified: '2026-09-16', priority: 0.8, changeFrequency: 'yearly'  },
   { path: '/work/monadnock-berries',        lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
   { path: '/work/elm-city-brewing',         lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },
   { path: '/work/granite-roots-brewing',    lastModified: '2026-07-23', priority: 0.8, changeFrequency: 'yearly'  },

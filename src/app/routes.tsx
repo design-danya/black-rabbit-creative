@@ -30,6 +30,7 @@ const CaseStudies = lazy(() => import("./pages/portfolio/CaseStudies"));
 const Books = lazy(() => import("./pages/portfolio/Books"));
 const ElmCityBrewing = lazy(() => import("./pages/portfolio/ElmCityBrewing"));
 const MonadnockBerries = lazy(() => import("./pages/portfolio/MonadnockBerries"));
+const FortifiedMotherhood = lazy(() => import("./pages/portfolio/FortifiedMotherhood"));
 const FAQ = lazy(() => import("./pages/about/FAQ"));
 const PressAwards = lazy(() => import("./pages/about/PressAwards"));
 
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
       {
         path: "work/elm-city-brewing",
         Component: ElmCityBrewing,
+      },
+      {
+        path: "work/fortified-motherhood",
+        Component: FortifiedMotherhood,
       },
       {
         path: "work/monadnock-berries",
