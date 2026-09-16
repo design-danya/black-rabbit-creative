@@ -124,6 +124,41 @@ export function serviceSchema(opts: {
   }
 }
 
+/**
+ * A portfolio case study. CreativeWork rather than Article: the page is the
+ * record of a design project, and `about` names the client so an assistant
+ * asked "who designed Fortified Motherhood" can connect the two.
+ */
+export function caseStudySchema(opts: {
+  name: string
+  headline: string
+  description: string
+  path: string
+  image: string
+  clientName: string
+  datePublished: string
+  keywords: string[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': `${SITE_URL}${opts.path}#case-study`,
+    name: opts.name,
+    headline: opts.headline,
+    description: opts.description,
+    url: `${SITE_URL}${opts.path}`,
+    image: `${SITE_URL}${opts.image}`,
+    datePublished: opts.datePublished,
+    inLanguage: 'en-US',
+    creator: { '@id': `${SITE_URL}/#organization` },
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    about: { '@type': 'Organization', name: opts.clientName },
+    keywords: opts.keywords.join(', '),
+    isPartOf: { '@type': 'CollectionPage', name: 'Work', url: `${SITE_URL}/work` },
+  }
+}
+
 /** Trail for a page, so crawlers and assistants can place it in the site. */
 export function breadcrumbSchema(trail: { name: string; path: string }[]) {
   return {

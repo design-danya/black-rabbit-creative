@@ -6,6 +6,8 @@ import { ArrowLeft, ArrowRight, X, Expand } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
+import { Accordion } from "../../components/Accordion";
+import { fortifiedFaq } from "../../data/fortifiedFaq";
 
 const A = "/assets/fortified-motherhood";
 
@@ -141,7 +143,10 @@ export default function FortifiedMotherhood() {
             </span>
             <h1
               className="font-black uppercase tracking-[0.07em] leading-[0.93] max-w-4xl text-white"
-              style={{ fontSize: "clamp(2.8rem, 6vw, 6rem)" }}
+              /* "Motherhood" is long enough to overflow a 360px phone at the
+                 2.8rem floor the other case studies use, so this one starts
+                 smaller and ramps faster. */
+              style={{ fontSize: "clamp(2.1rem, 8vw, 6rem)" }}
             >
               Fortified{" "}
               <em className="not-italic" style={{ color: steelBlue }}>Motherhood</em>
@@ -438,7 +443,7 @@ export default function FortifiedMotherhood() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/8">
             {logoSuite.map((item, i) => (
               <motion.div
                 key={item.role}
@@ -453,16 +458,16 @@ export default function FortifiedMotherhood() {
                   {item.role}
                 </span>
                 <div
-                  className="flex-1 flex items-center justify-center rounded-sm mb-5 px-5 py-8"
-                  style={{ minHeight: 230, backgroundColor: "rgba(141,182,200,0.07)" }}
+                  className="flex-1 flex items-center justify-center rounded-sm mb-5 px-6 py-10 md:px-10 md:py-12"
+                  style={{ minHeight: 300, backgroundColor: "rgba(141,182,200,0.07)" }}
                 >
                   <Image
                     src={`${A}/${item.file}.webp`}
                     width={item.w}
                     height={item.h}
-                    sizes="(max-width: 640px) 70vw, (max-width: 1024px) 40vw, 300px"
+                    sizes="(max-width: 640px) 78vw, 560px"
                     alt={`Fortified Motherhood ${item.role.toLowerCase()}`}
-                    className="w-full h-auto max-h-[200px] object-contain"
+                    className="w-auto h-auto max-h-[280px] max-w-full object-contain"
                   />
                 </div>
                 <p className="text-[11px] text-white/35 leading-relaxed">{item.note}</p>
@@ -581,6 +586,63 @@ export default function FortifiedMotherhood() {
         </div>
       </section>
 
+      {/* ── Brand guide ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28" style={{ backgroundColor: "#141b1e" }}>
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4" style={{ color: steelBlue }}>
+              Delivery
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] text-white"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
+            >
+              Brand Guide
+            </h2>
+            <p className="mt-4 text-white/40 text-sm leading-[1.9] max-w-2xl">
+              Written for the people who will actually use it — a printer, a merch vendor, Odell herself at eleven at
+              night. Logo rules, the full palette with production values, the botanical tokens and what each one means.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((n, i) => (
+              <motion.button
+                key={n}
+                type="button"
+                onClick={() => setGuidePage(n)}
+                aria-label={`Expand brand guide page ${n} of 3`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                className="group relative block w-full overflow-hidden border border-white/10 transition-colors duration-300 hover:border-[#8DB6C8]/70 focus:outline-none focus-visible:border-[#8DB6C8]"
+              >
+                <Image
+                  src={`${A}/brand-guide-${n}.webp`}
+                  width={1400}
+                  height={1812}
+                  sizes="(max-width: 768px) 100vw, 380px"
+                  alt={`Fortified Motherhood brand guide page ${n} of 3 — designed by Black Rabbit Creative`}
+                  className="w-full h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                />
+                <span className="pointer-events-none absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                  <span className="mb-5 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white">
+                    <Expand size={12} /> Page {n} of 3
+                  </span>
+                </span>
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Brand in action ── */}
       <section style={{ backgroundColor: ink }} className="py-20 md:py-28 border-t border-white/5">
         <div className="px-6 md:px-16 lg:px-24 max-w-7xl mx-auto mb-14">
@@ -656,63 +718,6 @@ export default function FortifiedMotherhood() {
         </div>
       </section>
 
-      {/* ── Brand guide ── */}
-      <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28" style={{ backgroundColor: "#141b1e" }}>
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4" style={{ color: steelBlue }}>
-              Delivery
-            </span>
-            <h2
-              className="font-black uppercase tracking-[0.07em] leading-[1.05] text-white"
-              style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
-            >
-              Brand Guide
-            </h2>
-            <p className="mt-4 text-white/40 text-sm leading-[1.9] max-w-2xl">
-              Written for the people who will actually use it — a printer, a merch vendor, Odell herself at eleven at
-              night. Logo rules, the full palette with production values, the botanical tokens and what each one means.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((n, i) => (
-              <motion.button
-                key={n}
-                type="button"
-                onClick={() => setGuidePage(n)}
-                aria-label={`Expand brand guide page ${n} of 3`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-                className="group relative block w-full overflow-hidden border border-white/10 transition-colors duration-300 hover:border-[#8DB6C8]/70 focus:outline-none focus-visible:border-[#8DB6C8]"
-              >
-                <Image
-                  src={`${A}/brand-guide-${n}.webp`}
-                  width={1400}
-                  height={1812}
-                  sizes="(max-width: 768px) 100vw, 380px"
-                  alt={`Fortified Motherhood brand guide page ${n} of 3 — designed by Black Rabbit Creative`}
-                  className="w-full h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                />
-                <span className="pointer-events-none absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                  <span className="mb-5 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] text-white">
-                    <Expand size={12} /> Page {n} of 3
-                  </span>
-                </span>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Outcome ── */}
       <section className="bg-white px-6 md:px-16 lg:px-24 py-20 md:py-28">
         <div className="max-w-7xl mx-auto">
@@ -770,6 +775,30 @@ export default function FortifiedMotherhood() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-20 md:py-28" style={{ backgroundColor: ink }}>
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4" style={{ color: steelBlue }}>
+              About This Project
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] text-white"
+              style={{ fontSize: "clamp(1.5rem, 3vw, 2.4rem)" }}
+            >
+              Questions
+            </h2>
+          </motion.div>
+          <Accordion items={fortifiedFaq} idPrefix="fm-faq" />
         </div>
       </section>
 
