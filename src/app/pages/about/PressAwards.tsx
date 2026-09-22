@@ -4,7 +4,12 @@ import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, Award, Newspaper } from "lucide-react";
 import { useSEO } from "../../components/useSEO";
 
-const awardImage = "https://images.unsplash.com/photo-1619824130478-2fb945b98ae1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBhd2FyZCUyMHRyb3BoeSUyMGdvbGRlbnxlbnwxfHx8fDE3NzUwOTI4NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
+/**
+ * The award row showed a hotlinked stock trophy while its alt text described
+ * the Granite Roots label. Same image the case study and portfolio use, so it
+ * is the actual winning work rather than a photograph of someone's trophy.
+ */
+const awardImage = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 
 interface AwardRow {
   year: string;

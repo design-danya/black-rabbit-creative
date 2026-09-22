@@ -19,8 +19,6 @@ const copperLight = "#D4943A";
 const maroon = "#7B2D26";
 const darkWood = "#1a1510";
 
-const workshopImg =
-  "https://images.unsplash.com/photo-1660006417074-91711e3ff86c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXRoaWVyJTIwZ3VpdGFyJTIwd29ya3Nob3AlMjBjcmFmdHNtYW4lMjB0b29sc3xlbnwxfHx8fDE3NzI0MTY0MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
 const meta = [
   { label: "Client", value: "Hendrick's Lutherie" },
@@ -289,12 +287,17 @@ export default function HendricksLutherie() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="relative overflow-hidden">
-              <ImageWithFallback
-                src={workshopImg}
-                alt="Guitar repair workshop with luthier tools — brand photography for Hendrick's Lutherie by Black Rabbit Creative"
-                className="w-full h-auto object-cover"
-                style={{ aspectRatio: "1/1" }}
+            <div
+              className="relative overflow-hidden flex items-center justify-center p-10 md:p-16"
+              style={{ aspectRatio: "1/1", backgroundColor: "#ffffff" }}
+            >
+              <Image
+                src={badgeLogo}
+                width={1200}
+                height={1200}
+                sizes="(max-width: 1024px) 100vw, 640px"
+                alt="Hendrick's Lutherie circular badge logo with lyre symbol, wordmark and date ring — designed by Black Rabbit Creative"
+                className="w-full h-auto max-h-full object-contain"
               />
             </div>
           </motion.div>
@@ -468,15 +471,12 @@ export default function HendricksLutherie() {
                 </span>
                 <div
                   className="flex-1 flex items-center justify-center rounded-sm mb-4 p-6"
-                  style={{
-                    minHeight: 160,
-                    backgroundColor: "rgba(196,106,44,0.04)",
-                  }}
+                  style={{ minHeight: 190, backgroundColor: "#ffffff" }}
                 >
                   <img
                     src={item.img}
                     alt={`Hendrick's Lutherie ${item.role}`}
-                    className="max-w-full max-h-[160px] object-contain"
+                    className="max-w-full max-h-[170px] object-contain"
                   />
                 </div>
                 <p className="text-[11px] text-white/35 leading-relaxed">
