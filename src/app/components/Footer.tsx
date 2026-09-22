@@ -163,7 +163,7 @@ export function Footer() {
             <h3 className="text-xs uppercase tracking-[0.2em] text-[#7c5fe6] mb-5">Contact</h3>
             <div className="flex flex-col gap-1 text-sm text-gray-400">
               <a href="mailto:hello@blackrabbit-creative.com" className="hover:text-white transition-colors">hello@blackrabbit-creative.com</a>
-              <a href="tel:6032079890" className="mt-3 hover:text-white transition-colors">603-207-9890</a>
+              <a href="tel:8024160905" className="mt-3 hover:text-white transition-colors">802-416-0905</a>
             </div>
           </div>
         </div>

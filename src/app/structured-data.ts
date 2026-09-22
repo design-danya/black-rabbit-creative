@@ -23,7 +23,9 @@ export const organizationSchema = {
   paymentAccepted: 'Cash, Credit Card',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '134 South Street, Apt 4',
+    // Street only — the unit number does nothing for local ranking and this
+    // schema is published on every page of the site.
+    streetAddress: '134 South Street',
     addressLocality: 'Portsmouth',
     addressRegion: 'NH',
     postalCode: '03801',

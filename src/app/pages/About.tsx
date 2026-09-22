@@ -342,10 +342,10 @@ export default function About() {
             <div>
               <p className="text-[11px] uppercase tracking-[0.25em] text-white/40 mb-2">Phone</p>
               <a
-                href="tel:6032079890"
+                href="tel:8024160905"
                 className="text-white hover:text-[#7c5fe6] transition-colors"
               >
-                603-207-9890
+                802-416-0905
               </a>
             </div>
           </motion.div>

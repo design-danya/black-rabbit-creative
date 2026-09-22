@@ -130,7 +130,7 @@ export default function Contact() {
           </div>
           <div>
             <span className="block text-[11px] font-bold uppercase tracking-widest text-[#7c5fe6] mb-1">Phone</span>
-            <a href="tel:6032079890" className="text-base hover:underline">603-207-9890</a>
+            <a href="tel:8024160905" className="text-base hover:underline">802-416-0905</a>
           </div>
         </motion.div>
 
