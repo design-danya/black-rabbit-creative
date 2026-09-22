@@ -145,7 +145,10 @@ export function Footer() {
                 </a>
               ))}
               <a
-                href="https://www.giveratings.com/black-rabbit-creative"
+                /* Was a giveratings.com page that now 404s. Points at the
+                   Google Business Profile review form instead — the same link
+                   the Contact page uses, and where the existing reviews live. */
+                href="https://g.page/r/CVgPQVm1INAxEAE/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-300 hover:text-white transition-colors"
