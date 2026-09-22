@@ -4,7 +4,13 @@ import Link from 'next/link';
 import { useSEO } from "../../components/useSEO";
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check, X, ZoomIn } from "lucide-react";
 const rabbitImg = "/assets/eed29b13bea1a52313221c289bafae04132dc381.png";
+/**
+ * Animated WebP is served where supported; the original GIF stays as the
+ * <picture> fallback. Same loop, a fraction of the bytes — these animations
+ * bypass next/image entirely, so the source file is what the visitor gets.
+ */
 const carrotRabbitImg = "/assets/199e77e547416bd57486c1a74cb2584cf537aa6f.png";
+const CARROT_RABBIT_WEBP = "/assets/packaging-carrot-rabbit.webp";
 const canImg = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
 const sequoiaFlatImg = "/assets/b7de3e886507c7e33eb8252454dbcec51cdc2204.png";
 const sequoiaPeachBoxImg = "/assets/7cc4ef53f0c695cab640f42b7d8c6b0c3607ef03.png";
@@ -140,11 +146,14 @@ export default function PackagingDesign() {
           }}
           className="hidden lg:block absolute top-1/2 -translate-y-1/2 right-[-220px] z-[1] w-[900px] pointer-events-none select-none"
         >
-          <img
-            src={carrotRabbitImg}
-            alt="Black Rabbit Creative mascot — packaging design studio"
-            className="w-full h-auto object-contain"
-          />
+          <picture>
+            <source srcSet={CARROT_RABBIT_WEBP} type="image/webp" />
+            <img
+              src={carrotRabbitImg}
+              alt="Black Rabbit Creative mascot — packaging design studio"
+              className="w-full h-auto object-contain"
+            />
+          </picture>
         </motion.div>
 
         {/* Content */}

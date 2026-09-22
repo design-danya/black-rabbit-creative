@@ -5,7 +5,13 @@ import { useSEO } from "../../components/useSEO";
 import { LogoTypes } from "./LogoTypes";
 import { ArrowRight, ArrowUpRight, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
+/**
+ * Animated WebP is served where supported; the original GIF stays as the
+ * <picture> fallback. Same loop, a fraction of the bytes — these animations
+ * bypass next/image entirely, so the source file is what the visitor gets.
+ */
 const seatedRabbit = "/assets/fd0fa931e00acfa6c15863207bc0a21f97710af2.png";
+const SEATED_RABBIT_WEBP = "/assets/logo-seated-rabbit.webp";
 const kapiloffLogo = "/assets/dac533663b508268f043b4fa54db52f02c04b87c.png";
 const hendricksLogo = "/assets/f1c91b1c74eea1db011e92c7ccbc33ab4d2367e3.png";
 const novaLogo = "/assets/e312a94d37336f32774b6a79ae7fe18a0aa10c91.png";
@@ -137,11 +143,14 @@ export default function LogoDesign() {
           transition={{ duration: 12, times: [0, 0.12, 0.88, 1], repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
         >
           <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#060606] to-transparent z-10" />
-          <img
-            src={seatedRabbit}
-            alt="Black Rabbit Creative mascot — logo design studio"
-            className={`h-full w-full object-contain mix-blend-lighten`}
-          />
+          <picture>
+            <source srcSet={SEATED_RABBIT_WEBP} type="image/webp" />
+            <img
+              src={seatedRabbit}
+              alt="Black Rabbit Creative mascot — logo design studio"
+              className={`h-full w-full object-contain mix-blend-lighten`}
+            />
+          </picture>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,#060606_92%)] z-10" />
         </motion.div>
 
@@ -152,11 +161,14 @@ export default function LogoDesign() {
           animate={{ opacity: [0, 0.3, 0.3, 0] }}
           transition={{ duration: 12, times: [0, 0.12, 0.88, 1], repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
         >
-          <img
-            src={seatedRabbit}
-            alt="Black Rabbit Creative mascot — logo design services"
-            className="h-full w-full object-contain mix-blend-lighten"
-          />
+          <picture>
+            <source srcSet={SEATED_RABBIT_WEBP} type="image/webp" />
+            <img
+              src={seatedRabbit}
+              alt="Black Rabbit Creative mascot — logo design services"
+              className="h-full w-full object-contain mix-blend-lighten"
+            />
+          </picture>
         </motion.div>
       </section>
 

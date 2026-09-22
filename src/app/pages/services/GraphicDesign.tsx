@@ -10,7 +10,13 @@ import { WorkMarquee } from "../../components/WorkMarquee";
 import { designInPracticeCount } from "../../data/designInPractice";
 import { illustrationCount } from "../../data/illustrations";
 const studioImg = "/assets/0073d227197a2d11078c48ed4c9955c144069439.png";
+/**
+ * Animated WebP is served where supported; the original GIF stays as the
+ * <picture> fallback. Same loop, a fraction of the bytes — these animations
+ * bypass next/image entirely, so the source file is what the visitor gets.
+ */
 const rabbitImg = "/assets/9741a92e4ee4c1dd885eaf1bd19cfdc13c2c5de3.png";
+const RABBIT_WEBP = "/assets/graphic-design-rabbit.webp";
 const touchpointImg = "/assets/5d310534f3e3a5364f6b09941e1e6a7aeb24ea11.png";
 
 const capabilities = [
@@ -65,11 +71,14 @@ export default function GraphicDesign() {
               WebkitMaskImage: "radial-gradient(ellipse 70% 85% at 60% 50%, black 42%, transparent 75%)",
             }}
           >
-            <img
-              src={rabbitImg}
-              alt="Black Rabbit Creative mascot — graphic design and illustration studio"
-              className="w-full h-auto object-contain"
-            />
+            <picture>
+              <source srcSet={RABBIT_WEBP} type="image/webp" />
+              <img
+                src={rabbitImg}
+                alt="Black Rabbit Creative mascot — graphic design and illustration studio"
+                className="w-full h-auto object-contain"
+              />
+            </picture>
           </div>
         </motion.div>
 

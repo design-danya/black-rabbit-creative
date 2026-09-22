@@ -10,7 +10,13 @@ import { motion } from "motion/react";
  * Cut out on transparency so it reads against the dark panel around it.
  */
 const danyaImg = "/assets/danya-pugliese-headshot.webp";
+/**
+ * Animated WebP is served where supported; the original GIF stays as the
+ * <picture> fallback. Same loop, a fraction of the bytes — these animations
+ * bypass next/image entirely, so the source file is what the visitor gets.
+ */
 const rabbitBoutiqueImg = "/assets/3103fbe1b861323996fe5b068f0223584004cb92.png";
+const RABBIT_BOUTIQUE_WEBP = "/assets/about-rabbit-boutique.webp";
 
 const beliefs = [
   {
@@ -102,13 +108,16 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             {/* Rabbit — no background, floats above the heading */}
-            <motion.img
-              src={rabbitBoutiqueImg}
-              alt="Animated black rabbit mascot illustration"
-              className="w-72 md:w-96 lg:w-[26rem] object-contain select-none pointer-events-none"
-              animate={{ opacity: [0.15, 1, 0.15] }}
-              transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
-            />
+            <picture>
+              <source srcSet={RABBIT_BOUTIQUE_WEBP} type="image/webp" />
+              <motion.img
+                src={rabbitBoutiqueImg}
+                alt="Animated black rabbit mascot illustration"
+                className="w-72 md:w-96 lg:w-[26rem] object-contain select-none pointer-events-none"
+                animate={{ opacity: [0.15, 1, 0.15] }}
+                transition={{ duration: 5, ease: "easeInOut", repeat: Infinity, repeatType: "loop" }}
+              />
+            </picture>
 
             <h2
               className="font-black uppercase tracking-[0.07em] leading-[1.0]"
