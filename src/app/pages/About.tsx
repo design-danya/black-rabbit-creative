@@ -4,8 +4,12 @@ import { useSEO } from "../components/useSEO";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
-// Headshot — hosted externally // cache-bust-v2
-const danyaImg = "https://i.imgur.com/kUWmB0z.jpeg";
+/**
+ * Headshot. Self-hosted on purpose: this was a hotlink to an image host, which
+ * is one takedown or rate limit away from the About page losing its face.
+ * Cut out on transparency so it reads against the dark panel around it.
+ */
+const danyaImg = "/assets/danya-pugliese-headshot.webp";
 const rabbitBoutiqueImg = "/assets/3103fbe1b861323996fe5b068f0223584004cb92.png";
 
 const beliefs = [
