@@ -15,6 +15,8 @@ const blackTeeImg = "/assets/e7a5c9433856757800295d1d2105caab3566ea9c.png";
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSEO } from "../../components/useSEO";
+import { Accordion } from "../../components/Accordion";
+import { elmCityFaq } from "../../data/elmCityFaq";
 import { motion } from "motion/react";
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
@@ -52,6 +54,49 @@ const brandActionImg = "/assets/f7e123f071199359e7515452e017bb9af26adca6.png";
 const mockupsGridImg = "/assets/6adfb80d05db69570f5834c7e7a4992a22844a96.png";
 const mockupsGrid2Img = "/assets/2a480d17f34915d27e5a6c2efac7b74cf89d41c7.png";
 const keepMeSafeImg = "/assets/4868a6d5ce73a0c1b9b9d5db3f4557ae0c655a11.png";
+
+const challenges = [
+  "Keep thirty years of recognition intact",
+  "Survive at an inch wide, in one color, on fabric",
+  "Work as a restaurant brand and a beer brand at once",
+  "Give staff files they can use without asking a designer",
+  "Read as established, not as new money in an old room",
+];
+
+/** The four decisions in the mark, as documented in the delivered brand guide. */
+const markDecisions = [
+  {
+    label: "Established Date",
+    text: "Kept, not dropped. The date is the one piece of the old mark that cannot be redesigned back into existence, and it does the work of saying this place has been here longer than you have.",
+  },
+  {
+    label: "Diamond Format",
+    text: "The badge shape references traditional brewery signage and historic beer labels. It also gives the brand one silhouette recognizable before any word is read — the thing a detailed mark can never have.",
+  },
+  {
+    label: "Simplified Emblem",
+    text: "Hop and barley, streamlined to a single iconic form. Everything that could not survive being an inch wide came out: the glassware scene, the ribbon, the bevel, the second display face.",
+  },
+  {
+    label: "Classic Serif",
+    text: "Typography carries the heritage so the illustration does not have to. Refined spacing and a real hierarchy — brand, then descriptor, then place — keep it readable at sizes the old lockup could not hold.",
+  },
+];
+
+const palette = [
+  { hex: "#C89B12", label: "Golden Ochre", role: "Primary · 60%", text: "rgba(31,32,16,0.9)", sub: "rgba(31,32,16,0.5)" },
+  { hex: "#1F2010", label: "Eerie Black", role: "Primary", text: "rgba(230,226,211,0.9)", sub: "rgba(230,226,211,0.45)" },
+  { hex: "#7D7F2F", label: "Dark Moss", role: "Secondary · 30%", text: "rgba(230,226,211,0.92)", sub: "rgba(230,226,211,0.55)" },
+  { hex: "#E6E2D3", label: "Eggshell", role: "Secondary", text: "rgba(31,32,16,0.8)", sub: "rgba(31,32,16,0.45)" },
+  { hex: "#D14517", label: "Burnt Sienna", role: "Accent · 10%", text: "rgba(255,255,255,0.95)", sub: "rgba(255,255,255,0.6)" },
+];
+
+const outcomes = [
+  { label: "Equity Kept", desc: "The date, the diamond and the hop-and-barley all carry forward. Regulars recognize it; it simply works now." },
+  { label: "One Mark, Every Surface", desc: "From a street sign to a favicon to an embroidered hat, without a redraw or an apology." },
+  { label: "A Team That Can Self-Serve", desc: "Thirty-one pages written for a bartender and a print vendor, not for a design department." },
+  { label: "Room To Grow", desc: "An illustration set and a stated color ratio mean new menus, new merch and new releases stay on brand." },
+];
 
 const meta = [
   { label: "Client", value: "Elm City Brewing Company" },
@@ -195,6 +240,82 @@ export default function ElmCityBrewing() {
         />
       </section>
 
+      {/* ── The Brief + The Challenge ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-8 text-[#C89B12]">
+              The Brief
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-8 text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.2rem)" }}
+            >
+              Thirty years of goodwill,{" "}
+              <em className="not-italic text-[#C89B12]">and a mark that had drifted</em>
+            </h2>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem]">
+              Elm City Brewing opened in 1994 as Keene&rsquo;s first brewery, in the historic Colony Mill. It is a
+              restaurant as much as a brewery — handcrafted beer alongside from-scratch food, locally sourced, in a
+              room people bring their families to. Nearly three decades in, it had become the thing a town keeps:
+              familiar staff, regulars who do not need a menu, a place that shows up in people&rsquo;s memories of
+              Keene.
+            </p>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem] mt-5">
+              Then it changed hands. New ownership wanted to{" "}
+              <span className="text-[#E6E2D3] font-semibold">honor the heritage and modernize at the same time</span>{" "}
+              — strengthen the brewery&rsquo;s presence without making regulars feel like their local had been
+              replaced by something else.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] text-[#E6E2D3]/30 mb-8">
+              The Challenge
+            </span>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem] mb-5">
+              The existing identity was not a bad idea badly executed. It was a good idea that had accumulated.
+              Three decades of additions had left a mark carrying a beveled banner, a scene of glassware, two display
+              faces, a ribbon, a full illustration and eight colours — all fighting for the same space.
+            </p>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem] mb-8">
+              That reads on a building. It does not read on a coaster, a tap handle, an embroidered hat or an
+              Instagram avatar, which is where a brewery brand actually lives. Staff were improvising, because the
+              files could not do what the job asked of them.
+            </p>
+            <div className="space-y-0">
+              {challenges.map((item, i) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: 16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.07, duration: 0.45 }}
+                  className="flex items-center gap-4 py-3 border-b border-[#E6E2D3]/[0.08] last:border-0"
+                >
+                  <span className="text-[10px] font-black tracking-[0.15em] flex-shrink-0 w-7 text-[#C89B12]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-sm text-[#E6E2D3]/65 leading-snug">{item}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── Process ── */}
       <section className="px-6 md:px-16 lg:px-24 py-4 md:py-5">
         <div className="max-w-7xl mx-auto">
@@ -333,6 +454,159 @@ export default function ElmCityBrewing() {
         </div>
       </section>
 
+      {/* ── Anatomy of the mark ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 max-w-3xl"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              The Mark
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-6 text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
+            >
+              Four decisions,{" "}
+              <em className="not-italic text-[#C89B12]">and what each one is for</em>
+            </h2>
+            <p className="text-[#E6E2D3]/50 leading-[1.9] text-[0.95rem]">
+              Restraint is easy to claim and hard to defend, so every element that stayed had to earn the space it
+              took. Three of the four came from the old mark. That is the point — the work was subtraction and
+              hierarchy, not invention.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#E6E2D3]/[0.08]">
+            {markDecisions.map((d, i) => (
+              <motion.div
+                key={d.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: (i % 2) * 0.08 }}
+                className="p-8 md:p-10 bg-[#1F2010]"
+              >
+                <div className="w-8 h-px mb-6 bg-[#C89B12]" />
+                <p className="text-[11px] uppercase tracking-[0.25em] mb-3 text-[#C89B12]">{d.label}</p>
+                <p className="text-sm text-[#E6E2D3]/55 leading-relaxed">{d.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Color ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10 max-w-3xl"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              Brand System
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-6 text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
+            >
+              Color
+            </h2>
+            <p className="text-[#E6E2D3]/50 leading-[1.9] text-[0.95rem]">
+              Beer, wood and brick — the palette is drawn from the room the brand lives in. Eight colours became
+              five, and the guide states the ratio rather than leaving it to taste: ochre and black at sixty per
+              cent, moss and eggshell at thirty, burnt sienna at ten. That number is what keeps a menu designed next
+              year looking like the same brewery.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-px bg-[#E6E2D3]/[0.08]">
+            {palette.map((c) => (
+              <motion.div
+                key={c.hex}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col justify-between p-6 aspect-square"
+                style={{ backgroundColor: c.hex }}
+              >
+                <p className="text-[9px] uppercase tracking-[0.2em]" style={{ color: c.sub }}>{c.role}</p>
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.2em] mb-1" style={{ color: c.text }}>{c.label}</p>
+                  <p className="text-[10px] font-mono tracking-wider" style={{ color: c.sub }}>{c.hex}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Voice + illustration ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              Voice
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-6 text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
+            >
+              A trusted neighbor,{" "}
+              <em className="not-italic text-[#C89B12]">not a craft-beer brand</em>
+            </h2>
+            <p className="text-[#E6E2D3]/50 leading-[1.9] text-[0.95rem]">
+              Welcoming, honest, proudly local — inviting without being casual, professional without being
+              corporate. The guide gives the team lines they can actually use rather than adjectives they have to
+              interpret, which is why the coasters read{" "}
+              <span className="text-[#E6E2D3]">Stay Awhile</span>,{" "}
+              <span className="text-[#E6E2D3]">Big Bite Energy</span>,{" "}
+              <span className="text-[#E6E2D3]">Worth Stealing</span> and{" "}
+              <span className="text-[#E6E2D3]">Eat Local, Brew Local</span>.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              Illustration
+            </span>
+            <p className="text-[#E6E2D3]/50 leading-[1.9] text-[0.95rem] mb-8">
+              A set built from what is actually on the table — a mug, a can, fries, a burger, a cocktail, a hop in a
+              map pin. Limited palette, consistent weight, drawn to sit beside the logo rather than compete with it,
+              so a menu or a sandwich board can carry personality without a second brand appearing on it.
+            </p>
+            <Image
+              src={illustrationSystemImg}
+              width={2400}
+              height={1350}
+              sizes="(max-width: 1024px) 100vw, 700px"
+              alt="Elm City Brewing illustration system — beer, food and gathering icons with coaster and sandwich board applications | Designed by Black Rabbit Creative"
+              className="w-full h-auto object-contain"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── Brand Guide Slideshow ── */}
       <section id="brand-guidelines" className="px-6 md:px-16 lg:px-24 pb-10 md:pb-14">
         <div className="max-w-7xl mx-auto">
@@ -404,7 +678,7 @@ export default function ElmCityBrewing() {
               {" / "}
               {String(brandSlides.length).padStart(2, "0")}
             </p>
-            <div className="flex gap-1">
+            <div className="flex flex-wrap justify-center gap-1 max-w-full">
               {brandSlides.map((_, i) => (
                 <button
                   key={i}
@@ -556,6 +830,88 @@ export default function ElmCityBrewing() {
           >
             From the bar top to the street — the brand shows up everywhere it matters.
           </motion.p>
+        </div>
+      </section>
+
+      {/* ── Outcome ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 max-w-3xl"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              The Outcome
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] mb-6 text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
+            >
+              The same brewery,{" "}
+              <em className="not-italic text-[#C89B12]">finally legible</em>
+            </h2>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem]">
+              Nobody walking into the Colony Mill should feel their local was replaced, and nobody does. The date,
+              the diamond and the hop-and-barley all survived; what changed is that they now work at every size on
+              every surface the brewery uses. Elm City has a complete system — four marks, a stated color ratio, a
+              typographic hierarchy, an illustration set, social and photography direction, and thirty-one pages
+              written so the team can apply all of it without calling me.
+            </p>
+            <p className="text-[#E6E2D3]/55 leading-[1.9] text-[0.95rem] mt-5">
+              Delivered as a{" "}
+              <Link
+                href="/services/brand-identity"
+                className="font-semibold underline underline-offset-4 decoration-1 text-[#C89B12] hover:text-[#E6E2D3] transition-colors duration-300"
+              >
+                Comprehensive Branding
+              </Link>{" "}
+              package.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#E6E2D3]/[0.08]">
+            {outcomes.map((o, i) => (
+              <motion.div
+                key={o.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08, duration: 0.55 }}
+                className="p-8 md:p-10 bg-[#1F2010]"
+              >
+                <div className="w-8 h-px mb-6 bg-[#C89B12]" />
+                <p className="text-[11px] uppercase tracking-[0.25em] mb-3 text-[#C89B12]">{o.label}</p>
+                <p className="text-sm text-[#E6E2D3]/55 leading-relaxed">{o.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="px-6 md:px-16 lg:px-24 py-16 md:py-24 border-t border-[#E6E2D3]/[0.06]">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10"
+          >
+            <span className="block text-[11px] uppercase tracking-[0.35em] mb-4 text-[#C89B12]">
+              About This Project
+            </span>
+            <h2
+              className="font-black uppercase tracking-[0.07em] leading-[1.05] text-[#E6E2D3]"
+              style={{ fontSize: "clamp(1.5rem, 3vw, 2.4rem)" }}
+            >
+              Questions
+            </h2>
+          </motion.div>
+          <Accordion items={elmCityFaq} idPrefix="elm-city-faq" />
         </div>
       </section>
 

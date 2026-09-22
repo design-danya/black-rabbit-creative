@@ -70,7 +70,7 @@ const whyUs = [
     desc: "No account layer, no handoff to a junior. You talk to the person drawing the label. For a brewery owner already doing four jobs, that means fewer meetings and faster decisions.",
   },
   {
-    title: "Nationally Recognised Work",
+    title: "Nationally Recognized Work",
     desc: "Our Granite Roots label earned a 2025 GDUSA Package Design Award and was featured in the Keene Sentinel. Bold work gets noticed.",
   },
   {
