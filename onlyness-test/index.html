@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Onlyness Test — Black Rabbit Creative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,SOFT,WONK,wght@0,9..144,0..100,0..1,340..900;1,9..144,0..100,0..1,340..700&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121212;--paper:#FFFFFF;--card:#F5F5F6;--ink-soft:#6E6E73;
+    --grey:#9A9AA1;--mark:#5B3FD6;--mark-deep:#4A31B8;--rule:#E4E4E7;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Archivo",system-ui,sans-serif;font-size:16px;line-height:1.5;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px 120px;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:40px 0 40px;border-bottom:2px solid var(--ink);position:relative;}
+  .ears{position:absolute;top:-34px;right:4px;height:94px;width:auto;
+    transform:rotate(180deg);margin:0;pointer-events:none;}
+  @media(min-width:940px){.ears{right:12px;height:104px;top:-38px;}}
+  .eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--mark);margin:0 0 20px;}
+  .hero h1{font-family:"Fraunces",serif;
+    font-variation-settings:"opsz" 144,"SOFT" 30,"WONK" 1,"wght" 860;
+    font-size:clamp(52px,9vw,116px);line-height:.9;letter-spacing:-.02em;margin:0;}
+  .hero h1 em{font-style:italic;color:var(--mark);
+    font-variation-settings:"opsz" 144,"SOFT" 60,"WONK" 1,"wght" 720;}
+  .hero .lede{max-width:640px;margin:26px 0 0;font-size:clamp(16px,2.2vw,19px);}
+  .hero .lede b{font-weight:600;}
+
+  /* ---------- Grid ---------- */
+  .grid{display:grid;grid-template-columns:1fr;gap:40px;padding-top:44px;}
+  @media(min-width:940px){
+    .grid{grid-template-columns:1.1fr 1fr;gap:56px;align-items:start;}
+    .col-form{order:1;} .col-statement{order:2;}
+  }
+
+  /* ---------- Question cards ---------- */
+  .q-intro{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--ink-soft);margin:0 0 22px;}
+  .card{border-top:1px solid var(--rule);padding:28px 0;}
+  .card:first-of-type{border-top:2px solid var(--ink);}
+  .card-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px;}
+  .tag{font-family:"Space Mono",monospace;font-size:12px;font-weight:700;
+    letter-spacing:.06em;color:var(--paper);background:var(--ink);
+    padding:3px 8px;flex:none;line-height:1.2;}
+  .card.filled .tag{background:var(--mark);}
+  .card h2{font-family:"Fraunces",serif;
+    font-variation-settings:"opsz" 60,"SOFT" 20,"WONK" 0,"wght" 620;
+    font-size:26px;line-height:1.05;margin:0;letter-spacing:-.01em;}
+  .card .why{color:var(--ink-soft);font-size:14.5px;margin:0 0 16px;max-width:52ch;}
+  .card textarea{width:100%;background:var(--card);color:var(--ink);
+    border:1.5px solid var(--rule);border-radius:0;
+    font-family:"Archivo",sans-serif;font-size:16px;line-height:1.45;
+    padding:13px 14px;resize:vertical;min-height:64px;
+    transition:border-color .15s ease, box-shadow .15s ease;}
+  .card textarea::placeholder{color:var(--ink-soft);opacity:.7;font-style:italic;}
+  .card textarea:focus{outline:none;border-color:var(--mark);box-shadow:0 0 0 3px rgba(91,63,214,.18);}
+  .card .ex{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--ink-soft);
+    margin:10px 0 0;letter-spacing:.02em;}
+  .card .ex b{color:var(--ink);font-weight:700;}
+
+  .help{margin-top:14px;border-top:1px dashed var(--rule);}
+  .help summary{list-style:none;cursor:pointer;font-family:"Space Mono",monospace;
+    font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mark);padding:11px 0 9px;display:flex;align-items:center;gap:9px;}
+  .help summary::-webkit-details-marker{display:none;}
+  .help summary::before{content:"+";font-weight:700;font-size:13px;}
+  .help[open] summary::before{content:"–";}
+  .help summary:hover{color:var(--mark-deep);}
+  .help .qlist{margin:2px 0 12px;padding-left:20px;color:var(--ink-soft);font-size:14px;line-height:1.55;}
+  .help .qlist li{margin:5px 0;}
+  .help .more{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--ink-soft);margin:0 0 6px;letter-spacing:.02em;}
+  .help .more b{color:var(--ink);font-weight:700;}
+
+  /* ---------- Statement panel ---------- */
+  .panel{background:var(--paper);color:var(--ink);border:2px solid var(--ink);
+    padding:28px 26px 24px;position:relative;
+    transition:border-color .2s ease, box-shadow .2s ease;}
+  @media(min-width:940px){.col-statement{position:sticky;top:20px;align-self:start;
+    max-height:calc(100vh - 40px);overflow-y:auto;}}
+  .panel .p-label{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-soft);margin:0 0 18px;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .counter{color:var(--mark);font-weight:700;flex:none;}
+  .brand-field{margin-bottom:20px;}
+  .brand-field label{display:block;font-family:"Space Mono",monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;}
+  .brand-field input{width:100%;background:transparent;color:var(--ink);
+    border:none;border-bottom:1.5px solid var(--rule);
+    font-family:"Fraunces",serif;font-variation-settings:"opsz" 40,"wght" 600;
+    font-size:22px;padding:4px 0 7px;}
+  .brand-field input::placeholder{color:#B5B5BB;font-style:italic;}
+  .brand-field input:focus{outline:none;border-bottom-color:var(--mark);}
+
+  .rtag{display:none;font-family:"Space Mono",monospace;font-size:10.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--mark);
+    border:1px solid var(--mark);padding:3px 8px;margin:0 0 12px;align-self:flex-start;}
+  .panel.is-refined .rtag{display:inline-block;}
+
+  .statement{font-family:"Fraunces",serif;
+    font-variation-settings:"opsz" 90,"SOFT" 22,"WONK" 0,"wght" 480;
+    font-size:clamp(21px,2.9vw,26px);line-height:1.42;letter-spacing:-.003em;margin:0;}
+  .statement .fixed{color:var(--grey);}
+  .statement .only{color:var(--mark);font-style:italic;
+    font-variation-settings:"opsz" 90,"SOFT" 60,"WONK" 1,"wght" 620;}
+  .slot{color:var(--ink);font-variation-settings:"opsz" 90,"SOFT" 22,"WONK" 0,"wght" 560;}
+  .slot.empty{color:#A6A6AD;font-style:italic;font-size:.84em;
+    border-bottom:1.5px dashed #CFCED4;padding:0 2px 1px;
+    font-variation-settings:"opsz" 40,"wght" 400;}
+
+  .ai-status{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--ink-soft);
+    line-height:1.5;margin:14px 0 0;min-height:0;}
+  .ai-status.err{color:var(--mark-deep);}
+
+  .swap{margin-top:20px;padding-top:18px;border-top:1px solid var(--rule);
+    font-size:13px;color:var(--ink-soft);line-height:1.55;}
+  .swap b{color:var(--mark);font-weight:700;}
+
+  .actions{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;}
+  .btn{font-family:"Space Mono",monospace;font-size:12px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
+    padding:12px 16px;border:1.5px solid var(--ink);background:transparent;
+    color:var(--ink);border-radius:0;
+    transition:background .14s ease,color .14s ease,transform .05s ease,opacity .14s ease;}
+  .btn:hover{background:var(--ink);color:var(--paper);}
+  .btn:active{transform:translateY(1px);}
+  .btn.primary{background:var(--mark);border-color:var(--mark);color:var(--paper);}
+  .btn.primary:hover{background:var(--mark-deep);border-color:var(--mark-deep);}
+  .btn.ghost{border-color:var(--rule);color:var(--ink-soft);}
+  .btn.ghost:hover{background:var(--card);color:var(--ink);}
+  .btn:disabled{opacity:.4;cursor:not-allowed;}
+  .btn:disabled:hover{background:var(--mark);color:var(--paper);}
+  .btn:focus-visible{outline:2px solid var(--mark);outline-offset:2px;}
+  .card textarea:focus-visible,.brand-field input:focus-visible{outline:none;}
+
+  .panel.complete{border-color:var(--mark);box-shadow:0 0 0 4px rgba(91,63,214,.12);}
+  .stamp{position:absolute;top:-14px;right:22px;background:var(--paper);
+    font-family:"Space Mono",monospace;font-size:11px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--mark);
+    border:1.5px solid var(--mark);padding:4px 10px;transform:rotate(-3deg);
+    opacity:0;transition:opacity .3s ease;}
+  .panel.complete .stamp{opacity:1;}
+
+  .pill{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:5;
+    background:var(--ink);color:var(--paper);font-family:"Space Mono",monospace;
+    font-size:12px;letter-spacing:.06em;padding:11px 16px;display:flex;gap:12px;
+    align-items:center;box-shadow:0 6px 24px rgba(0,0,0,.28);cursor:pointer;
+    border:1.5px solid var(--mark);}
+  .pill .pc{color:#a58cff;font-weight:700;}
+  @media(min-width:940px){.pill{display:none;}}
+
+  .footer-note{margin-top:56px;padding-top:22px;border-top:1px solid var(--rule);
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;
+    color:var(--ink-soft);text-transform:uppercase;}
+  .footer-note b{color:var(--ink);}
+
+  /* ---------- Brand gap report (lead magnet) ---------- */
+  .audit{border:2px solid var(--ink);padding:26px 24px 24px;margin-top:22px;}
+  .audit h3{font-family:"Fraunces",serif;
+    font-variation-settings:"opsz" 60,"SOFT" 20,"WONK" 0,"wght" 640;
+    font-size:23px;line-height:1.08;margin:0 0 8px;letter-spacing:-.01em;}
+  .audit .a-sub{color:var(--ink-soft);font-size:14px;margin:0 0 20px;max-width:46ch;}
+  .audit .a-field{margin-bottom:14px;}
+  .audit .a-field label{display:block;font-family:"Space Mono",monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  .audit .a-field input{width:100%;background:var(--card);color:var(--ink);
+    border:1.5px solid var(--rule);border-radius:0;
+    font-family:"Archivo",sans-serif;font-size:15px;padding:11px 12px;
+    transition:border-color .15s ease,box-shadow .15s ease;}
+  .audit .a-field input:focus{outline:none;border-color:var(--mark);box-shadow:0 0 0 3px rgba(91,63,214,.18);}
+  .audit .a-consent{font-family:"Space Mono",monospace;font-size:10.5px;color:var(--ink-soft);
+    letter-spacing:.02em;line-height:1.55;margin:2px 0 16px;}
+  .audit .btn{width:100%;text-align:center;}
+  .audit .a-status{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--ink-soft);
+    line-height:1.5;margin:12px 0 0;}
+  .audit .a-status.err{color:var(--mark-deep);}
+  .audit .a-results{margin-top:22px;display:none;}
+  .audit.has-results .a-results{display:block;}
+  .audit .r-summary{font-family:"Fraunces",serif;
+    font-variation-settings:"opsz" 60,"SOFT" 20,"WONK" 0,"wght" 500;
+    font-size:18px;line-height:1.42;margin:0 0 6px;}
+  .audit .r-h{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--mark);margin:20px 0 8px;}
+  .audit ul.r-list{list-style:none;margin:0;padding:0;}
+  .audit ul.r-list li{border-top:1px solid var(--rule);padding:12px 0;}
+  .audit ul.r-list li b{display:block;font-weight:700;font-size:14.5px;margin-bottom:3px;}
+  .audit ul.r-list li span{color:var(--ink-soft);font-size:14px;line-height:1.5;}
+  .audit a.cta{display:block;width:100%;margin-top:20px;text-decoration:none;}
+
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="ears" src="data:image/png;base64,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" alt="Black Rabbit Creative" />
+    <p class="eyebrow">Positioning Exercise · Black Rabbit Creative</p>
+    <h1>The <em>Onlyness</em><br>Test</h1>
+    <p class="lede">Six questions build one sentence — the thing only you can say. The rule is simple: <b>if a competitor could say it too, it isn't done yet.</b> Answer all six, then polish it into one clean statement.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- FORM -->
+    <main class="col-form">
+      <p class="q-intro">Answer in plain words · Short is stronger</p>
+
+      <div class="card" data-key="what">
+        <div class="card-head"><span class="tag">W · 1</span><h2>What are you?</h2></div>
+        <p class="why">Name your category in the plainest words possible. This is the noun a stranger would use.</p>
+        <textarea rows="2" placeholder="a branding studio…"></textarea>
+        <p class="ex">e.g. <b>a branding studio</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>If someone at a party asked "what do you do?", what's the plainest answer?</li>
+            <li>What shelf or category would a customer look under to find you?</li>
+            <li>Strip away every adjective — what's the bare noun that's left?</li>
+          </ul>
+          <p class="more">More examples: <b>a cold-brew coffee company</b> · <b>a running-shoe brand</b> · <b>a bookkeeping service</b></p>
+        </details>
+      </div>
+
+      <div class="card" data-key="how">
+        <div class="card-head"><span class="tag">W · 2</span><h2>How are you different?</h2></div>
+        <p class="why">The one thing rivals can't claim. Not a list — the single sharpest difference. This is where the test is won or lost.</p>
+        <textarea rows="2" placeholder="refuses to make generic work…"></textarea>
+        <p class="ex">e.g. <b>refuses to make generic work</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>Finish this: "Unlike everyone else in my category, we ___."</li>
+            <li>What do you refuse to do that your competitors happily do?</li>
+            <li>If a rival copied your look tomorrow, what still couldn't they copy?</li>
+          </ul>
+          <p class="more">More examples: <b>roasts every batch the day it ships</b> · <b>is built for feet standard sizes ignore</b></p>
+        </details>
+      </div>
+
+      <div class="card" data-key="who">
+        <div class="card-head"><span class="tag">W · 3</span><h2>Who is it for?</h2></div>
+        <p class="why">Your specific customer. The narrower you go, the sharper the position.</p>
+        <textarea rows="2" placeholder="product founders ready to invest in brand…"></textarea>
+        <p class="ex">e.g. <b>product founders ready to invest in brand</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>Picture one real customer — who are they, exactly?</li>
+            <li>Who is this <em>not</em> for? Naming that sharpens the who.</li>
+            <li>What do your best clients have in common with each other?</li>
+          </ul>
+          <p class="more">More examples: <b>chefs who care where the beans come from</b> · <b>marathoners with wide feet</b></p>
+        </details>
+      </div>
+
+      <div class="card" data-key="where">
+        <div class="card-head"><span class="tag">W · 4</span><h2>Where do you play?</h2></div>
+        <p class="why">Your market, place, or channel — the arena you compete in.</p>
+        <textarea rows="2" placeholder="the U.S. craft & product space…"></textarea>
+        <p class="ex">e.g. <b>the U.S. craft & product space</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>What market, region, or channel is your home turf?</li>
+            <li>Online, in person, wholesale, retail — where do people meet you?</li>
+            <li>Where do your competitors <em>not</em> operate?</li>
+          </ul>
+          <p class="more">More examples: <b>specialty grocery and direct-to-consumer</b> · <b>independent run shops nationwide</b></p>
+        </details>
+      </div>
+
+      <div class="card" data-key="why">
+        <div class="card-head"><span class="tag">W · 5</span><h2>Why does it matter?</h2></div>
+        <p class="why">Why should they care — and what's at stake if they don't?</p>
+        <textarea rows="2" placeholder="they'd rather stand apart than blend in…"></textarea>
+        <p class="ex">e.g. <b>they'd rather stand apart than blend in</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>What changes for the customer the moment they choose you?</li>
+            <li>What's the real cost of settling for the generic option?</li>
+            <li>Why do your clients say they came to you in the first place?</li>
+          </ul>
+          <p class="more">More examples: <b>flavor dies within days of roasting</b> · <b>the wrong shoe ends a training season</b></p>
+        </details>
+      </div>
+
+      <div class="card" data-key="when">
+        <div class="card-head"><span class="tag">W · 6</span><h2>Why now?</h2></div>
+        <p class="why">The shift that makes this the moment for you to exist.</p>
+        <textarea rows="2" placeholder="as markets get louder, sameness gets punished…"></textarea>
+        <p class="ex">e.g. <b>as markets get louder, sameness gets punished</b></p>
+        <details class="help"><summary>Prompts to find your answer</summary>
+          <ul class="qlist">
+            <li>What has shifted in your market recently?</li>
+            <li>Why would this have been harder to say five years ago?</li>
+            <li>What trend or tension makes you timely right now?</li>
+          </ul>
+          <p class="more">More examples: <b>as buyers turn on mass-market coffee</b> · <b>as running booms and gear stays one-size-fits-all</b></p>
+        </details>
+      </div>
+
+      <p class="footer-note">The Onlyness Test · adapted from Marty Neumeier's <b>Zag</b>. Built by Black Rabbit Creative.</p>
+    </main>
+
+    <!-- STATEMENT -->
+    <aside class="col-statement">
+      <div class="panel panel-sticky" id="panel">
+        <span class="stamp">Only ✓</span>
+        <p class="p-label"><span>Your onlyness statement</span> <span class="counter" id="counter">0 / 6</span></p>
+
+        <div class="brand-field">
+          <label for="brand">Brand name</label>
+          <input id="brand" type="text" placeholder="Your brand" autocomplete="off" />
+        </div>
+
+        <div class="rtag" id="rtag">✦ Refined by AI</div>
+        <p class="statement" id="statement"></p>
+        <p class="ai-status" id="status"></p>
+
+        <div class="swap">
+          <b>The swap test →</b> Drop a competitor's name into the sentence above. If it still reads true, your <b>how</b> isn't sharp enough yet.
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="polish" type="button" disabled>Polish with AI</button>
+          <button class="btn" id="copyStatement" type="button">Copy statement</button>
+          <button class="btn ghost" id="reset" type="button">Reset</button>
+        </div>
+      </div>
+
+      <div class="audit" id="audit">
+        <h3>Does your brand live up to it?</h3>
+        <p class="a-sub">Get a free, instant read on where your current website falls short of your onlyness — and exactly how to close the gap.</p>
+        <div class="a-field">
+          <label for="auditSite">Your website</label>
+          <input id="auditSite" type="url" inputmode="url" placeholder="yourbrand.com" autocomplete="url" />
+        </div>
+        <div class="a-field">
+          <label for="auditEmail">Email — we'll send your report</label>
+          <input id="auditEmail" type="email" placeholder="you@company.com" autocomplete="email" />
+        </div>
+        <p class="a-consent">We'll use your email to send your brand gap report and the occasional brand tip from Black Rabbit Creative. No spam — unsubscribe anytime.</p>
+        <button class="btn primary" id="auditBtn" type="button" disabled>Get my free brand gap report</button>
+        <p class="a-status" id="auditStatus"></p>
+        <div class="a-results" id="auditResults"></div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<div class="pill" id="pill" role="button" tabindex="0" aria-label="Jump to your statement">
+  <span><span class="pc" id="pillCount">0</span>/6 answered</span>
+  <span>· See statement ↑</span>
+</div>
+
+<script>
+(function(){
+  /* ============================================================
+     AI POLISH — configuration
+     Leave REFINE_ENDPOINT = "" to use the built-in Anthropic call
+     (works inside Claude's artifact preview).
+     To run on your own hosted site, deploy a small proxy such as a
+     Supabase Edge Function that forwards to the Anthropic API with
+     your key, then paste its URL here. It should accept a JSON body
+     of the six answers and return { "statement": "..." }.
+     ============================================================ */
+  var REFINE_ENDPOINT = "https://bfmqwlyjdctfmebdagej.functions.supabase.co/refine-onlyness";
+  var AUDIT_ENDPOINT  = "https://bfmqwlyjdctfmebdagej.functions.supabase.co/onlyness-audit";
+
+  var data = {brand:"", what:"", how:"", who:"", where:"", why:"", when:""};
+  var wKeys = ["what","how","who","where","why","when"];
+  var refined = null;
+  var polishing = false;
+
+  var stmtEl   = document.getElementById("statement");
+  var counter  = document.getElementById("counter");
+  var pillCount= document.getElementById("pillCount");
+  var panel    = document.getElementById("panel");
+  var brandIn  = document.getElementById("brand");
+  var statusEl = document.getElementById("status");
+  var btnPolish= document.getElementById("polish");
+
+  /* ---------- refinement (live draft) ---------- */
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function clean(s){return String(s||"").replace(/\s+/g," ").trim()
+    .replace(/[.,;:!?\u2019\u201D"']+$/,"").trim();}
+  function decap(s){
+    if(!s) return s;
+    var first=s.split(" ")[0], after=first.slice(1);
+    var allCaps=first.length>1&&first===first.toUpperCase();
+    if(allCaps||/[A-Z]/.test(after)||first.indexOf(".")>-1) return s;
+    return s.charAt(0).toLowerCase()+s.slice(1);
+  }
+  function capFirst(s){s=String(s||"").replace(/\s+/g," ").trim();
+    return s?s.charAt(0).toUpperCase()+s.slice(1):s;}
+  function stripLead(s,re){return s.replace(re,"");}
+  function splitConn(v,re,def){v=clean(v);var m=v.match(re);
+    if(m) return {conn:m[0].trim().toLowerCase(),body:decap(v.slice(m[0].length).trim())};
+    return {conn:def,body:decap(v)};}
+
+  function parts(){return{
+    brand:capFirst(data.brand),
+    what: data.what.trim()? decap(stripLead(clean(data.what),/^(a|an|the)\s+/i)):"",
+    how:  data.how.trim() ? decap(stripLead(clean(data.how),/^(that|which|who)\s+/i)):"",
+    who:  data.who.trim() ? splitConn(data.who,/^(for|serving|built for|aimed at)\s+/i,"for"):null,
+    where:data.where.trim()?splitConn(data.where,/^(in|on|at|across|throughout|within|around|near)\s+/i,"in"):null,
+    why:  data.why.trim() ? splitConn(data.why,/^(because|since|as|so that|so)\s+/i,"because"):null,
+    when: data.when.trim()? splitConn(data.when,/^(now that|now|as|because|since|when|after|amid|amidst|with)\s+/i,"now that"):null
+  };}
+
+  function renderHTML(p){
+    var fx=function(t){return '<span class="fixed">'+t+'</span>';};
+    var sl=function(t){return '<span class="slot">'+esc(t)+'</span>';};
+    var bl=function(t){return '<span class="slot empty">'+t+'</span>';};
+    var o=(p.brand?sl(p.brand):bl("Your brand"));
+    o+=fx(" is the ")+'<span class="only">only</span> ';
+    o+=(p.what?sl(p.what):bl("what you are"));
+    o+=fx(" that ");
+    o+=(p.how?sl(p.how):bl("how you're different"));
+    if(p.who)  o+=fx(" "+p.who.conn+" ")+sl(p.who.body);
+    if(p.where)o+=fx(" "+p.where.conn+" ")+sl(p.where.body);
+    if(p.why)  o+=fx(", "+p.why.conn+" ")+sl(p.why.body);
+    if(p.when) o+=fx(", "+p.when.conn+" ")+sl(p.when.body);
+    o+=fx(".");
+    return o;
+  }
+  function statementText(p){
+    var brand=p.brand||"[Brand]",what=p.what||"[what you are]",how=p.how||"[how you're different]";
+    var s=brand+" is the only "+what+" that "+how;
+    if(p.who)  s+=" "+p.who.conn+" "+p.who.body;
+    if(p.where)s+=" "+p.where.conn+" "+p.where.body;
+    if(p.why)  s+=", "+p.why.conn+" "+p.why.body;
+    if(p.when) s+=", "+p.when.conn+" "+p.when.body;
+    return s.replace(/\s+/g," ").trim()+".";
+  }
+  function rawAnswers(){return{
+    brand:data.brand.trim(),what:data.what.trim(),how:data.how.trim(),
+    who:data.who.trim(),where:data.where.trim(),why:data.why.trim(),when:data.when.trim()
+  };}
+  function ready(){return data.brand.trim()&&data.what.trim()&&data.how.trim();}
+
+  function render(){
+    if(refined===null){ stmtEl.innerHTML=renderHTML(parts()); }
+    var n=wKeys.filter(function(k){return data[k].trim();}).length;
+    counter.textContent=n+" / 6";
+    pillCount.textContent=n;
+    panel.classList.toggle("complete",n===6&&!!data.brand.trim());
+    if(!polishing) btnPolish.disabled=!ready();
+    updateAudit();
+  }
+
+  /* ---------- AI polish ---------- */
+  function setStatus(msg,err){statusEl.textContent=msg||"";statusEl.classList.toggle("err",!!err);}
+  function setRefined(text){refined=text;stmtEl.textContent=text;panel.classList.add("is-refined");}
+  function clearRefined(){if(refined!==null){refined=null;panel.classList.remove("is-refined");setStatus("");}}
+
+  function buildPrompt(a){
+    return [
+"You are a brand strategist refining a positioning statement using Marty Neumeier's \"onlyness\" framework.",
+"A client answered six questions. Rewrite their answers into ONE polished, grammatically correct onlyness statement that sounds confident, clear, and natural.",
+"",
+"Requirements:",
+"- Keep the onlyness shape: \"[Brand] is the only [category] that [what makes them different]\", then weave in who it's for, where, why it matters, and why now — but only where it reads smoothly. Two sentences are fine if one would be a run-on.",
+"- Preserve the client's meaning and as much of their original wording as possible. Fix grammar, capitalization, and awkward phrasing. Turn loose phrases into a clean category noun where needed (for example, \"we make dog treats\" becomes \"dog-treat company\").",
+"- Do NOT invent claims, benefits, or facts they did not provide.",
+"- Return ONLY the finished statement. No preamble, no quotation marks, no markdown.",
+"",
+"Brand name: "+(a.brand||"(none given)"),
+"What they are: "+(a.what||"(none given)"),
+"How they're different: "+(a.how||"(none given)"),
+"Who it's for: "+(a.who||"(none given)"),
+"Where they play: "+(a.where||"(none given)"),
+"Why it matters: "+(a.why||"(none given)"),
+"Why now: "+(a.when||"(none given)")
+    ].join("\n");
+  }
+
+  function callRefine(a){
+    if(REFINE_ENDPOINT){
+      return fetch(REFINE_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(a)}).then(function(r){
+          if(!r.ok) throw new Error("status "+r.status); return r.json();
+        }).then(function(d){return (d.statement||"").trim();});
+    }
+    return fetch("https://api.anthropic.com/v1/messages",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({model:"claude-sonnet-4-6",max_tokens:1000,
+        messages:[{role:"user",content:buildPrompt(a)}]})
+    }).then(function(r){if(!r.ok) throw new Error("status "+r.status);return r.json();})
+    .then(function(d){
+      var t=(d.content||[]).filter(function(x){return x.type==="text";})
+        .map(function(x){return x.text;}).join("").trim();
+      return t.replace(/^["'\u201C\u2018]+|["'\u201D\u2019]+$/g,"").trim();
+    });
+  }
+
+  function polish(){
+    if(polishing||!ready()) return;
+    polishing=true;
+    var label=btnPolish.textContent;
+    btnPolish.disabled=true; btnPolish.textContent="Polishing…";
+    setStatus("Refining your statement…");
+    callRefine(rawAnswers()).then(function(text){
+      if(text){ setRefined(text); setStatus("Refined. Edit any answer to return to the live draft."); }
+      else setStatus("No response — please try again.",true);
+    }).catch(function(){
+      setStatus("Couldn't reach the polish service. It runs automatically in Claude's preview; on your own site set REFINE_ENDPOINT in the code.",true);
+    }).then(function(){
+      polishing=false; btnPolish.textContent=label; btnPolish.disabled=!ready();
+    });
+  }
+
+  /* ---------- wiring ---------- */
+  document.querySelectorAll(".card").forEach(function(card){
+    var key=card.getAttribute("data-key"), ta=card.querySelector("textarea");
+    ta.addEventListener("input",function(){
+      data[key]=ta.value;
+      card.classList.toggle("filled",!!ta.value.trim());
+      clearRefined(); render();
+    });
+  });
+  brandIn.addEventListener("input",function(){data.brand=brandIn.value;clearRefined();render();});
+
+  function flash(btn,label){var old=btn.textContent;btn.textContent=label;
+    setTimeout(function(){btn.textContent=old;},1600);}
+  function copy(text,btn){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){flash(btn,"Copied ✓");},function(){fallback(text,btn);});
+    } else fallback(text,btn);
+  }
+  function fallback(text,btn){var t=document.createElement("textarea");
+    t.value=text;t.style.position="fixed";t.style.opacity="0";
+    document.body.appendChild(t);t.select();
+    try{document.execCommand("copy");flash(btn,"Copied ✓");}catch(e){flash(btn,"Copy failed");}
+    document.body.removeChild(t);}
+
+  btnPolish.addEventListener("click",polish);
+  document.getElementById("copyStatement").addEventListener("click",function(){
+    copy(refined!==null?refined:statementText(parts()),this);
+  });
+  document.getElementById("reset").addEventListener("click",function(){
+    if(!confirm("Clear all answers?")) return;
+    Object.keys(data).forEach(function(k){data[k]="";});
+    brandIn.value="";
+    document.querySelectorAll(".card").forEach(function(c){
+      c.querySelector("textarea").value="";c.classList.remove("filled");});
+    clearRefined(); render();
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  var pill=document.getElementById("pill");
+  function toPanel(){panel.scrollIntoView({behavior:"smooth",block:"start"});}
+  pill.addEventListener("click",toPanel);
+  pill.addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();toPanel();}});
+
+  /* ---------- brand gap report (lead magnet) ---------- */
+  var auditSite   = document.getElementById("auditSite");
+  var auditEmail  = document.getElementById("auditEmail");
+  var auditBtn    = document.getElementById("auditBtn");
+  var auditStatus = document.getElementById("auditStatus");
+  var auditResults= document.getElementById("auditResults");
+  var auditEl     = document.getElementById("audit");
+  var auditing=false;
+
+  function emailOk(s){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((s||"").trim());}
+  function currentStatement(){return refined!==null?refined:statementText(parts());}
+  function auditReady(){return ready()&&!!auditSite.value.trim()&&emailOk(auditEmail.value);}
+  function updateAudit(){ if(!auditing) auditBtn.disabled=!auditReady(); }
+
+  function renderAudit(a){
+    var h="";
+    if(a.summary) h+='<p class="r-summary">'+esc(a.summary)+'</p>';
+    if(a.workOn&&a.workOn.length){
+      h+='<p class="r-h">What to work on</p><ul class="r-list">';
+      a.workOn.forEach(function(w){h+='<li><b>'+esc(w.title||"")+'</b><span>'+esc(w.detail||"")+'</span></li>';});
+      h+='</ul>';
+    }
+    if(a.howWeHelp&&a.howWeHelp.length){
+      h+='<p class="r-h">How Black Rabbit can help</p><ul class="r-list">';
+      a.howWeHelp.forEach(function(w){h+='<li><b>'+esc(w.service||"")+'</b><span>'+esc(w.why||"")+'</span></li>';});
+      h+='</ul>';
+    }
+    h+='<a class="btn primary cta" href="https://danya-designs.moxieapp.com/public/discovery-call" target="_blank" rel="noopener">Book a free discovery call &rarr;</a>';
+    auditResults.innerHTML=h;
+    auditEl.classList.add("has-results");
+  }
+
+  function runAudit(){
+    if(auditing||!auditReady()) return;
+    auditing=true;
+    var label=auditBtn.textContent;
+    auditBtn.disabled=true; auditBtn.textContent="Analyzing…";
+    auditStatus.classList.remove("err");
+    auditStatus.textContent="Reading your website and building your report — about 10 seconds…";
+    fetch(AUDIT_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({email:auditEmail.value.trim(),website:auditSite.value.trim(),
+        statement:currentStatement(),brand:data.brand.trim()})})
+      .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+      .then(function(res){
+        if(res.ok&&res.d&&res.d.analysis){
+          renderAudit(res.d.analysis);
+          auditStatus.textContent=res.d.readWebsite?"Here’s your report — scroll down for your next step.":"We couldn’t fully read your site, so this is based on your statement.";
+        } else {
+          auditStatus.textContent=(res.d&&res.d.error)?res.d.error:"Something went wrong — please try again.";
+          auditStatus.classList.add("err");
+        }
+      })
+      .catch(function(){
+        auditStatus.textContent="Couldn’t reach the report service — please try again.";
+        auditStatus.classList.add("err");
+      })
+      .then(function(){ auditing=false; auditBtn.textContent=label; updateAudit(); });
+  }
+
+  auditSite.addEventListener("input",updateAudit);
+  auditEmail.addEventListener("input",updateAudit);
+  auditBtn.addEventListener("click",runAudit);
+
+  render();
+})();
+</script>
+</body>
+</html>
