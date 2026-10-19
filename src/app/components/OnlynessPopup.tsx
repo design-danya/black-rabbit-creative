@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, ArrowUpRight } from 'lucide-react'
 
-const TEST_URL = 'https://www.blackrabbit-brandtest.com/'
+const TEST_URL = '/onlyness-test/'
 const STORAGE_KEY = 'br_onlyness_popup_dismissed'
 
 /**
