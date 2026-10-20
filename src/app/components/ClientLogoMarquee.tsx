@@ -29,7 +29,7 @@ import { clientLogos } from '../data/clientLogos'
  * every client twice.
  */
 
-const HEIGHT = 50 // px — rendered logo height
+const HEIGHT = 62 // px — rendered logo height
 
 export function ClientLogoMarquee() {
   if (clientLogos.length === 0) return null
@@ -58,7 +58,7 @@ export function ClientLogoMarquee() {
         .brc-clients__track {
           display: flex;
           align-items: center;
-          gap: 56px;
+          gap: 64px;
           width: max-content;
           animation: brc-clients-scroll 70s linear infinite;
         }
@@ -76,7 +76,7 @@ export function ClientLogoMarquee() {
         }
         @keyframes brc-clients-scroll {
           from { transform: translate3d(0, 0, 0); }
-          to   { transform: translate3d(calc(-50% - 28px), 0, 0); }
+          to   { transform: translate3d(calc(-50% - 32px), 0, 0); }
         }
         @media (prefers-reduced-motion: reduce) {
           .brc-clients,
@@ -110,7 +110,7 @@ export function ClientLogoMarquee() {
                   width={logo.w}
                   height={logo.h}
                   style={{ height: HEIGHT, width: (logo.w / logo.h) * HEIGHT }}
-                  sizes="240px"
+                  sizes="300px"
                   priority={i < 6}
                 />
               </div>
