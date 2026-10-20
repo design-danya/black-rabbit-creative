@@ -18,6 +18,11 @@ import { clientLogos } from '../data/clientLogos'
  * fixed height, and the files are optically normalised, so a wide wordmark and
  * a small badge read at the same weight.
  *
+ * A hairline rail runs under the row, fading out at both ends with the same
+ * mask as the marquee, so the logos read as travelling along a line. It also
+ * does the job the section border used to: the dark hero above already marks
+ * the top edge, so the rail is the only rule in the band.
+ *
  * These are companies worked with, not a portfolio of logo design, so nothing
  * here links out — the case studies live on /work. The list is duplicated for
  * the loop, so the second copy is hidden from assistive tech to avoid reading
@@ -33,14 +38,22 @@ export function ClientLogoMarquee() {
   return (
     <section
       aria-label="Companies Black Rabbit Creative has worked with"
-      className="relative border-y border-black/[0.06] bg-[#fbfbf9] py-10 md:py-12"
+      className="relative bg-[#fbfbf9] py-10 md:py-12"
     >
       <style>{`
+        .brc-clients,
+        .brc-clients__rail {
+          -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+        }
+        .brc-clients__rail {
+          margin-top: 18px;
+          height: 1px;
+          background: rgba(0, 0, 0, 0.14);
+        }
         .brc-clients {
           position: relative;
           overflow: hidden;
-          -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-          mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
         }
         .brc-clients__track {
           display: flex;
@@ -66,11 +79,12 @@ export function ClientLogoMarquee() {
           to   { transform: translate3d(calc(-50% - 28px), 0, 0); }
         }
         @media (prefers-reduced-motion: reduce) {
-          .brc-clients {
-            overflow-x: auto;
+          .brc-clients,
+          .brc-clients__rail {
             -webkit-mask-image: none;
             mask-image: none;
           }
+          .brc-clients { overflow-x: auto; }
           .brc-clients__track { animation: none; }
           .brc-clients__item { opacity: 1; }
         }
@@ -104,6 +118,8 @@ export function ClientLogoMarquee() {
           })}
         </div>
       </div>
+
+      <div className="brc-clients__rail" aria-hidden />
     </section>
   )
 }
