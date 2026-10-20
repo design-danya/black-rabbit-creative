@@ -58,7 +58,7 @@ const projects = [
     image: fortifiedMotherhoodThumb,
     year: "2026",
     href: "/work/fortified-motherhood",
-    tag: "New",
+    award: "GDUSA 2026",
   },
   {
     title: "Monadnock Berries",

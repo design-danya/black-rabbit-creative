@@ -22,7 +22,7 @@ const meta = [
   { label: "Client", value: "Fortified Motherhood" },
   { label: "Industry", value: "Postpartum Care" },
   { label: "Package", value: "Streamlined Branding" },
-  { label: "Year", value: "2026" },
+  { label: "Recognition", value: "GDUSA Health+Wellness 2026" },
 ];
 
 const challenges = [
@@ -79,6 +79,7 @@ const mockups = [
 ];
 
 const impacts = [
+  { label: "Nationally Recognized", desc: "A 2026 GDUSA Health+Wellness Design Award, in a field judged across agencies, corporations and institutions." },
   { label: "Category Break", desc: "No lotus, no script, no blush. The brand is recognizably not the practice next to it." },
   { label: "Meaning Throughout", desc: "Eight botanicals chosen for what they do in recovery, not for how they decorate." },
   { label: "Built to Scale", desc: "A system ready for a website, virtual coaching, packaging and merchandise before those exist." },
@@ -156,6 +157,9 @@ export default function FortifiedMotherhood() {
             </p>
             <p className="mt-6 text-white/40 text-sm leading-relaxed max-w-2xl">
               Brand strategy · Visual identity · Logo suite · Hand-drawn illustration · Pattern design
+            </p>
+            <p className="mt-6 inline-flex items-center gap-2 border px-4 py-2 text-[11px] uppercase tracking-[0.2em]" style={{ borderColor: "rgba(141,182,200,0.35)", color: steelBlue }}>
+              ★ Winner — 2026 GDUSA Health+Wellness Design Award
             </p>
           </motion.div>
         </section>
@@ -743,6 +747,13 @@ export default function FortifiedMotherhood() {
               relied on for centuries. The system is complete — a full logo suite, brand typography and color, eight
               hand-drawn illustrations, a signature pattern and a brand guide — and it is ready for her website, her
               virtual coaching and the community-funded care she plans to offer one day.
+            </p>
+            <p className="text-black/60 leading-[1.9] text-[0.95rem] mt-5">
+              The work went on to win a{" "}
+              <span className="text-[#111] font-semibold">2026 Health+Wellness Design Award</span> from Graphic
+              Design USA, in the 25th annual edition of a program judged across design firms, agencies,
+              corporations and institutions. It is the studio&rsquo;s second GDUSA award in two years, and its
+              first outside packaging.
             </p>
             <p className="text-black/60 leading-[1.9] text-[0.95rem] mt-5">
               Delivered as a{" "}

@@ -6,6 +6,10 @@
 
 export const fortifiedFaq = [
   {
+    q: 'Has this work won any awards?',
+    a: 'Yes. Fortified Motherhood won a 2026 Health+Wellness Design Award from Graphic Design USA, in the 25th annual edition of that program. GDUSA judges the category across traditional medicine, healthcare services, healthy lifestyles, self-care and public health, and entries come from design firms, agencies, corporations and institutions. It is Black Rabbit Creative\'s second GDUSA award, following the 2025 American Package Design Award for the Granite Roots Cheshire Czech beer label.',
+  },
+  {
     q: 'What does a postpartum brand identity include?',
     a: 'For Fortified Motherhood it was a logo system of four marks with tagline and service-line variations, a color palette with production values for print and screen, a typographic pairing, eight hand-drawn botanical illustrations, a repeating pattern built from them, and a brand guide written for vendors. Every mark ships in color, black and reversed, for print and digital, so the practice can hand files to a printer or a merchandise supplier without coming back to the studio.',
   },

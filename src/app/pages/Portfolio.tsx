@@ -32,7 +32,7 @@ const projects = [
     image: fortifiedMotherhoodThumb,
     href: "/work/fortified-motherhood",
     year: "2026",
-    tag: "New",
+    award: "GDUSA 2026",
   },
   {
     id: 14,

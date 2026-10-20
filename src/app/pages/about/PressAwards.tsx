@@ -10,6 +10,8 @@ import { useSEO } from "../../components/useSEO";
  * is the actual winning work rather than a photograph of someone's trophy.
  */
 const awardImage = "/assets/50e23837cf920f2e5faee0e0a19273c2909f747d.png";
+/** Latest recognition: the Fortified Motherhood collateral that won in 2026. */
+const latestAwardImage = "/assets/fortified-motherhood/hero-flatlay.webp";
 
 interface AwardRow {
   year: string;
@@ -32,6 +34,7 @@ const majorAwards: AwardRow[] = [
 ];
 
 const professionalRecognition: AwardRow[] = [
+  { year: "2026", award: "Health+Wellness Design Award", org: "Graphic Design USA (for Fortified Motherhood)" },
   { year: "2025", award: "American Package Design Award", org: "Graphic Design USA (for Granite Roots Beer Label)" },
   { year: "2024", award: "Course Director Award — Copywriting", org: "Full Sail University" },
   { year: "2024", award: "Advanced Achievement Award", org: "Full Sail University" },
@@ -117,8 +120,8 @@ export default function PressAwards() {
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
               <div className="shrink-0 w-32 sm:w-40 md:w-44 lg:w-52 overflow-hidden">
                 <img
-                  src={awardImage}
-                  alt="2025 American Package Design Award — Granite Roots Brewing beer label designed by Black Rabbit Creative"
+                  src={latestAwardImage}
+                  alt="2026 GDUSA Health+Wellness Design Award — Fortified Motherhood brand collateral designed by Black Rabbit Creative"
                   className="w-full h-auto object-contain rounded-sm"
                   loading="lazy"
                   decoding="async"
@@ -131,18 +134,21 @@ export default function PressAwards() {
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase tracking-[0.3em] text-[#7c5fe6] mb-3">
-                      Latest Recognition — 2025
+                      Latest Recognition — 2026
                     </span>
                     <h2
                       className="font-black uppercase tracking-[0.07em] leading-tight mb-4"
                       style={{ fontSize: "clamp(1.3rem, 2.5vw, 2rem)" }}
                     >
-                      American Package Design Award
+                      Health+Wellness Design Award
                     </h2>
                   </div>
                 </div>
                 <p className="text-gray-400 leading-[1.9]">
-                  Black Rabbit Creative received the 2025 American Package Design Award from Graphic Design USA for the innovative beer label design for Granite Roots Brewing.
+                  Fortified Motherhood won a 2026 Health+Wellness Design Award from Graphic Design USA, in the 25th annual edition of the program. The category spans traditional medicine, healthcare services, healthy lifestyles, self-care and public health, judged across design firms, agencies, corporations and institutions.
+                </p>
+                <p className="text-gray-400 leading-[1.9] mt-4">
+                  It is the studio&rsquo;s second GDUSA award, after the 2025 American Package Design Award for the Granite Roots <em className="not-italic text-white">Cheshire Czech</em> beer label &mdash; two wins in two different disciplines.
                 </p>
               </div>
             </div>

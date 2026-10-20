@@ -7,10 +7,10 @@ import { fortifiedFaq } from '../../data/fortifiedFaq'
 const PATH = '/work/fortified-motherhood'
 const HERO = '/assets/fortified-motherhood/hero-flatlay.webp'
 const DESCRIPTION =
-  'Brand strategy, a four-mark logo suite, eight hand-drawn botanical illustrations and a pattern system for Fortified Motherhood, a postpartum care practice in the Monadnock region of New Hampshire. A case study in breaking out of a category built on lotus flowers and blush pastels.'
+  'Winner of a 2026 GDUSA Health+Wellness Design Award. Brand strategy, a four-mark logo suite, eight hand-drawn botanical illustrations and a pattern system for Fortified Motherhood, a postpartum care practice in the Monadnock region of New Hampshire. A case study in breaking out of a category built on lotus flowers and blush pastels.'
 
 export const metadata: Metadata = {
-  title: 'Fortified Motherhood — Postpartum Brand Identity & Illustration',
+  title: 'Fortified Motherhood — Award-Winning Postpartum Brand Identity',
   description: DESCRIPTION,
   keywords: [
     'postpartum brand identity',
@@ -51,7 +51,7 @@ export default function FortifiedMotherhoodPage() {
         schema={[
           caseStudySchema({
             name: 'Fortified Motherhood — Brand Identity',
-            headline: 'A postpartum brand built on strength, not pastels',
+            headline: 'A postpartum brand built on strength, not pastels — 2026 GDUSA Health+Wellness Design Award winner',
             description: DESCRIPTION,
             path: PATH,
             image: HERO,
@@ -59,6 +59,8 @@ export default function FortifiedMotherhoodPage() {
             datePublished: '2026-09-16',
             keywords: [
               'postpartum branding',
+              'GDUSA Health+Wellness Design Award',
+              'award-winning brand identity',
               'brand identity design',
               'hand-drawn illustration',
               'pattern design',
