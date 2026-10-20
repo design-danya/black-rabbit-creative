@@ -21,6 +21,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from 'next/link';
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { ReviewsMarquee } from "../components/ReviewsMarquee";
+import { ClientLogoMarquee } from "../components/ClientLogoMarquee";
 import { useSEO } from "../components/useSEO";
 
 // Animated WebP is served to browsers that support it (~776KB); the original
@@ -299,6 +300,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── CLIENT LOGOS ─── */}
+      <ClientLogoMarquee />
 
       {/* ─── SECTION 2: BRAND PHILOSOPHY ─── */}
       <section className="bg-white text-[#060606] px-6 md:px-16 lg:px-24 pt-16 pb-14 md:pt-[5.5rem] md:pb-20">
